@@ -4800,7 +4800,7 @@ void I2C_ReadDataBlock(i2c_address_t address, uint8_t reg, uint8_t *data, size_t
 # 45 "main.c" 2
 
 # 1 "./Modbas_RTU.h" 1
-# 56 "./Modbas_RTU.h"
+# 57 "./Modbas_RTU.h"
  unsigned char Danie_Rx_ModbasRtu[30] = {},quantity_Data_ModbasRtu;
 
  unsigned int Danie_ModbasRtu_analog_input [ 10 ];

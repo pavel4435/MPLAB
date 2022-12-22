@@ -4491,7 +4491,7 @@ void TMR0_DefaultInterruptHandler(void);
 # 52 "mcc_generated_files/tmr0.c" 2
 
 # 1 "mcc_generated_files/../Modbas_RTU.h" 1
-# 56 "mcc_generated_files/../Modbas_RTU.h"
+# 57 "mcc_generated_files/../Modbas_RTU.h"
  unsigned char Danie_Rx_ModbasRtu[30] = {},quantity_Data_ModbasRtu;
 
  unsigned int Danie_ModbasRtu_analog_input [ 10 ];

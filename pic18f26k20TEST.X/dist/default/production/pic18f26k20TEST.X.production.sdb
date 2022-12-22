@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 18F26K20 ]
 [d frameptr 4065 ]
-"67 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/examples/i2c_master_example.c
+"67 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/examples/i2c_master_example.c
 [e E355 . `uc
 I2C_NOERR 0
 I2C_BUSY 1
@@ -17,7 +17,7 @@ I2C_RESTART_WRITE 3
 I2C_CONTINUE 4
 I2C_RESET_LINK 5
 ]
-"146 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
+"146 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
 [e E2846 . `uc
 I2C_IDLE 0
 I2C_SEND_ADR_READ 1
@@ -82,9 +82,9 @@ I2C_NULL 5
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"58 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\main.c
+"58 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"88 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/eusart.c
+"88 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/eusart.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
 "197
 [v _EUSART_Transmit_ISR EUSART_Transmit_ISR `(v  1 e 1 0 ]
@@ -108,7 +108,7 @@ I2C_NULL 5
 [v _EUSART_SetTxInterruptHandler EUSART_SetTxInterruptHandler `(v  1 e 1 0 ]
 "280
 [v _EUSART_SetRxInterruptHandler EUSART_SetRxInterruptHandler `(v  1 e 1 0 ]
-"111 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/examples/i2c_master_example.c
+"111 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/examples/i2c_master_example.c
 [v _I2C_WriteNBytes I2C_WriteNBytes `(v  1 e 1 0 ]
 "120
 [v _I2C_ReadNBytes I2C_ReadNBytes `(v  1 e 1 0 ]
@@ -122,7 +122,7 @@ I2C_NULL 5
 [v _wr2RegCompleteHandler wr2RegCompleteHandler `(E360  1 s 1 wr2RegCompleteHandler ]
 "170
 [v _rdBlkRegCompleteHandler rdBlkRegCompleteHandler `(E360  1 s 1 rdBlkRegCompleteHandler ]
-"167 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
+"167 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
 [v _I2C_Initialize I2C_Initialize `(v  1 e 1 0 ]
 "176
 [v _I2C_Open I2C_Open `(E355  1 e 1 0 ]
@@ -218,17 +218,17 @@ I2C_NULL 5
 [v _I2C_MasterSetIrq I2C_MasterSetIrq `T(v  1 s 1 I2C_MasterSetIrq ]
 "650
 [v _I2C_MasterWaitForEvent I2C_MasterWaitForEvent `T(v  1 s 1 I2C_MasterWaitForEvent ]
-"52 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/interrupt_manager.c
+"52 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 "58
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
-"50 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/mcc.c
+"50 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "61
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
-"55 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/pin_manager.c
+"55 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"68 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/tmr0.c
+"68 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/tmr0.c
 [v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
 "95
 [v _TMR0_StartTimer TMR0_StartTimer `(v  1 e 1 0 ]
@@ -242,7 +242,7 @@ I2C_NULL 5
 [v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
 "153
 [v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
-"24 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\Modbas_RTU.c
+"24 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\Modbas_RTU.c
 [v _TIMER0_COMP_vect TIMER0_COMP_vect `(v  1 e 1 0 ]
 "41
 [v _USART_RXC_vect USART_RXC_vect `(v  1 e 1 0 ]
@@ -274,26 +274,26 @@ I2C_NULL 5
 [v _modbasRtu_Answer modbasRtu_Answer `(v  1 e 1 0 ]
 "432
 [v _modbasRtu_Slave modbasRtu_Slave `(v  1 e 1 0 ]
-"56 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X/Modbas_RTU.h
+"57 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X/Modbas_RTU.h
 [v _Danie_Rx_ModbasRtu Danie_Rx_ModbasRtu `[30]uc  1 e 30 0 ]
 [v _quantity_Data_ModbasRtu quantity_Data_ModbasRtu `uc  1 e 1 0 ]
-"58
-[v _Danie_ModbasRtu_analog_input Danie_ModbasRtu_analog_input `[10]ui  1 e 20 0 ]
 "59
-[v _Danie_ModbasRtu_analog_Output Danie_ModbasRtu_analog_Output `[10]ui  1 e 20 0 ]
+[v _Danie_ModbasRtu_analog_input Danie_ModbasRtu_analog_input `[10]ui  1 e 20 0 ]
 "60
-[v _Danie_ModbasRtu_Binary_input Danie_ModbasRtu_Binary_input `[2]uc  1 e 2 0 ]
+[v _Danie_ModbasRtu_analog_Output Danie_ModbasRtu_analog_Output `[10]ui  1 e 20 0 ]
 "61
-[v _Danie_ModbasRtu_Binary_Output Danie_ModbasRtu_Binary_Output `[2]uc  1 e 2 0 ]
+[v _Danie_ModbasRtu_Binary_input Danie_ModbasRtu_Binary_input `[2]uc  1 e 2 0 ]
 "62
+[v _Danie_ModbasRtu_Binary_Output Danie_ModbasRtu_Binary_Output `[2]uc  1 e 2 0 ]
+"63
 [v _Temp_ModbasRtu Temp_ModbasRtu `uc  1 e 1 0 ]
 [s S1016 . 1 `uc 1 b0 1 0 :1:0 
 `uc 1 b1 1 0 :1:1 
 `uc 1 b2 1 0 :1:2 
 ]
-"68
-[v _Bit_action_ModbasRtu Bit_action_ModbasRtu `S1016  1 e 1 0 ]
 "69
+[v _Bit_action_ModbasRtu Bit_action_ModbasRtu `S1016  1 e 1 0 ]
+"70
 [v _USART_UDR_vect USART_UDR_vect `uc  1 e 1 0 ]
 "334 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h
 [v _WPUB WPUB `VEuc  1 e 1 @3964 ]
@@ -699,7 +699,7 @@ I2C_NULL 5
 ]
 [u S947 . 1 `S925 1 . 1 0 `S934 1 . 1 0 `S943 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES947  1 e 1 @4082 ]
-"62 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/eusart.c
+"62 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/eusart.c
 [v _eusartTxHead eusartTxHead `VEuc  1 e 1 0 ]
 "63
 [v _eusartTxTail eusartTxTail `VEuc  1 e 1 0 ]
@@ -735,7 +735,7 @@ I2C_NULL 5
 [v _EUSART_OverrunErrorHandler EUSART_OverrunErrorHandler `*.37(v  1 e 2 0 ]
 "82
 [v _EUSART_ErrorHandler EUSART_ErrorHandler `*.37(v  1 e 2 0 ]
-"146 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
+"146 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
 [v _i2c_fsmStateTable i2c_fsmStateTable `C[16]*.37(E2846  1 e 32 0 ]
 [s S248 . 36 `[6]*.37(E360 1 callbackTable 12 0 `[6]*.39v 1 callbackPayload 12 12 `us 1 time_out 2 24 `us 1 time_out_value 2 26 `uc 1 address 1 28 `*.39uc 1 data_ptr 2 29 `ui 1 data_length 2 31 `E2846 1 state 1 33 `E355 1 error 1 34 `uc 1 addressNackCheck 1 35 :1:0 
 `uc 1 busy 1 35 :1:1 
@@ -744,11 +744,11 @@ I2C_NULL 5
 ]
 "165
 [v _I2C_Status I2C_Status `S248  1 e 36 0 ]
-"59 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/tmr0.c
+"59 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/tmr0.c
 [v _TMR0_InterruptHandler TMR0_InterruptHandler `*.37(v  1 e 2 0 ]
 "61
 [v _timer0ReloadVal timer0ReloadVal `VEuc  1 e 1 0 ]
-"58 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\main.c
+"58 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
 "86
@@ -775,7 +775,7 @@ I2C_NULL 5
 [v main@F3020 F3020 `[3]uc  1 s 3 F3020 ]
 "123
 } 0
-"432 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\Modbas_RTU.c
+"432 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\Modbas_RTU.c
 [v _modbasRtu_Slave modbasRtu_Slave `(v  1 e 1 0 ]
 {
 "451
@@ -906,12 +906,12 @@ I2C_NULL 5
 {
 "102
 } 0
-"50 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/mcc.c
+"50 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
 "59
 } 0
-"68 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/tmr0.c
+"68 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/tmr0.c
 [v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
 {
 "93
@@ -922,27 +922,27 @@ I2C_NULL 5
 [v TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 6 ]
 "151
 } 0
-"55 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/pin_manager.c
+"55 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "90
 } 0
-"61 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/mcc.c
+"61 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
 "67
 } 0
-"52 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/interrupt_manager.c
+"52 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 {
 "56
 } 0
-"167 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
+"167 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
 [v _I2C_Initialize I2C_Initialize `(v  1 e 1 0 ]
 {
 "174
 } 0
-"88 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/eusart.c
+"88 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/eusart.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
 {
 "130
@@ -977,7 +977,7 @@ I2C_NULL 5
 [v EUSART_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 6 ]
 "274
 } 0
-"111 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/examples/i2c_master_example.c
+"111 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/examples/i2c_master_example.c
 [v _I2C_WriteNBytes I2C_WriteNBytes `(v  1 e 1 0 ]
 {
 [v I2C_WriteNBytes@address address `uc  1 a 1 wreg ]
@@ -987,7 +987,7 @@ I2C_NULL 5
 [v I2C_WriteNBytes@address address `uc  1 a 1 27 ]
 "118
 } 0
-"283 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
+"283 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
 [v _I2C_SetAddressNackCallback I2C_SetAddressNackCallback `(v  1 e 1 0 ]
 {
 [v I2C_SetAddressNackCallback@cb cb `*.37(E360  1 p 2 11 ]
@@ -999,7 +999,7 @@ I2C_NULL 5
 {
 "254
 } 0
-"120 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/examples/i2c_master_example.c
+"120 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/examples/i2c_master_example.c
 [v _I2C_ReadNBytes I2C_ReadNBytes `(v  1 e 1 0 ]
 {
 [v I2C_ReadNBytes@address address `uc  1 a 1 wreg ]
@@ -1009,7 +1009,7 @@ I2C_NULL 5
 [v I2C_ReadNBytes@address address `uc  1 a 1 27 ]
 "126
 } 0
-"176 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
+"176 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
 [v _I2C_Open I2C_Open `(E355  1 e 1 0 ]
 {
 [v I2C_Open@address address `uc  1 a 1 wreg ]
@@ -1188,7 +1188,7 @@ I2C_NULL 5
 {
 "523
 } 0
-"170 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/examples/i2c_master_example.c
+"170 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/examples/i2c_master_example.c
 [v _rdBlkRegCompleteHandler rdBlkRegCompleteHandler `(E360  1 s 1 rdBlkRegCompleteHandler ]
 {
 [v rdBlkRegCompleteHandler@ptr ptr `*.39v  1 p 2 15 ]
@@ -1218,7 +1218,7 @@ I2C_NULL 5
 [v wr2RegCompleteHandler@ptr ptr `*.39v  1 p 2 15 ]
 "168
 } 0
-"273 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
+"273 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
 [v _I2C_SetDataCompleteCallback I2C_SetDataCompleteCallback `(v  1 e 1 0 ]
 {
 [v I2C_SetDataCompleteCallback@cb cb `*.37(E360  1 p 2 11 ]
@@ -1280,34 +1280,34 @@ I2C_NULL 5
 {
 "643
 } 0
-"58 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/interrupt_manager.c
+"58 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
 {
 "84
 } 0
-"197 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/eusart.c
+"197 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/eusart.c
 [v _EUSART_Transmit_ISR EUSART_Transmit_ISR `(v  1 e 1 0 ]
 {
 "214
 } 0
-"71 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\Modbas_RTU.c
+"71 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\Modbas_RTU.c
 [v _USART_TXC_vect USART_TXC_vect `(v  1 e 1 0 ]
 {
 "79
 } 0
-"216 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/eusart.c
+"216 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/eusart.c
 [v _EUSART_Receive_ISR EUSART_Receive_ISR `(v  1 e 1 0 ]
 {
 "238
 } 0
-"41 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\Modbas_RTU.c
+"41 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\Modbas_RTU.c
 [v _USART_RXC_vect USART_RXC_vect `(v  1 e 1 0 ]
 {
 "43
 [v USART_RXC_vect@TempModbas TempModbas `uc  1 a 1 1 ]
 "68
 } 0
-"95 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/tmr0.c
+"95 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/tmr0.c
 [v _TMR0_StartTimer TMR0_StartTimer `(v  1 e 1 0 ]
 {
 "99
@@ -1327,17 +1327,17 @@ I2C_NULL 5
 {
 "156
 } 0
-"24 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\Modbas_RTU.c
+"24 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\Modbas_RTU.c
 [v _TIMER0_COMP_vect TIMER0_COMP_vect `(v  1 e 1 0 ]
 {
 "37
 } 0
-"101 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/tmr0.c
+"101 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/tmr0.c
 [v _TMR0_StopTimer TMR0_StopTimer `(v  1 e 1 0 ]
 {
 "105
 } 0
-"252 C:\Users\orlov_pv\MPLABXProjects\pic18f26k20TEST.X\mcc_generated_files/eusart.c
+"252 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/eusart.c
 [v _EUSART_DefaultOverrunErrorHandler EUSART_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
 {
 "258

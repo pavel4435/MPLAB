@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"64 mcc_generated_files/../Modbas_RTU.h
-[; ;mcc_generated_files/../Modbas_RTU.h: 64:     {
+"65 mcc_generated_files/../Modbas_RTU.h
+[; ;mcc_generated_files/../Modbas_RTU.h: 65:     {
 [s S277 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S277 . b0 b1 b2 ]
 [v F2538 `(v ~T0 @X0 0 tf ]
@@ -54,8 +54,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "5716
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5716: extern volatile T0CONbits_t T0CONbits __attribute__((address(0xFD5)));
 [v _T0CONbits `VS257 ~T0 @X0 0 e@4053 ]
-"72 mcc_generated_files/../Modbas_RTU.h
-[; ;mcc_generated_files/../Modbas_RTU.h: 72: void TIMER0_COMP_vect(void);
+"73 mcc_generated_files/../Modbas_RTU.h
+[; ;mcc_generated_files/../Modbas_RTU.h: 73: void TIMER0_COMP_vect(void);
 [v _TIMER0_COMP_vect `(v ~T0 @X0 0 ef ]
 [v F2550 `(v ~T0 @X0 0 tf ]
 [v F2552 `(v ~T0 @X0 0 tf ]
@@ -480,31 +480,31 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6516
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6516: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"56 mcc_generated_files/../Modbas_RTU.h
-[; ;mcc_generated_files/../Modbas_RTU.h: 56:  unsigned char Danie_Rx_ModbasRtu[30] = {},quantity_Data_ModbasRtu;
+"57 mcc_generated_files/../Modbas_RTU.h
+[; ;mcc_generated_files/../Modbas_RTU.h: 57:  unsigned char Danie_Rx_ModbasRtu[30] = {},quantity_Data_ModbasRtu;
 [v _Danie_Rx_ModbasRtu `uc ~T0 @X0 -> 30 `i e ]
 [i _Danie_Rx_ModbasRtu
 :U ..
 ..
 ]
 [v _quantity_Data_ModbasRtu `uc ~T0 @X0 1 e ]
-"58
-[; ;mcc_generated_files/../Modbas_RTU.h: 58:  unsigned int Danie_ModbasRtu_analog_input [ 10 ];
-[v _Danie_ModbasRtu_analog_input `ui ~T0 @X0 -> 10 `i e ]
 "59
-[; ;mcc_generated_files/../Modbas_RTU.h: 59:  unsigned int Danie_ModbasRtu_analog_Output [ 10 ];
-[v _Danie_ModbasRtu_analog_Output `ui ~T0 @X0 -> 10 `i e ]
+[; ;mcc_generated_files/../Modbas_RTU.h: 59:  unsigned int Danie_ModbasRtu_analog_input [ 10 ];
+[v _Danie_ModbasRtu_analog_input `ui ~T0 @X0 -> 10 `i e ]
 "60
-[; ;mcc_generated_files/../Modbas_RTU.h: 60:  unsigned char Danie_ModbasRtu_Binary_input [ (10 / 8)+ 1 ];
-[v _Danie_ModbasRtu_Binary_input `uc ~T0 @X0 -> 2 `i e ]
+[; ;mcc_generated_files/../Modbas_RTU.h: 60:  unsigned int Danie_ModbasRtu_analog_Output [ 10 ];
+[v _Danie_ModbasRtu_analog_Output `ui ~T0 @X0 -> 10 `i e ]
 "61
-[; ;mcc_generated_files/../Modbas_RTU.h: 61:  unsigned char Danie_ModbasRtu_Binary_Output [ (10/ 8)+ 1 ];
-[v _Danie_ModbasRtu_Binary_Output `uc ~T0 @X0 -> 2 `i e ]
+[; ;mcc_generated_files/../Modbas_RTU.h: 61:  unsigned char Danie_ModbasRtu_Binary_input [ (10 / 8)+ 1 ];
+[v _Danie_ModbasRtu_Binary_input `uc ~T0 @X0 -> 2 `i e ]
 "62
-[; ;mcc_generated_files/../Modbas_RTU.h: 62:  unsigned char Temp_ModbasRtu;
+[; ;mcc_generated_files/../Modbas_RTU.h: 62:  unsigned char Danie_ModbasRtu_Binary_Output [ (10/ 8)+ 1 ];
+[v _Danie_ModbasRtu_Binary_Output `uc ~T0 @X0 -> 2 `i e ]
+"63
+[; ;mcc_generated_files/../Modbas_RTU.h: 63:  unsigned char Temp_ModbasRtu;
 [v _Temp_ModbasRtu `uc ~T0 @X0 1 e ]
-"68
-[; ;mcc_generated_files/../Modbas_RTU.h: 68:     } Bit_action_ModbasRtu = {0,0,0},D;
+"69
+[; ;mcc_generated_files/../Modbas_RTU.h: 69:     } Bit_action_ModbasRtu = {0,0,0},D;
 [v _Bit_action_ModbasRtu `S277 ~T0 @X0 1 e ]
 [i _Bit_action_ModbasRtu
 :U ..
@@ -516,8 +516,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _D `S277 ~T0 @X0 1 e ]
-"69
-[; ;mcc_generated_files/../Modbas_RTU.h: 69: unsigned char USART_UDR_vect = 0;
+"70
+[; ;mcc_generated_files/../Modbas_RTU.h: 70: unsigned char USART_UDR_vect = 0;
 [v _USART_UDR_vect `uc ~T0 @X0 1 e ]
 [i _USART_UDR_vect
 -> -> 0 `i `uc

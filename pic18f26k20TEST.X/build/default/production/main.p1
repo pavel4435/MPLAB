@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"64 ./Modbas_RTU.h
-[; ;./Modbas_RTU.h: 64:     {
+"65 ./Modbas_RTU.h
+[; ;./Modbas_RTU.h: 65:     {
 [s S281 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S281 . b0 b1 b2 ]
 [p mainexit ]
@@ -11,15 +11,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "505 ./mcc_generated_files/eusart.h
 [; ;./mcc_generated_files/eusart.h: 505: void EUSART_SetRxInterruptHandler(void (* interruptHandler)(void));
 [v _EUSART_SetRxInterruptHandler `(v ~T0 @X0 0 ef1`*F2907 ]
-"73 ./Modbas_RTU.h
-[; ;./Modbas_RTU.h: 73: void USART_RXC_vect(void);
+"74 ./Modbas_RTU.h
+[; ;./Modbas_RTU.h: 74: void USART_RXC_vect(void);
 [v _USART_RXC_vect `(v ~T0 @X0 0 ef ]
 [v F2903 `(v ~T0 @X0 0 tf ]
 "485 ./mcc_generated_files/eusart.h
 [; ;./mcc_generated_files/eusart.h: 485: void EUSART_SetTxInterruptHandler(void (* interruptHandler)(void));
 [v _EUSART_SetTxInterruptHandler `(v ~T0 @X0 0 ef1`*F2903 ]
-"74 ./Modbas_RTU.h
-[; ;./Modbas_RTU.h: 74: void USART_TXC_vect (void);
+"75 ./Modbas_RTU.h
+[; ;./Modbas_RTU.h: 75: void USART_TXC_vect (void);
 [v _USART_TXC_vect `(v ~T0 @X0 0 ef ]
 "6213 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6213:     struct {
@@ -131,11 +131,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3194
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 3194: extern volatile TXSTAbits_t TXSTAbits __attribute__((address(0xFAC)));
 [v _TXSTAbits `VS132 ~T0 @X0 0 e@4012 ]
-"75 ./Modbas_RTU.h
-[; ;./Modbas_RTU.h: 75: void USART_UDRE_vect(void);
+"76 ./Modbas_RTU.h
+[; ;./Modbas_RTU.h: 76: void USART_UDRE_vect(void);
 [v _USART_UDRE_vect `(v ~T0 @X0 0 ef ]
-"98
-[; ;./Modbas_RTU.h: 98:     void modbasRtu_Slave( void );
+"99
+[; ;./Modbas_RTU.h: 99:     void modbasRtu_Slave( void );
 [v _modbasRtu_Slave `(v ~T0 @X0 0 ef ]
 "55 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 55: __asm("SSPMSK equ 0F77h");
@@ -557,31 +557,31 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6516
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6516: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"56 ./Modbas_RTU.h
-[; ;./Modbas_RTU.h: 56:  unsigned char Danie_Rx_ModbasRtu[30] = {},quantity_Data_ModbasRtu;
+"57 ./Modbas_RTU.h
+[; ;./Modbas_RTU.h: 57:  unsigned char Danie_Rx_ModbasRtu[30] = {},quantity_Data_ModbasRtu;
 [v _Danie_Rx_ModbasRtu `uc ~T0 @X0 -> 30 `i e ]
 [i _Danie_Rx_ModbasRtu
 :U ..
 ..
 ]
 [v _quantity_Data_ModbasRtu `uc ~T0 @X0 1 e ]
-"58
-[; ;./Modbas_RTU.h: 58:  unsigned int Danie_ModbasRtu_analog_input [ 10 ];
-[v _Danie_ModbasRtu_analog_input `ui ~T0 @X0 -> 10 `i e ]
 "59
-[; ;./Modbas_RTU.h: 59:  unsigned int Danie_ModbasRtu_analog_Output [ 10 ];
-[v _Danie_ModbasRtu_analog_Output `ui ~T0 @X0 -> 10 `i e ]
+[; ;./Modbas_RTU.h: 59:  unsigned int Danie_ModbasRtu_analog_input [ 10 ];
+[v _Danie_ModbasRtu_analog_input `ui ~T0 @X0 -> 10 `i e ]
 "60
-[; ;./Modbas_RTU.h: 60:  unsigned char Danie_ModbasRtu_Binary_input [ (10 / 8)+ 1 ];
-[v _Danie_ModbasRtu_Binary_input `uc ~T0 @X0 -> 2 `i e ]
+[; ;./Modbas_RTU.h: 60:  unsigned int Danie_ModbasRtu_analog_Output [ 10 ];
+[v _Danie_ModbasRtu_analog_Output `ui ~T0 @X0 -> 10 `i e ]
 "61
-[; ;./Modbas_RTU.h: 61:  unsigned char Danie_ModbasRtu_Binary_Output [ (10/ 8)+ 1 ];
-[v _Danie_ModbasRtu_Binary_Output `uc ~T0 @X0 -> 2 `i e ]
+[; ;./Modbas_RTU.h: 61:  unsigned char Danie_ModbasRtu_Binary_input [ (10 / 8)+ 1 ];
+[v _Danie_ModbasRtu_Binary_input `uc ~T0 @X0 -> 2 `i e ]
 "62
-[; ;./Modbas_RTU.h: 62:  unsigned char Temp_ModbasRtu;
+[; ;./Modbas_RTU.h: 62:  unsigned char Danie_ModbasRtu_Binary_Output [ (10/ 8)+ 1 ];
+[v _Danie_ModbasRtu_Binary_Output `uc ~T0 @X0 -> 2 `i e ]
+"63
+[; ;./Modbas_RTU.h: 63:  unsigned char Temp_ModbasRtu;
 [v _Temp_ModbasRtu `uc ~T0 @X0 1 e ]
-"68
-[; ;./Modbas_RTU.h: 68:     } Bit_action_ModbasRtu = {0,0,0},D;
+"69
+[; ;./Modbas_RTU.h: 69:     } Bit_action_ModbasRtu = {0,0,0},D;
 [v _Bit_action_ModbasRtu `S281 ~T0 @X0 1 e ]
 [i _Bit_action_ModbasRtu
 :U ..
@@ -593,8 +593,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _D `S281 ~T0 @X0 1 e ]
-"69
-[; ;./Modbas_RTU.h: 69: unsigned char USART_UDR_vect = 0;
+"70
+[; ;./Modbas_RTU.h: 70: unsigned char USART_UDR_vect = 0;
 [v _USART_UDR_vect `uc ~T0 @X0 1 e ]
 [i _USART_UDR_vect
 -> -> 0 `i `uc

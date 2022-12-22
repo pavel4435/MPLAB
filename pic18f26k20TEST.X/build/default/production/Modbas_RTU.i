@@ -4465,7 +4465,7 @@ unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\\pic\\include\\xc.h" 2 3
 # 34 "./Modbas_RTU.h" 2
-# 56 "./Modbas_RTU.h"
+# 57 "./Modbas_RTU.h"
  unsigned char Danie_Rx_ModbasRtu[30] = {},quantity_Data_ModbasRtu;
 
  unsigned int Danie_ModbasRtu_analog_input [ 10 ];
