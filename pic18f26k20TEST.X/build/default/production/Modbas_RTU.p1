@@ -1,0 +1,1786 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"64 ./Modbas_RTU.h
+[; ;./Modbas_RTU.h: 64:     {
+[s S277 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S277 . b0 b1 b2 ]
+"161 ./mcc_generated_files/tmr0.h
+[; ;./mcc_generated_files/tmr0.h: 161: void TMR0_StopTimer(void);
+[v _TMR0_StopTimer `(v ~T0 @X0 0 ef ]
+"3423 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 3423: extern volatile unsigned char RCREG __attribute__((address(0xFAE)));
+[v _RCREG `Vuc ~T0 @X0 0 e@4014 ]
+"271 ./mcc_generated_files/tmr0.h
+[; ;./mcc_generated_files/tmr0.h: 271: void TMR0_Reload(void);
+[v _TMR0_Reload `(v ~T0 @X0 0 ef ]
+"1258 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 1258:     struct {
+[s S61 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S61 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
+"1268
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 1268:     struct {
+[s S62 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S62 . LA0 LA1 LA2 LA3 LA4 LA5 LA6 LA7 ]
+"1257
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 1257: typedef union {
+[u S60 `S61 1 `S62 1 ]
+[n S60 . . . ]
+"1279
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 1279: extern volatile LATAbits_t LATAbits __attribute__((address(0xF89)));
+[v _LATAbits `VS60 ~T0 @X0 0 e@3977 ]
+"129 ./mcc_generated_files/tmr0.h
+[; ;./mcc_generated_files/tmr0.h: 129: void TMR0_StartTimer(void);
+[v _TMR0_StartTimer `(v ~T0 @X0 0 ef ]
+"2330 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 2330:     struct {
+[s S91 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S91 . TMR1IE TMR2IE CCP1IE SSPIE TXIE RCIE ADIE ]
+"2339
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 2339:     struct {
+[s S92 :4 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S92 . . TX1IE RC1IE ]
+"2329
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 2329: typedef union {
+[u S90 `S91 1 `S92 1 ]
+[n S90 . . . ]
+"2345
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 2345: extern volatile PIE1bits_t PIE1bits __attribute__((address(0xF9D)));
+[v _PIE1bits `VS90 ~T0 @X0 0 e@3997 ]
+"3411
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 3411: extern volatile unsigned char TXREG __attribute__((address(0xFAD)));
+[v _TXREG `Vuc ~T0 @X0 0 e@4013 ]
+"87 ./Modbas_RTU.h
+[; ;./Modbas_RTU.h: 87:     void Error_modbasRtu (volatile unsigned char Temp_Error);
+[v _Error_modbasRtu `(v ~T0 @X0 0 ef1`Vuc ]
+"88
+[; ;./Modbas_RTU.h: 88:     void check_sum ( register unsigned char Adress);
+[v _check_sum `(v ~T0 @X0 0 ef1`uc ]
+"55 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 55: __asm("SSPMSK equ 0F77h");
+[; <" SSPMSK equ 0F77h ;# ">
+"125
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 125: __asm("SLRCON equ 0F78h");
+[; <" SLRCON equ 0F78h ;# ">
+"157
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 157: __asm("CM2CON1 equ 0F79h");
+[; <" CM2CON1 equ 0F79h ;# ">
+"196
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 196: __asm("CM2CON0 equ 0F7Ah");
+[; <" CM2CON0 equ 0F7Ah ;# ">
+"266
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 266: __asm("CM1CON0 equ 0F7Bh");
+[; <" CM1CON0 equ 0F7Bh ;# ">
+"336
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 336: __asm("WPUB equ 0F7Ch");
+[; <" WPUB equ 0F7Ch ;# ">
+"398
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 398: __asm("IOCB equ 0F7Dh");
+[; <" IOCB equ 0F7Dh ;# ">
+"437
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 437: __asm("ANSEL equ 0F7Eh");
+[; <" ANSEL equ 0F7Eh ;# ">
+"481
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 481: __asm("ANSELH equ 0F7Fh");
+[; <" ANSELH equ 0F7Fh ;# ">
+"525
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 525: __asm("PORTA equ 0F80h");
+[; <" PORTA equ 0F80h ;# ">
+"761
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 761: __asm("PORTB equ 0F81h");
+[; <" PORTB equ 0F81h ;# ">
+"991
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 991: __asm("PORTC equ 0F82h");
+[; <" PORTC equ 0F82h ;# ">
+"1179
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 1179: __asm("PORTE equ 0F84h");
+[; <" PORTE equ 0F84h ;# ">
+"1254
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 1254: __asm("LATA equ 0F89h");
+[; <" LATA equ 0F89h ;# ">
+"1366
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 1366: __asm("LATB equ 0F8Ah");
+[; <" LATB equ 0F8Ah ;# ">
+"1478
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 1478: __asm("LATC equ 0F8Bh");
+[; <" LATC equ 0F8Bh ;# ">
+"1590
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 1590: __asm("TRISA equ 0F92h");
+[; <" TRISA equ 0F92h ;# ">
+"1595
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 1595: __asm("DDRA equ 0F92h");
+[; <" DDRA equ 0F92h ;# ">
+"1812
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 1812: __asm("TRISB equ 0F93h");
+[; <" TRISB equ 0F93h ;# ">
+"1817
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 1817: __asm("DDRB equ 0F93h");
+[; <" DDRB equ 0F93h ;# ">
+"2034
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 2034: __asm("TRISC equ 0F94h");
+[; <" TRISC equ 0F94h ;# ">
+"2039
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 2039: __asm("DDRC equ 0F94h");
+[; <" DDRC equ 0F94h ;# ">
+"2256
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 2256: __asm("OSCTUNE equ 0F9Bh");
+[; <" OSCTUNE equ 0F9Bh ;# ">
+"2326
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 2326: __asm("PIE1 equ 0F9Dh");
+[; <" PIE1 equ 0F9Dh ;# ">
+"2397
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 2397: __asm("PIR1 equ 0F9Eh");
+[; <" PIR1 equ 0F9Eh ;# ">
+"2468
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 2468: __asm("IPR1 equ 0F9Fh");
+[; <" IPR1 equ 0F9Fh ;# ">
+"2539
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 2539: __asm("PIE2 equ 0FA0h");
+[; <" PIE2 equ 0FA0h ;# ">
+"2619
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 2619: __asm("PIR2 equ 0FA1h");
+[; <" PIR2 equ 0FA1h ;# ">
+"2699
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 2699: __asm("IPR2 equ 0FA2h");
+[; <" IPR2 equ 0FA2h ;# ">
+"2779
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 2779: __asm("EECON1 equ 0FA6h");
+[; <" EECON1 equ 0FA6h ;# ">
+"2845
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 2845: __asm("EECON2 equ 0FA7h");
+[; <" EECON2 equ 0FA7h ;# ">
+"2852
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 2852: __asm("EEDATA equ 0FA8h");
+[; <" EEDATA equ 0FA8h ;# ">
+"2859
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 2859: __asm("EEADR equ 0FA9h");
+[; <" EEADR equ 0FA9h ;# ">
+"2921
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 2921: __asm("EEADRH equ 0FAAh");
+[; <" EEADRH equ 0FAAh ;# ">
+"2947
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 2947: __asm("RCSTA equ 0FABh");
+[; <" RCSTA equ 0FABh ;# ">
+"2952
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 2952: __asm("RCSTA1 equ 0FABh");
+[; <" RCSTA1 equ 0FABh ;# ">
+"3157
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 3157: __asm("TXSTA equ 0FACh");
+[; <" TXSTA equ 0FACh ;# ">
+"3162
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 3162: __asm("TXSTA1 equ 0FACh");
+[; <" TXSTA1 equ 0FACh ;# ">
+"3413
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 3413: __asm("TXREG equ 0FADh");
+[; <" TXREG equ 0FADh ;# ">
+"3418
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 3418: __asm("TXREG1 equ 0FADh");
+[; <" TXREG1 equ 0FADh ;# ">
+"3425
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 3425: __asm("RCREG equ 0FAEh");
+[; <" RCREG equ 0FAEh ;# ">
+"3430
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 3430: __asm("RCREG1 equ 0FAEh");
+[; <" RCREG1 equ 0FAEh ;# ">
+"3437
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 3437: __asm("SPBRG equ 0FAFh");
+[; <" SPBRG equ 0FAFh ;# ">
+"3442
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 3442: __asm("SPBRG1 equ 0FAFh");
+[; <" SPBRG1 equ 0FAFh ;# ">
+"3449
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 3449: __asm("SPBRGH equ 0FB0h");
+[; <" SPBRGH equ 0FB0h ;# ">
+"3456
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 3456: __asm("T3CON equ 0FB1h");
+[; <" T3CON equ 0FB1h ;# ">
+"3568
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 3568: __asm("TMR3 equ 0FB2h");
+[; <" TMR3 equ 0FB2h ;# ">
+"3575
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 3575: __asm("TMR3L equ 0FB2h");
+[; <" TMR3L equ 0FB2h ;# ">
+"3582
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 3582: __asm("TMR3H equ 0FB3h");
+[; <" TMR3H equ 0FB3h ;# ">
+"3589
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 3589: __asm("CVRCON2 equ 0FB4h");
+[; <" CVRCON2 equ 0FB4h ;# ">
+"3616
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 3616: __asm("CVRCON equ 0FB5h");
+[; <" CVRCON equ 0FB5h ;# ">
+"3695
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 3695: __asm("ECCP1AS equ 0FB6h");
+[; <" ECCP1AS equ 0FB6h ;# ">
+"3777
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 3777: __asm("PWM1CON equ 0FB7h");
+[; <" PWM1CON equ 0FB7h ;# ">
+"3847
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 3847: __asm("BAUDCON equ 0FB8h");
+[; <" BAUDCON equ 0FB8h ;# ">
+"3852
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 3852: __asm("BAUDCTL equ 0FB8h");
+[; <" BAUDCTL equ 0FB8h ;# ">
+"4013
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 4013: __asm("PSTRCON equ 0FB9h");
+[; <" PSTRCON equ 0FB9h ;# ">
+"4057
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 4057: __asm("CCP2CON equ 0FBAh");
+[; <" CCP2CON equ 0FBAh ;# ">
+"4121
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 4121: __asm("CCPR2 equ 0FBBh");
+[; <" CCPR2 equ 0FBBh ;# ">
+"4128
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 4128: __asm("CCPR2L equ 0FBBh");
+[; <" CCPR2L equ 0FBBh ;# ">
+"4135
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 4135: __asm("CCPR2H equ 0FBCh");
+[; <" CCPR2H equ 0FBCh ;# ">
+"4142
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 4142: __asm("CCP1CON equ 0FBDh");
+[; <" CCP1CON equ 0FBDh ;# ">
+"4224
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 4224: __asm("CCPR1 equ 0FBEh");
+[; <" CCPR1 equ 0FBEh ;# ">
+"4231
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 4231: __asm("CCPR1L equ 0FBEh");
+[; <" CCPR1L equ 0FBEh ;# ">
+"4238
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 4238: __asm("CCPR1H equ 0FBFh");
+[; <" CCPR1H equ 0FBFh ;# ">
+"4245
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 4245: __asm("ADCON2 equ 0FC0h");
+[; <" ADCON2 equ 0FC0h ;# ">
+"4316
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 4316: __asm("ADCON1 equ 0FC1h");
+[; <" ADCON1 equ 0FC1h ;# ">
+"4367
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 4367: __asm("ADCON0 equ 0FC2h");
+[; <" ADCON0 equ 0FC2h ;# ">
+"4486
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 4486: __asm("ADRES equ 0FC3h");
+[; <" ADRES equ 0FC3h ;# ">
+"4493
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 4493: __asm("ADRESL equ 0FC3h");
+[; <" ADRESL equ 0FC3h ;# ">
+"4500
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 4500: __asm("ADRESH equ 0FC4h");
+[; <" ADRESH equ 0FC4h ;# ">
+"4507
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 4507: __asm("SSPCON2 equ 0FC5h");
+[; <" SSPCON2 equ 0FC5h ;# ">
+"4569
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 4569: __asm("SSPCON1 equ 0FC6h");
+[; <" SSPCON1 equ 0FC6h ;# ">
+"4639
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 4639: __asm("SSPSTAT equ 0FC7h");
+[; <" SSPSTAT equ 0FC7h ;# ">
+"4864
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 4864: __asm("SSPADD equ 0FC8h");
+[; <" SSPADD equ 0FC8h ;# ">
+"4871
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 4871: __asm("SSPBUF equ 0FC9h");
+[; <" SSPBUF equ 0FC9h ;# ">
+"4878
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 4878: __asm("T2CON equ 0FCAh");
+[; <" T2CON equ 0FCAh ;# ">
+"4949
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 4949: __asm("PR2 equ 0FCBh");
+[; <" PR2 equ 0FCBh ;# ">
+"4954
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 4954: __asm("MEMCON equ 0FCBh");
+[; <" MEMCON equ 0FCBh ;# ">
+"5059
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5059: __asm("TMR2 equ 0FCCh");
+[; <" TMR2 equ 0FCCh ;# ">
+"5066
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5066: __asm("T1CON equ 0FCDh");
+[; <" T1CON equ 0FCDh ;# ">
+"5169
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5169: __asm("TMR1 equ 0FCEh");
+[; <" TMR1 equ 0FCEh ;# ">
+"5176
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5176: __asm("TMR1L equ 0FCEh");
+[; <" TMR1L equ 0FCEh ;# ">
+"5183
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5183: __asm("TMR1H equ 0FCFh");
+[; <" TMR1H equ 0FCFh ;# ">
+"5190
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5190: __asm("RCON equ 0FD0h");
+[; <" RCON equ 0FD0h ;# ">
+"5323
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5323: __asm("WDTCON equ 0FD1h");
+[; <" WDTCON equ 0FD1h ;# ">
+"5351
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5351: __asm("HLVDCON equ 0FD2h");
+[; <" HLVDCON equ 0FD2h ;# ">
+"5356
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5356: __asm("LVDCON equ 0FD2h");
+[; <" LVDCON equ 0FD2h ;# ">
+"5621
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5621: __asm("OSCCON equ 0FD3h");
+[; <" OSCCON equ 0FD3h ;# ">
+"5698
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5698: __asm("T0CON equ 0FD5h");
+[; <" T0CON equ 0FD5h ;# ">
+"5768
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5768: __asm("TMR0 equ 0FD6h");
+[; <" TMR0 equ 0FD6h ;# ">
+"5775
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5775: __asm("TMR0L equ 0FD6h");
+[; <" TMR0L equ 0FD6h ;# ">
+"5782
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5782: __asm("TMR0H equ 0FD7h");
+[; <" TMR0H equ 0FD7h ;# ">
+"5789
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5789: __asm("STATUS equ 0FD8h");
+[; <" STATUS equ 0FD8h ;# ">
+"5860
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5860: __asm("FSR2 equ 0FD9h");
+[; <" FSR2 equ 0FD9h ;# ">
+"5867
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5867: __asm("FSR2L equ 0FD9h");
+[; <" FSR2L equ 0FD9h ;# ">
+"5874
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5874: __asm("FSR2H equ 0FDAh");
+[; <" FSR2H equ 0FDAh ;# ">
+"5881
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5881: __asm("PLUSW2 equ 0FDBh");
+[; <" PLUSW2 equ 0FDBh ;# ">
+"5888
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5888: __asm("PREINC2 equ 0FDCh");
+[; <" PREINC2 equ 0FDCh ;# ">
+"5895
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5895: __asm("POSTDEC2 equ 0FDDh");
+[; <" POSTDEC2 equ 0FDDh ;# ">
+"5902
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5902: __asm("POSTINC2 equ 0FDEh");
+[; <" POSTINC2 equ 0FDEh ;# ">
+"5909
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5909: __asm("INDF2 equ 0FDFh");
+[; <" INDF2 equ 0FDFh ;# ">
+"5916
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5916: __asm("BSR equ 0FE0h");
+[; <" BSR equ 0FE0h ;# ">
+"5923
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5923: __asm("FSR1 equ 0FE1h");
+[; <" FSR1 equ 0FE1h ;# ">
+"5930
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5930: __asm("FSR1L equ 0FE1h");
+[; <" FSR1L equ 0FE1h ;# ">
+"5937
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5937: __asm("FSR1H equ 0FE2h");
+[; <" FSR1H equ 0FE2h ;# ">
+"5944
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5944: __asm("PLUSW1 equ 0FE3h");
+[; <" PLUSW1 equ 0FE3h ;# ">
+"5951
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5951: __asm("PREINC1 equ 0FE4h");
+[; <" PREINC1 equ 0FE4h ;# ">
+"5958
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5958: __asm("POSTDEC1 equ 0FE5h");
+[; <" POSTDEC1 equ 0FE5h ;# ">
+"5965
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5965: __asm("POSTINC1 equ 0FE6h");
+[; <" POSTINC1 equ 0FE6h ;# ">
+"5972
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5972: __asm("INDF1 equ 0FE7h");
+[; <" INDF1 equ 0FE7h ;# ">
+"5979
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5979: __asm("WREG equ 0FE8h");
+[; <" WREG equ 0FE8h ;# ">
+"5991
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5991: __asm("FSR0 equ 0FE9h");
+[; <" FSR0 equ 0FE9h ;# ">
+"5998
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 5998: __asm("FSR0L equ 0FE9h");
+[; <" FSR0L equ 0FE9h ;# ">
+"6005
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6005: __asm("FSR0H equ 0FEAh");
+[; <" FSR0H equ 0FEAh ;# ">
+"6012
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6012: __asm("PLUSW0 equ 0FEBh");
+[; <" PLUSW0 equ 0FEBh ;# ">
+"6019
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6019: __asm("PREINC0 equ 0FECh");
+[; <" PREINC0 equ 0FECh ;# ">
+"6026
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6026: __asm("POSTDEC0 equ 0FEDh");
+[; <" POSTDEC0 equ 0FEDh ;# ">
+"6033
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6033: __asm("POSTINC0 equ 0FEEh");
+[; <" POSTINC0 equ 0FEEh ;# ">
+"6040
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6040: __asm("INDF0 equ 0FEFh");
+[; <" INDF0 equ 0FEFh ;# ">
+"6047
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6047: __asm("INTCON3 equ 0FF0h");
+[; <" INTCON3 equ 0FF0h ;# ">
+"6139
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6139: __asm("INTCON2 equ 0FF1h");
+[; <" INTCON2 equ 0FF1h ;# ">
+"6209
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6209: __asm("INTCON equ 0FF2h");
+[; <" INTCON equ 0FF2h ;# ">
+"6326
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6326: __asm("PROD equ 0FF3h");
+[; <" PROD equ 0FF3h ;# ">
+"6333
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6333: __asm("PRODL equ 0FF3h");
+[; <" PRODL equ 0FF3h ;# ">
+"6340
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6340: __asm("PRODH equ 0FF4h");
+[; <" PRODH equ 0FF4h ;# ">
+"6347
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6347: __asm("TABLAT equ 0FF5h");
+[; <" TABLAT equ 0FF5h ;# ">
+"6356
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6356: __asm("TBLPTR equ 0FF6h");
+[; <" TBLPTR equ 0FF6h ;# ">
+"6363
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6363: __asm("TBLPTRL equ 0FF6h");
+[; <" TBLPTRL equ 0FF6h ;# ">
+"6370
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6370: __asm("TBLPTRH equ 0FF7h");
+[; <" TBLPTRH equ 0FF7h ;# ">
+"6377
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6377: __asm("TBLPTRU equ 0FF8h");
+[; <" TBLPTRU equ 0FF8h ;# ">
+"6386
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6386: __asm("PCLAT equ 0FF9h");
+[; <" PCLAT equ 0FF9h ;# ">
+"6393
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6393: __asm("PC equ 0FF9h");
+[; <" PC equ 0FF9h ;# ">
+"6400
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6400: __asm("PCL equ 0FF9h");
+[; <" PCL equ 0FF9h ;# ">
+"6407
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6407: __asm("PCLATH equ 0FFAh");
+[; <" PCLATH equ 0FFAh ;# ">
+"6414
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6414: __asm("PCLATU equ 0FFBh");
+[; <" PCLATU equ 0FFBh ;# ">
+"6421
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6421: __asm("STKPTR equ 0FFCh");
+[; <" STKPTR equ 0FFCh ;# ">
+"6495
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6495: __asm("TOS equ 0FFDh");
+[; <" TOS equ 0FFDh ;# ">
+"6502
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6502: __asm("TOSL equ 0FFDh");
+[; <" TOSL equ 0FFDh ;# ">
+"6509
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6509: __asm("TOSH equ 0FFEh");
+[; <" TOSH equ 0FFEh ;# ">
+"6516
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6516: __asm("TOSU equ 0FFFh");
+[; <" TOSU equ 0FFFh ;# ">
+"56 ./Modbas_RTU.h
+[; ;./Modbas_RTU.h: 56:  unsigned char Danie_Rx_ModbasRtu[30] = {},quantity_Data_ModbasRtu;
+[v _Danie_Rx_ModbasRtu `uc ~T0 @X0 -> 30 `i e ]
+[i _Danie_Rx_ModbasRtu
+:U ..
+..
+]
+[v _quantity_Data_ModbasRtu `uc ~T0 @X0 1 e ]
+"58
+[; ;./Modbas_RTU.h: 58:  unsigned int Danie_ModbasRtu_analog_input [ 10 ];
+[v _Danie_ModbasRtu_analog_input `ui ~T0 @X0 -> 10 `i e ]
+"59
+[; ;./Modbas_RTU.h: 59:  unsigned int Danie_ModbasRtu_analog_Output [ 10 ];
+[v _Danie_ModbasRtu_analog_Output `ui ~T0 @X0 -> 10 `i e ]
+"60
+[; ;./Modbas_RTU.h: 60:  unsigned char Danie_ModbasRtu_Binary_input [ (10 / 8)+ 1 ];
+[v _Danie_ModbasRtu_Binary_input `uc ~T0 @X0 -> 2 `i e ]
+"61
+[; ;./Modbas_RTU.h: 61:  unsigned char Danie_ModbasRtu_Binary_Output [ (10/ 8)+ 1 ];
+[v _Danie_ModbasRtu_Binary_Output `uc ~T0 @X0 -> 2 `i e ]
+"62
+[; ;./Modbas_RTU.h: 62:  unsigned char Temp_ModbasRtu;
+[v _Temp_ModbasRtu `uc ~T0 @X0 1 e ]
+"68
+[; ;./Modbas_RTU.h: 68:     } Bit_action_ModbasRtu = {0,0,0},D;
+[v _Bit_action_ModbasRtu `S277 ~T0 @X0 1 e ]
+[i _Bit_action_ModbasRtu
+:U ..
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+..
+]
+[v _D `S277 ~T0 @X0 1 e ]
+"69
+[; ;./Modbas_RTU.h: 69: unsigned char USART_UDR_vect = 0;
+[v _USART_UDR_vect `uc ~T0 @X0 1 e ]
+[i _USART_UDR_vect
+-> -> 0 `i `uc
+]
+"24 Modbas_RTU.c
+[; ;Modbas_RTU.c: 24:   void TIMER0_COMP_vect (void)
+[v _TIMER0_COMP_vect `(v ~T0 @X0 1 ef ]
+"25
+[; ;Modbas_RTU.c: 25:  {
+{
+[e :U _TIMER0_COMP_vect ]
+[f ]
+"27
+[; ;Modbas_RTU.c: 27:    Bit_action_ModbasRtu.b0 = 0;
+[e = . _Bit_action_ModbasRtu 0 -> -> 0 `i `uc ]
+"28
+[; ;Modbas_RTU.c: 28:    TMR0_StopTimer();
+[e ( _TMR0_StopTimer ..  ]
+"29
+[; ;Modbas_RTU.c: 29:       if ( Bit_action_ModbasRtu.b1)
+[e $ ! != -> . _Bit_action_ModbasRtu 1 `i -> 0 `i 283  ]
+"30
+[; ;Modbas_RTU.c: 30:        {
+{
+"31
+[; ;Modbas_RTU.c: 31:       Bit_action_ModbasRtu.b1 = 0;
+[e = . _Bit_action_ModbasRtu 1 -> -> 0 `i `uc ]
+"34
+[; ;Modbas_RTU.c: 34:    Bit_action_ModbasRtu.b2 = 1;
+[e = . _Bit_action_ModbasRtu 2 -> -> 1 `i `uc ]
+"36
+[; ;Modbas_RTU.c: 36:        }
+}
+[e :U 283 ]
+"37
+[; ;Modbas_RTU.c: 37:  }
+[e :UE 282 ]
+}
+"41
+[; ;Modbas_RTU.c: 41: void USART_RXC_vect(void)
+[v _USART_RXC_vect `(v ~T0 @X0 1 ef ]
+"42
+[; ;Modbas_RTU.c: 42:  {
+{
+[e :U _USART_RXC_vect ]
+[f ]
+"43
+[; ;Modbas_RTU.c: 43:      unsigned char TempModbas = RCREG;
+[v _TempModbas `uc ~T0 @X0 1 a ]
+[e = _TempModbas _RCREG ]
+"45
+[; ;Modbas_RTU.c: 45:  TMR0_Reload();
+[e ( _TMR0_Reload ..  ]
+"46
+[; ;Modbas_RTU.c: 46:  if (!Bit_action_ModbasRtu.b2)
+[e $ ! ! != -> . _Bit_action_ModbasRtu 2 `i -> 0 `i 285  ]
+"47
+[; ;Modbas_RTU.c: 47:   {
+{
+"48
+[; ;Modbas_RTU.c: 48:   if (!Bit_action_ModbasRtu.b0)
+[e $ ! ! != -> . _Bit_action_ModbasRtu 0 `i -> 0 `i 286  ]
+"49
+[; ;Modbas_RTU.c: 49:    {
+{
+"50
+[; ;Modbas_RTU.c: 50:    Bit_action_ModbasRtu.b0 = 1;
+[e = . _Bit_action_ModbasRtu 0 -> -> 1 `i `uc ]
+"51
+[; ;Modbas_RTU.c: 51:    if (TempModbas == 0x31 )
+[e $ ! == -> _TempModbas `i -> 49 `i 287  ]
+"52
+[; ;Modbas_RTU.c: 52:     {
+{
+"53
+[; ;Modbas_RTU.c: 53:     Bit_action_ModbasRtu.b1 = 1;
+[e = . _Bit_action_ModbasRtu 1 -> -> 1 `i `uc ]
+"55
+[; ;Modbas_RTU.c: 55:                 do { LATAbits.LATA1 = ~LATAbits.LATA1; } while(0);
+[e :U 290 ]
+{
+[e = . . _LATAbits 0 1 -> ~ -> . . _LATAbits 0 1 `i `uc ]
+}
+[e :U 289 ]
+"56
+[; ;Modbas_RTU.c: 56:     }
+}
+[e :U 287 ]
+"57
+[; ;Modbas_RTU.c: 57:    quantity_Data_ModbasRtu = 0;
+[e = _quantity_Data_ModbasRtu -> -> 0 `i `uc ]
+"58
+[; ;Modbas_RTU.c: 58:    TMR0_StartTimer();
+[e ( _TMR0_StartTimer ..  ]
+"59
+[; ;Modbas_RTU.c: 59:    }
+}
+[e :U 286 ]
+"60
+[; ;Modbas_RTU.c: 60:   if (Bit_action_ModbasRtu.b1 == 1)
+[e $ ! == -> . _Bit_action_ModbasRtu 1 `i -> 1 `i 291  ]
+"62
+[; ;Modbas_RTU.c: 62:    {
+{
+"63
+[; ;Modbas_RTU.c: 63:      Danie_Rx_ModbasRtu[quantity_Data_ModbasRtu] = TempModbas;
+[e = *U + &U _Danie_Rx_ModbasRtu * -> _quantity_Data_ModbasRtu `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux _TempModbas ]
+"64
+[; ;Modbas_RTU.c: 64:      quantity_Data_ModbasRtu ++;
+[e ++ _quantity_Data_ModbasRtu -> -> 1 `i `uc ]
+"66
+[; ;Modbas_RTU.c: 66:    }
+}
+[e :U 291 ]
+"67
+[; ;Modbas_RTU.c: 67:   }
+}
+[e :U 285 ]
+"68
+[; ;Modbas_RTU.c: 68:  }
+[e :UE 284 ]
+}
+"71
+[; ;Modbas_RTU.c: 71: void USART_TXC_vect(void)
+[v _USART_TXC_vect `(v ~T0 @X0 1 ef ]
+"72
+[; ;Modbas_RTU.c: 72:  {
+{
+[e :U _USART_TXC_vect ]
+[f ]
+"75
+[; ;Modbas_RTU.c: 75:    PIE1bits.TX1IE=0;
+[e = . . _PIE1bits 1 1 -> -> 0 `i `uc ]
+"79
+[; ;Modbas_RTU.c: 79:  }
+[e :UE 292 ]
+}
+"82
+[; ;Modbas_RTU.c: 82: void USART_UDRE_vect (void)
+[v _USART_UDRE_vect `(v ~T0 @X0 1 ef ]
+"83
+[; ;Modbas_RTU.c: 83:  {
+{
+[e :U _USART_UDRE_vect ]
+[f ]
+"85
+[; ;Modbas_RTU.c: 85:    if (quantity_Data_ModbasRtu >= Temp_ModbasRtu )
+[e $ ! >= -> _quantity_Data_ModbasRtu `i -> _Temp_ModbasRtu `i 294  ]
+"86
+[; ;Modbas_RTU.c: 86:     {
+{
+"87
+[; ;Modbas_RTU.c: 87:    TXREG = Danie_Rx_ModbasRtu[Temp_ModbasRtu++];
+[e = _TXREG *U + &U _Danie_Rx_ModbasRtu * -> ++ _Temp_ModbasRtu -> -> 1 `i `uc `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux ]
+"89
+[; ;Modbas_RTU.c: 89:     }
+}
+[e $U 295  ]
+"90
+[; ;Modbas_RTU.c: 90:    else
+[e :U 294 ]
+"91
+[; ;Modbas_RTU.c: 91:     {
+{
+"96
+[; ;Modbas_RTU.c: 96:       USART_UDR_vect=0;
+[e = _USART_UDR_vect -> -> 0 `i `uc ]
+"98
+[; ;Modbas_RTU.c: 98:       PIE1bits.TX1IE=1;
+[e = . . _PIE1bits 1 1 -> -> 1 `i `uc ]
+"101
+[; ;Modbas_RTU.c: 101:  }
+}
+[e :U 295 ]
+"102
+[; ;Modbas_RTU.c: 102:  }
+[e :UE 293 ]
+}
+"107
+[; ;Modbas_RTU.c: 107:   int crc_chk (unsigned char* data, unsigned char length )
+[v _crc_chk `(i ~T0 @X0 1 ef2`*uc`uc ]
+"108
+[; ;Modbas_RTU.c: 108:   {
+{
+[e :U _crc_chk ]
+"107
+[; ;Modbas_RTU.c: 107:   int crc_chk (unsigned char* data, unsigned char length )
+[v _data `*uc ~T0 @X0 1 r1 ]
+[v _length `uc ~T0 @X0 1 r2 ]
+"108
+[; ;Modbas_RTU.c: 108:   {
+[f ]
+"109
+[; ;Modbas_RTU.c: 109:   int j;
+[v _j `i ~T0 @X0 1 a ]
+"110
+[; ;Modbas_RTU.c: 110:   unsigned int reg_crc = 0xFFFF;
+[v _reg_crc `ui ~T0 @X0 1 a ]
+[e = _reg_crc -> 65535 `ui ]
+"111
+[; ;Modbas_RTU.c: 111:  while (length--)
+[e $U 297  ]
+[e :U 298 ]
+"112
+[; ;Modbas_RTU.c: 112:  {
+{
+"113
+[; ;Modbas_RTU.c: 113:    reg_crc ^= *data++;
+[e =^ _reg_crc -> *U ++ _data * -> -> 1 `i `x -> -> # *U _data `i `x `ui ]
+"114
+[; ;Modbas_RTU.c: 114:    for(j=0;j<8;j++)
+{
+[e = _j -> 0 `i ]
+[e $ < _j -> 8 `i 300  ]
+[e $U 301  ]
+[e :U 300 ]
+"115
+[; ;Modbas_RTU.c: 115:     {
+{
+"116
+[; ;Modbas_RTU.c: 116:    if(reg_crc & 0x01)
+[e $ ! != & _reg_crc -> -> 1 `i `ui -> -> 0 `i `ui 303  ]
+"117
+[; ;Modbas_RTU.c: 117:        {
+{
+"118
+[; ;Modbas_RTU.c: 118:       reg_crc = (reg_crc >> 1) ^ 0xA001;
+[e = _reg_crc ^ >> _reg_crc -> 1 `i -> 40961 `ui ]
+"119
+[; ;Modbas_RTU.c: 119:        }
+}
+[e $U 304  ]
+"120
+[; ;Modbas_RTU.c: 120:   else
+[e :U 303 ]
+"121
+[; ;Modbas_RTU.c: 121:        {
+{
+"122
+[; ;Modbas_RTU.c: 122:       reg_crc = reg_crc >> 1;
+[e = _reg_crc >> _reg_crc -> 1 `i ]
+"123
+[; ;Modbas_RTU.c: 123:     }
+}
+[e :U 304 ]
+"124
+[; ;Modbas_RTU.c: 124:     }
+}
+[e ++ _j -> 1 `i ]
+[e $ < _j -> 8 `i 300  ]
+[e :U 301 ]
+}
+"125
+[; ;Modbas_RTU.c: 125:  }
+}
+[e :U 297 ]
+"111
+[; ;Modbas_RTU.c: 111:  while (length--)
+[e $ != -> -- _length -> -> 1 `i `uc `i -> 0 `i 298  ]
+[e :U 299 ]
+"126
+[; ;Modbas_RTU.c: 126:  return reg_crc;
+[e ) -> _reg_crc `i ]
+[e $UE 296  ]
+"127
+[; ;Modbas_RTU.c: 127:   }
+[e :UE 296 ]
+}
+"131
+[; ;Modbas_RTU.c: 131:  unsigned int ModbasRtu_Register_address(unsigned char Li)
+[v _ModbasRtu_Register_address `(ui ~T0 @X0 1 ef1`uc ]
+"132
+[; ;Modbas_RTU.c: 132:  {
+{
+[e :U _ModbasRtu_Register_address ]
+"131
+[; ;Modbas_RTU.c: 131:  unsigned int ModbasRtu_Register_address(unsigned char Li)
+[v _Li `uc ~T0 @X0 1 r1 ]
+"132
+[; ;Modbas_RTU.c: 132:  {
+[f ]
+"133
+[; ;Modbas_RTU.c: 133:   register char Hi= Li - 1;
+[v _Hi `uc ~T0 @X0 1 A ]
+[e = _Hi -> - -> _Li `i -> 1 `i `uc ]
+"134
+[; ;Modbas_RTU.c: 134:   return Danie_Rx_ModbasRtu[Hi] * 256+ Danie_Rx_ModbasRtu[Li];
+[e ) -> + * -> *U + &U _Danie_Rx_ModbasRtu * -> _Hi `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux `i -> 256 `i -> *U + &U _Danie_Rx_ModbasRtu * -> _Li `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux `i `ui ]
+[e $UE 305  ]
+"135
+[; ;Modbas_RTU.c: 135:  }
+[e :UE 305 ]
+}
+"139
+[; ;Modbas_RTU.c: 139:  char Data_integrity()
+[v _Data_integrity `(uc ~T0 @X0 1 ef ]
+"140
+[; ;Modbas_RTU.c: 140:  {
+{
+[e :U _Data_integrity ]
+[f ]
+"141
+[; ;Modbas_RTU.c: 141:    register unsigned int Temp22;
+[v _Temp22 `ui ~T0 @X0 1 A ]
+"142
+[; ;Modbas_RTU.c: 142:    register unsigned char Temp33;
+[v _Temp33 `uc ~T0 @X0 1 A ]
+"143
+[; ;Modbas_RTU.c: 143:    quantity_Data_ModbasRtu = quantity_Data_ModbasRtu - 2;
+[e = _quantity_Data_ModbasRtu -> - -> _quantity_Data_ModbasRtu `i -> 2 `i `uc ]
+"144
+[; ;Modbas_RTU.c: 144:    Temp22 = crc_chk(Danie_Rx_ModbasRtu,quantity_Data_ModbasRtu);
+[e = _Temp22 -> ( _crc_chk (2 , &U _Danie_Rx_ModbasRtu _quantity_Data_ModbasRtu `ui ]
+"145
+[; ;Modbas_RTU.c: 145:    Temp33 = Temp22;
+[e = _Temp33 -> _Temp22 `uc ]
+"146
+[; ;Modbas_RTU.c: 146:    if ( Danie_Rx_ModbasRtu[quantity_Data_ModbasRtu] == Temp33 )
+[e $ ! == -> *U + &U _Danie_Rx_ModbasRtu * -> _quantity_Data_ModbasRtu `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux `i -> _Temp33 `i 307  ]
+"147
+[; ;Modbas_RTU.c: 147:  {
+{
+"148
+[; ;Modbas_RTU.c: 148:    quantity_Data_ModbasRtu ++;
+[e ++ _quantity_Data_ModbasRtu -> -> 1 `i `uc ]
+"149
+[; ;Modbas_RTU.c: 149:    Temp33 = (Temp22>> 8) ;
+[e = _Temp33 -> >> _Temp22 -> 8 `i `uc ]
+"150
+[; ;Modbas_RTU.c: 150:    if ( Danie_Rx_ModbasRtu[quantity_Data_ModbasRtu] == Temp33 )
+[e $ ! == -> *U + &U _Danie_Rx_ModbasRtu * -> _quantity_Data_ModbasRtu `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux `i -> _Temp33 `i 308  ]
+"151
+[; ;Modbas_RTU.c: 151:     {
+{
+"152
+[; ;Modbas_RTU.c: 152:    return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 306  ]
+"153
+[; ;Modbas_RTU.c: 153:     }
+}
+[e :U 308 ]
+"154
+[; ;Modbas_RTU.c: 154:  }
+}
+[e :U 307 ]
+"155
+[; ;Modbas_RTU.c: 155:    return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 306  ]
+"156
+[; ;Modbas_RTU.c: 156:  }
+[e :UE 306 ]
+}
+"162
+[; ;Modbas_RTU.c: 162: char _Bin_input_Output( register unsigned char NUMBER, register unsigned char state,volatile unsigned char *Masiv, volatile unsigned char Sd )
+[v __Bin_input_Output `(uc ~T0 @X0 1 ef4`uc`uc`*Vuc`Vuc ]
+"163
+[; ;Modbas_RTU.c: 163:   {
+{
+[e :U __Bin_input_Output ]
+"162
+[; ;Modbas_RTU.c: 162: char _Bin_input_Output( register unsigned char NUMBER, register unsigned char state,volatile unsigned char *Masiv, volatile unsigned char Sd )
+[v _NUMBER `uc ~T0 @X0 1 R1 ]
+[v _state `uc ~T0 @X0 1 R2 ]
+[v _Masiv `*Vuc ~T0 @X0 1 r3 ]
+[v _Sd `Vuc ~T0 @X0 1 r4 ]
+"163
+[; ;Modbas_RTU.c: 163:   {
+[f ]
+"164
+[; ;Modbas_RTU.c: 164:  volatile unsigned char Temp = 0,Temp1 = 0;
+[v _Temp `Vuc ~T0 @X0 1 a ]
+[e = _Temp -> -> 0 `i `uc ]
+[v _Temp1 `Vuc ~T0 @X0 1 a ]
+[e = _Temp1 -> -> 0 `i `uc ]
+"165
+[; ;Modbas_RTU.c: 165:  while (NUMBER >= 8)
+[e $U 310  ]
+[e :U 311 ]
+"166
+[; ;Modbas_RTU.c: 166:   {
+{
+"167
+[; ;Modbas_RTU.c: 167:     NUMBER = NUMBER - 8;
+[e = _NUMBER -> - -> _NUMBER `i -> 8 `i `uc ]
+"168
+[; ;Modbas_RTU.c: 168:     Temp ++;
+[e ++ _Temp -> -> 1 `i `Vuc ]
+"169
+[; ;Modbas_RTU.c: 169:   }
+}
+[e :U 310 ]
+"165
+[; ;Modbas_RTU.c: 165:  while (NUMBER >= 8)
+[e $ >= -> _NUMBER `i -> 8 `i 311  ]
+[e :U 312 ]
+"170
+[; ;Modbas_RTU.c: 170:  Temp1 = Masiv [ Temp ];
+[e = _Temp1 *U + _Masiv * -> _Temp `ux -> -> # *U _Masiv `ui `ux ]
+"171
+[; ;Modbas_RTU.c: 171:  if (Sd == 10 )
+[e $ ! == -> _Sd `i -> 10 `i 313  ]
+"172
+[; ;Modbas_RTU.c: 172:   {
+{
+"173
+[; ;Modbas_RTU.c: 173:     if ( state == 1)
+[e $ ! == -> _state `i -> 1 `i 314  ]
+"174
+[; ;Modbas_RTU.c: 174:      Temp1 |=(1<<NUMBER);
+[e =| _Temp1 -> << -> 1 `i -> _NUMBER `i `Vuc ]
+[e $U 315  ]
+"175
+[; ;Modbas_RTU.c: 175:     else
+[e :U 314 ]
+"176
+[; ;Modbas_RTU.c: 176:      Temp1 &=~(1<<NUMBER);
+[e =& _Temp1 -> ~ << -> 1 `i -> _NUMBER `i `Vuc ]
+[e :U 315 ]
+"177
+[; ;Modbas_RTU.c: 177:     Masiv [ Temp ] = Temp1;
+[e = *U + _Masiv * -> _Temp `ux -> -> # *U _Masiv `ui `ux _Temp1 ]
+"178
+[; ;Modbas_RTU.c: 178:   }
+}
+[e $U 316  ]
+"179
+[; ;Modbas_RTU.c: 179:  else
+[e :U 313 ]
+"180
+[; ;Modbas_RTU.c: 180:   {
+{
+"181
+[; ;Modbas_RTU.c: 181:   if ( Temp1 & (1<<NUMBER) )
+[e $ ! != & -> _Temp1 `i << -> 1 `i -> _NUMBER `i -> 0 `i 317  ]
+"182
+[; ;Modbas_RTU.c: 182:    NUMBER = 1;
+[e = _NUMBER -> -> 1 `i `uc ]
+[e $U 318  ]
+"183
+[; ;Modbas_RTU.c: 183:   else
+[e :U 317 ]
+"184
+[; ;Modbas_RTU.c: 184:    NUMBER = 0;
+[e = _NUMBER -> -> 0 `i `uc ]
+[e :U 318 ]
+"185
+[; ;Modbas_RTU.c: 185:   }
+}
+[e :U 316 ]
+"186
+[; ;Modbas_RTU.c: 186:   return NUMBER;
+[e ) -> _NUMBER `uc ]
+[e $UE 309  ]
+"187
+[; ;Modbas_RTU.c: 187:   }
+[e :UE 309 ]
+}
+"194
+[; ;Modbas_RTU.c: 194:  void Changing_Discrete_Output(void)
+[v _Changing_Discrete_Output `(v ~T0 @X0 1 ef ]
+"195
+[; ;Modbas_RTU.c: 195:    {
+{
+[e :U _Changing_Discrete_Output ]
+[f ]
+"196
+[; ;Modbas_RTU.c: 196:    register unsigned int address;
+[v _address `ui ~T0 @X0 1 A ]
+"197
+[; ;Modbas_RTU.c: 197:    address = ModbasRtu_Register_address(3);
+[e = _address ( _ModbasRtu_Register_address (1 -> -> 3 `i `uc ]
+"198
+[; ;Modbas_RTU.c: 198:    if ( address > 10 )
+[e $ ! > _address -> -> 10 `i `ui 320  ]
+"199
+[; ;Modbas_RTU.c: 199:     {
+{
+"200
+[; ;Modbas_RTU.c: 200:     Error_modbasRtu (0x02);
+[e ( _Error_modbasRtu (1 -> -> 2 `i `uc ]
+"201
+[; ;Modbas_RTU.c: 201:     }
+}
+[e $U 321  ]
+"202
+[; ;Modbas_RTU.c: 202:     else
+[e :U 320 ]
+"203
+[; ;Modbas_RTU.c: 203:     {
+{
+"204
+[; ;Modbas_RTU.c: 204:    if (Danie_Rx_ModbasRtu[4] == 255)
+[e $ ! == -> *U + &U _Danie_Rx_ModbasRtu * -> -> -> 4 `i `ui `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux `i -> 255 `i 322  ]
+"205
+[; ;Modbas_RTU.c: 205:      _Bin_input_Output ((char)address,1,Danie_ModbasRtu_Binary_Output,10);
+[e ( __Bin_input_Output (4 , , , -> -> _address `uc `uc -> -> 1 `i `uc -> &U _Danie_ModbasRtu_Binary_Output `*Vuc -> -> 10 `i `uc ]
+[e $U 323  ]
+"206
+[; ;Modbas_RTU.c: 206:       else
+[e :U 322 ]
+"207
+[; ;Modbas_RTU.c: 207:            _Bin_input_Output ((char)address,0,Danie_ModbasRtu_Binary_Output,10);
+[e ( __Bin_input_Output (4 , , , -> -> _address `uc `uc -> -> 0 `i `uc -> &U _Danie_ModbasRtu_Binary_Output `*Vuc -> -> 10 `i `uc ]
+[e :U 323 ]
+"208
+[; ;Modbas_RTU.c: 208:     }
+}
+[e :U 321 ]
+"209
+[; ;Modbas_RTU.c: 209:   }
+[e :UE 319 ]
+}
+"215
+[; ;Modbas_RTU.c: 215:  void Reading_Discrete_Output(unsigned char* Massiv, register unsigned char Number_)
+[v _Reading_Discrete_Output `(v ~T0 @X0 1 ef2`*uc`uc ]
+"216
+[; ;Modbas_RTU.c: 216:   {
+{
+[e :U _Reading_Discrete_Output ]
+"215
+[; ;Modbas_RTU.c: 215:  void Reading_Discrete_Output(unsigned char* Massiv, register unsigned char Number_)
+[v _Massiv `*uc ~T0 @X0 1 r1 ]
+[v _Number_ `uc ~T0 @X0 1 R2 ]
+"216
+[; ;Modbas_RTU.c: 216:   {
+[f ]
+"217
+[; ;Modbas_RTU.c: 217:  volatile unsigned int address,Number_bits;
+[v _address `Vui ~T0 @X0 1 a ]
+[v _Number_bits `Vui ~T0 @X0 1 a ]
+"218
+[; ;Modbas_RTU.c: 218:  register unsigned char Temp = 0,Danie,Temp2 = 0,address2 = 0,Temp3 = 2;
+[v _Temp `uc ~T0 @X0 1 A ]
+[e = _Temp -> -> 0 `i `uc ]
+[v _Danie `uc ~T0 @X0 1 A ]
+[v _Temp2 `uc ~T0 @X0 1 A ]
+[e = _Temp2 -> -> 0 `i `uc ]
+[v _address2 `uc ~T0 @X0 1 A ]
+[e = _address2 -> -> 0 `i `uc ]
+[v _Temp3 `uc ~T0 @X0 1 A ]
+[e = _Temp3 -> -> 2 `i `uc ]
+"219
+[; ;Modbas_RTU.c: 219:  address = ModbasRtu_Register_address(3);
+[e = _address ( _ModbasRtu_Register_address (1 -> -> 3 `i `uc ]
+"220
+[; ;Modbas_RTU.c: 220:  if ( address > Number_ )
+[e $ ! > _address -> _Number_ `ui 325  ]
+"221
+[; ;Modbas_RTU.c: 221:         {
+{
+"222
+[; ;Modbas_RTU.c: 222:            Error_modbasRtu (0x02);
+[e ( _Error_modbasRtu (1 -> -> 2 `i `uc ]
+"223
+[; ;Modbas_RTU.c: 223:         }
+}
+[e $U 326  ]
+"224
+[; ;Modbas_RTU.c: 224:   else
+[e :U 325 ]
+"225
+[; ;Modbas_RTU.c: 225:   {
+{
+"226
+[; ;Modbas_RTU.c: 226:   Number_bits = ModbasRtu_Register_address(5);
+[e = _Number_bits ( _ModbasRtu_Register_address (1 -> -> 5 `i `uc ]
+"227
+[; ;Modbas_RTU.c: 227:   while (address >= 8)
+[e $U 327  ]
+[e :U 328 ]
+"228
+[; ;Modbas_RTU.c: 228:             {
+{
+"229
+[; ;Modbas_RTU.c: 229:               address = address - 8;
+[e = _address - _address -> -> 8 `i `ui ]
+"230
+[; ;Modbas_RTU.c: 230:               Temp ++;
+[e ++ _Temp -> -> 1 `i `uc ]
+"231
+[; ;Modbas_RTU.c: 231:             }
+}
+[e :U 327 ]
+"227
+[; ;Modbas_RTU.c: 227:   while (address >= 8)
+[e $ >= _address -> -> 8 `i `ui 328  ]
+[e :U 329 ]
+"232
+[; ;Modbas_RTU.c: 232:   Danie = Massiv [ Temp ];
+[e = _Danie *U + _Massiv * -> _Temp `ux -> -> # *U _Massiv `ui `ux ]
+"236
+[; ;Modbas_RTU.c: 236:   while ( Number_bits > 0)
+[e $U 330  ]
+[e :U 331 ]
+"237
+[; ;Modbas_RTU.c: 237:     {
+{
+"238
+[; ;Modbas_RTU.c: 238:                 Number_bits --;
+[e -- _Number_bits -> -> 1 `i `Vui ]
+"239
+[; ;Modbas_RTU.c: 239:                 if ( Danie & (1 << address) )
+[e $ ! != & -> _Danie `i << -> 1 `i _address -> 0 `i 333  ]
+"240
+[; ;Modbas_RTU.c: 240:                     {
+{
+"241
+[; ;Modbas_RTU.c: 241:                       Temp2 |=(1<<address2);
+[e =| _Temp2 -> << -> 1 `i -> _address2 `i `uc ]
+"242
+[; ;Modbas_RTU.c: 242:                     }
+}
+[e :U 333 ]
+"243
+[; ;Modbas_RTU.c: 243:                 address2 ++;
+[e ++ _address2 -> -> 1 `i `uc ]
+"244
+[; ;Modbas_RTU.c: 244:                 address ++;
+[e ++ _address -> -> 1 `i `Vui ]
+"245
+[; ;Modbas_RTU.c: 245:                 if (address2 == 8 )
+[e $ ! == -> _address2 `i -> 8 `i 334  ]
+"246
+[; ;Modbas_RTU.c: 246:                     {
+{
+"247
+[; ;Modbas_RTU.c: 247:                       address2 = 0;
+[e = _address2 -> -> 0 `i `uc ]
+"248
+[; ;Modbas_RTU.c: 248:                       Temp3 ++;
+[e ++ _Temp3 -> -> 1 `i `uc ]
+"249
+[; ;Modbas_RTU.c: 249:                       Danie_Rx_ModbasRtu[Temp3] = Temp2;
+[e = *U + &U _Danie_Rx_ModbasRtu * -> _Temp3 `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux _Temp2 ]
+"250
+[; ;Modbas_RTU.c: 250:                       Temp2 = 0;
+[e = _Temp2 -> -> 0 `i `uc ]
+"251
+[; ;Modbas_RTU.c: 251:                     }
+}
+[e :U 334 ]
+"252
+[; ;Modbas_RTU.c: 252:                 if ( address == 8)
+[e $ ! == _address -> -> 8 `i `ui 335  ]
+"253
+[; ;Modbas_RTU.c: 253:                     {
+{
+"254
+[; ;Modbas_RTU.c: 254:                        address = 0;
+[e = _address -> -> 0 `i `ui ]
+"255
+[; ;Modbas_RTU.c: 255:                        Temp++;
+[e ++ _Temp -> -> 1 `i `uc ]
+"256
+[; ;Modbas_RTU.c: 256:                        Danie = Massiv [ Temp ];
+[e = _Danie *U + _Massiv * -> _Temp `ux -> -> # *U _Massiv `ui `ux ]
+"257
+[; ;Modbas_RTU.c: 257:                     }
+}
+[e :U 335 ]
+"258
+[; ;Modbas_RTU.c: 258:    }
+}
+[e :U 330 ]
+"236
+[; ;Modbas_RTU.c: 236:   while ( Number_bits > 0)
+[e $ > _Number_bits -> -> 0 `i `ui 331  ]
+[e :U 332 ]
+"259
+[; ;Modbas_RTU.c: 259:   if ( address2 > 0 )
+[e $ ! > -> _address2 `i -> 0 `i 336  ]
+"260
+[; ;Modbas_RTU.c: 260:    {
+{
+"261
+[; ;Modbas_RTU.c: 261:      Temp3 ++;
+[e ++ _Temp3 -> -> 1 `i `uc ]
+"262
+[; ;Modbas_RTU.c: 262:      Danie_Rx_ModbasRtu[Temp3] = Temp2;
+[e = *U + &U _Danie_Rx_ModbasRtu * -> _Temp3 `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux _Temp2 ]
+"263
+[; ;Modbas_RTU.c: 263:    }
+}
+[e :U 336 ]
+"266
+[; ;Modbas_RTU.c: 266:   Danie_Rx_ModbasRtu[2] = Temp3 - 2;
+[e = *U + &U _Danie_Rx_ModbasRtu * -> -> -> 2 `i `ui `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux -> - -> _Temp3 `i -> 2 `i `uc ]
+"267
+[; ;Modbas_RTU.c: 267:   Temp3 ++;
+[e ++ _Temp3 -> -> 1 `i `uc ]
+"268
+[; ;Modbas_RTU.c: 268:   check_sum ( Temp3);
+[e ( _check_sum (1 _Temp3 ]
+"269
+[; ;Modbas_RTU.c: 269:   }
+}
+[e :U 326 ]
+"270
+[; ;Modbas_RTU.c: 270:   }
+[e :UE 324 ]
+}
+"276
+[; ;Modbas_RTU.c: 276:  void Read_analog_input(unsigned char* Massiv, register unsigned char Number_, unsigned char Vt)
+[v _Read_analog_input `(v ~T0 @X0 1 ef3`*uc`uc`uc ]
+"277
+[; ;Modbas_RTU.c: 277:  {
+{
+[e :U _Read_analog_input ]
+"276
+[; ;Modbas_RTU.c: 276:  void Read_analog_input(unsigned char* Massiv, register unsigned char Number_, unsigned char Vt)
+[v _Massiv `*uc ~T0 @X0 1 r1 ]
+[v _Number_ `uc ~T0 @X0 1 R2 ]
+[v _Vt `uc ~T0 @X0 1 r3 ]
+"277
+[; ;Modbas_RTU.c: 277:  {
+[f ]
+"278
+[; ;Modbas_RTU.c: 278:  volatile unsigned int address,Number_bits,Danie;
+[v _address `Vui ~T0 @X0 1 a ]
+[v _Number_bits `Vui ~T0 @X0 1 a ]
+[v _Danie `Vui ~T0 @X0 1 a ]
+"279
+[; ;Modbas_RTU.c: 279:  volatile unsigned char Adress = 4;
+[v _Adress `Vuc ~T0 @X0 1 a ]
+[e = _Adress -> -> 4 `i `uc ]
+"280
+[; ;Modbas_RTU.c: 280:  address = ModbasRtu_Register_address(3);
+[e = _address ( _ModbasRtu_Register_address (1 -> -> 3 `i `uc ]
+"281
+[; ;Modbas_RTU.c: 281:  if ( address > Number_ )
+[e $ ! > _address -> _Number_ `ui 338  ]
+"282
+[; ;Modbas_RTU.c: 282:   {
+{
+"283
+[; ;Modbas_RTU.c: 283:   Error_modbasRtu (0x02);
+[e ( _Error_modbasRtu (1 -> -> 2 `i `uc ]
+"284
+[; ;Modbas_RTU.c: 284:   }
+}
+[e $U 339  ]
+"285
+[; ;Modbas_RTU.c: 285:   else
+[e :U 338 ]
+"286
+[; ;Modbas_RTU.c: 286:   {
+{
+"287
+[; ;Modbas_RTU.c: 287:   Number_bits = ModbasRtu_Register_address(5);
+[e = _Number_bits ( _ModbasRtu_Register_address (1 -> -> 5 `i `uc ]
+"288
+[; ;Modbas_RTU.c: 288:   Danie_Rx_ModbasRtu[2] = (char)Number_bits * 2;
+[e = *U + &U _Danie_Rx_ModbasRtu * -> -> -> 2 `i `ui `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux -> * -> -> _Number_bits `uc `i -> 2 `i `uc ]
+"289
+[; ;Modbas_RTU.c: 289:   Adress = 3;
+[e = _Adress -> -> 3 `i `uc ]
+"290
+[; ;Modbas_RTU.c: 290:   while (Number_bits > 0 )
+[e $U 340  ]
+[e :U 341 ]
+"291
+[; ;Modbas_RTU.c: 291:    {
+{
+"292
+[; ;Modbas_RTU.c: 292:    if ( Vt == 1 )
+[e $ ! == -> _Vt `i -> 1 `i 343  ]
+"293
+[; ;Modbas_RTU.c: 293:    {
+{
+"294
+[; ;Modbas_RTU.c: 294:      Danie = Danie_ModbasRtu_analog_input[ address ];
+[e = _Danie *U + &U _Danie_ModbasRtu_analog_input * -> _address `ux -> -> # *U &U _Danie_ModbasRtu_analog_input `ui `ux ]
+"295
+[; ;Modbas_RTU.c: 295:    }
+}
+[e $U 344  ]
+"296
+[; ;Modbas_RTU.c: 296:    else
+[e :U 343 ]
+"297
+[; ;Modbas_RTU.c: 297:       {
+{
+"298
+[; ;Modbas_RTU.c: 298:      Danie = Danie_ModbasRtu_analog_Output[ address ];
+[e = _Danie *U + &U _Danie_ModbasRtu_analog_Output * -> _address `ux -> -> # *U &U _Danie_ModbasRtu_analog_Output `ui `ux ]
+"299
+[; ;Modbas_RTU.c: 299:    }
+}
+[e :U 344 ]
+"300
+[; ;Modbas_RTU.c: 300:    address++;
+[e ++ _address -> -> 1 `i `Vui ]
+"301
+[; ;Modbas_RTU.c: 301:    Massiv = &Danie;
+[e = _Massiv -> &U _Danie `*uc ]
+"302
+[; ;Modbas_RTU.c: 302:    Danie_Rx_ModbasRtu[Adress ++] = Massiv[1];
+[e = *U + &U _Danie_Rx_ModbasRtu * -> ++ _Adress -> -> 1 `i `Vuc `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux *U + _Massiv * -> -> 1 `i `x -> -> # *U _Massiv `i `x ]
+"303
+[; ;Modbas_RTU.c: 303:    Danie_Rx_ModbasRtu[Adress++] = Massiv [0];
+[e = *U + &U _Danie_Rx_ModbasRtu * -> ++ _Adress -> -> 1 `i `Vuc `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux *U + _Massiv * -> -> 0 `i `x -> -> # *U _Massiv `i `x ]
+"304
+[; ;Modbas_RTU.c: 304:    Number_bits = Number_bits - 1 ;
+[e = _Number_bits - _Number_bits -> -> 1 `i `ui ]
+"305
+[; ;Modbas_RTU.c: 305:    }
+}
+[e :U 340 ]
+"290
+[; ;Modbas_RTU.c: 290:   while (Number_bits > 0 )
+[e $ > _Number_bits -> -> 0 `i `ui 341  ]
+[e :U 342 ]
+"306
+[; ;Modbas_RTU.c: 306:   check_sum ( Adress);
+[e ( _check_sum (1 _Adress ]
+"307
+[; ;Modbas_RTU.c: 307:   }
+}
+[e :U 339 ]
+"308
+[; ;Modbas_RTU.c: 308:  }
+[e :UE 337 ]
+}
+"314
+[; ;Modbas_RTU.c: 314:  void analog_output_recording(void)
+[v _analog_output_recording `(v ~T0 @X0 1 ef ]
+"315
+[; ;Modbas_RTU.c: 315:   {
+{
+[e :U _analog_output_recording ]
+[f ]
+"316
+[; ;Modbas_RTU.c: 316:  register int address;
+[v _address `i ~T0 @X0 1 A ]
+"317
+[; ;Modbas_RTU.c: 317:  address = ModbasRtu_Register_address(3);
+[e = _address -> ( _ModbasRtu_Register_address (1 -> -> 3 `i `uc `i ]
+"318
+[; ;Modbas_RTU.c: 318:  if ( address > 10 )
+[e $ ! > _address -> 10 `i 346  ]
+"319
+[; ;Modbas_RTU.c: 319:   {
+{
+"320
+[; ;Modbas_RTU.c: 320:   Error_modbasRtu (0x02);
+[e ( _Error_modbasRtu (1 -> -> 2 `i `uc ]
+"321
+[; ;Modbas_RTU.c: 321:   }
+}
+[e $U 347  ]
+"322
+[; ;Modbas_RTU.c: 322:   else
+[e :U 346 ]
+"323
+[; ;Modbas_RTU.c: 323:   {
+{
+"324
+[; ;Modbas_RTU.c: 324:     Danie_ModbasRtu_analog_Output [address] = ModbasRtu_Register_address(5);
+[e = *U + &U _Danie_ModbasRtu_analog_Output * -> -> _address `ui `ux -> -> # *U &U _Danie_ModbasRtu_analog_Output `ui `ux ( _ModbasRtu_Register_address (1 -> -> 5 `i `uc ]
+"325
+[; ;Modbas_RTU.c: 325:   }
+}
+[e :U 347 ]
+"326
+[; ;Modbas_RTU.c: 326:   }
+[e :UE 345 ]
+}
+"332
+[; ;Modbas_RTU.c: 332:  void Error_modbasRtu (volatile unsigned char Temp_Error)
+[v _Error_modbasRtu `(v ~T0 @X0 1 ef1`Vuc ]
+"333
+[; ;Modbas_RTU.c: 333:   {
+{
+[e :U _Error_modbasRtu ]
+"332
+[; ;Modbas_RTU.c: 332:  void Error_modbasRtu (volatile unsigned char Temp_Error)
+[v _Temp_Error `Vuc ~T0 @X0 1 r1 ]
+"333
+[; ;Modbas_RTU.c: 333:   {
+[f ]
+"334
+[; ;Modbas_RTU.c: 334:  Danie_Rx_ModbasRtu[1] |= (1<<7);
+[e =| *U + &U _Danie_Rx_ModbasRtu * -> -> -> 1 `i `ui `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux -> << -> 1 `i -> 7 `i `uc ]
+"335
+[; ;Modbas_RTU.c: 335:  Danie_Rx_ModbasRtu[2] = Temp_Error;
+[e = *U + &U _Danie_Rx_ModbasRtu * -> -> -> 2 `i `ui `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux _Temp_Error ]
+"336
+[; ;Modbas_RTU.c: 336:  check_sum (3);
+[e ( _check_sum (1 -> -> 3 `i `uc ]
+"337
+[; ;Modbas_RTU.c: 337:   }
+[e :UE 348 ]
+}
+"341
+[; ;Modbas_RTU.c: 341:  void check_sum ( register unsigned char Adress)
+[v _check_sum `(v ~T0 @X0 1 ef1`uc ]
+"342
+[; ;Modbas_RTU.c: 342:   {
+{
+[e :U _check_sum ]
+"341
+[; ;Modbas_RTU.c: 341:  void check_sum ( register unsigned char Adress)
+[v _Adress `uc ~T0 @X0 1 R1 ]
+"342
+[; ;Modbas_RTU.c: 342:   {
+[f ]
+"343
+[; ;Modbas_RTU.c: 343:  register unsigned int RC;
+[v _RC `ui ~T0 @X0 1 A ]
+"344
+[; ;Modbas_RTU.c: 344:  RC = crc_chk(Danie_Rx_ModbasRtu,Adress);
+[e = _RC -> ( _crc_chk (2 , &U _Danie_Rx_ModbasRtu _Adress `ui ]
+"345
+[; ;Modbas_RTU.c: 345:  Danie_Rx_ModbasRtu[Adress] = RC ;
+[e = *U + &U _Danie_Rx_ModbasRtu * -> _Adress `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux -> _RC `uc ]
+"346
+[; ;Modbas_RTU.c: 346:  Adress++;
+[e ++ _Adress -> -> 1 `i `uc ]
+"347
+[; ;Modbas_RTU.c: 347:  Danie_Rx_ModbasRtu[Adress] = RC >> 8;
+[e = *U + &U _Danie_Rx_ModbasRtu * -> _Adress `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux -> >> _RC -> 8 `i `uc ]
+"348
+[; ;Modbas_RTU.c: 348:  quantity_Data_ModbasRtu = Adress;
+[e = _quantity_Data_ModbasRtu _Adress ]
+"349
+[; ;Modbas_RTU.c: 349:   }
+[e :UE 349 ]
+}
+"355
+[; ;Modbas_RTU.c: 355:   void modbasRtu_Answer()
+[v _modbasRtu_Answer `(v ~T0 @X0 1 ef ]
+"356
+[; ;Modbas_RTU.c: 356:   {
+{
+[e :U _modbasRtu_Answer ]
+[f ]
+"357
+[; ;Modbas_RTU.c: 357:    Temp_ModbasRtu = 0;
+[e = _Temp_ModbasRtu -> -> 0 `i `uc ]
+"358
+[; ;Modbas_RTU.c: 358:    switch (Danie_Rx_ModbasRtu[1])
+[e $U 352  ]
+"359
+[; ;Modbas_RTU.c: 359:    {
+{
+"360
+[; ;Modbas_RTU.c: 360:     case 1:
+[e :U 353 ]
+"361
+[; ;Modbas_RTU.c: 361:            Reading_Discrete_Output(Danie_ModbasRtu_Binary_Output,10);
+[e ( _Reading_Discrete_Output (2 , &U _Danie_ModbasRtu_Binary_Output -> -> 10 `i `uc ]
+"362
+[; ;Modbas_RTU.c: 362:            break;
+[e $U 351  ]
+"363
+[; ;Modbas_RTU.c: 363:     case 2:
+[e :U 354 ]
+"364
+[; ;Modbas_RTU.c: 364:            Reading_Discrete_Output(Danie_ModbasRtu_Binary_input,10);
+[e ( _Reading_Discrete_Output (2 , &U _Danie_ModbasRtu_Binary_input -> -> 10 `i `uc ]
+"365
+[; ;Modbas_RTU.c: 365:            break;
+[e $U 351  ]
+"366
+[; ;Modbas_RTU.c: 366:     case 3:
+[e :U 355 ]
+"367
+[; ;Modbas_RTU.c: 367:            Read_analog_input( Danie_ModbasRtu_analog_Output,10,0);
+[e ( _Read_analog_input (3 , , -> &U _Danie_ModbasRtu_analog_Output `*uc -> -> 10 `i `uc -> -> 0 `i `uc ]
+"368
+[; ;Modbas_RTU.c: 368:     break;
+[e $U 351  ]
+"369
+[; ;Modbas_RTU.c: 369:     case 4:
+[e :U 356 ]
+"370
+[; ;Modbas_RTU.c: 370:            Read_analog_input(Danie_ModbasRtu_analog_input,10,1);
+[e ( _Read_analog_input (3 , , -> &U _Danie_ModbasRtu_analog_input `*uc -> -> 10 `i `uc -> -> 1 `i `uc ]
+"371
+[; ;Modbas_RTU.c: 371:            break;
+[e $U 351  ]
+"372
+[; ;Modbas_RTU.c: 372:     case 5:
+[e :U 357 ]
+"373
+[; ;Modbas_RTU.c: 373:            Changing_Discrete_Output();
+[e ( _Changing_Discrete_Output ..  ]
+"374
+[; ;Modbas_RTU.c: 374:            break;
+[e $U 351  ]
+"375
+[; ;Modbas_RTU.c: 375:     case 6:
+[e :U 358 ]
+"376
+[; ;Modbas_RTU.c: 376:            analog_output_recording();
+[e ( _analog_output_recording ..  ]
+"377
+[; ;Modbas_RTU.c: 377:            break;
+[e $U 351  ]
+"378
+[; ;Modbas_RTU.c: 378:     case 15:
+[e :U 359 ]
+"379
+[; ;Modbas_RTU.c: 379:            __asm("nop");
+[; <" nop ;# ">
+"381
+[; ;Modbas_RTU.c: 381:     case 16:
+[e :U 360 ]
+"382
+[; ;Modbas_RTU.c: 382:            __asm("nop");
+[; <" nop ;# ">
+"385
+[; ;Modbas_RTU.c: 385:     default:
+[e :U 361 ]
+"386
+[; ;Modbas_RTU.c: 386:           Error_modbasRtu (0x01);
+[e ( _Error_modbasRtu (1 -> -> 1 `i `uc ]
+"387
+[; ;Modbas_RTU.c: 387:     break;
+[e $U 351  ]
+"388
+[; ;Modbas_RTU.c: 388:    }
+}
+[e $U 351  ]
+[e :U 352 ]
+[e [\ -> *U + &U _Danie_Rx_ModbasRtu * -> -> -> 1 `i `ui `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux `i , $ -> 1 `i 353
+ , $ -> 2 `i 354
+ , $ -> 3 `i 355
+ , $ -> 4 `i 356
+ , $ -> 5 `i 357
+ , $ -> 6 `i 358
+ , $ -> 15 `i 359
+ , $ -> 16 `i 360
+ 361 ]
+[e :U 351 ]
+"390
+[; ;Modbas_RTU.c: 390:      USART_UDR_vect=1;
+[e = _USART_UDR_vect -> -> 1 `i `uc ]
+"392
+[; ;Modbas_RTU.c: 392:   Bit_action_ModbasRtu.b2 = 0;
+[e = . _Bit_action_ModbasRtu 2 -> -> 0 `i `uc ]
+"393
+[; ;Modbas_RTU.c: 393:   }
+[e :UE 350 ]
+}
+"397
+[; ;Modbas_RTU.c: 397:  char read_digital_inputs( volatile unsigned char Temp1 )
+[v _read_digital_inputs `(uc ~T0 @X0 1 ef1`Vuc ]
+"398
+[; ;Modbas_RTU.c: 398:   {
+{
+[e :U _read_digital_inputs ]
+"397
+[; ;Modbas_RTU.c: 397:  char read_digital_inputs( volatile unsigned char Temp1 )
+[v _Temp1 `Vuc ~T0 @X0 1 r1 ]
+"398
+[; ;Modbas_RTU.c: 398:   {
+[f ]
+"399
+[; ;Modbas_RTU.c: 399:    return _Bin_input_Output (Temp1,1,Danie_ModbasRtu_Binary_input,11);
+[e ) ( __Bin_input_Output (4 , , , _Temp1 -> -> 1 `i `uc -> &U _Danie_ModbasRtu_Binary_input `*Vuc -> -> 11 `i `uc ]
+[e $UE 362  ]
+"400
+[; ;Modbas_RTU.c: 400:   }
+[e :UE 362 ]
+}
+"401
+[; ;Modbas_RTU.c: 401: void change_digital_inputs( volatile unsigned char Temp1,volatile unsigned char Temp2 )
+[v _change_digital_inputs `(v ~T0 @X0 1 ef2`Vuc`Vuc ]
+"402
+[; ;Modbas_RTU.c: 402:   {
+{
+[e :U _change_digital_inputs ]
+"401
+[; ;Modbas_RTU.c: 401: void change_digital_inputs( volatile unsigned char Temp1,volatile unsigned char Temp2 )
+[v _Temp1 `Vuc ~T0 @X0 1 r1 ]
+[v _Temp2 `Vuc ~T0 @X0 1 r2 ]
+"402
+[; ;Modbas_RTU.c: 402:   {
+[f ]
+"403
+[; ;Modbas_RTU.c: 403:    _Bin_input_Output (Temp1,Temp2,Danie_ModbasRtu_Binary_input,10);
+[e ( __Bin_input_Output (4 , , , _Temp1 _Temp2 -> &U _Danie_ModbasRtu_Binary_input `*Vuc -> -> 10 `i `uc ]
+"404
+[; ;Modbas_RTU.c: 404:   }
+[e :UE 363 ]
+}
+"405
+[; ;Modbas_RTU.c: 405: char read_digital_Output( volatile unsigned char Temp1 )
+[v _read_digital_Output `(uc ~T0 @X0 1 ef1`Vuc ]
+"406
+[; ;Modbas_RTU.c: 406:   {
+{
+[e :U _read_digital_Output ]
+"405
+[; ;Modbas_RTU.c: 405: char read_digital_Output( volatile unsigned char Temp1 )
+[v _Temp1 `Vuc ~T0 @X0 1 r1 ]
+"406
+[; ;Modbas_RTU.c: 406:   {
+[f ]
+"407
+[; ;Modbas_RTU.c: 407:    return _Bin_input_Output (Temp1,1,Danie_ModbasRtu_Binary_Output,11);
+[e ) ( __Bin_input_Output (4 , , , _Temp1 -> -> 1 `i `uc -> &U _Danie_ModbasRtu_Binary_Output `*Vuc -> -> 11 `i `uc ]
+[e $UE 364  ]
+"408
+[; ;Modbas_RTU.c: 408:   }
+[e :UE 364 ]
+}
+"409
+[; ;Modbas_RTU.c: 409: void change_digital_Output( volatile unsigned char Temp1,volatile unsigned char Temp2 )
+[v _change_digital_Output `(v ~T0 @X0 1 ef2`Vuc`Vuc ]
+"410
+[; ;Modbas_RTU.c: 410:   {
+{
+[e :U _change_digital_Output ]
+"409
+[; ;Modbas_RTU.c: 409: void change_digital_Output( volatile unsigned char Temp1,volatile unsigned char Temp2 )
+[v _Temp1 `Vuc ~T0 @X0 1 r1 ]
+[v _Temp2 `Vuc ~T0 @X0 1 r2 ]
+"410
+[; ;Modbas_RTU.c: 410:   {
+[f ]
+"411
+[; ;Modbas_RTU.c: 411:    _Bin_input_Output (Temp1,Temp2,Danie_ModbasRtu_Binary_Output,10);
+[e ( __Bin_input_Output (4 , , , _Temp1 _Temp2 -> &U _Danie_ModbasRtu_Binary_Output `*Vuc -> -> 10 `i `uc ]
+"412
+[; ;Modbas_RTU.c: 412:   }
+[e :UE 365 ]
+}
+"415
+[; ;Modbas_RTU.c: 415: void change_analogue_Output (volatile unsigned char nomer, int Danie)
+[v _change_analogue_Output `(v ~T0 @X0 1 ef2`Vuc`i ]
+"416
+[; ;Modbas_RTU.c: 416:   {
+{
+[e :U _change_analogue_Output ]
+"415
+[; ;Modbas_RTU.c: 415: void change_analogue_Output (volatile unsigned char nomer, int Danie)
+[v _nomer `Vuc ~T0 @X0 1 r1 ]
+[v _Danie `i ~T0 @X0 1 r2 ]
+"416
+[; ;Modbas_RTU.c: 416:   {
+[f ]
+"417
+[; ;Modbas_RTU.c: 417:    Danie_ModbasRtu_analog_Output [ nomer ] = Danie;
+[e = *U + &U _Danie_ModbasRtu_analog_Output * -> _nomer `ux -> -> # *U &U _Danie_ModbasRtu_analog_Output `ui `ux -> _Danie `ui ]
+"418
+[; ;Modbas_RTU.c: 418:   }
+[e :UE 366 ]
+}
+"419
+[; ;Modbas_RTU.c: 419: void change_analogue_input (volatile unsigned char nomer, int Danie)
+[v _change_analogue_input `(v ~T0 @X0 1 ef2`Vuc`i ]
+"420
+[; ;Modbas_RTU.c: 420:   {
+{
+[e :U _change_analogue_input ]
+"419
+[; ;Modbas_RTU.c: 419: void change_analogue_input (volatile unsigned char nomer, int Danie)
+[v _nomer `Vuc ~T0 @X0 1 r1 ]
+[v _Danie `i ~T0 @X0 1 r2 ]
+"420
+[; ;Modbas_RTU.c: 420:   {
+[f ]
+"421
+[; ;Modbas_RTU.c: 421:    Danie_ModbasRtu_analog_input [ nomer ] = Danie;
+[e = *U + &U _Danie_ModbasRtu_analog_input * -> _nomer `ux -> -> # *U &U _Danie_ModbasRtu_analog_input `ui `ux -> _Danie `ui ]
+"422
+[; ;Modbas_RTU.c: 422:   }
+[e :UE 367 ]
+}
+"423
+[; ;Modbas_RTU.c: 423:  int read_analogue_Output (volatile unsigned char nomer)
+[v _read_analogue_Output `(i ~T0 @X0 1 ef1`Vuc ]
+"424
+[; ;Modbas_RTU.c: 424:   {
+{
+[e :U _read_analogue_Output ]
+"423
+[; ;Modbas_RTU.c: 423:  int read_analogue_Output (volatile unsigned char nomer)
+[v _nomer `Vuc ~T0 @X0 1 r1 ]
+"424
+[; ;Modbas_RTU.c: 424:   {
+[f ]
+"425
+[; ;Modbas_RTU.c: 425:   return Danie_ModbasRtu_analog_Output [ nomer ];
+[e ) -> *U + &U _Danie_ModbasRtu_analog_Output * -> _nomer `ux -> -> # *U &U _Danie_ModbasRtu_analog_Output `ui `ux `i ]
+[e $UE 368  ]
+"426
+[; ;Modbas_RTU.c: 426:   }
+[e :UE 368 ]
+}
+"427
+[; ;Modbas_RTU.c: 427:  int read_analogue_input (volatile unsigned char nomer)
+[v _read_analogue_input `(i ~T0 @X0 1 ef1`Vuc ]
+"428
+[; ;Modbas_RTU.c: 428:   {
+{
+[e :U _read_analogue_input ]
+"427
+[; ;Modbas_RTU.c: 427:  int read_analogue_input (volatile unsigned char nomer)
+[v _nomer `Vuc ~T0 @X0 1 r1 ]
+"428
+[; ;Modbas_RTU.c: 428:   {
+[f ]
+"429
+[; ;Modbas_RTU.c: 429:   return Danie_ModbasRtu_analog_input [ nomer ];
+[e ) -> *U + &U _Danie_ModbasRtu_analog_input * -> _nomer `ux -> -> # *U &U _Danie_ModbasRtu_analog_input `ui `ux `i ]
+[e $UE 369  ]
+"430
+[; ;Modbas_RTU.c: 430:   }
+[e :UE 369 ]
+}
+"432
+[; ;Modbas_RTU.c: 432:  void modbasRtu_Slave( void )
+[v _modbasRtu_Slave `(v ~T0 @X0 1 ef ]
+"433
+[; ;Modbas_RTU.c: 433:    {
+{
+[e :U _modbasRtu_Slave ]
+[f ]
+"434
+[; ;Modbas_RTU.c: 434:     if (Bit_action_ModbasRtu.b2)
+[e $ ! != -> . _Bit_action_ModbasRtu 2 `i -> 0 `i 371  ]
+"435
+[; ;Modbas_RTU.c: 435:     {
+{
+"436
+[; ;Modbas_RTU.c: 436:      if ( Data_integrity() == 0 )
+[e $ ! == -> ( _Data_integrity ..  `i -> 0 `i 372  ]
+"437
+[; ;Modbas_RTU.c: 437:      {
+{
+"440
+[; ;Modbas_RTU.c: 440:       Error_modbasRtu (0x04);
+[e ( _Error_modbasRtu (1 -> -> 4 `i `uc ]
+"441
+[; ;Modbas_RTU.c: 441:       USART_UDR_vect=1;
+[e = _USART_UDR_vect -> -> 1 `i `uc ]
+"442
+[; ;Modbas_RTU.c: 442:             Temp_ModbasRtu = 0;
+[e = _Temp_ModbasRtu -> -> 0 `i `uc ]
+"443
+[; ;Modbas_RTU.c: 443:             Bit_action_ModbasRtu.b2 = 0;
+[e = . _Bit_action_ModbasRtu 2 -> -> 0 `i `uc ]
+"445
+[; ;Modbas_RTU.c: 445:      }
+}
+[e $U 373  ]
+"446
+[; ;Modbas_RTU.c: 446:      else
+[e :U 372 ]
+"447
+[; ;Modbas_RTU.c: 447:      {
+{
+"448
+[; ;Modbas_RTU.c: 448:       modbasRtu_Answer( );
+[e ( _modbasRtu_Answer ..  ]
+"449
+[; ;Modbas_RTU.c: 449:      }
+}
+[e :U 373 ]
+"450
+[; ;Modbas_RTU.c: 450:     }
+}
+[e :U 371 ]
+"451
+[; ;Modbas_RTU.c: 451:   }
+[e :UE 370 ]
+}
