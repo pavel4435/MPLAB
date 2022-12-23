@@ -40,8 +40,7 @@
 //************************//
 void USART_RXC_vect(void)        // завершение приема байта данных
  {
-     unsigned char TempModbas = RCREG;// забираем принятые данные UDR
-    
+    unsigned char TempModbas = RCREG;// забираем принятые данные UDR
 	TMR0_Reload();//TCNT0 = 0;//обнуление таймера
 	if (!Bit_action_ModbasRtu.b2)   //данные не приняты и не обрабатываются !(D & (1<<2))
 	 {
@@ -62,7 +61,6 @@ void USART_RXC_vect(void)        // завершение приема байта данных
 		 {
 		   Danie_Rx_ModbasRtu[quantity_Data_ModbasRtu] = TempModbas; // сохраняем принятые данные
 		   quantity_Data_ModbasRtu ++; //количество принятых данных
-           
 		 }
 	 }
  }
@@ -85,14 +83,12 @@ void USART_UDRE_vect (void)        //регистр данных на передачю пуст TXSTAbits.T
    if (quantity_Data_ModbasRtu >= Temp_ModbasRtu )
     {
 	  TXREG = Danie_Rx_ModbasRtu[Temp_ModbasRtu++];
-     
     }
    else
     {
                                 /*UDRIE Разрешение прерывания при очистке регистра данных. То есть
                                 если мы выставим здесь "1", то при пустом регистре данных будет
                                 генериться прерывание*/
-       
       USART_UDR_vect=0;
 	                  //UCSRB &=~(1 << UDRIE);  //прерывания по опусташение регистра данных на передачю запрещаем
       PIE1bits.TX1IE=1;
@@ -146,7 +142,7 @@ void USART_UDRE_vect (void)        //регистр данных на передачю пуст TXSTAbits.T
    if ( Danie_Rx_ModbasRtu[quantity_Data_ModbasRtu] == Temp33  ) // сравнимаем с таблицы старший байт контрольной суму
 	{
 	  quantity_Data_ModbasRtu ++;
-	  Temp33 = (Temp22>> 8) ;//IO_RA0_SetHigh(); 
+	  Temp33 = (Temp22 >> 8) ;//IO_RA0_SetHigh(); 
 	  if ( Danie_Rx_ModbasRtu[quantity_Data_ModbasRtu] == Temp33  )
 	   {
 		 return 1;
@@ -222,51 +218,51 @@ char _Bin_input_Output( register unsigned char NUMBER, register unsigned char st
            Error_modbasRtu (0x02); // не допустимый адресс
         }
 	 else
-	 {
-		Number_bits =  ModbasRtu_Register_address(5); //количество бит которые нужно передать
-		while (address >= 8) // узнаем номер ячейки массива с которой начнем считывать данные
-            {
-              address = address - 8;	// address - по завершению преобразования хранится бит с которого нужно начинать считывание
-              Temp ++;  //номер байта в массиве к которому изначально происходит обращение
+        {
+           Number_bits =  ModbasRtu_Register_address(5); //количество бит которые нужно передать
+           while (address >= 8) // узнаем номер ячейки массива с которой начнем считывать данные
+               {
+                 address = address - 8;	// address - по завершению преобразования хранится бит с которого нужно начинать считывание
+                 Temp ++;  //номер бита в массиве к которому изначально происходит обращение
+               }
+           Danie = Massiv [ Temp ];	// считываем данные
+           //----------------
+             //считываем побитно и формируем данные для отправки
+           //----------------
+           while ( Number_bits > 0) // проверка что все биты запроса переданны
+             {
+                   Number_bits --;
+                   if ( Danie & (1 << address) )	//
+                       {
+                         Temp2 |=(1<<address2);
+                       }
+                   address2 ++;
+                   address ++;
+                   if (address2 == 8 )
+                       {
+                         address2 = 0;
+                         Temp3 ++;
+                         Danie_Rx_ModbasRtu[Temp3] = Temp2;
+                         Temp2 = 0;
+                       }
+                   if ( address == 8)
+                       {
+                          address = 0;
+                          Temp++;
+                          Danie = Massiv [ Temp ];	// считуем данные
+                       }
             }
-		Danie = Massiv [ Temp ];	// считываем данные
-		//----------------
-		  //считываем побайтно и формируем данные для отправки
-		//----------------
-		while ( Number_bits > 0) // проверка что все биты запроса переданны
-		  {
-                Number_bits --;
-                if ( Danie & (1 << address) )	//
-                    {
-                      Temp2 |=(1<<address2);
-                    }
-                address2 ++;
-                address ++;
-                if (address2 == 8 )
-                    {
-                      address2 = 0;
-                      Temp3 ++;
-                      Danie_Rx_ModbasRtu[Temp3] = Temp2;
-                      Temp2 = 0;
-                    }
-                if ( address == 8)
-                    {
-                       address = 0;
-                       Temp++;
-                       Danie = Massiv [ Temp ];	// считуем данные
-                    }
-		 }
-		if ( address2 > 0 )
-		 {
-		   Temp3 ++;
-		   Danie_Rx_ModbasRtu[Temp3] = Temp2;
-		 }
-		//----------------
-		//----------------
-		Danie_Rx_ModbasRtu[2] = Temp3 - 2; // количество переданных байт (без учета адресса и кода команды)
-		Temp3 ++;
-		check_sum ( Temp3); //подсчитуем контрольную сумму для передачи данных
-	 }
+           if ( address2 > 0 )
+            {
+              Temp3 ++;
+              Danie_Rx_ModbasRtu[Temp3] = Temp2;
+            }
+           //----------------
+           //----------------
+           Danie_Rx_ModbasRtu[2] = Temp3 - 2; // количество переданных байт (без учета адресса и кода команды)
+           Temp3 ++;
+           check_sum ( Temp3); //подсчитуем контрольную сумму для передачи данных
+        }
   }
  //********************************
   //.................................
@@ -285,7 +281,7 @@ char _Bin_input_Output( register unsigned char NUMBER, register unsigned char st
 	 else
 	 {
 		Number_bits =  ModbasRtu_Register_address(5); //количество INT байт которые нужно передать (старший и младший )
-		Danie_Rx_ModbasRtu[2] = (char)Number_bits * 2; // количество байт информащии что будут переданны
+		Danie_Rx_ModbasRtu[2] = Number_bits * 2; // количество байт информащии что будут переданны
 		Adress = 3;
 		while (Number_bits > 0 )
 		 {

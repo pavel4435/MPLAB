@@ -4854,8 +4854,7 @@ void OSCILLATOR_Initialize(void);
 
 void USART_RXC_vect(void)
  {
-     unsigned char TempModbas = RCREG;
-
+    unsigned char TempModbas = RCREG;
  TMR0_Reload();
  if (!Bit_action_ModbasRtu.b2)
   {
@@ -4876,7 +4875,6 @@ void USART_RXC_vect(void)
    {
      Danie_Rx_ModbasRtu[quantity_Data_ModbasRtu] = TempModbas;
      quantity_Data_ModbasRtu ++;
-
    }
   }
  }
@@ -4899,11 +4897,9 @@ void USART_UDRE_vect (void)
    if (quantity_Data_ModbasRtu >= Temp_ModbasRtu )
     {
    TXREG = Danie_Rx_ModbasRtu[Temp_ModbasRtu++];
-
     }
    else
     {
-
 
 
 
@@ -5099,7 +5095,7 @@ char _Bin_input_Output( register unsigned char NUMBER, register unsigned char st
   else
   {
   Number_bits = ModbasRtu_Register_address(5);
-  Danie_Rx_ModbasRtu[2] = (char)Number_bits * 2;
+  Danie_Rx_ModbasRtu[2] = Number_bits * 2;
   Adress = 3;
   while (Number_bits > 0 )
    {

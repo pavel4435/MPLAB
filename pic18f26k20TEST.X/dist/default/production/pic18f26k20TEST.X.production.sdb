@@ -246,33 +246,33 @@ I2C_NULL 5
 [v _TIMER0_COMP_vect TIMER0_COMP_vect `(v  1 e 1 0 ]
 "41
 [v _USART_RXC_vect USART_RXC_vect `(v  1 e 1 0 ]
-"71
+"69
 [v _USART_TXC_vect USART_TXC_vect `(v  1 e 1 0 ]
-"82
+"80
 [v _USART_UDRE_vect USART_UDRE_vect `(v  1 e 1 0 ]
-"107
+"103
 [v _crc_chk crc_chk `(i  1 e 2 0 ]
-"131
+"127
 [v _ModbasRtu_Register_address ModbasRtu_Register_address `(ui  1 e 2 0 ]
-"139
+"135
 [v _Data_integrity Data_integrity `(uc  1 e 1 0 ]
-"162
+"158
 [v __Bin_input_Output _Bin_input_Output `(uc  1 e 1 0 ]
-"194
+"190
 [v _Changing_Discrete_Output Changing_Discrete_Output `(v  1 e 1 0 ]
-"215
+"211
 [v _Reading_Discrete_Output Reading_Discrete_Output `(v  1 e 1 0 ]
-"276
+"272
 [v _Read_analog_input Read_analog_input `(v  1 e 1 0 ]
-"314
+"310
 [v _analog_output_recording analog_output_recording `(v  1 e 1 0 ]
-"332
+"328
 [v _Error_modbasRtu Error_modbasRtu `(v  1 e 1 0 ]
-"341
+"337
 [v _check_sum check_sum `(v  1 e 1 0 ]
-"355
+"351
 [v _modbasRtu_Answer modbasRtu_Answer `(v  1 e 1 0 ]
-"432
+"428
 [v _modbasRtu_Slave modbasRtu_Slave `(v  1 e 1 0 ]
 "57 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X/Modbas_RTU.h
 [v _Danie_Rx_ModbasRtu Danie_Rx_ModbasRtu `[30]uc  1 e 30 0 ]
@@ -775,136 +775,136 @@ I2C_NULL 5
 [v main@F3020 F3020 `[3]uc  1 s 3 F3020 ]
 "123
 } 0
-"432 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\Modbas_RTU.c
+"428 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\Modbas_RTU.c
 [v _modbasRtu_Slave modbasRtu_Slave `(v  1 e 1 0 ]
 {
-"451
+"447
 } 0
-"355
+"351
 [v _modbasRtu_Answer modbasRtu_Answer `(v  1 e 1 0 ]
 {
-"393
+"389
 } 0
-"314
+"310
 [v _analog_output_recording analog_output_recording `(v  1 e 1 0 ]
 {
-"316
+"312
 [v analog_output_recording@address address `i  1 a 2 19 ]
-"326
+"322
 } 0
-"215
+"211
 [v _Reading_Discrete_Output Reading_Discrete_Output `(v  1 e 1 0 ]
 {
-"217
+"213
 [v Reading_Discrete_Output@address address `VEui  1 a 2 31 ]
 [v Reading_Discrete_Output@Number_bits Number_bits `VEui  1 a 2 29 ]
-"218
+"214
 [v Reading_Discrete_Output@Temp3 Temp3 `uc  1 a 1 28 ]
 [v Reading_Discrete_Output@address2 address2 `uc  1 a 1 27 ]
 [v Reading_Discrete_Output@Temp2 Temp2 `uc  1 a 1 26 ]
 [v Reading_Discrete_Output@Temp Temp `uc  1 a 1 25 ]
 [v Reading_Discrete_Output@Danie Danie `uc  1 a 1 24 ]
-"215
+"211
 [v Reading_Discrete_Output@Massiv Massiv `*.39uc  1 p 2 19 ]
 [v Reading_Discrete_Output@Number_ Number_ `uc  1 p 1 21 ]
-"270
+"266
 } 0
-"276
+"272
 [v _Read_analog_input Read_analog_input `(v  1 e 1 0 ]
 {
-"278
+"274
 [v Read_analog_input@Number_bits Number_bits `VEui  1 a 2 29 ]
 [v Read_analog_input@address address `VEui  1 a 2 27 ]
 [v Read_analog_input@Danie Danie `VEui  1 a 2 25 ]
-"279
+"275
 [v Read_analog_input@Adress Adress `VEuc  1 a 1 31 ]
-"276
+"272
 [v Read_analog_input@Massiv Massiv `*.39uc  1 p 2 19 ]
 [v Read_analog_input@Number_ Number_ `uc  1 p 1 21 ]
 [v Read_analog_input@Vt Vt `uc  1 p 1 22 ]
-"308
+"304
 } 0
-"194
+"190
 [v _Changing_Discrete_Output Changing_Discrete_Output `(v  1 e 1 0 ]
 {
-"196
+"192
 [v Changing_Discrete_Output@address address `ui  1 a 2 19 ]
-"209
+"205
 } 0
-"162
+"158
 [v __Bin_input_Output _Bin_input_Output `(uc  1 e 1 0 ]
 {
 [v __Bin_input_Output@NUMBER NUMBER `uc  1 a 1 wreg ]
-"164
+"160
 [v __Bin_input_Output@Temp1 Temp1 `VEuc  1 a 1 14 ]
 [v __Bin_input_Output@Temp Temp `VEuc  1 a 1 13 ]
-"162
+"158
 [v __Bin_input_Output@NUMBER NUMBER `uc  1 a 1 wreg ]
 [v __Bin_input_Output@state state `uc  1 p 1 6 ]
 [v __Bin_input_Output@Masiv Masiv `*.39VEuc  1 p 2 7 ]
 [v __Bin_input_Output@Sd Sd `VEuc  1 p 1 9 ]
-"164
+"160
 [v __Bin_input_Output@NUMBER NUMBER `uc  1 a 1 12 ]
-"187
+"183
 } 0
-"131
+"127
 [v _ModbasRtu_Register_address ModbasRtu_Register_address `(ui  1 e 2 0 ]
 {
 [v ModbasRtu_Register_address@Li Li `uc  1 a 1 wreg ]
-"133
+"129
 [v ModbasRtu_Register_address@Hi Hi `uc  1 a 1 12 ]
-"131
+"127
 [v ModbasRtu_Register_address@Li Li `uc  1 a 1 wreg ]
-"133
+"129
 [v ModbasRtu_Register_address@Li Li `uc  1 a 1 13 ]
-"135
+"131
 } 0
-"332
+"328
 [v _Error_modbasRtu Error_modbasRtu `(v  1 e 1 0 ]
 {
 [v Error_modbasRtu@Temp_Error Temp_Error `VEuc  1 a 1 wreg ]
 [v Error_modbasRtu@Temp_Error Temp_Error `VEuc  1 a 1 wreg ]
-"334
+"330
 [v Error_modbasRtu@Temp_Error Temp_Error `VEuc  1 a 1 18 ]
-"337
+"333
 } 0
-"341
+"337
 [v _check_sum check_sum `(v  1 e 1 0 ]
 {
 [v check_sum@Adress Adress `uc  1 a 1 wreg ]
-"343
+"339
 [v check_sum@RC RC `ui  1 a 2 15 ]
-"341
+"337
 [v check_sum@Adress Adress `uc  1 a 1 wreg ]
-"344
+"340
 [v check_sum@Adress Adress `uc  1 a 1 17 ]
-"349
+"345
 } 0
-"139
+"135
 [v _Data_integrity Data_integrity `(uc  1 e 1 0 ]
 {
-"141
+"137
 [v Data_integrity@Temp22 Temp22 `ui  1 a 2 16 ]
-"142
+"138
 [v Data_integrity@Temp33 Temp33 `uc  1 a 1 18 ]
-"156
+"152
 } 0
-"107
+"103
 [v _crc_chk crc_chk `(i  1 e 2 0 ]
 {
-"110
+"106
 [v crc_chk@reg_crc reg_crc `ui  1 a 2 13 ]
-"109
+"105
 [v crc_chk@j j `i  1 a 2 11 ]
-"107
+"103
 [v crc_chk@data data `*.39uc  1 p 2 6 ]
 [v crc_chk@length length `uc  1 p 1 8 ]
-"127
+"123
 } 0
-"82
+"80
 [v _USART_UDRE_vect USART_UDRE_vect `(v  1 e 1 0 ]
 {
-"102
+"98
 } 0
 "50 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -1290,10 +1290,10 @@ I2C_NULL 5
 {
 "214
 } 0
-"71 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\Modbas_RTU.c
+"69 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\Modbas_RTU.c
 [v _USART_TXC_vect USART_TXC_vect `(v  1 e 1 0 ]
 {
-"79
+"77
 } 0
 "216 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/eusart.c
 [v _EUSART_Receive_ISR EUSART_Receive_ISR `(v  1 e 1 0 ]
@@ -1305,7 +1305,7 @@ I2C_NULL 5
 {
 "43
 [v USART_RXC_vect@TempModbas TempModbas `uc  1 a 1 1 ]
-"68
+"66
 } 0
 "95 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/tmr0.c
 [v _TMR0_StartTimer TMR0_StartTimer `(v  1 e 1 0 ]
