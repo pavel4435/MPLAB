@@ -82,7 +82,7 @@ I2C_NULL 5
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"58 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\main.c
+"59 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\main.c
 [v _main main `(v  1 e 1 0 ]
 "88 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/eusart.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
@@ -748,14 +748,14 @@ I2C_NULL 5
 [v _TMR0_InterruptHandler TMR0_InterruptHandler `*.37(v  1 e 2 0 ]
 "61
 [v _timer0ReloadVal timer0ReloadVal `VEuc  1 e 1 0 ]
-"58 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\main.c
+"59 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"86
-[v main@red red `[3]uc  1 a 3 6 ]
-"85
-[v main@dat dat `[3]uc  1 a 3 3 ]
 "87
+[v main@red red `[3]uc  1 a 3 6 ]
+"86
+[v main@dat dat `[3]uc  1 a 3 3 ]
+"88
 [v main@red2 red2 `[3]uc  1 a 3 0 ]
 [s S1783 . 1 `uc 1 b0 1 0 :1:0 
 `uc 1 b1 1 0 :1:1 
@@ -766,14 +766,14 @@ I2C_NULL 5
 `uc 1 b6 1 0 :1:6 
 `uc 1 b7 1 0 :1:7 
 ]
-"82
+"83
 [v main@bitt bitt `S1783  1 a 1 10 ]
-"84
+"85
 [v main@address address `uc  1 a 1 9 ]
 [v main@F3018 F3018 `[3]uc  1 s 3 F3018 ]
-"85
+"86
 [v main@F3020 F3020 `[3]uc  1 s 3 F3020 ]
-"123
+"124
 } 0
 "428 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\Modbas_RTU.c
 [v _modbasRtu_Slave modbasRtu_Slave `(v  1 e 1 0 ]

@@ -4808,7 +4808,7 @@ void I2C_ReadDataBlock(i2c_address_t address, uint8_t reg, uint8_t *data, size_t
  unsigned char Danie_ModbasRtu_Binary_input [ (10 / 8)+ 1 ];
  unsigned char Danie_ModbasRtu_Binary_Output [ (10/ 8)+ 1 ];
  unsigned char Temp_ModbasRtu;
-    struct
+ struct
     {
         unsigned b0 : 1;
         unsigned b1 : 1;
@@ -4845,7 +4845,7 @@ void USART_UDRE_vect(void);
     int read_analogue_input (volatile unsigned char nomer);
     void modbasRtu_Slave( void );
 # 46 "main.c" 2
-# 58 "main.c"
+# 59 "main.c"
 void main(void)
 {
 

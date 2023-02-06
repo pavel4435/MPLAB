@@ -4499,7 +4499,7 @@ void TMR0_DefaultInterruptHandler(void);
  unsigned char Danie_ModbasRtu_Binary_input [ (10 / 8)+ 1 ];
  unsigned char Danie_ModbasRtu_Binary_Output [ (10/ 8)+ 1 ];
  unsigned char Temp_ModbasRtu;
-    struct
+ struct
     {
         unsigned b0 : 1;
         unsigned b1 : 1;

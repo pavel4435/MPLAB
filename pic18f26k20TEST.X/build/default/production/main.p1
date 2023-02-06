@@ -40,8 +40,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6239
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6239: extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
 [v _INTCONbits `VS270 ~T0 @X0 0 e@4082 ]
-"80 main.c
-[; ;main.c: 80:   struct {
+"81 main.c
+[; ;main.c: 81:   struct {
 [s S283 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S283 . b0 b1 b2 b3 b4 b5 b6 b7 ]
 "529 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h
@@ -600,45 +600,45 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"58 main.c
-[; ;main.c: 58: void main(void)
+"59 main.c
+[; ;main.c: 59: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"59
-[; ;main.c: 59: {
+"60
+[; ;main.c: 60: {
 {
 [e :U _main ]
 [f ]
-"61
-[; ;main.c: 61:     SYSTEM_Initialize();
+"62
+[; ;main.c: 62:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"63
-[; ;main.c: 63:    EUSART_SetRxInterruptHandler(USART_RXC_vect);
-[e ( _EUSART_SetRxInterruptHandler (1 &U _USART_RXC_vect ]
 "64
-[; ;main.c: 64:    EUSART_SetTxInterruptHandler(USART_TXC_vect);
+[; ;main.c: 64:    EUSART_SetRxInterruptHandler(USART_RXC_vect);
+[e ( _EUSART_SetRxInterruptHandler (1 &U _USART_RXC_vect ]
+"65
+[; ;main.c: 65:    EUSART_SetTxInterruptHandler(USART_TXC_vect);
 [e ( _EUSART_SetTxInterruptHandler (1 &U _USART_TXC_vect ]
-"70
-[; ;main.c: 70:    (INTCONbits.GIE = 1);
+"71
+[; ;main.c: 71:    (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-"76
-[; ;main.c: 76:    (INTCONbits.PEIE = 1);
+"77
+[; ;main.c: 77:    (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
-"82
-[; ;main.c: 82:          } bitt;
-[v _bitt `S283 ~T0 @X0 1 a ]
 "83
-[; ;main.c: 83:    char toggle=0;
+[; ;main.c: 83:          } bitt;
+[v _bitt `S283 ~T0 @X0 1 a ]
+"84
+[; ;main.c: 84:    char toggle=0;
 [v _toggle `uc ~T0 @X0 1 a ]
 [e = _toggle -> -> 0 `i `uc ]
-"84
-[; ;main.c: 84:    uint8_t address = (0XE6)>>1;
+"85
+[; ;main.c: 85:    uint8_t address = (0XE6)>>1;
 [v _address `uc ~T0 @X0 1 a ]
 [e = _address -> >> -> 230 `i -> 1 `i `uc ]
 [v F3018 `uc ~T0 @X0 -> 3 `i s ]
 [i F3018
 :U ..
-"85
-[; ;main.c: 85:    uint8_t dat[3]={0X30,0X64,0XC0};
+"86
+[; ;main.c: 86:    uint8_t dat[3]={0X30,0X64,0XC0};
 -> -> 48 `i `uc
 -> -> 100 `i `uc
 -> -> 192 `i `uc
@@ -649,96 +649,96 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F3020 `uc ~T0 @X0 -> 3 `i s ]
 [i F3020
 :U ..
-"86
-[; ;main.c: 86:    uint8_t red[3]={0x1C};
+"87
+[; ;main.c: 87:    uint8_t red[3]={0x1C};
 -> -> 28 `i `uc
 ..
 ]
 [v _red `uc ~T0 @X0 -> 3 `i a ]
 [e = _red F3020 ]
-"87
-[; ;main.c: 87:    uint8_t red2[3];
+"88
+[; ;main.c: 88:    uint8_t red2[3];
 [v _red2 `uc ~T0 @X0 -> 3 `i a ]
-"90
-[; ;main.c: 90:     while (1)
-[e :U 285 ]
 "91
-[; ;main.c: 91:     {
+[; ;main.c: 91:     while (1)
+[e :U 285 ]
+"92
+[; ;main.c: 92:     {
 {
-"94
-[; ;main.c: 94:          if(PORTAbits.RA2 && !bitt.b0 )
-[e $ ! && != -> . . _PORTAbits 0 2 `i -> 0 `i ! != -> . _bitt 0 `i -> 0 `i 287  ]
 "95
-[; ;main.c: 95:          {
-{
+[; ;main.c: 95:          if(PORTAbits.RA2 && !bitt.b0 )
+[e $ ! && != -> . . _PORTAbits 0 2 `i -> 0 `i ! != -> . _bitt 0 `i -> 0 `i 287  ]
 "96
-[; ;main.c: 96:              do { LATAbits.LATA0 = 1; } while(0);
+[; ;main.c: 96:          {
+{
+"97
+[; ;main.c: 97:              do { LATAbits.LATA0 = 1; } while(0);
 [e :U 290 ]
 {
 [e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
 }
 [e :U 289 ]
-"100
-[; ;main.c: 100:               I2C_WriteNBytes(address,dat,3);
+"101
+[; ;main.c: 101:               I2C_WriteNBytes(address,dat,3);
 [e ( _I2C_WriteNBytes (3 , , _address &U _dat -> -> 3 `i `ui ]
-"102
-[; ;main.c: 102:               I2C_WriteNBytes((0xD0)>>1,red,1);
+"103
+[; ;main.c: 103:               I2C_WriteNBytes((0xD0)>>1,red,1);
 [e ( _I2C_WriteNBytes (3 , , -> >> -> 208 `i -> 1 `i `uc &U _red -> -> 1 `i `ui ]
-"104
-[; ;main.c: 104:               I2C_ReadNBytes((0xD1)>>1, red2 , 3);
+"105
+[; ;main.c: 105:               I2C_ReadNBytes((0xD1)>>1, red2 , 3);
 [e ( _I2C_ReadNBytes (3 , , -> >> -> 209 `i -> 1 `i `uc &U _red2 -> -> 3 `i `ui ]
-"106
-[; ;main.c: 106:               bitt.b0=1;
+"107
+[; ;main.c: 107:               bitt.b0=1;
 [e = . _bitt 0 -> -> 1 `i `uc ]
-"108
-[; ;main.c: 108:          }
+"109
+[; ;main.c: 109:          }
 }
 [e $U 291  ]
-"109
-[; ;main.c: 109:          else if(!PORTAbits.RA2 && bitt.b0)
+"110
+[; ;main.c: 110:          else if(!PORTAbits.RA2 && bitt.b0)
 [e :U 287 ]
 [e $ ! && ! != -> . . _PORTAbits 0 2 `i -> 0 `i != -> . _bitt 0 `i -> 0 `i 292  ]
-"110
-[; ;main.c: 110:          {
-{
 "111
-[; ;main.c: 111:              do { LATAbits.LATA0 = 0; } while(0);
+[; ;main.c: 111:          {
+{
+"112
+[; ;main.c: 112:              do { LATAbits.LATA0 = 0; } while(0);
 [e :U 295 ]
 {
 [e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
 }
 [e :U 294 ]
-"112
-[; ;main.c: 112:              bitt.b0=0;
-[e = . _bitt 0 -> -> 0 `i `uc ]
 "113
-[; ;main.c: 113:          }
+[; ;main.c: 113:              bitt.b0=0;
+[e = . _bitt 0 -> -> 0 `i `uc ]
+"114
+[; ;main.c: 114:          }
 }
 [e :U 292 ]
 [e :U 291 ]
-"114
-[; ;main.c: 114:          if(TXSTAbits.TRMT && USART_UDR_vect)
-[e $ ! && != -> . . _TXSTAbits 0 1 `i -> 0 `i != -> _USART_UDR_vect `i -> 0 `i 296  ]
 "115
-[; ;main.c: 115:          {
-{
+[; ;main.c: 115:          if(TXSTAbits.TRMT && USART_UDR_vect)
+[e $ ! && != -> . . _TXSTAbits 0 1 `i -> 0 `i != -> _USART_UDR_vect `i -> 0 `i 296  ]
 "116
-[; ;main.c: 116:              USART_UDRE_vect ();
+[; ;main.c: 116:          {
+{
+"117
+[; ;main.c: 117:              USART_UDRE_vect ();
 [e ( _USART_UDRE_vect ..  ]
-"118
-[; ;main.c: 118:          }
+"119
+[; ;main.c: 119:          }
 }
 [e :U 296 ]
-"119
-[; ;main.c: 119:            modbasRtu_Slave();
+"120
+[; ;main.c: 120:            modbasRtu_Slave();
 [e ( _modbasRtu_Slave ..  ]
-"121
-[; ;main.c: 121:     }
+"122
+[; ;main.c: 122:     }
 }
 [e :U 284 ]
 [e $U 285  ]
 [e :U 286 ]
-"123
-[; ;main.c: 123: }
+"124
+[; ;main.c: 124: }
 [e :UE 282 ]
 }

@@ -838,7 +838,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Modbas_RTU.c: 144:    quantity_Data_ModbasRtu ++;
 [e ++ _quantity_Data_ModbasRtu -> -> 1 `i `uc ]
 "145
-[; ;Modbas_RTU.c: 145:    Temp33 = (Temp22>> 8) ;
+[; ;Modbas_RTU.c: 145:    Temp33 = (Temp22 >> 8) ;
 [e = _Temp33 -> >> _Temp22 -> 8 `i `uc ]
 "146
 [; ;Modbas_RTU.c: 146:    if ( Danie_Rx_ModbasRtu[quantity_Data_ModbasRtu] == Temp33 )
@@ -1075,140 +1075,140 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Modbas_RTU.c: 220:   else
 [e :U 325 ]
 "221
-[; ;Modbas_RTU.c: 221:   {
+[; ;Modbas_RTU.c: 221:         {
 {
 "222
-[; ;Modbas_RTU.c: 222:   Number_bits = ModbasRtu_Register_address(5);
+[; ;Modbas_RTU.c: 222:            Number_bits = ModbasRtu_Register_address(5);
 [e = _Number_bits ( _ModbasRtu_Register_address (1 -> -> 5 `i `uc ]
 "223
-[; ;Modbas_RTU.c: 223:   while (address >= 8)
+[; ;Modbas_RTU.c: 223:            while (address >= 8)
 [e $U 327  ]
 [e :U 328 ]
 "224
-[; ;Modbas_RTU.c: 224:             {
+[; ;Modbas_RTU.c: 224:                {
 {
 "225
-[; ;Modbas_RTU.c: 225:               address = address - 8;
+[; ;Modbas_RTU.c: 225:                  address = address - 8;
 [e = _address - _address -> -> 8 `i `ui ]
 "226
-[; ;Modbas_RTU.c: 226:               Temp ++;
+[; ;Modbas_RTU.c: 226:                  Temp ++;
 [e ++ _Temp -> -> 1 `i `uc ]
 "227
-[; ;Modbas_RTU.c: 227:             }
+[; ;Modbas_RTU.c: 227:                }
 }
 [e :U 327 ]
 "223
-[; ;Modbas_RTU.c: 223:   while (address >= 8)
+[; ;Modbas_RTU.c: 223:            while (address >= 8)
 [e $ >= _address -> -> 8 `i `ui 328  ]
 [e :U 329 ]
 "228
-[; ;Modbas_RTU.c: 228:   Danie = Massiv [ Temp ];
+[; ;Modbas_RTU.c: 228:            Danie = Massiv [ Temp ];
 [e = _Danie *U + _Massiv * -> _Temp `ux -> -> # *U _Massiv `ui `ux ]
 "232
-[; ;Modbas_RTU.c: 232:   while ( Number_bits > 0)
+[; ;Modbas_RTU.c: 232:            while ( Number_bits > 0)
 [e $U 330  ]
 [e :U 331 ]
 "233
-[; ;Modbas_RTU.c: 233:     {
+[; ;Modbas_RTU.c: 233:              {
 {
 "234
-[; ;Modbas_RTU.c: 234:                 Number_bits --;
+[; ;Modbas_RTU.c: 234:                    Number_bits --;
 [e -- _Number_bits -> -> 1 `i `Vui ]
 "235
-[; ;Modbas_RTU.c: 235:                 if ( Danie & (1 << address) )
+[; ;Modbas_RTU.c: 235:                    if ( Danie & (1 << address) )
 [e $ ! != & -> _Danie `i << -> 1 `i _address -> 0 `i 333  ]
 "236
-[; ;Modbas_RTU.c: 236:                     {
+[; ;Modbas_RTU.c: 236:                        {
 {
 "237
-[; ;Modbas_RTU.c: 237:                       Temp2 |=(1<<address2);
+[; ;Modbas_RTU.c: 237:                          Temp2 |=(1<<address2);
 [e =| _Temp2 -> << -> 1 `i -> _address2 `i `uc ]
 "238
-[; ;Modbas_RTU.c: 238:                     }
+[; ;Modbas_RTU.c: 238:                        }
 }
 [e :U 333 ]
 "239
-[; ;Modbas_RTU.c: 239:                 address2 ++;
+[; ;Modbas_RTU.c: 239:                    address2 ++;
 [e ++ _address2 -> -> 1 `i `uc ]
 "240
-[; ;Modbas_RTU.c: 240:                 address ++;
+[; ;Modbas_RTU.c: 240:                    address ++;
 [e ++ _address -> -> 1 `i `Vui ]
 "241
-[; ;Modbas_RTU.c: 241:                 if (address2 == 8 )
+[; ;Modbas_RTU.c: 241:                    if (address2 == 8 )
 [e $ ! == -> _address2 `i -> 8 `i 334  ]
 "242
-[; ;Modbas_RTU.c: 242:                     {
+[; ;Modbas_RTU.c: 242:                        {
 {
 "243
-[; ;Modbas_RTU.c: 243:                       address2 = 0;
+[; ;Modbas_RTU.c: 243:                          address2 = 0;
 [e = _address2 -> -> 0 `i `uc ]
 "244
-[; ;Modbas_RTU.c: 244:                       Temp3 ++;
+[; ;Modbas_RTU.c: 244:                          Temp3 ++;
 [e ++ _Temp3 -> -> 1 `i `uc ]
 "245
-[; ;Modbas_RTU.c: 245:                       Danie_Rx_ModbasRtu[Temp3] = Temp2;
+[; ;Modbas_RTU.c: 245:                          Danie_Rx_ModbasRtu[Temp3] = Temp2;
 [e = *U + &U _Danie_Rx_ModbasRtu * -> _Temp3 `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux _Temp2 ]
 "246
-[; ;Modbas_RTU.c: 246:                       Temp2 = 0;
+[; ;Modbas_RTU.c: 246:                          Temp2 = 0;
 [e = _Temp2 -> -> 0 `i `uc ]
 "247
-[; ;Modbas_RTU.c: 247:                     }
+[; ;Modbas_RTU.c: 247:                        }
 }
 [e :U 334 ]
 "248
-[; ;Modbas_RTU.c: 248:                 if ( address == 8)
+[; ;Modbas_RTU.c: 248:                    if ( address == 8)
 [e $ ! == _address -> -> 8 `i `ui 335  ]
 "249
-[; ;Modbas_RTU.c: 249:                     {
+[; ;Modbas_RTU.c: 249:                        {
 {
 "250
-[; ;Modbas_RTU.c: 250:                        address = 0;
+[; ;Modbas_RTU.c: 250:                           address = 0;
 [e = _address -> -> 0 `i `ui ]
 "251
-[; ;Modbas_RTU.c: 251:                        Temp++;
+[; ;Modbas_RTU.c: 251:                           Temp++;
 [e ++ _Temp -> -> 1 `i `uc ]
 "252
-[; ;Modbas_RTU.c: 252:                        Danie = Massiv [ Temp ];
+[; ;Modbas_RTU.c: 252:                           Danie = Massiv [ Temp ];
 [e = _Danie *U + _Massiv * -> _Temp `ux -> -> # *U _Massiv `ui `ux ]
 "253
-[; ;Modbas_RTU.c: 253:                     }
+[; ;Modbas_RTU.c: 253:                        }
 }
 [e :U 335 ]
 "254
-[; ;Modbas_RTU.c: 254:    }
+[; ;Modbas_RTU.c: 254:             }
 }
 [e :U 330 ]
 "232
-[; ;Modbas_RTU.c: 232:   while ( Number_bits > 0)
+[; ;Modbas_RTU.c: 232:            while ( Number_bits > 0)
 [e $ > _Number_bits -> -> 0 `i `ui 331  ]
 [e :U 332 ]
 "255
-[; ;Modbas_RTU.c: 255:   if ( address2 > 0 )
+[; ;Modbas_RTU.c: 255:            if ( address2 > 0 )
 [e $ ! > -> _address2 `i -> 0 `i 336  ]
 "256
-[; ;Modbas_RTU.c: 256:    {
+[; ;Modbas_RTU.c: 256:             {
 {
 "257
-[; ;Modbas_RTU.c: 257:      Temp3 ++;
+[; ;Modbas_RTU.c: 257:               Temp3 ++;
 [e ++ _Temp3 -> -> 1 `i `uc ]
 "258
-[; ;Modbas_RTU.c: 258:      Danie_Rx_ModbasRtu[Temp3] = Temp2;
+[; ;Modbas_RTU.c: 258:               Danie_Rx_ModbasRtu[Temp3] = Temp2;
 [e = *U + &U _Danie_Rx_ModbasRtu * -> _Temp3 `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux _Temp2 ]
 "259
-[; ;Modbas_RTU.c: 259:    }
+[; ;Modbas_RTU.c: 259:             }
 }
 [e :U 336 ]
 "262
-[; ;Modbas_RTU.c: 262:   Danie_Rx_ModbasRtu[2] = Temp3 - 2;
+[; ;Modbas_RTU.c: 262:            Danie_Rx_ModbasRtu[2] = Temp3 - 2;
 [e = *U + &U _Danie_Rx_ModbasRtu * -> -> -> 2 `i `ui `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux -> - -> _Temp3 `i -> 2 `i `uc ]
 "263
-[; ;Modbas_RTU.c: 263:   Temp3 ++;
+[; ;Modbas_RTU.c: 263:            Temp3 ++;
 [e ++ _Temp3 -> -> 1 `i `uc ]
 "264
-[; ;Modbas_RTU.c: 264:   check_sum ( Temp3);
+[; ;Modbas_RTU.c: 264:            check_sum ( Temp3);
 [e ( _check_sum (1 _Temp3 ]
 "265
-[; ;Modbas_RTU.c: 265:   }
+[; ;Modbas_RTU.c: 265:         }
 }
 [e :U 326 ]
 "266

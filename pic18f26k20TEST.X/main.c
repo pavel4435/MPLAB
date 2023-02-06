@@ -45,6 +45,7 @@
 #include "mcc_generated_files/examples/i2c_master_example.h"
 #include "Modbas_RTU.h"
 
+
 #define test1bit(var, bit) ((var) & (1 <<(bit)))
 #define setbit(var, bit) ((var) |= (1 << (bit)))
 #define clrbit(var, bit) ((var) &= ~(1 << (bit)))

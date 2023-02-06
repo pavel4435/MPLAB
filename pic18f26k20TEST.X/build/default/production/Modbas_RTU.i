@@ -4473,7 +4473,7 @@ unsigned char __t3rd16on(void);
  unsigned char Danie_ModbasRtu_Binary_input [ (10 / 8)+ 1 ];
  unsigned char Danie_ModbasRtu_Binary_Output [ (10/ 8)+ 1 ];
  unsigned char Temp_ModbasRtu;
-    struct
+ struct
     {
         unsigned b0 : 1;
         unsigned b1 : 1;
@@ -4956,7 +4956,7 @@ void USART_UDRE_vect (void)
    if ( Danie_Rx_ModbasRtu[quantity_Data_ModbasRtu] == Temp33 )
  {
    quantity_Data_ModbasRtu ++;
-   Temp33 = (Temp22>> 8) ;
+   Temp33 = (Temp22 >> 8) ;
    if ( Danie_Rx_ModbasRtu[quantity_Data_ModbasRtu] == Temp33 )
     {
    return 1;
@@ -5032,51 +5032,51 @@ char _Bin_input_Output( register unsigned char NUMBER, register unsigned char st
            Error_modbasRtu (0x02);
         }
   else
-  {
-  Number_bits = ModbasRtu_Register_address(5);
-  while (address >= 8)
-            {
-              address = address - 8;
-              Temp ++;
+        {
+           Number_bits = ModbasRtu_Register_address(5);
+           while (address >= 8)
+               {
+                 address = address - 8;
+                 Temp ++;
+               }
+           Danie = Massiv [ Temp ];
+
+
+
+           while ( Number_bits > 0)
+             {
+                   Number_bits --;
+                   if ( Danie & (1 << address) )
+                       {
+                         Temp2 |=(1<<address2);
+                       }
+                   address2 ++;
+                   address ++;
+                   if (address2 == 8 )
+                       {
+                         address2 = 0;
+                         Temp3 ++;
+                         Danie_Rx_ModbasRtu[Temp3] = Temp2;
+                         Temp2 = 0;
+                       }
+                   if ( address == 8)
+                       {
+                          address = 0;
+                          Temp++;
+                          Danie = Massiv [ Temp ];
+                       }
             }
-  Danie = Massiv [ Temp ];
+           if ( address2 > 0 )
+            {
+              Temp3 ++;
+              Danie_Rx_ModbasRtu[Temp3] = Temp2;
+            }
 
 
-
-  while ( Number_bits > 0)
-    {
-                Number_bits --;
-                if ( Danie & (1 << address) )
-                    {
-                      Temp2 |=(1<<address2);
-                    }
-                address2 ++;
-                address ++;
-                if (address2 == 8 )
-                    {
-                      address2 = 0;
-                      Temp3 ++;
-                      Danie_Rx_ModbasRtu[Temp3] = Temp2;
-                      Temp2 = 0;
-                    }
-                if ( address == 8)
-                    {
-                       address = 0;
-                       Temp++;
-                       Danie = Massiv [ Temp ];
-                    }
-   }
-  if ( address2 > 0 )
-   {
-     Temp3 ++;
-     Danie_Rx_ModbasRtu[Temp3] = Temp2;
-   }
-
-
-  Danie_Rx_ModbasRtu[2] = Temp3 - 2;
-  Temp3 ++;
-  check_sum ( Temp3);
-  }
+           Danie_Rx_ModbasRtu[2] = Temp3 - 2;
+           Temp3 ++;
+           check_sum ( Temp3);
+        }
   }
 
 
