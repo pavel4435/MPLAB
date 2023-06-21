@@ -43,16 +43,25 @@ extern "C" {
 
 
 /*************************************************************************************/
-#define On 1
-#define Off 0
-#define Change_output 10
+#define On                      1
+#define Off                     0
+#define Change_output           10
 #define discrete_output_reading 11
-#define address_Device 0x31
-    
-#define NUMBER_ANALOG_INPUT 10
-#define NUMBER_ANALOG_Output 10 
-#define NUMBER_Binary_inputs 10
-#define NUMBER_Binary_Output  10 
+#define address_Device          0x31 //adress device
+
+#define NUMBER_ANALOG_INPUT     10
+#define NUMBER_ANALOG_Output    10 
+#define NUMBER_Binary_inputs    10
+#define NUMBER_Binary_Output    10
+        
+#define StopTimer()             do { T0CONbits.TMR0ON = 0; } while(0) 
+#define StartTimer()            do { T0CONbits.TMR0ON = 1; } while(0)
+#define ReloadTimer()           TMR0_Reload()
+
+#define InterruptUartEnable()         do { PIE1bits.TX1IE=1; } while(0)
+#define InterruptUartDisable()        do { PIE1bits.TX1IE=0; } while(0)
+#define UartBuffer              TXREG
+
     
  unsigned char Danie_Rx_ModbasRtu[30] = {},quantity_Data_ModbasRtu;
 //volatile unsigned char Bit_action_ModbasRtu,DD;
@@ -61,12 +70,12 @@ extern "C" {
  unsigned char Danie_ModbasRtu_Binary_input  [ (NUMBER_Binary_inputs / 8)+ 1 ];
  unsigned char Danie_ModbasRtu_Binary_Output [ (NUMBER_Binary_Output/ 8)+ 1 ];
  unsigned char Temp_ModbasRtu;
- struct 
-    {
+
+ struct {
         unsigned b0 : 1;
         unsigned b1 : 1;
         unsigned b2 : 1;
-    } Bit_action_ModbasRtu = {0,0,0},D;
+    } Bit_action_ModbasRtu = {0, 0, 0}, D;
 unsigned char  USART_UDR_vect = 0;
 
 /**************************************************************************************/
@@ -77,26 +86,26 @@ void USART_UDRE_vect(void);        // прерывание регистр данных на передачю пуст
 
 /*************************************************************************************/
     
-    int crc_chk( unsigned char* data, unsigned char length );
+    unsigned int crc_chk(unsigned char* data, unsigned char length);
     unsigned int ModbasRtu_Register_address(unsigned char Li);
     char Data_integrity();
-    char _Bin_input_Output( register unsigned char NUMBER, register unsigned char state,volatile unsigned char *Masiv, volatile unsigned char Sd );
+    char _Bin_input_Output(register unsigned char NUMBER, register unsigned char state, volatile unsigned char *Masiv, volatile unsigned char Sd);
     void Changing_Discrete_Output(void);
     void Reading_Discrete_Output(unsigned char *Massiv, register unsigned char Number_);
     void Read_analog_input(unsigned char *Massiv, register unsigned char Number_, unsigned char Vt);
     void analog_output_recording(void);
-    void Error_modbasRtu (volatile unsigned char Temp_Error);
-    void check_sum ( register unsigned char Adress);
+    void Error_modbasRtu(volatile unsigned char Temp_Error);
+    void check_sum(register unsigned char Adress);
     void modbasRtu_Answer();
-    char read_digital_inputs( volatile unsigned char Temp1 ); // прочитать бит входов
-    void change_digital_inputs( volatile unsigned char Temp1,volatile unsigned char Temp2 ); // изменить бит входов
-    char read_digital_Output( volatile unsigned char Temp1 ); // прочитать бит выходов
-    void change_digital_Output( volatile unsigned char Temp1,volatile unsigned char Temp2 ); // изменить бит выходов
-    void change_analogue_Output (volatile unsigned char nomer, int Danie); // записать значение аналоговые выходов
-    void change_analogue_input (volatile unsigned char nomer, int Danie);  // записать значение аналоговых входов
-    int read_analogue_Output (volatile unsigned char nomer); // считать значение аналоговые выходов
-    int read_analogue_input (volatile unsigned char nomer);  // считать значение аналоговых входов
-    void modbasRtu_Slave( void );
+    char read_digital_inputs(volatile unsigned char Temp1); // прочитать бит входов
+    void change_digital_inputs(volatile unsigned char Temp1, volatile unsigned char Temp2); // изменить бит входов
+    char read_digital_Output(volatile unsigned char Temp1); // прочитать бит выходов
+    void change_digital_Output(volatile unsigned char Temp1, volatile unsigned char Temp2); // изменить бит выходов
+    void change_analogue_Output(volatile unsigned char nomer, int Danie); // записать значение аналоговые выходов
+    void change_analogue_input(volatile unsigned char nomer, int Danie); // записать значение аналоговых входов
+    int read_analogue_Output(volatile unsigned char nomer); // считать значение аналоговые выходов
+    int read_analogue_input(volatile unsigned char nomer); // считать значение аналоговых входов
+    void modbasRtu_Slave(void);
 
 	     /*
 

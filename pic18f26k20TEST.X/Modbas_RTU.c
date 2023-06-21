@@ -22,17 +22,16 @@
 
     
   void TIMER0_COMP_vect (void)    //прерывание таймера T0
- {
-         
+ {     
 		 Bit_action_ModbasRtu.b0 = 0;   //Bit_action_ModbasRtu &=~ (1<<0) установка на проверку адресса устройства
-		 TMR0_StopTimer(); //TCCR0=0b00001000;  // таймер остановлен
+		 StopTimer(); //TCCR0=0b00001000;  // таймер остановлен
 	     if ( Bit_action_ModbasRtu.b1)  // принимались данные или нет Bit_action_ModbasRtu & (1<<1)
 	      {
 		    Bit_action_ModbasRtu.b1 = 0; //Bit_action_ModbasRtu &=~ (1<<1)
 //			                             PORTB &=~(1<<0);
 //			                             PORTB &=~(1<<1);
 			Bit_action_ModbasRtu.b2 = 1;   //Bit_action_ModbasRtu |= (1<<2);   данные приняты можно обрабатывать
-            
+            modbasRtu_Slave();
 	      }
  }
 //************************//
@@ -41,7 +40,7 @@
 void USART_RXC_vect(void)        // завершение приема байта данных
  {
     unsigned char TempModbas = RCREG;// забираем принятые данные UDR
-	TMR0_Reload();//TCNT0 = 0;//обнуление таймера
+	ReloadTimer();//TCNT0 = 0;//обнуление таймера
 	if (!Bit_action_ModbasRtu.b2)   //данные не приняты и не обрабатываются !(D & (1<<2))
 	 {
 		if (!Bit_action_ModbasRtu.b0) // !(D & (1<<0))
@@ -54,7 +53,7 @@ void USART_RXC_vect(void)        // завершение приема байта данных
                 IO_RA1_Toggle();
 			 }
 			quantity_Data_ModbasRtu = 0;  // обнуляем счетчик
-			TMR0_StartTimer(); //TCCR0=0b00001100;  запускаем таймер для определения завершения пакета данных
+			StartTimer(); //TCCR0=0b00001100;  запускаем таймер для определения завершения пакета данных
 		 }
 		if (Bit_action_ModbasRtu.b1 == 1)
             // D & (1<<1)
@@ -70,7 +69,7 @@ void USART_TXC_vect(void)
  {
     //IO_RA0_SetHigh();
    //PORTD &=~ (1<<2); //выключаем передатчик RS485
-   PIE1bits.TX1IE=0;//IO_RA0_Toggle();
+   InterruptUartDisable();//IO_RA0_Toggle();
    //UCSRB &=~ (1 << TXCIE);  //Запрещаеим прерывания  PIE1bits.RC1IE = 0;
     //UCSRB - Регистр управления. Состоит из восьми бит. 
    //TXCIE Данный флаг разрешает прерывания по завершению передачи. 
@@ -82,7 +81,7 @@ void USART_UDRE_vect (void)        //регистр данных на передачю пуст TXSTAbits.T
     
    if (quantity_Data_ModbasRtu >= Temp_ModbasRtu )
     {
-	  TXREG = Danie_Rx_ModbasRtu[Temp_ModbasRtu++];
+	  UartBuffer = Danie_Rx_ModbasRtu[Temp_ModbasRtu++];
     }
    else
     {
@@ -91,7 +90,7 @@ void USART_UDRE_vect (void)        //регистр данных на передачю пуст TXSTAbits.T
                                 генериться прерывание*/
       USART_UDR_vect=0;
 	                  //UCSRB &=~(1 << UDRIE);  //прерывания по опусташение регистра данных на передачю запрещаем
-      PIE1bits.TX1IE=1;
+      InterruptUartEnable();
 	                 //UCSRB |= (1 << TXCIE); //UCSRB - Регистр управления. Состоит из восьми бит.
                      //PIE1bits.RC1IE = 1;                       //TXCIE Данный флаг разрешает прерывания по завершению передачи.
 	}
@@ -100,7 +99,7 @@ void USART_UDRE_vect (void)        //регистр данных на передачю пуст TXSTAbits.T
 //************************//
 // CRC16 Modbus RTU подсчитуем контрольную сумму
 //************************//
-  int crc_chk (unsigned char* data, unsigned char length )
+ unsigned int crc_chk (unsigned char* data, unsigned char length )
   {
 	 int j;
 	 unsigned int reg_crc = 0xFFFF;
@@ -127,7 +126,7 @@ void USART_UDRE_vect (void)        //регистр данных на передачю пуст TXSTAbits.T
  unsigned int ModbasRtu_Register_address(unsigned char Li)
  {
 	 register char Hi= Li - 1;
-	 return  Danie_Rx_ModbasRtu[Hi] * 256+ Danie_Rx_ModbasRtu[Li]; // считываем адресс старшего байта и младший
+	 return  Danie_Rx_ModbasRtu[Hi] * 256 + Danie_Rx_ModbasRtu[Li]; // считываем адресс старшего байта и младший
  }
 //*****************************//
    //проверка контрольной суммы в полученой посылке данных
@@ -372,20 +371,36 @@ char _Bin_input_Output( register unsigned char NUMBER, register unsigned char st
 		         analog_output_recording();// Modbus RTU на запись аналогового выхода? Команда 0x06
 		         break;
 		  case 15: // Modbus RTU на запись нескольких дискретных выводов? Команда 0x0F
-		         asm("nop");
-		//  break;
+		          asm("nop");
+		          break;
 		  case 16:
-		         asm("nop");
+		          asm("nop");
 		       // Modbus RTU на запись нескольких аналоговых выводов? Команда 0x10
-		 // break;
+		          break;
+          case 21:
+		         //Request_Uart_ELL(); 
+		       
+		          break;
+          case 22:
+		          //Enable_Uart_LISA();
+		       
+		          break;
+          case 23:
+		         //Enable_ON-OFF(); 
+		       
+		          break;
+          case 24:
+		        //Disable_ON-OFF(); 
+		       
+		          break;
+                  
 		  default: // команды не подерживаются
-		        Error_modbasRtu (0x01); //Принятый код функции не может быть обработан.
-		  break;
+		          Error_modbasRtu (0x01); //Принятый код функции не может быть обработан.
+		          break;
 	  }
-	 //PORTD |= (1<<2);
-     USART_UDR_vect=1; 
-	 //UCSRB |=(1 << UDRIE); // ответ отправляем либо код ошибки
-	 Bit_action_ModbasRtu.b2 = 0;      //Bit_action_ModbasRtu &=~ (1<<2); // данные обработаны можем принимать следующие
+	 
+     USART_UDR_vect=1; // ответ отправляем либо код ошибки 
+	 Bit_action_ModbasRtu.b2 = 0; // данные обработаны можем принимать следующие
   }
   //*************************//
      //подпрограммы для установки значений
@@ -441,7 +456,7 @@ void change_analogue_input (volatile unsigned char nomer, int Danie)  // записат
 	    }
 	    else
 	    {
-		    modbasRtu_Answer(  );             // выполняем команду и формеруем ответ, на выполнение либо ашибки
+		    modbasRtu_Answer();             // выполняем команду и формеруем ответ, на выполнение либо ашибки
 	    }
     }
   }

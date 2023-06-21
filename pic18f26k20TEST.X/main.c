@@ -39,11 +39,12 @@
     CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT 
     OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS 
     SOFTWARE.
-*/
+*////
 
 #include "mcc_generated_files/mcc.h"
 #include "mcc_generated_files/examples/i2c_master_example.h"
 #include "Modbas_RTU.h"
+
 
 
 #define test1bit(var, bit) ((var) & (1 <<(bit)))
@@ -94,9 +95,7 @@ void main(void)
         //
          if(IO_RA2_GetValue() && !bitt.b0 )
          {
-             IO_RA0_SetHigh();
-             
-             
+             IO_RA0_SetHigh();        
               //I2C_Write2ByteRegister((0XE6)>>1,0X30,0X64C0);
               I2C_WriteNBytes(address,dat,3);
               //I2C_ReadNBytes(i2c_address_t address, uint8_t *data, size_t len);
@@ -114,10 +113,9 @@ void main(void)
          }
          if(TXSTAbits.TRMT && USART_UDR_vect)
          {
-             USART_UDRE_vect (); 
-             
+             USART_UDRE_vect ();     
          }
-           modbasRtu_Slave();
+           
         // Add your application code
     }
    

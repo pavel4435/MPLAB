@@ -1,25 +1,25 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"65 ./Modbas_RTU.h
-[; ;./Modbas_RTU.h: 65:     {
+"74 ./Modbas_RTU.h
+[; ;./Modbas_RTU.h: 74:  struct {
 [s S281 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S281 . b0 b1 b2 ]
 [p mainexit ]
-"73 ./mcc_generated_files/mcc.h
-[; ;./mcc_generated_files/mcc.h: 73: void SYSTEM_Initialize(void);
+"74 ./mcc_generated_files/mcc.h
+[; ;./mcc_generated_files/mcc.h: 74: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-[v F2907 `(v ~T0 @X0 0 tf ]
+[v F2923 `(v ~T0 @X0 0 tf ]
 "505 ./mcc_generated_files/eusart.h
 [; ;./mcc_generated_files/eusart.h: 505: void EUSART_SetRxInterruptHandler(void (* interruptHandler)(void));
-[v _EUSART_SetRxInterruptHandler `(v ~T0 @X0 0 ef1`*F2907 ]
-"74 ./Modbas_RTU.h
-[; ;./Modbas_RTU.h: 74: void USART_RXC_vect(void);
+[v _EUSART_SetRxInterruptHandler `(v ~T0 @X0 0 ef1`*F2923 ]
+"83 ./Modbas_RTU.h
+[; ;./Modbas_RTU.h: 83: void USART_RXC_vect(void);
 [v _USART_RXC_vect `(v ~T0 @X0 0 ef ]
-[v F2903 `(v ~T0 @X0 0 tf ]
+[v F2919 `(v ~T0 @X0 0 tf ]
 "485 ./mcc_generated_files/eusart.h
 [; ;./mcc_generated_files/eusart.h: 485: void EUSART_SetTxInterruptHandler(void (* interruptHandler)(void));
-[v _EUSART_SetTxInterruptHandler `(v ~T0 @X0 0 ef1`*F2903 ]
-"75 ./Modbas_RTU.h
-[; ;./Modbas_RTU.h: 75: void USART_TXC_vect (void);
+[v _EUSART_SetTxInterruptHandler `(v ~T0 @X0 0 ef1`*F2919 ]
+"84 ./Modbas_RTU.h
+[; ;./Modbas_RTU.h: 84: void USART_TXC_vect (void);
 [v _USART_TXC_vect `(v ~T0 @X0 0 ef ]
 "6213 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6213:     struct {
@@ -40,8 +40,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6239
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6239: extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
 [v _INTCONbits `VS270 ~T0 @X0 0 e@4082 ]
-"81 main.c
-[; ;main.c: 81:   struct {
+"82 main.c
+[; ;main.c: 82:   struct {
 [s S283 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S283 . b0 b1 b2 b3 b4 b5 b6 b7 ]
 "529 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h
@@ -131,12 +131,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3194
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 3194: extern volatile TXSTAbits_t TXSTAbits __attribute__((address(0xFAC)));
 [v _TXSTAbits `VS132 ~T0 @X0 0 e@4012 ]
-"76 ./Modbas_RTU.h
-[; ;./Modbas_RTU.h: 76: void USART_UDRE_vect(void);
+"85 ./Modbas_RTU.h
+[; ;./Modbas_RTU.h: 85: void USART_UDRE_vect(void);
 [v _USART_UDRE_vect `(v ~T0 @X0 0 ef ]
-"99
-[; ;./Modbas_RTU.h: 99:     void modbasRtu_Slave( void );
-[v _modbasRtu_Slave `(v ~T0 @X0 0 ef ]
 "55 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 55: __asm("SSPMSK equ 0F77h");
 [; <" SSPMSK equ 0F77h ;# ">
@@ -557,31 +554,31 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6516
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h: 6516: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"57 ./Modbas_RTU.h
-[; ;./Modbas_RTU.h: 57:  unsigned char Danie_Rx_ModbasRtu[30] = {},quantity_Data_ModbasRtu;
+"66 ./Modbas_RTU.h
+[; ;./Modbas_RTU.h: 66:  unsigned char Danie_Rx_ModbasRtu[30] = {},quantity_Data_ModbasRtu;
 [v _Danie_Rx_ModbasRtu `uc ~T0 @X0 -> 30 `i e ]
 [i _Danie_Rx_ModbasRtu
 :U ..
 ..
 ]
 [v _quantity_Data_ModbasRtu `uc ~T0 @X0 1 e ]
-"59
-[; ;./Modbas_RTU.h: 59:  unsigned int Danie_ModbasRtu_analog_input [ 10 ];
+"68
+[; ;./Modbas_RTU.h: 68:  unsigned int Danie_ModbasRtu_analog_input [ 10 ];
 [v _Danie_ModbasRtu_analog_input `ui ~T0 @X0 -> 10 `i e ]
-"60
-[; ;./Modbas_RTU.h: 60:  unsigned int Danie_ModbasRtu_analog_Output [ 10 ];
-[v _Danie_ModbasRtu_analog_Output `ui ~T0 @X0 -> 10 `i e ]
-"61
-[; ;./Modbas_RTU.h: 61:  unsigned char Danie_ModbasRtu_Binary_input [ (10 / 8)+ 1 ];
-[v _Danie_ModbasRtu_Binary_input `uc ~T0 @X0 -> 2 `i e ]
-"62
-[; ;./Modbas_RTU.h: 62:  unsigned char Danie_ModbasRtu_Binary_Output [ (10/ 8)+ 1 ];
-[v _Danie_ModbasRtu_Binary_Output `uc ~T0 @X0 -> 2 `i e ]
-"63
-[; ;./Modbas_RTU.h: 63:  unsigned char Temp_ModbasRtu;
-[v _Temp_ModbasRtu `uc ~T0 @X0 1 e ]
 "69
-[; ;./Modbas_RTU.h: 69:     } Bit_action_ModbasRtu = {0,0,0},D;
+[; ;./Modbas_RTU.h: 69:  unsigned int Danie_ModbasRtu_analog_Output [ 10 ];
+[v _Danie_ModbasRtu_analog_Output `ui ~T0 @X0 -> 10 `i e ]
+"70
+[; ;./Modbas_RTU.h: 70:  unsigned char Danie_ModbasRtu_Binary_input [ (10 / 8)+ 1 ];
+[v _Danie_ModbasRtu_Binary_input `uc ~T0 @X0 -> 2 `i e ]
+"71
+[; ;./Modbas_RTU.h: 71:  unsigned char Danie_ModbasRtu_Binary_Output [ (10/ 8)+ 1 ];
+[v _Danie_ModbasRtu_Binary_Output `uc ~T0 @X0 -> 2 `i e ]
+"72
+[; ;./Modbas_RTU.h: 72:  unsigned char Temp_ModbasRtu;
+[v _Temp_ModbasRtu `uc ~T0 @X0 1 e ]
+"78
+[; ;./Modbas_RTU.h: 78:     } Bit_action_ModbasRtu = {0, 0, 0}, D;
 [v _Bit_action_ModbasRtu `S281 ~T0 @X0 1 e ]
 [i _Bit_action_ModbasRtu
 :U ..
@@ -593,152 +590,149 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _D `S281 ~T0 @X0 1 e ]
-"70
-[; ;./Modbas_RTU.h: 70: unsigned char USART_UDR_vect = 0;
+"79
+[; ;./Modbas_RTU.h: 79: unsigned char USART_UDR_vect = 0;
 [v _USART_UDR_vect `uc ~T0 @X0 1 e ]
 [i _USART_UDR_vect
 -> -> 0 `i `uc
 ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"59 main.c
-[; ;main.c: 59: void main(void)
+"60 main.c
+[; ;main.c: 60: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"60
-[; ;main.c: 60: {
+"61
+[; ;main.c: 61: {
 {
 [e :U _main ]
 [f ]
-"62
-[; ;main.c: 62:     SYSTEM_Initialize();
+"63
+[; ;main.c: 63:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"64
-[; ;main.c: 64:    EUSART_SetRxInterruptHandler(USART_RXC_vect);
-[e ( _EUSART_SetRxInterruptHandler (1 &U _USART_RXC_vect ]
 "65
-[; ;main.c: 65:    EUSART_SetTxInterruptHandler(USART_TXC_vect);
+[; ;main.c: 65:    EUSART_SetRxInterruptHandler(USART_RXC_vect);
+[e ( _EUSART_SetRxInterruptHandler (1 &U _USART_RXC_vect ]
+"66
+[; ;main.c: 66:    EUSART_SetTxInterruptHandler(USART_TXC_vect);
 [e ( _EUSART_SetTxInterruptHandler (1 &U _USART_TXC_vect ]
-"71
-[; ;main.c: 71:    (INTCONbits.GIE = 1);
+"72
+[; ;main.c: 72:    (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-"77
-[; ;main.c: 77:    (INTCONbits.PEIE = 1);
+"78
+[; ;main.c: 78:    (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
-"83
-[; ;main.c: 83:          } bitt;
-[v _bitt `S283 ~T0 @X0 1 a ]
 "84
-[; ;main.c: 84:    char toggle=0;
+[; ;main.c: 84:          } bitt;
+[v _bitt `S283 ~T0 @X0 1 a ]
+"85
+[; ;main.c: 85:    char toggle=0;
 [v _toggle `uc ~T0 @X0 1 a ]
 [e = _toggle -> -> 0 `i `uc ]
-"85
-[; ;main.c: 85:    uint8_t address = (0XE6)>>1;
+"86
+[; ;main.c: 86:    uint8_t address = (0XE6)>>1;
 [v _address `uc ~T0 @X0 1 a ]
 [e = _address -> >> -> 230 `i -> 1 `i `uc ]
-[v F3018 `uc ~T0 @X0 -> 3 `i s ]
-[i F3018
+[v F3034 `uc ~T0 @X0 -> 3 `i s ]
+[i F3034
 :U ..
-"86
-[; ;main.c: 86:    uint8_t dat[3]={0X30,0X64,0XC0};
+"87
+[; ;main.c: 87:    uint8_t dat[3]={0X30,0X64,0XC0};
 -> -> 48 `i `uc
 -> -> 100 `i `uc
 -> -> 192 `i `uc
 ..
 ]
 [v _dat `uc ~T0 @X0 -> 3 `i a ]
-[e = _dat F3018 ]
-[v F3020 `uc ~T0 @X0 -> 3 `i s ]
-[i F3020
+[e = _dat F3034 ]
+[v F3036 `uc ~T0 @X0 -> 3 `i s ]
+[i F3036
 :U ..
-"87
-[; ;main.c: 87:    uint8_t red[3]={0x1C};
+"88
+[; ;main.c: 88:    uint8_t red[3]={0x1C};
 -> -> 28 `i `uc
 ..
 ]
 [v _red `uc ~T0 @X0 -> 3 `i a ]
-[e = _red F3020 ]
-"88
-[; ;main.c: 88:    uint8_t red2[3];
+[e = _red F3036 ]
+"89
+[; ;main.c: 89:    uint8_t red2[3];
 [v _red2 `uc ~T0 @X0 -> 3 `i a ]
-"91
-[; ;main.c: 91:     while (1)
-[e :U 285 ]
 "92
-[; ;main.c: 92:     {
+[; ;main.c: 92:     while (1)
+[e :U 285 ]
+"93
+[; ;main.c: 93:     {
 {
-"95
-[; ;main.c: 95:          if(PORTAbits.RA2 && !bitt.b0 )
-[e $ ! && != -> . . _PORTAbits 0 2 `i -> 0 `i ! != -> . _bitt 0 `i -> 0 `i 287  ]
 "96
-[; ;main.c: 96:          {
-{
+[; ;main.c: 96:          if(PORTAbits.RA2 && !bitt.b0 )
+[e $ ! && != -> . . _PORTAbits 0 2 `i -> 0 `i ! != -> . _bitt 0 `i -> 0 `i 287  ]
 "97
-[; ;main.c: 97:              do { LATAbits.LATA0 = 1; } while(0);
+[; ;main.c: 97:          {
+{
+"98
+[; ;main.c: 98:              do { LATAbits.LATA0 = 1; } while(0);
 [e :U 290 ]
 {
 [e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
 }
 [e :U 289 ]
-"101
-[; ;main.c: 101:               I2C_WriteNBytes(address,dat,3);
+"100
+[; ;main.c: 100:               I2C_WriteNBytes(address,dat,3);
 [e ( _I2C_WriteNBytes (3 , , _address &U _dat -> -> 3 `i `ui ]
-"103
-[; ;main.c: 103:               I2C_WriteNBytes((0xD0)>>1,red,1);
+"102
+[; ;main.c: 102:               I2C_WriteNBytes((0xD0)>>1,red,1);
 [e ( _I2C_WriteNBytes (3 , , -> >> -> 208 `i -> 1 `i `uc &U _red -> -> 1 `i `ui ]
-"105
-[; ;main.c: 105:               I2C_ReadNBytes((0xD1)>>1, red2 , 3);
+"104
+[; ;main.c: 104:               I2C_ReadNBytes((0xD1)>>1, red2 , 3);
 [e ( _I2C_ReadNBytes (3 , , -> >> -> 209 `i -> 1 `i `uc &U _red2 -> -> 3 `i `ui ]
-"107
-[; ;main.c: 107:               bitt.b0=1;
+"106
+[; ;main.c: 106:               bitt.b0=1;
 [e = . _bitt 0 -> -> 1 `i `uc ]
-"109
-[; ;main.c: 109:          }
+"108
+[; ;main.c: 108:          }
 }
 [e $U 291  ]
-"110
-[; ;main.c: 110:          else if(!PORTAbits.RA2 && bitt.b0)
+"109
+[; ;main.c: 109:          else if(!PORTAbits.RA2 && bitt.b0)
 [e :U 287 ]
 [e $ ! && ! != -> . . _PORTAbits 0 2 `i -> 0 `i != -> . _bitt 0 `i -> 0 `i 292  ]
-"111
-[; ;main.c: 111:          {
+"110
+[; ;main.c: 110:          {
 {
-"112
-[; ;main.c: 112:              do { LATAbits.LATA0 = 0; } while(0);
+"111
+[; ;main.c: 111:              do { LATAbits.LATA0 = 0; } while(0);
 [e :U 295 ]
 {
 [e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
 }
 [e :U 294 ]
-"113
-[; ;main.c: 113:              bitt.b0=0;
+"112
+[; ;main.c: 112:              bitt.b0=0;
 [e = . _bitt 0 -> -> 0 `i `uc ]
-"114
-[; ;main.c: 114:          }
+"113
+[; ;main.c: 113:          }
 }
 [e :U 292 ]
 [e :U 291 ]
-"115
-[; ;main.c: 115:          if(TXSTAbits.TRMT && USART_UDR_vect)
+"114
+[; ;main.c: 114:          if(TXSTAbits.TRMT && USART_UDR_vect)
 [e $ ! && != -> . . _TXSTAbits 0 1 `i -> 0 `i != -> _USART_UDR_vect `i -> 0 `i 296  ]
-"116
-[; ;main.c: 116:          {
+"115
+[; ;main.c: 115:          {
 {
-"117
-[; ;main.c: 117:              USART_UDRE_vect ();
+"116
+[; ;main.c: 116:              USART_UDRE_vect ();
 [e ( _USART_UDRE_vect ..  ]
-"119
-[; ;main.c: 119:          }
+"117
+[; ;main.c: 117:          }
 }
 [e :U 296 ]
 "120
-[; ;main.c: 120:            modbasRtu_Slave();
-[e ( _modbasRtu_Slave ..  ]
-"122
-[; ;main.c: 122:     }
+[; ;main.c: 120:     }
 }
 [e :U 284 ]
 [e $U 285  ]
 [e :U 286 ]
-"124
-[; ;main.c: 124: }
+"122
+[; ;main.c: 122: }
 [e :UE 282 ]
 }

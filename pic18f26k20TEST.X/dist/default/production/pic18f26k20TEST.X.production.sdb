@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 18F26K20 ]
 [d frameptr 4065 ]
-"67 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/examples/i2c_master_example.c
+"67 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/examples/i2c_master_example.c
 [e E355 . `uc
 I2C_NOERR 0
 I2C_BUSY 1
@@ -17,7 +17,7 @@ I2C_RESTART_WRITE 3
 I2C_CONTINUE 4
 I2C_RESET_LINK 5
 ]
-"146 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
+"146 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
 [e E2846 . `uc
 I2C_IDLE 0
 I2C_SEND_ADR_READ 1
@@ -82,9 +82,9 @@ I2C_NULL 5
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"59 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\main.c
+"60 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"88 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/eusart.c
+"88 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/eusart.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
 "197
 [v _EUSART_Transmit_ISR EUSART_Transmit_ISR `(v  1 e 1 0 ]
@@ -108,7 +108,7 @@ I2C_NULL 5
 [v _EUSART_SetTxInterruptHandler EUSART_SetTxInterruptHandler `(v  1 e 1 0 ]
 "280
 [v _EUSART_SetRxInterruptHandler EUSART_SetRxInterruptHandler `(v  1 e 1 0 ]
-"111 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/examples/i2c_master_example.c
+"111 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/examples/i2c_master_example.c
 [v _I2C_WriteNBytes I2C_WriteNBytes `(v  1 e 1 0 ]
 "120
 [v _I2C_ReadNBytes I2C_ReadNBytes `(v  1 e 1 0 ]
@@ -122,7 +122,7 @@ I2C_NULL 5
 [v _wr2RegCompleteHandler wr2RegCompleteHandler `(E360  1 s 1 wr2RegCompleteHandler ]
 "170
 [v _rdBlkRegCompleteHandler rdBlkRegCompleteHandler `(E360  1 s 1 rdBlkRegCompleteHandler ]
-"167 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
+"167 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
 [v _I2C_Initialize I2C_Initialize `(v  1 e 1 0 ]
 "176
 [v _I2C_Open I2C_Open `(E355  1 e 1 0 ]
@@ -218,22 +218,18 @@ I2C_NULL 5
 [v _I2C_MasterSetIrq I2C_MasterSetIrq `T(v  1 s 1 I2C_MasterSetIrq ]
 "650
 [v _I2C_MasterWaitForEvent I2C_MasterWaitForEvent `T(v  1 s 1 I2C_MasterWaitForEvent ]
-"52 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/interrupt_manager.c
+"52 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 "58
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
-"50 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/mcc.c
+"50 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
-"61
+"62
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
-"55 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/pin_manager.c
+"55 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"68 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/tmr0.c
+"68 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/tmr0.c
 [v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
-"95
-[v _TMR0_StartTimer TMR0_StartTimer `(v  1 e 1 0 ]
-"101
-[v _TMR0_StopTimer TMR0_StopTimer `(v  1 e 1 0 ]
 "123
 [v _TMR0_Reload TMR0_Reload `(v  1 e 1 0 ]
 "130
@@ -242,58 +238,66 @@ I2C_NULL 5
 [v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
 "153
 [v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
-"24 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\Modbas_RTU.c
+"64 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+"119
+[v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
+"132
+[v _TMR2_SetInterruptHandler TMR2_SetInterruptHandler `(v  1 e 1 0 ]
+"136
+[v _TMR2_DefaultInterruptHandler TMR2_DefaultInterruptHandler `(v  1 e 1 0 ]
+"24 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\Modbas_RTU.c
 [v _TIMER0_COMP_vect TIMER0_COMP_vect `(v  1 e 1 0 ]
-"41
+"40
 [v _USART_RXC_vect USART_RXC_vect `(v  1 e 1 0 ]
-"69
+"68
 [v _USART_TXC_vect USART_TXC_vect `(v  1 e 1 0 ]
-"80
+"79
 [v _USART_UDRE_vect USART_UDRE_vect `(v  1 e 1 0 ]
-"103
-[v _crc_chk crc_chk `(i  1 e 2 0 ]
-"127
+"102
+[v _crc_chk crc_chk `(ui  1 e 2 0 ]
+"126
 [v _ModbasRtu_Register_address ModbasRtu_Register_address `(ui  1 e 2 0 ]
-"135
+"134
 [v _Data_integrity Data_integrity `(uc  1 e 1 0 ]
-"158
+"157
 [v __Bin_input_Output _Bin_input_Output `(uc  1 e 1 0 ]
-"190
+"189
 [v _Changing_Discrete_Output Changing_Discrete_Output `(v  1 e 1 0 ]
-"211
+"210
 [v _Reading_Discrete_Output Reading_Discrete_Output `(v  1 e 1 0 ]
-"272
+"271
 [v _Read_analog_input Read_analog_input `(v  1 e 1 0 ]
-"310
+"309
 [v _analog_output_recording analog_output_recording `(v  1 e 1 0 ]
-"328
+"327
 [v _Error_modbasRtu Error_modbasRtu `(v  1 e 1 0 ]
-"337
+"336
 [v _check_sum check_sum `(v  1 e 1 0 ]
-"351
+"350
 [v _modbasRtu_Answer modbasRtu_Answer `(v  1 e 1 0 ]
-"428
+"443
 [v _modbasRtu_Slave modbasRtu_Slave `(v  1 e 1 0 ]
-"57 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X/Modbas_RTU.h
+"66 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X/Modbas_RTU.h
 [v _Danie_Rx_ModbasRtu Danie_Rx_ModbasRtu `[30]uc  1 e 30 0 ]
 [v _quantity_Data_ModbasRtu quantity_Data_ModbasRtu `uc  1 e 1 0 ]
-"59
+"68
 [v _Danie_ModbasRtu_analog_input Danie_ModbasRtu_analog_input `[10]ui  1 e 20 0 ]
-"60
+"69
 [v _Danie_ModbasRtu_analog_Output Danie_ModbasRtu_analog_Output `[10]ui  1 e 20 0 ]
-"61
+"70
 [v _Danie_ModbasRtu_Binary_input Danie_ModbasRtu_Binary_input `[2]uc  1 e 2 0 ]
-"62
+"71
 [v _Danie_ModbasRtu_Binary_Output Danie_ModbasRtu_Binary_Output `[2]uc  1 e 2 0 ]
-"63
+"72
 [v _Temp_ModbasRtu Temp_ModbasRtu `uc  1 e 1 0 ]
-[s S1016 . 1 `uc 1 b0 1 0 :1:0 
+[s S1020 . 1 `uc 1 b0 1 0 :1:0 
 `uc 1 b1 1 0 :1:1 
 `uc 1 b2 1 0 :1:2 
 ]
-"69
-[v _Bit_action_ModbasRtu Bit_action_ModbasRtu `S1016  1 e 1 0 ]
-"70
+"78
+[v _Bit_action_ModbasRtu Bit_action_ModbasRtu `S1020  1 e 1 0 ]
+"79
 [v _USART_UDR_vect USART_UDR_vect `uc  1 e 1 0 ]
 "334 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f26k20.h
 [v _WPUB WPUB `VEuc  1 e 1 @3964 ]
@@ -301,7 +305,7 @@ I2C_NULL 5
 [v _ANSEL ANSEL `VEuc  1 e 1 @3966 ]
 "479
 [v _ANSELH ANSELH `VEuc  1 e 1 @3967 ]
-[s S1792 . 1 `uc 1 RA0 1 0 :1:0 
+[s S1629 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -311,52 +315,52 @@ I2C_NULL 5
 `uc 1 RA7 1 0 :1:7 
 ]
 "589
-[s S1801 . 1 `uc 1 AN0 1 0 :1:0 
+[s S1638 . 1 `uc 1 AN0 1 0 :1:0 
 `uc 1 AN1 1 0 :1:1 
 `uc 1 AN2 1 0 :1:2 
 `uc 1 AN3 1 0 :1:3 
 `uc 1 . 1 0 :1:4 
 `uc 1 AN4 1 0 :1:5 
 ]
-[s S1808 . 1 `uc 1 C12IN0M 1 0 :1:0 
+[s S1645 . 1 `uc 1 C12IN0M 1 0 :1:0 
 `uc 1 C12IN1M 1 0 :1:1 
 `uc 1 C2INP 1 0 :1:2 
 `uc 1 C1INP 1 0 :1:3 
 `uc 1 C1OUT 1 0 :1:4 
 `uc 1 C2OUT 1 0 :1:5 
 ]
-[s S1815 . 1 `uc 1 C12IN0N 1 0 :1:0 
+[s S1652 . 1 `uc 1 C12IN0N 1 0 :1:0 
 `uc 1 C12IN1N 1 0 :1:1 
 `uc 1 VREFM 1 0 :1:2 
 `uc 1 VREFP 1 0 :1:3 
 `uc 1 T0CKI 1 0 :1:4 
 `uc 1 SS 1 0 :1:5 
 ]
-[s S1822 . 1 `uc 1 . 1 0 :5:0 
+[s S1659 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 NOT_SS 1 0 :1:5 
 ]
-[s S1825 . 1 `uc 1 . 1 0 :2:0 
+[s S1662 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 VREFN 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nSS 1 0 :1:5 
 ]
-[s S1830 . 1 `uc 1 . 1 0 :2:0 
+[s S1667 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 CVREF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 LVDIN 1 0 :1:5 
 ]
-[s S1835 . 1 `uc 1 . 1 0 :5:0 
+[s S1672 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 HLVDIN 1 0 :1:5 
 ]
-[s S1838 . 1 `uc 1 ULPWUIN 1 0 :1:0 
+[s S1675 . 1 `uc 1 ULPWUIN 1 0 :1:0 
 `uc 1 . 1 0 :6:1 
 `uc 1 RJPU 1 0 :1:7 
 ]
-[u S1842 . 1 `S1792 1 . 1 0 `S1801 1 . 1 0 `S1808 1 . 1 0 `S1815 1 . 1 0 `S1822 1 . 1 0 `S1825 1 . 1 0 `S1830 1 . 1 0 `S1835 1 . 1 0 `S1838 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES1842  1 e 1 @3968 ]
+[u S1679 . 1 `S1629 1 . 1 0 `S1638 1 . 1 0 `S1645 1 . 1 0 `S1652 1 . 1 0 `S1659 1 . 1 0 `S1662 1 . 1 0 `S1667 1 . 1 0 `S1672 1 . 1 0 `S1675 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES1679  1 e 1 @3968 ]
 "1252
 [v _LATA LATA `VEuc  1 e 1 @3977 ]
-[s S1575 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S1740 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 LATA3 1 0 :1:3 
@@ -366,7 +370,7 @@ I2C_NULL 5
 `uc 1 LATA7 1 0 :1:7 
 ]
 "1279
-[s S1584 . 1 `uc 1 LA0 1 0 :1:0 
+[s S1749 . 1 `uc 1 LA0 1 0 :1:0 
 `uc 1 LA1 1 0 :1:1 
 `uc 1 LA2 1 0 :1:2 
 `uc 1 LA3 1 0 :1:3 
@@ -375,8 +379,8 @@ I2C_NULL 5
 `uc 1 LA6 1 0 :1:6 
 `uc 1 LA7 1 0 :1:7 
 ]
-[u S1593 . 1 `S1575 1 . 1 0 `S1584 1 . 1 0 ]
-[v _LATAbits LATAbits `VES1593  1 e 1 @3977 ]
+[u S1758 . 1 `S1740 1 . 1 0 `S1749 1 . 1 0 ]
+[v _LATAbits LATAbits `VES1758  1 e 1 @3977 ]
 "1364
 [v _LATB LATB `VEuc  1 e 1 @3978 ]
 "1476
@@ -439,7 +443,7 @@ I2C_NULL 5
 [v _PIR2bits PIR2bits `VES475  1 e 1 @4001 ]
 "2945
 [v _RCSTA RCSTA `VEuc  1 e 1 @4011 ]
-[s S1268 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S1272 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -449,25 +453,25 @@ I2C_NULL 5
 `uc 1 SPEN 1 0 :1:7 
 ]
 "2986
-[s S1277 . 1 `uc 1 . 1 0 :3:0 
+[s S1281 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 ADEN 1 0 :1:3 
 ]
-[s S1280 . 1 `uc 1 . 1 0 :5:0 
+[s S1284 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 SRENA 1 0 :1:5 
 ]
-[s S1283 . 1 `uc 1 . 1 0 :6:0 
+[s S1287 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[s S1286 . 1 `uc 1 . 1 0 :6:0 
+[s S1290 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S1289 . 1 `uc 1 RCD8 1 0 :1:0 
+[s S1293 . 1 `uc 1 RCD8 1 0 :1:0 
 ]
-[u S1291 . 1 `S1268 1 . 1 0 `S1277 1 . 1 0 `S1280 1 . 1 0 `S1283 1 . 1 0 `S1286 1 . 1 0 `S1289 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES1291  1 e 1 @4011 ]
+[u S1295 . 1 `S1272 1 . 1 0 `S1281 1 . 1 0 `S1284 1 . 1 0 `S1287 1 . 1 0 `S1290 1 . 1 0 `S1293 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES1295  1 e 1 @4011 ]
 "3155
 [v _TXSTA TXSTA `VEuc  1 e 1 @4012 ]
-[s S1215 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S1219 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -477,7 +481,7 @@ I2C_NULL 5
 `uc 1 CSRC 1 0 :1:7 
 ]
 "3194
-[s S1224 . 1 `uc 1 TX9D1 1 0 :1:0 
+[s S1228 . 1 `uc 1 TX9D1 1 0 :1:0 
 `uc 1 TRMT1 1 0 :1:1 
 `uc 1 BRGH1 1 0 :1:2 
 `uc 1 SENDB1 1 0 :1:3 
@@ -486,13 +490,13 @@ I2C_NULL 5
 `uc 1 TX91 1 0 :1:6 
 `uc 1 CSRC1 1 0 :1:7 
 ]
-[s S1233 . 1 `uc 1 . 1 0 :6:0 
+[s S1237 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[s S1236 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S1240 . 1 `uc 1 TXD8 1 0 :1:0 
 ]
-[u S1238 . 1 `S1215 1 . 1 0 `S1224 1 . 1 0 `S1233 1 . 1 0 `S1236 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES1238  1 e 1 @4012 ]
+[u S1242 . 1 `S1219 1 . 1 0 `S1228 1 . 1 0 `S1237 1 . 1 0 `S1240 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES1242  1 e 1 @4012 ]
 "3411
 [v _TXREG TXREG `VEuc  1 e 1 @4013 ]
 "3423
@@ -602,22 +606,43 @@ I2C_NULL 5
 [v _SSPADD SSPADD `VEuc  1 e 1 @4040 ]
 "4869
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @4041 ]
-[s S1409 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+"4876
+[v _T2CON T2CON `VEuc  1 e 1 @4042 ]
+[s S1911 . 1 `uc 1 T2CKPS 1 0 :2:0 
+`uc 1 TMR2ON 1 0 :1:2 
+`uc 1 T2OUTPS 1 0 :4:3 
+]
+"4897
+[s S1915 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+`uc 1 T2CKPS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 T2OUTPS0 1 0 :1:3 
+`uc 1 T2OUTPS1 1 0 :1:4 
+`uc 1 T2OUTPS2 1 0 :1:5 
+`uc 1 T2OUTPS3 1 0 :1:6 
+]
+[u S1923 . 1 `S1911 1 . 1 0 `S1915 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES1923  1 e 1 @4042 ]
+"4947
+[v _PR2 PR2 `VEuc  1 e 1 @4043 ]
+"5057
+[v _TMR2 TMR2 `VEuc  1 e 1 @4044 ]
+[s S1413 . 1 `uc 1 NOT_BOR 1 0 :1:0 
 ]
 "5231
-[s S1411 . 1 `uc 1 . 1 0 :1:0 
+[s S1415 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_POR 1 0 :1:1 
 ]
-[s S1414 . 1 `uc 1 . 1 0 :2:0 
+[s S1418 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_PD 1 0 :1:2 
 ]
-[s S1417 . 1 `uc 1 . 1 0 :3:0 
+[s S1421 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 NOT_TO 1 0 :1:3 
 ]
-[s S1420 . 1 `uc 1 . 1 0 :4:0 
+[s S1424 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 NOT_RI 1 0 :1:4 
 ]
-[s S1423 . 1 `uc 1 nBOR 1 0 :1:0 
+[s S1427 . 1 `uc 1 nBOR 1 0 :1:0 
 `uc 1 nPOR 1 0 :1:1 
 `uc 1 nPD 1 0 :1:2 
 `uc 1 nTO 1 0 :1:3 
@@ -626,19 +651,19 @@ I2C_NULL 5
 `uc 1 SBOREN 1 0 :1:6 
 `uc 1 IPEN 1 0 :1:7 
 ]
-[s S1432 . 1 `uc 1 BOR 1 0 :1:0 
+[s S1436 . 1 `uc 1 BOR 1 0 :1:0 
 `uc 1 POR 1 0 :1:1 
 `uc 1 PD 1 0 :1:2 
 `uc 1 TO 1 0 :1:3 
 `uc 1 RI 1 0 :1:4 
 ]
-[u S1438 . 1 `S1409 1 . 1 0 `S1411 1 . 1 0 `S1414 1 . 1 0 `S1417 1 . 1 0 `S1420 1 . 1 0 `S1423 1 . 1 0 `S1432 1 . 1 0 ]
-[v _RCONbits RCONbits `VES1438  1 e 1 @4048 ]
+[u S1442 . 1 `S1413 1 . 1 0 `S1415 1 . 1 0 `S1418 1 . 1 0 `S1421 1 . 1 0 `S1424 1 . 1 0 `S1427 1 . 1 0 `S1436 1 . 1 0 ]
+[v _RCONbits RCONbits `VES1442  1 e 1 @4048 ]
 "5619
 [v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
 "5696
 [v _T0CON T0CON `VEuc  1 e 1 @4053 ]
-[s S1061 . 1 `uc 1 T0PS 1 0 :3:0 
+[s S1065 . 1 `uc 1 T0PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
@@ -646,12 +671,12 @@ I2C_NULL 5
 `uc 1 TMR0ON 1 0 :1:7 
 ]
 "5716
-[s S1068 . 1 `uc 1 T0PS0 1 0 :1:0 
+[s S1072 . 1 `uc 1 T0PS0 1 0 :1:0 
 `uc 1 T0PS1 1 0 :1:1 
 `uc 1 T0PS2 1 0 :1:2 
 ]
-[u S1072 . 1 `S1061 1 . 1 0 `S1068 1 . 1 0 ]
-[v _T0CONbits T0CONbits `VES1072  1 e 1 @4053 ]
+[u S1076 . 1 `S1065 1 . 1 0 `S1072 1 . 1 0 ]
+[v _T0CONbits T0CONbits `VES1076  1 e 1 @4053 ]
 "5773
 [v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
 "5780
@@ -699,7 +724,7 @@ I2C_NULL 5
 ]
 [u S947 . 1 `S925 1 . 1 0 `S934 1 . 1 0 `S943 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES947  1 e 1 @4082 ]
-"62 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/eusart.c
+"62 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/eusart.c
 [v _eusartTxHead eusartTxHead `VEuc  1 e 1 0 ]
 "63
 [v _eusartTxTail eusartTxTail `VEuc  1 e 1 0 ]
@@ -713,18 +738,18 @@ I2C_NULL 5
 [v _eusartRxTail eusartRxTail `VEuc  1 e 1 0 ]
 "69
 [v _eusartRxBuffer eusartRxBuffer `VE[8]uc  1 e 8 0 ]
-[s S1131 . 1 `uc 1 perr 1 0 :1:0 
+[s S1135 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
 `uc 1 oerr 1 0 :1:2 
 `uc 1 reserved 1 0 :5:3 
 ]
 "70
-[u S1136 . 1 `S1131 1 . 1 0 `uc 1 status 1 0 ]
-[v _eusartRxStatusBuffer eusartRxStatusBuffer `VE[8]S1136  1 e 8 0 ]
+[u S1140 . 1 `S1135 1 . 1 0 `uc 1 status 1 0 ]
+[v _eusartRxStatusBuffer eusartRxStatusBuffer `VE[8]S1140  1 e 8 0 ]
 "71
 [v _eusartRxCount eusartRxCount `VEuc  1 e 1 0 ]
 "72
-[v _eusartRxLastError eusartRxLastError `VES1136  1 e 1 0 ]
+[v _eusartRxLastError eusartRxLastError `VES1140  1 e 1 0 ]
 "77
 [v _EUSART_TxDefaultInterruptHandler EUSART_TxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
 "78
@@ -735,7 +760,7 @@ I2C_NULL 5
 [v _EUSART_OverrunErrorHandler EUSART_OverrunErrorHandler `*.37(v  1 e 2 0 ]
 "82
 [v _EUSART_ErrorHandler EUSART_ErrorHandler `*.37(v  1 e 2 0 ]
-"146 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
+"146 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
 [v _i2c_fsmStateTable i2c_fsmStateTable `C[16]*.37(E2846  1 e 32 0 ]
 [s S248 . 36 `[6]*.37(E360 1 callbackTable 12 0 `[6]*.39v 1 callbackPayload 12 12 `us 1 time_out 2 24 `us 1 time_out_value 2 26 `uc 1 address 1 28 `*.39uc 1 data_ptr 2 29 `ui 1 data_length 2 31 `E2846 1 state 1 33 `E355 1 error 1 34 `uc 1 addressNackCheck 1 35 :1:0 
 `uc 1 busy 1 35 :1:1 
@@ -744,20 +769,22 @@ I2C_NULL 5
 ]
 "165
 [v _I2C_Status I2C_Status `S248  1 e 36 0 ]
-"59 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/tmr0.c
+"59 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/tmr0.c
 [v _TMR0_InterruptHandler TMR0_InterruptHandler `*.37(v  1 e 2 0 ]
 "61
 [v _timer0ReloadVal timer0ReloadVal `VEuc  1 e 1 0 ]
-"59 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\main.c
+"58 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/tmr2.c
+[v _TMR2_InterruptHandler TMR2_InterruptHandler `*.37(v  1 e 2 0 ]
+"60 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"87
-[v main@red red `[3]uc  1 a 3 6 ]
-"86
-[v main@dat dat `[3]uc  1 a 3 3 ]
 "88
+[v main@red red `[3]uc  1 a 3 6 ]
+"87
+[v main@dat dat `[3]uc  1 a 3 3 ]
+"89
 [v main@red2 red2 `[3]uc  1 a 3 0 ]
-[s S1783 . 1 `uc 1 b0 1 0 :1:0 
+[s S1620 . 1 `uc 1 b0 1 0 :1:0 
 `uc 1 b1 1 0 :1:1 
 `uc 1 b2 1 0 :1:2 
 `uc 1 b3 1 0 :1:3 
@@ -766,152 +793,37 @@ I2C_NULL 5
 `uc 1 b6 1 0 :1:6 
 `uc 1 b7 1 0 :1:7 
 ]
-"83
-[v main@bitt bitt `S1783  1 a 1 10 ]
-"85
-[v main@address address `uc  1 a 1 9 ]
-[v main@F3018 F3018 `[3]uc  1 s 3 F3018 ]
+"84
+[v main@bitt bitt `S1620  1 a 1 10 ]
 "86
-[v main@F3020 F3020 `[3]uc  1 s 3 F3020 ]
-"124
+[v main@address address `uc  1 a 1 9 ]
+[v main@F3034 F3034 `[3]uc  1 s 3 F3034 ]
+"87
+[v main@F3036 F3036 `[3]uc  1 s 3 F3036 ]
+"122
 } 0
-"428 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\Modbas_RTU.c
-[v _modbasRtu_Slave modbasRtu_Slave `(v  1 e 1 0 ]
-{
-"447
-} 0
-"351
-[v _modbasRtu_Answer modbasRtu_Answer `(v  1 e 1 0 ]
-{
-"389
-} 0
-"310
-[v _analog_output_recording analog_output_recording `(v  1 e 1 0 ]
-{
-"312
-[v analog_output_recording@address address `i  1 a 2 19 ]
-"322
-} 0
-"211
-[v _Reading_Discrete_Output Reading_Discrete_Output `(v  1 e 1 0 ]
-{
-"213
-[v Reading_Discrete_Output@address address `VEui  1 a 2 31 ]
-[v Reading_Discrete_Output@Number_bits Number_bits `VEui  1 a 2 29 ]
-"214
-[v Reading_Discrete_Output@Temp3 Temp3 `uc  1 a 1 28 ]
-[v Reading_Discrete_Output@address2 address2 `uc  1 a 1 27 ]
-[v Reading_Discrete_Output@Temp2 Temp2 `uc  1 a 1 26 ]
-[v Reading_Discrete_Output@Temp Temp `uc  1 a 1 25 ]
-[v Reading_Discrete_Output@Danie Danie `uc  1 a 1 24 ]
-"211
-[v Reading_Discrete_Output@Massiv Massiv `*.39uc  1 p 2 19 ]
-[v Reading_Discrete_Output@Number_ Number_ `uc  1 p 1 21 ]
-"266
-} 0
-"272
-[v _Read_analog_input Read_analog_input `(v  1 e 1 0 ]
-{
-"274
-[v Read_analog_input@Number_bits Number_bits `VEui  1 a 2 29 ]
-[v Read_analog_input@address address `VEui  1 a 2 27 ]
-[v Read_analog_input@Danie Danie `VEui  1 a 2 25 ]
-"275
-[v Read_analog_input@Adress Adress `VEuc  1 a 1 31 ]
-"272
-[v Read_analog_input@Massiv Massiv `*.39uc  1 p 2 19 ]
-[v Read_analog_input@Number_ Number_ `uc  1 p 1 21 ]
-[v Read_analog_input@Vt Vt `uc  1 p 1 22 ]
-"304
-} 0
-"190
-[v _Changing_Discrete_Output Changing_Discrete_Output `(v  1 e 1 0 ]
-{
-"192
-[v Changing_Discrete_Output@address address `ui  1 a 2 19 ]
-"205
-} 0
-"158
-[v __Bin_input_Output _Bin_input_Output `(uc  1 e 1 0 ]
-{
-[v __Bin_input_Output@NUMBER NUMBER `uc  1 a 1 wreg ]
-"160
-[v __Bin_input_Output@Temp1 Temp1 `VEuc  1 a 1 14 ]
-[v __Bin_input_Output@Temp Temp `VEuc  1 a 1 13 ]
-"158
-[v __Bin_input_Output@NUMBER NUMBER `uc  1 a 1 wreg ]
-[v __Bin_input_Output@state state `uc  1 p 1 6 ]
-[v __Bin_input_Output@Masiv Masiv `*.39VEuc  1 p 2 7 ]
-[v __Bin_input_Output@Sd Sd `VEuc  1 p 1 9 ]
-"160
-[v __Bin_input_Output@NUMBER NUMBER `uc  1 a 1 12 ]
-"183
-} 0
-"127
-[v _ModbasRtu_Register_address ModbasRtu_Register_address `(ui  1 e 2 0 ]
-{
-[v ModbasRtu_Register_address@Li Li `uc  1 a 1 wreg ]
-"129
-[v ModbasRtu_Register_address@Hi Hi `uc  1 a 1 12 ]
-"127
-[v ModbasRtu_Register_address@Li Li `uc  1 a 1 wreg ]
-"129
-[v ModbasRtu_Register_address@Li Li `uc  1 a 1 13 ]
-"131
-} 0
-"328
-[v _Error_modbasRtu Error_modbasRtu `(v  1 e 1 0 ]
-{
-[v Error_modbasRtu@Temp_Error Temp_Error `VEuc  1 a 1 wreg ]
-[v Error_modbasRtu@Temp_Error Temp_Error `VEuc  1 a 1 wreg ]
-"330
-[v Error_modbasRtu@Temp_Error Temp_Error `VEuc  1 a 1 18 ]
-"333
-} 0
-"337
-[v _check_sum check_sum `(v  1 e 1 0 ]
-{
-[v check_sum@Adress Adress `uc  1 a 1 wreg ]
-"339
-[v check_sum@RC RC `ui  1 a 2 15 ]
-"337
-[v check_sum@Adress Adress `uc  1 a 1 wreg ]
-"340
-[v check_sum@Adress Adress `uc  1 a 1 17 ]
-"345
-} 0
-"135
-[v _Data_integrity Data_integrity `(uc  1 e 1 0 ]
-{
-"137
-[v Data_integrity@Temp22 Temp22 `ui  1 a 2 16 ]
-"138
-[v Data_integrity@Temp33 Temp33 `uc  1 a 1 18 ]
-"152
-} 0
-"103
-[v _crc_chk crc_chk `(i  1 e 2 0 ]
-{
-"106
-[v crc_chk@reg_crc reg_crc `ui  1 a 2 13 ]
-"105
-[v crc_chk@j j `i  1 a 2 11 ]
-"103
-[v crc_chk@data data `*.39uc  1 p 2 6 ]
-[v crc_chk@length length `uc  1 p 1 8 ]
-"123
-} 0
-"80
+"79 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\Modbas_RTU.c
 [v _USART_UDRE_vect USART_UDRE_vect `(v  1 e 1 0 ]
 {
-"98
+"97
 } 0
-"50 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/mcc.c
+"50 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
-"59
+"60
 } 0
-"68 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/tmr0.c
+"64 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+{
+"85
+} 0
+"132
+[v _TMR2_SetInterruptHandler TMR2_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v TMR2_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"134
+} 0
+"68 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/tmr0.c
 [v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
 {
 "93
@@ -919,30 +831,30 @@ I2C_NULL 5
 "149
 [v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 6 ]
+[v TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
 "151
 } 0
-"55 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/pin_manager.c
+"55 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "90
 } 0
-"61 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/mcc.c
+"62 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
-"67
+"68
 } 0
-"52 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/interrupt_manager.c
+"52 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 {
 "56
 } 0
-"167 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
+"167 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
 [v _I2C_Initialize I2C_Initialize `(v  1 e 1 0 ]
 {
 "174
 } 0
-"88 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/eusart.c
+"88 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/eusart.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
 {
 "130
@@ -950,48 +862,48 @@ I2C_NULL 5
 "276
 [v _EUSART_SetTxInterruptHandler EUSART_SetTxInterruptHandler `(v  1 e 1 0 ]
 {
-[v EUSART_SetTxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 6 ]
+[v EUSART_SetTxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
 "278
 } 0
 "280
 [v _EUSART_SetRxInterruptHandler EUSART_SetRxInterruptHandler `(v  1 e 1 0 ]
 {
-[v EUSART_SetRxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 6 ]
+[v EUSART_SetRxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
 "282
 } 0
 "268
 [v _EUSART_SetOverrunErrorHandler EUSART_SetOverrunErrorHandler `(v  1 e 1 0 ]
 {
-[v EUSART_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 6 ]
+[v EUSART_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
 "270
 } 0
 "264
 [v _EUSART_SetFramingErrorHandler EUSART_SetFramingErrorHandler `(v  1 e 1 0 ]
 {
-[v EUSART_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 6 ]
+[v EUSART_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
 "266
 } 0
 "272
 [v _EUSART_SetErrorHandler EUSART_SetErrorHandler `(v  1 e 1 0 ]
 {
-[v EUSART_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 6 ]
+[v EUSART_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
 "274
 } 0
-"111 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/examples/i2c_master_example.c
+"111 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/examples/i2c_master_example.c
 [v _I2C_WriteNBytes I2C_WriteNBytes `(v  1 e 1 0 ]
 {
 [v I2C_WriteNBytes@address address `uc  1 a 1 wreg ]
 [v I2C_WriteNBytes@address address `uc  1 a 1 wreg ]
-[v I2C_WriteNBytes@data data `*.39uc  1 p 2 23 ]
-[v I2C_WriteNBytes@len len `ui  1 p 2 25 ]
-[v I2C_WriteNBytes@address address `uc  1 a 1 27 ]
+[v I2C_WriteNBytes@data data `*.39uc  1 p 2 17 ]
+[v I2C_WriteNBytes@len len `ui  1 p 2 19 ]
+[v I2C_WriteNBytes@address address `uc  1 a 1 21 ]
 "118
 } 0
-"283 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
+"283 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
 [v _I2C_SetAddressNackCallback I2C_SetAddressNackCallback `(v  1 e 1 0 ]
 {
-[v I2C_SetAddressNackCallback@cb cb `*.37(E360  1 p 2 11 ]
-[v I2C_SetAddressNackCallback@ptr ptr `*.2v  1 p 2 13 ]
+[v I2C_SetAddressNackCallback@cb cb `*.37(E360  1 p 2 5 ]
+[v I2C_SetAddressNackCallback@ptr ptr `*.2v  1 p 2 7 ]
 "286
 } 0
 "251
@@ -999,26 +911,26 @@ I2C_NULL 5
 {
 "254
 } 0
-"120 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/examples/i2c_master_example.c
+"120 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/examples/i2c_master_example.c
 [v _I2C_ReadNBytes I2C_ReadNBytes `(v  1 e 1 0 ]
 {
 [v I2C_ReadNBytes@address address `uc  1 a 1 wreg ]
 [v I2C_ReadNBytes@address address `uc  1 a 1 wreg ]
-[v I2C_ReadNBytes@data data `*.39uc  1 p 2 23 ]
-[v I2C_ReadNBytes@len len `ui  1 p 2 25 ]
-[v I2C_ReadNBytes@address address `uc  1 a 1 27 ]
+[v I2C_ReadNBytes@data data `*.39uc  1 p 2 17 ]
+[v I2C_ReadNBytes@len len `ui  1 p 2 19 ]
+[v I2C_ReadNBytes@address address `uc  1 a 1 21 ]
 "126
 } 0
-"176 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
+"176 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
 [v _I2C_Open I2C_Open `(E355  1 e 1 0 ]
 {
 [v I2C_Open@address address `uc  1 a 1 wreg ]
 "178
-[v I2C_Open@returnValue returnValue `E355  1 a 1 7 ]
+[v I2C_Open@returnValue returnValue `E355  1 a 1 1 ]
 "176
 [v I2C_Open@address address `uc  1 a 1 wreg ]
 "178
-[v I2C_Open@address address `uc  1 a 1 6 ]
+[v I2C_Open@address address `uc  1 a 1 0 ]
 "207
 } 0
 "543
@@ -1036,11 +948,11 @@ I2C_NULL 5
 {
 [v I2C_MasterOperation@read read `a  1 a 1 wreg ]
 "226
-[v I2C_MasterOperation@returnValue returnValue `E355  1 a 1 22 ]
+[v I2C_MasterOperation@returnValue returnValue `E355  1 a 1 16 ]
 "224
 [v I2C_MasterOperation@read read `a  1 a 1 wreg ]
 "226
-[v I2C_MasterOperation@read read `a  1 a 1 21 ]
+[v I2C_MasterOperation@read read `a  1 a 1 15 ]
 "244
 } 0
 "312
@@ -1154,7 +1066,7 @@ I2C_NULL 5
 [v I2C_MasterSendTxData@data data `uc  1 a 1 wreg ]
 [v I2C_MasterSendTxData@data data `uc  1 a 1 wreg ]
 "570
-[v I2C_MasterSendTxData@data data `uc  1 a 1 6 ]
+[v I2C_MasterSendTxData@data data `uc  1 a 1 0 ]
 "571
 } 0
 "603
@@ -1180,7 +1092,7 @@ I2C_NULL 5
 "525
 [v _I2C_CallbackReturnReset I2C_CallbackReturnReset `(E360  1 e 1 0 ]
 {
-[v I2C_CallbackReturnReset@funPtr funPtr `*.39v  1 p 2 15 ]
+[v I2C_CallbackReturnReset@funPtr funPtr `*.39v  1 p 2 9 ]
 "528
 } 0
 "520
@@ -1188,41 +1100,41 @@ I2C_NULL 5
 {
 "523
 } 0
-"170 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/examples/i2c_master_example.c
+"170 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/examples/i2c_master_example.c
 [v _rdBlkRegCompleteHandler rdBlkRegCompleteHandler `(E360  1 s 1 rdBlkRegCompleteHandler ]
 {
-[v rdBlkRegCompleteHandler@ptr ptr `*.39v  1 p 2 15 ]
+[v rdBlkRegCompleteHandler@ptr ptr `*.39v  1 p 2 9 ]
 "175
 } 0
 "156
 [v _wr1RegCompleteHandler wr1RegCompleteHandler `(E360  1 s 1 wr1RegCompleteHandler ]
 {
-[v wr1RegCompleteHandler@ptr ptr `*.39v  1 p 2 15 ]
+[v wr1RegCompleteHandler@ptr ptr `*.39v  1 p 2 9 ]
 "161
 } 0
 "149
 [v _rd2RegCompleteHandler rd2RegCompleteHandler `(E360  1 s 1 rd2RegCompleteHandler ]
 {
-[v rd2RegCompleteHandler@ptr ptr `*.39v  1 p 2 15 ]
+[v rd2RegCompleteHandler@ptr ptr `*.39v  1 p 2 9 ]
 "154
 } 0
 "142
 [v _rd1RegCompleteHandler rd1RegCompleteHandler `(E360  1 s 1 rd1RegCompleteHandler ]
 {
-[v rd1RegCompleteHandler@ptr ptr `*.39v  1 p 2 15 ]
+[v rd1RegCompleteHandler@ptr ptr `*.39v  1 p 2 9 ]
 "147
 } 0
 "163
 [v _wr2RegCompleteHandler wr2RegCompleteHandler `(E360  1 s 1 wr2RegCompleteHandler ]
 {
-[v wr2RegCompleteHandler@ptr ptr `*.39v  1 p 2 15 ]
+[v wr2RegCompleteHandler@ptr ptr `*.39v  1 p 2 9 ]
 "168
 } 0
-"273 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
+"273 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/i2c_master.c
 [v _I2C_SetDataCompleteCallback I2C_SetDataCompleteCallback `(v  1 e 1 0 ]
 {
-[v I2C_SetDataCompleteCallback@cb cb `*.37(E360  1 p 2 11 ]
-[v I2C_SetDataCompleteCallback@ptr ptr `*.39v  1 p 2 13 ]
+[v I2C_SetDataCompleteCallback@cb cb `*.37(E360  1 p 2 5 ]
+[v I2C_SetDataCompleteCallback@ptr ptr `*.39v  1 p 2 7 ]
 "276
 } 0
 "298
@@ -1230,17 +1142,17 @@ I2C_NULL 5
 {
 [v I2C_SetCallback@idx idx `E2864  1 a 1 wreg ]
 [v I2C_SetCallback@idx idx `E2864  1 a 1 wreg ]
-[v I2C_SetCallback@cb cb `*.37(E360  1 p 2 6 ]
-[v I2C_SetCallback@ptr ptr `*.39v  1 p 2 8 ]
+[v I2C_SetCallback@cb cb `*.37(E360  1 p 2 0 ]
+[v I2C_SetCallback@ptr ptr `*.39v  1 p 2 2 ]
 "300
-[v I2C_SetCallback@idx idx `E2864  1 a 1 10 ]
+[v I2C_SetCallback@idx idx `E2864  1 a 1 4 ]
 "310
 } 0
 "263
 [v _I2C_SetBuffer I2C_SetBuffer `(v  1 e 1 0 ]
 {
-[v I2C_SetBuffer@buffer buffer `*.39v  1 p 2 6 ]
-[v I2C_SetBuffer@bufferSize bufferSize `ui  1 p 2 8 ]
+[v I2C_SetBuffer@buffer buffer `*.39v  1 p 2 0 ]
+[v I2C_SetBuffer@bufferSize bufferSize `ui  1 p 2 2 ]
 "271
 } 0
 "593
@@ -1262,7 +1174,7 @@ I2C_NULL 5
 [v _I2C_Close I2C_Close `(E355  1 e 1 0 ]
 {
 "211
-[v I2C_Close@returnValue returnValue `E355  1 a 1 6 ]
+[v I2C_Close@returnValue returnValue `E355  1 a 1 0 ]
 "222
 } 0
 "635
@@ -1280,44 +1192,49 @@ I2C_NULL 5
 {
 "643
 } 0
-"58 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/interrupt_manager.c
+"58 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
 {
-"84
+"88
 } 0
-"197 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/eusart.c
+"197 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/eusart.c
 [v _EUSART_Transmit_ISR EUSART_Transmit_ISR `(v  1 e 1 0 ]
 {
 "214
 } 0
-"69 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\Modbas_RTU.c
+"68 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\Modbas_RTU.c
 [v _USART_TXC_vect USART_TXC_vect `(v  1 e 1 0 ]
 {
-"77
+"76
 } 0
-"216 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/eusart.c
+"216 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/eusart.c
 [v _EUSART_Receive_ISR EUSART_Receive_ISR `(v  1 e 1 0 ]
 {
 "238
 } 0
-"41 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\Modbas_RTU.c
+"40 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\Modbas_RTU.c
 [v _USART_RXC_vect USART_RXC_vect `(v  1 e 1 0 ]
 {
-"43
+"42
 [v USART_RXC_vect@TempModbas TempModbas `uc  1 a 1 1 ]
-"66
+"65
 } 0
-"95 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/tmr0.c
-[v _TMR0_StartTimer TMR0_StartTimer `(v  1 e 1 0 ]
-{
-"99
-} 0
-"123
+"123 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/tmr0.c
 [v _TMR0_Reload TMR0_Reload `(v  1 e 1 0 ]
 {
 "127
 } 0
-"130
+"119 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/tmr2.c
+[v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
+{
+"129
+} 0
+"136
+[v _TMR2_DefaultInterruptHandler TMR2_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"139
+} 0
+"130 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/tmr0.c
 [v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
 {
 "146
@@ -1327,17 +1244,138 @@ I2C_NULL 5
 {
 "156
 } 0
-"24 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\Modbas_RTU.c
+"24 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\Modbas_RTU.c
 [v _TIMER0_COMP_vect TIMER0_COMP_vect `(v  1 e 1 0 ]
 {
-"37
+"36
 } 0
-"101 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/tmr0.c
-[v _TMR0_StopTimer TMR0_StopTimer `(v  1 e 1 0 ]
+"443
+[v _modbasRtu_Slave modbasRtu_Slave `(v  1 e 1 0 ]
+{
+"462
+} 0
+"350
+[v _modbasRtu_Answer modbasRtu_Answer `(v  1 e 1 0 ]
+{
+"404
+} 0
+"309
+[v _analog_output_recording analog_output_recording `(v  1 e 1 0 ]
+{
+"311
+[v analog_output_recording@address address `i  1 a 2 13 ]
+"321
+} 0
+"210
+[v _Reading_Discrete_Output Reading_Discrete_Output `(v  1 e 1 0 ]
+{
+"212
+[v Reading_Discrete_Output@address address `VEui  1 a 2 25 ]
+[v Reading_Discrete_Output@Number_bits Number_bits `VEui  1 a 2 23 ]
+"213
+[v Reading_Discrete_Output@Temp3 Temp3 `uc  1 a 1 22 ]
+[v Reading_Discrete_Output@address2 address2 `uc  1 a 1 21 ]
+[v Reading_Discrete_Output@Temp2 Temp2 `uc  1 a 1 20 ]
+[v Reading_Discrete_Output@Temp Temp `uc  1 a 1 19 ]
+[v Reading_Discrete_Output@Danie Danie `uc  1 a 1 18 ]
+"210
+[v Reading_Discrete_Output@Massiv Massiv `*.39uc  1 p 2 13 ]
+[v Reading_Discrete_Output@Number_ Number_ `uc  1 p 1 15 ]
+"265
+} 0
+"271
+[v _Read_analog_input Read_analog_input `(v  1 e 1 0 ]
+{
+"273
+[v Read_analog_input@Number_bits Number_bits `VEui  1 a 2 23 ]
+[v Read_analog_input@address address `VEui  1 a 2 21 ]
+[v Read_analog_input@Danie Danie `VEui  1 a 2 19 ]
+"274
+[v Read_analog_input@Adress Adress `VEuc  1 a 1 25 ]
+"271
+[v Read_analog_input@Massiv Massiv `*.39uc  1 p 2 13 ]
+[v Read_analog_input@Number_ Number_ `uc  1 p 1 15 ]
+[v Read_analog_input@Vt Vt `uc  1 p 1 16 ]
+"303
+} 0
+"189
+[v _Changing_Discrete_Output Changing_Discrete_Output `(v  1 e 1 0 ]
+{
+"191
+[v Changing_Discrete_Output@address address `ui  1 a 2 13 ]
+"204
+} 0
+"157
+[v __Bin_input_Output _Bin_input_Output `(uc  1 e 1 0 ]
+{
+[v __Bin_input_Output@NUMBER NUMBER `uc  1 a 1 wreg ]
+"159
+[v __Bin_input_Output@Temp1 Temp1 `VEuc  1 a 1 8 ]
+[v __Bin_input_Output@Temp Temp `VEuc  1 a 1 7 ]
+"157
+[v __Bin_input_Output@NUMBER NUMBER `uc  1 a 1 wreg ]
+[v __Bin_input_Output@state state `uc  1 p 1 0 ]
+[v __Bin_input_Output@Masiv Masiv `*.39VEuc  1 p 2 1 ]
+[v __Bin_input_Output@Sd Sd `VEuc  1 p 1 3 ]
+"159
+[v __Bin_input_Output@NUMBER NUMBER `uc  1 a 1 6 ]
+"182
+} 0
+"126
+[v _ModbasRtu_Register_address ModbasRtu_Register_address `(ui  1 e 2 0 ]
+{
+[v ModbasRtu_Register_address@Li Li `uc  1 a 1 wreg ]
+"128
+[v ModbasRtu_Register_address@Hi Hi `uc  1 a 1 6 ]
+"126
+[v ModbasRtu_Register_address@Li Li `uc  1 a 1 wreg ]
+"128
+[v ModbasRtu_Register_address@Li Li `uc  1 a 1 7 ]
+"130
+} 0
+"327
+[v _Error_modbasRtu Error_modbasRtu `(v  1 e 1 0 ]
+{
+[v Error_modbasRtu@Temp_Error Temp_Error `VEuc  1 a 1 wreg ]
+[v Error_modbasRtu@Temp_Error Temp_Error `VEuc  1 a 1 wreg ]
+"329
+[v Error_modbasRtu@Temp_Error Temp_Error `VEuc  1 a 1 12 ]
+"332
+} 0
+"336
+[v _check_sum check_sum `(v  1 e 1 0 ]
+{
+[v check_sum@Adress Adress `uc  1 a 1 wreg ]
+"338
+[v check_sum@RC RC `ui  1 a 2 9 ]
+"336
+[v check_sum@Adress Adress `uc  1 a 1 wreg ]
+"339
+[v check_sum@Adress Adress `uc  1 a 1 11 ]
+"344
+} 0
+"134
+[v _Data_integrity Data_integrity `(uc  1 e 1 0 ]
+{
+"136
+[v Data_integrity@Temp22 Temp22 `ui  1 a 2 10 ]
+"137
+[v Data_integrity@Temp33 Temp33 `uc  1 a 1 12 ]
+"151
+} 0
+"102
+[v _crc_chk crc_chk `(ui  1 e 2 0 ]
 {
 "105
+[v crc_chk@reg_crc reg_crc `ui  1 a 2 7 ]
+"104
+[v crc_chk@j j `i  1 a 2 5 ]
+"102
+[v crc_chk@data data `*.39uc  1 p 2 0 ]
+[v crc_chk@length length `uc  1 p 1 2 ]
+"122
 } 0
-"252 C:\Users\orlov_pv\MPLABXProjects\MPLAB\pic18f26k20TEST.X\mcc_generated_files/eusart.c
+"252 C:\Users\orlov_pv\Documents\MPLAB\pic18f26k20TEST.X\mcc_generated_files/eusart.c
 [v _EUSART_DefaultOverrunErrorHandler EUSART_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
 {
 "258

@@ -4705,6 +4705,29 @@ void I2C_SetDataNackCallback(i2c_callback_t cb, void *ptr);
 void I2C_SetTimeoutCallback(i2c_callback_t cb, void *ptr);
 # 56 "./mcc_generated_files/mcc.h" 2
 
+# 1 "./mcc_generated_files/tmr2.h" 1
+# 103 "./mcc_generated_files/tmr2.h"
+void TMR2_Initialize(void);
+# 132 "./mcc_generated_files/tmr2.h"
+void TMR2_StartTimer(void);
+# 164 "./mcc_generated_files/tmr2.h"
+void TMR2_StopTimer(void);
+# 199 "./mcc_generated_files/tmr2.h"
+uint8_t TMR2_ReadTimer(void);
+# 238 "./mcc_generated_files/tmr2.h"
+void TMR2_WriteTimer(uint8_t timerVal);
+# 290 "./mcc_generated_files/tmr2.h"
+void TMR2_LoadPeriodRegister(uint8_t periodVal);
+# 308 "./mcc_generated_files/tmr2.h"
+void TMR2_ISR(void);
+# 326 "./mcc_generated_files/tmr2.h"
+ void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
+# 344 "./mcc_generated_files/tmr2.h"
+extern void (*TMR2_InterruptHandler)(void);
+# 362 "./mcc_generated_files/tmr2.h"
+void TMR2_DefaultInterruptHandler(void);
+# 57 "./mcc_generated_files/mcc.h" 2
+
 # 1 "./mcc_generated_files/tmr0.h" 1
 # 100 "./mcc_generated_files/tmr0.h"
 void TMR0_Initialize(void);
@@ -4726,7 +4749,7 @@ void TMR0_ISR(void);
 extern void (*TMR0_InterruptHandler)(void);
 # 345 "./mcc_generated_files/tmr0.h"
 void TMR0_DefaultInterruptHandler(void);
-# 57 "./mcc_generated_files/mcc.h" 2
+# 58 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/eusart.h" 1
 # 75 "./mcc_generated_files/eusart.h"
@@ -4781,10 +4804,10 @@ void EUSART_SetErrorHandler(void (* interruptHandler)(void));
 void EUSART_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 505 "./mcc_generated_files/eusart.h"
 void EUSART_SetRxInterruptHandler(void (* interruptHandler)(void));
-# 58 "./mcc_generated_files/mcc.h" 2
-# 73 "./mcc_generated_files/mcc.h"
+# 59 "./mcc_generated_files/mcc.h" 2
+# 74 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 86 "./mcc_generated_files/mcc.h"
+# 87 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
 # 44 "main.c" 2
 
@@ -4800,7 +4823,7 @@ void I2C_ReadDataBlock(i2c_address_t address, uint8_t reg, uint8_t *data, size_t
 # 45 "main.c" 2
 
 # 1 "./Modbas_RTU.h" 1
-# 57 "./Modbas_RTU.h"
+# 66 "./Modbas_RTU.h"
  unsigned char Danie_Rx_ModbasRtu[30] = {},quantity_Data_ModbasRtu;
 
  unsigned int Danie_ModbasRtu_analog_input [ 10 ];
@@ -4808,12 +4831,12 @@ void I2C_ReadDataBlock(i2c_address_t address, uint8_t reg, uint8_t *data, size_t
  unsigned char Danie_ModbasRtu_Binary_input [ (10 / 8)+ 1 ];
  unsigned char Danie_ModbasRtu_Binary_Output [ (10/ 8)+ 1 ];
  unsigned char Temp_ModbasRtu;
- struct
-    {
+
+ struct {
         unsigned b0 : 1;
         unsigned b1 : 1;
         unsigned b2 : 1;
-    } Bit_action_ModbasRtu = {0,0,0},D;
+    } Bit_action_ModbasRtu = {0, 0, 0}, D;
 unsigned char USART_UDR_vect = 0;
 
 
@@ -4824,28 +4847,28 @@ void USART_UDRE_vect(void);
 
 
 
-    int crc_chk( unsigned char* data, unsigned char length );
+    unsigned int crc_chk(unsigned char* data, unsigned char length);
     unsigned int ModbasRtu_Register_address(unsigned char Li);
     char Data_integrity();
-    char _Bin_input_Output( register unsigned char NUMBER, register unsigned char state,volatile unsigned char *Masiv, volatile unsigned char Sd );
+    char _Bin_input_Output(register unsigned char NUMBER, register unsigned char state, volatile unsigned char *Masiv, volatile unsigned char Sd);
     void Changing_Discrete_Output(void);
     void Reading_Discrete_Output(unsigned char *Massiv, register unsigned char Number_);
     void Read_analog_input(unsigned char *Massiv, register unsigned char Number_, unsigned char Vt);
     void analog_output_recording(void);
-    void Error_modbasRtu (volatile unsigned char Temp_Error);
-    void check_sum ( register unsigned char Adress);
+    void Error_modbasRtu(volatile unsigned char Temp_Error);
+    void check_sum(register unsigned char Adress);
     void modbasRtu_Answer();
-    char read_digital_inputs( volatile unsigned char Temp1 );
-    void change_digital_inputs( volatile unsigned char Temp1,volatile unsigned char Temp2 );
-    char read_digital_Output( volatile unsigned char Temp1 );
-    void change_digital_Output( volatile unsigned char Temp1,volatile unsigned char Temp2 );
-    void change_analogue_Output (volatile unsigned char nomer, int Danie);
-    void change_analogue_input (volatile unsigned char nomer, int Danie);
-    int read_analogue_Output (volatile unsigned char nomer);
-    int read_analogue_input (volatile unsigned char nomer);
-    void modbasRtu_Slave( void );
+    char read_digital_inputs(volatile unsigned char Temp1);
+    void change_digital_inputs(volatile unsigned char Temp1, volatile unsigned char Temp2);
+    char read_digital_Output(volatile unsigned char Temp1);
+    void change_digital_Output(volatile unsigned char Temp1, volatile unsigned char Temp2);
+    void change_analogue_Output(volatile unsigned char nomer, int Danie);
+    void change_analogue_input(volatile unsigned char nomer, int Danie);
+    int read_analogue_Output(volatile unsigned char nomer);
+    int read_analogue_input(volatile unsigned char nomer);
+    void modbasRtu_Slave(void);
 # 46 "main.c" 2
-# 59 "main.c"
+# 60 "main.c"
 void main(void)
 {
 
@@ -4886,8 +4909,6 @@ void main(void)
          {
              do { LATAbits.LATA0 = 1; } while(0);
 
-
-
               I2C_WriteNBytes(address,dat,3);
 
               I2C_WriteNBytes((0xD0)>>1,red,1);
@@ -4905,9 +4926,8 @@ void main(void)
          if(TXSTAbits.TRMT && USART_UDR_vect)
          {
              USART_UDRE_vect ();
-
          }
-           modbasRtu_Slave();
+
 
     }
 

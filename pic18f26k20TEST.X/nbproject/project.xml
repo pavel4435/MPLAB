@@ -12,7 +12,10 @@
             <asminc-extensions/>
             <sourceEncoding>windows-1251</sourceEncoding>
             <make-dep-projects/>
-            <sourceRootList/>
+            <sourceRootList>
+                <sourceRootElem>../pic-lcd-library-master</sourceRootElem>
+                <sourceRootElem>.</sourceRootElem>
+            </sourceRootList>
             <confList>
                 <confElem>
                     <name>default</name>

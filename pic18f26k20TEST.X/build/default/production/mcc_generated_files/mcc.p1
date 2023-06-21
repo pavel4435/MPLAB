@@ -8,9 +8,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "166 mcc_generated_files/pin_manager.h
 [; ;mcc_generated_files/pin_manager.h: 166: void PIN_MANAGER_Initialize (void);
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
-"86 mcc_generated_files/mcc.h
-[; ;mcc_generated_files/mcc.h: 86: void OSCILLATOR_Initialize(void);
+"87 mcc_generated_files/mcc.h
+[; ;mcc_generated_files/mcc.h: 87: void OSCILLATOR_Initialize(void);
 [v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
+"103 mcc_generated_files/tmr2.h
+[; ;mcc_generated_files/tmr2.h: 103: void TMR2_Initialize(void);
+[v _TMR2_Initialize `(v ~T0 @X0 0 ef ]
 "100 mcc_generated_files/tmr0.h
 [; ;mcc_generated_files/tmr0.h: 100: void TMR0_Initialize(void);
 [v _TMR0_Initialize `(v ~T0 @X0 0 ef ]
@@ -464,30 +467,33 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/mcc.c: 56:     OSCILLATOR_Initialize();
 [e ( _OSCILLATOR_Initialize ..  ]
 "57
-[; ;mcc_generated_files/mcc.c: 57:     TMR0_Initialize();
-[e ( _TMR0_Initialize ..  ]
+[; ;mcc_generated_files/mcc.c: 57:     TMR2_Initialize();
+[e ( _TMR2_Initialize ..  ]
 "58
-[; ;mcc_generated_files/mcc.c: 58:     EUSART_Initialize();
-[e ( _EUSART_Initialize ..  ]
+[; ;mcc_generated_files/mcc.c: 58:     TMR0_Initialize();
+[e ( _TMR0_Initialize ..  ]
 "59
-[; ;mcc_generated_files/mcc.c: 59: }
+[; ;mcc_generated_files/mcc.c: 59:     EUSART_Initialize();
+[e ( _EUSART_Initialize ..  ]
+"60
+[; ;mcc_generated_files/mcc.c: 60: }
 [e :UE 281 ]
 }
-"61
-[; ;mcc_generated_files/mcc.c: 61: void OSCILLATOR_Initialize(void)
-[v _OSCILLATOR_Initialize `(v ~T0 @X0 1 ef ]
 "62
-[; ;mcc_generated_files/mcc.c: 62: {
+[; ;mcc_generated_files/mcc.c: 62: void OSCILLATOR_Initialize(void)
+[v _OSCILLATOR_Initialize `(v ~T0 @X0 1 ef ]
+"63
+[; ;mcc_generated_files/mcc.c: 63: {
 {
 [e :U _OSCILLATOR_Initialize ]
 [f ]
-"64
-[; ;mcc_generated_files/mcc.c: 64:     OSCCON = 0x60;
+"65
+[; ;mcc_generated_files/mcc.c: 65:     OSCCON = 0x60;
 [e = _OSCCON -> -> 96 `i `uc ]
-"66
-[; ;mcc_generated_files/mcc.c: 66:     OSCTUNE = 0x00;
-[e = _OSCTUNE -> -> 0 `i `uc ]
 "67
-[; ;mcc_generated_files/mcc.c: 67: }
+[; ;mcc_generated_files/mcc.c: 67:     OSCTUNE = 0x00;
+[e = _OSCTUNE -> -> 0 `i `uc ]
+"68
+[; ;mcc_generated_files/mcc.c: 68: }
 [e :UE 282 ]
 }

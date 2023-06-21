@@ -4706,6 +4706,29 @@ void I2C_SetDataNackCallback(i2c_callback_t cb, void *ptr);
 void I2C_SetTimeoutCallback(i2c_callback_t cb, void *ptr);
 # 56 "mcc_generated_files/mcc.h" 2
 
+# 1 "mcc_generated_files/tmr2.h" 1
+# 103 "mcc_generated_files/tmr2.h"
+void TMR2_Initialize(void);
+# 132 "mcc_generated_files/tmr2.h"
+void TMR2_StartTimer(void);
+# 164 "mcc_generated_files/tmr2.h"
+void TMR2_StopTimer(void);
+# 199 "mcc_generated_files/tmr2.h"
+uint8_t TMR2_ReadTimer(void);
+# 238 "mcc_generated_files/tmr2.h"
+void TMR2_WriteTimer(uint8_t timerVal);
+# 290 "mcc_generated_files/tmr2.h"
+void TMR2_LoadPeriodRegister(uint8_t periodVal);
+# 308 "mcc_generated_files/tmr2.h"
+void TMR2_ISR(void);
+# 326 "mcc_generated_files/tmr2.h"
+ void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
+# 344 "mcc_generated_files/tmr2.h"
+extern void (*TMR2_InterruptHandler)(void);
+# 362 "mcc_generated_files/tmr2.h"
+void TMR2_DefaultInterruptHandler(void);
+# 57 "mcc_generated_files/mcc.h" 2
+
 # 1 "mcc_generated_files/tmr0.h" 1
 # 100 "mcc_generated_files/tmr0.h"
 void TMR0_Initialize(void);
@@ -4727,7 +4750,7 @@ void TMR0_ISR(void);
 extern void (*TMR0_InterruptHandler)(void);
 # 345 "mcc_generated_files/tmr0.h"
 void TMR0_DefaultInterruptHandler(void);
-# 57 "mcc_generated_files/mcc.h" 2
+# 58 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/eusart.h" 1
 # 75 "mcc_generated_files/eusart.h"
@@ -4782,10 +4805,10 @@ void EUSART_SetErrorHandler(void (* interruptHandler)(void));
 void EUSART_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 505 "mcc_generated_files/eusart.h"
 void EUSART_SetRxInterruptHandler(void (* interruptHandler)(void));
-# 58 "mcc_generated_files/mcc.h" 2
-# 73 "mcc_generated_files/mcc.h"
+# 59 "mcc_generated_files/mcc.h" 2
+# 74 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 86 "mcc_generated_files/mcc.h"
+# 87 "mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
 # 50 "mcc_generated_files/interrupt_manager.c" 2
 
@@ -4812,6 +4835,10 @@ void __attribute__((picinterrupt(("")))) INTERRUPT_InterruptManager (void)
         else if(PIE1bits.RC1IE == 1 && PIR1bits.RC1IF == 1)
         {
             EUSART_RxDefaultInterruptHandler();
+        }
+        else if(PIE1bits.TMR2IE == 1 && PIR1bits.TMR2IF == 1)
+        {
+            TMR2_ISR();
         }
         else
         {

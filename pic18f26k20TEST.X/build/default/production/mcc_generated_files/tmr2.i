@@ -1,4 +1,4 @@
-# 1 "Modbas_RTU.c"
+# 1 "mcc_generated_files/tmr2.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,10 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "Modbas_RTU.c" 2
-
-# 1 "./Modbas_RTU.h" 1
-# 34 "./Modbas_RTU.h"
+# 1 "mcc_generated_files/tmr2.c" 2
+# 51 "mcc_generated_files/tmr2.c"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -4464,836 +4462,118 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\\pic\\include\\xc.h" 2 3
-# 34 "./Modbas_RTU.h" 2
-# 66 "./Modbas_RTU.h"
- unsigned char Danie_Rx_ModbasRtu[30] = {},quantity_Data_ModbasRtu;
+# 51 "mcc_generated_files/tmr2.c" 2
 
- unsigned int Danie_ModbasRtu_analog_input [ 10 ];
- unsigned int Danie_ModbasRtu_analog_Output [ 10 ];
- unsigned char Danie_ModbasRtu_Binary_input [ (10 / 8)+ 1 ];
- unsigned char Danie_ModbasRtu_Binary_Output [ (10/ 8)+ 1 ];
- unsigned char Temp_ModbasRtu;
-
- struct {
-        unsigned b0 : 1;
-        unsigned b1 : 1;
-        unsigned b2 : 1;
-    } Bit_action_ModbasRtu = {0, 0, 0}, D;
-unsigned char USART_UDR_vect = 0;
-
-
-void TIMER0_COMP_vect(void);
-void USART_RXC_vect(void);
-void USART_TXC_vect (void);
-void USART_UDRE_vect(void);
-
-
-
-    unsigned int crc_chk(unsigned char* data, unsigned char length);
-    unsigned int ModbasRtu_Register_address(unsigned char Li);
-    char Data_integrity();
-    char _Bin_input_Output(register unsigned char NUMBER, register unsigned char state, volatile unsigned char *Masiv, volatile unsigned char Sd);
-    void Changing_Discrete_Output(void);
-    void Reading_Discrete_Output(unsigned char *Massiv, register unsigned char Number_);
-    void Read_analog_input(unsigned char *Massiv, register unsigned char Number_, unsigned char Vt);
-    void analog_output_recording(void);
-    void Error_modbasRtu(volatile unsigned char Temp_Error);
-    void check_sum(register unsigned char Adress);
-    void modbasRtu_Answer();
-    char read_digital_inputs(volatile unsigned char Temp1);
-    void change_digital_inputs(volatile unsigned char Temp1, volatile unsigned char Temp2);
-    char read_digital_Output(volatile unsigned char Temp1);
-    void change_digital_Output(volatile unsigned char Temp1, volatile unsigned char Temp2);
-    void change_analogue_Output(volatile unsigned char nomer, int Danie);
-    void change_analogue_input(volatile unsigned char nomer, int Danie);
-    int read_analogue_Output(volatile unsigned char nomer);
-    int read_analogue_input(volatile unsigned char nomer);
-    void modbasRtu_Slave(void);
-# 2 "Modbas_RTU.c" 2
-
-# 1 "./mcc_generated_files/mcc.h" 1
-# 50 "./mcc_generated_files/mcc.h"
-# 1 "./mcc_generated_files/device_config.h" 1
-# 50 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/pin_manager.h" 1
-# 166 "./mcc_generated_files/pin_manager.h"
-void PIN_MANAGER_Initialize (void);
-# 178 "./mcc_generated_files/pin_manager.h"
-void PIN_MANAGER_IOC(void);
-# 51 "./mcc_generated_files/mcc.h" 2
-
-
+# 1 "mcc_generated_files/tmr2.h" 1
+# 55 "mcc_generated_files/tmr2.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdbool.h" 1 3
-# 53 "./mcc_generated_files/mcc.h" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\conio.h" 1 3
-
-
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 1 3
-# 24 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 1 3
-
-
-
-
-
-typedef void * va_list[1];
-
-
-
-
-typedef void * __isoc_va_list[1];
-# 137 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long ssize_t;
-# 246 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long long off_t;
-# 399 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef struct _IO_FILE FILE;
-# 24 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 2 3
-# 52 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 3
-typedef union _G_fpos64_t {
- char __opaque[16];
- double __align;
-} fpos_t;
-
-extern FILE *const stdin;
-extern FILE *const stdout;
-extern FILE *const stderr;
-
-
-
-
-
-FILE *fopen(const char *restrict, const char *restrict);
-FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
-int fclose(FILE *);
-
-int remove(const char *);
-int rename(const char *, const char *);
-
-int feof(FILE *);
-int ferror(FILE *);
-int fflush(FILE *);
-void clearerr(FILE *);
-
-int fseek(FILE *, long, int);
-long ftell(FILE *);
-void rewind(FILE *);
-
-int fgetpos(FILE *restrict, fpos_t *restrict);
-int fsetpos(FILE *, const fpos_t *);
-
-size_t fread(void *restrict, size_t, size_t, FILE *restrict);
-size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
-
-int fgetc(FILE *);
-int getc(FILE *);
-int getchar(void);
-int ungetc(int, FILE *);
-
-int fputc(int, FILE *);
-int putc(int, FILE *);
-int putchar(int);
-
-char *fgets(char *restrict, int, FILE *restrict);
-
-char *gets(char *);
-
-
-int fputs(const char *restrict, FILE *restrict);
-int puts(const char *);
-
-__attribute__((__format__(__printf__, 1, 2)))
-int printf(const char *restrict, ...);
-__attribute__((__format__(__printf__, 2, 3)))
-int fprintf(FILE *restrict, const char *restrict, ...);
-__attribute__((__format__(__printf__, 2, 3)))
-int sprintf(char *restrict, const char *restrict, ...);
-__attribute__((__format__(__printf__, 3, 4)))
-int snprintf(char *restrict, size_t, const char *restrict, ...);
-
-__attribute__((__format__(__printf__, 1, 0)))
-int vprintf(const char *restrict, __isoc_va_list);
-int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
-__attribute__((__format__(__printf__, 2, 0)))
-int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
-__attribute__((__format__(__printf__, 3, 0)))
-int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
-
-__attribute__((__format__(__scanf__, 1, 2)))
-int scanf(const char *restrict, ...);
-__attribute__((__format__(__scanf__, 2, 3)))
-int fscanf(FILE *restrict, const char *restrict, ...);
-__attribute__((__format__(__scanf__, 2, 3)))
-int sscanf(const char *restrict, const char *restrict, ...);
-
-__attribute__((__format__(__scanf__, 1, 0)))
-int vscanf(const char *restrict, __isoc_va_list);
-int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
-__attribute__((__format__(__scanf__, 2, 0)))
-int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
-
-void perror(const char *);
-
-int setvbuf(FILE *restrict, char *restrict, int, size_t);
-void setbuf(FILE *restrict, char *restrict);
-
-char *tmpnam(char *);
-FILE *tmpfile(void);
-
-
-
-
-FILE *fmemopen(void *restrict, size_t, const char *restrict);
-FILE *open_memstream(char **, size_t *);
-FILE *fdopen(int, const char *);
-FILE *popen(const char *, const char *);
-int pclose(FILE *);
-int fileno(FILE *);
-int fseeko(FILE *, off_t, int);
-off_t ftello(FILE *);
-int dprintf(int, const char *restrict, ...);
-int vdprintf(int, const char *restrict, __isoc_va_list);
-void flockfile(FILE *);
-int ftrylockfile(FILE *);
-void funlockfile(FILE *);
-int getc_unlocked(FILE *);
-int getchar_unlocked(void);
-int putc_unlocked(int, FILE *);
-int putchar_unlocked(int);
-ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
-ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
-int renameat(int, const char *, int, const char *);
-char *ctermid(char *);
-
-
-
-
-
-
-
-char *tempnam(const char *, const char *);
-# 7 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\conio.h" 2 3
-# 54 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/interrupt_manager.h" 1
-# 110 "./mcc_generated_files/interrupt_manager.h"
-void INTERRUPT_Initialize (void);
-# 55 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/i2c_master.h" 1
-# 58 "./mcc_generated_files/i2c_master.h"
-typedef enum {
-    I2C_NOERR,
-    I2C_BUSY,
-    I2C_FAIL
-
-
-} i2c_error_t;
-
-typedef enum
-{
-    I2C_STOP=1,
-    I2C_RESTART_READ,
-    I2C_RESTART_WRITE,
-    I2C_CONTINUE,
-    I2C_RESET_LINK
-} i2c_operations_t;
-
-typedef uint8_t i2c_address_t;
-typedef i2c_operations_t (*i2c_callback_t)(void *funPtr);
-
-
-i2c_operations_t I2C_CallbackReturnStop(void *funPtr);
-i2c_operations_t I2C_CallbackReturnReset(void *funPtr);
-i2c_operations_t I2C_CallbackRestartWrite(void *funPtr);
-i2c_operations_t I2C_CallbackRestartRead(void *funPtr);
-
-
-
-
-
-
-void I2C_Initialize(void);
-# 101 "./mcc_generated_files/i2c_master.h"
-i2c_error_t I2C_Open(i2c_address_t address);
-# 111 "./mcc_generated_files/i2c_master.h"
-i2c_error_t I2C_Close(void);
-# 123 "./mcc_generated_files/i2c_master.h"
-i2c_error_t I2C_MasterOperation(_Bool read);
-
-
-
-
-i2c_error_t I2C_MasterWrite(void);
-
-
-
-
-i2c_error_t I2C_MasterRead(void);
-# 142 "./mcc_generated_files/i2c_master.h"
-void I2C_SetTimeout(uint8_t timeOut);
-# 152 "./mcc_generated_files/i2c_master.h"
-void I2C_SetBuffer(void *buffer, size_t bufferSize);
-# 164 "./mcc_generated_files/i2c_master.h"
-void I2C_SetDataCompleteCallback(i2c_callback_t cb, void *ptr);
-# 174 "./mcc_generated_files/i2c_master.h"
-void I2C_SetWriteCollisionCallback(i2c_callback_t cb, void *ptr);
-# 184 "./mcc_generated_files/i2c_master.h"
-void I2C_SetAddressNackCallback(i2c_callback_t cb, void *ptr);
-# 194 "./mcc_generated_files/i2c_master.h"
-void I2C_SetDataNackCallback(i2c_callback_t cb, void *ptr);
-# 204 "./mcc_generated_files/i2c_master.h"
-void I2C_SetTimeoutCallback(i2c_callback_t cb, void *ptr);
-# 56 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/tmr2.h" 1
-# 103 "./mcc_generated_files/tmr2.h"
+# 55 "mcc_generated_files/tmr2.h" 2
+# 103 "mcc_generated_files/tmr2.h"
 void TMR2_Initialize(void);
-# 132 "./mcc_generated_files/tmr2.h"
+# 132 "mcc_generated_files/tmr2.h"
 void TMR2_StartTimer(void);
-# 164 "./mcc_generated_files/tmr2.h"
+# 164 "mcc_generated_files/tmr2.h"
 void TMR2_StopTimer(void);
-# 199 "./mcc_generated_files/tmr2.h"
+# 199 "mcc_generated_files/tmr2.h"
 uint8_t TMR2_ReadTimer(void);
-# 238 "./mcc_generated_files/tmr2.h"
+# 238 "mcc_generated_files/tmr2.h"
 void TMR2_WriteTimer(uint8_t timerVal);
-# 290 "./mcc_generated_files/tmr2.h"
+# 290 "mcc_generated_files/tmr2.h"
 void TMR2_LoadPeriodRegister(uint8_t periodVal);
-# 308 "./mcc_generated_files/tmr2.h"
+# 308 "mcc_generated_files/tmr2.h"
 void TMR2_ISR(void);
-# 326 "./mcc_generated_files/tmr2.h"
+# 326 "mcc_generated_files/tmr2.h"
  void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
-# 344 "./mcc_generated_files/tmr2.h"
+# 344 "mcc_generated_files/tmr2.h"
 extern void (*TMR2_InterruptHandler)(void);
-# 362 "./mcc_generated_files/tmr2.h"
+# 362 "mcc_generated_files/tmr2.h"
 void TMR2_DefaultInterruptHandler(void);
-# 57 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/tmr0.h" 1
-# 100 "./mcc_generated_files/tmr0.h"
-void TMR0_Initialize(void);
-# 129 "./mcc_generated_files/tmr0.h"
-void TMR0_StartTimer(void);
-# 161 "./mcc_generated_files/tmr0.h"
-void TMR0_StopTimer(void);
-# 196 "./mcc_generated_files/tmr0.h"
-uint8_t TMR0_ReadTimer(void);
-# 235 "./mcc_generated_files/tmr0.h"
-void TMR0_WriteTimer(uint8_t timerVal);
-# 271 "./mcc_generated_files/tmr0.h"
-void TMR0_Reload(void);
-# 290 "./mcc_generated_files/tmr0.h"
-void TMR0_ISR(void);
-# 309 "./mcc_generated_files/tmr0.h"
- void TMR0_SetInterruptHandler(void (* InterruptHandler)(void));
-# 327 "./mcc_generated_files/tmr0.h"
-extern void (*TMR0_InterruptHandler)(void);
-# 345 "./mcc_generated_files/tmr0.h"
-void TMR0_DefaultInterruptHandler(void);
-# 58 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/eusart.h" 1
-# 75 "./mcc_generated_files/eusart.h"
-typedef union {
-    struct {
-        unsigned perr : 1;
-        unsigned ferr : 1;
-        unsigned oerr : 1;
-        unsigned reserved : 5;
-    };
-    uint8_t status;
-}eusart_status_t;
+# 52 "mcc_generated_files/tmr2.c" 2
 
 
 
 
-extern volatile uint8_t eusartTxBufferRemaining;
-extern volatile uint8_t eusartRxCount;
+
+
+void (*TMR2_InterruptHandler)(void);
 
 
 
 
-extern void (*EUSART_TxDefaultInterruptHandler)(void);
-extern void (*EUSART_RxDefaultInterruptHandler)(void);
-# 117 "./mcc_generated_files/eusart.h"
-void EUSART_Initialize(void);
-# 165 "./mcc_generated_files/eusart.h"
-_Bool EUSART_is_tx_ready(void);
-# 213 "./mcc_generated_files/eusart.h"
-_Bool EUSART_is_rx_ready(void);
-# 260 "./mcc_generated_files/eusart.h"
-_Bool EUSART_is_tx_done(void);
-# 308 "./mcc_generated_files/eusart.h"
-eusart_status_t EUSART_get_last_status(void);
-# 328 "./mcc_generated_files/eusart.h"
-uint8_t EUSART_Read(void);
-# 348 "./mcc_generated_files/eusart.h"
-void EUSART_Write(uint8_t txData);
-# 369 "./mcc_generated_files/eusart.h"
-void EUSART_Transmit_ISR(void);
-# 390 "./mcc_generated_files/eusart.h"
-void EUSART_Receive_ISR(void);
-# 411 "./mcc_generated_files/eusart.h"
-void EUSART_RxDataHandler(void);
-# 429 "./mcc_generated_files/eusart.h"
-void EUSART_SetFramingErrorHandler(void (* interruptHandler)(void));
-# 447 "./mcc_generated_files/eusart.h"
-void EUSART_SetOverrunErrorHandler(void (* interruptHandler)(void));
-# 465 "./mcc_generated_files/eusart.h"
-void EUSART_SetErrorHandler(void (* interruptHandler)(void));
-# 485 "./mcc_generated_files/eusart.h"
-void EUSART_SetTxInterruptHandler(void (* interruptHandler)(void));
-# 505 "./mcc_generated_files/eusart.h"
-void EUSART_SetRxInterruptHandler(void (* interruptHandler)(void));
-# 59 "./mcc_generated_files/mcc.h" 2
-# 74 "./mcc_generated_files/mcc.h"
-void SYSTEM_Initialize(void);
-# 87 "./mcc_generated_files/mcc.h"
-void OSCILLATOR_Initialize(void);
-# 3 "Modbas_RTU.c" 2
-# 24 "Modbas_RTU.c"
-  void TIMER0_COMP_vect (void)
- {
-   Bit_action_ModbasRtu.b0 = 0;
-   do { T0CONbits.TMR0ON = 0; } while(0);
-      if ( Bit_action_ModbasRtu.b1)
-       {
-      Bit_action_ModbasRtu.b1 = 0;
 
-
-   Bit_action_ModbasRtu.b2 = 1;
-            modbasRtu_Slave();
-       }
- }
+void TMR2_Initialize(void)
+{
 
 
 
-void USART_RXC_vect(void)
- {
-    unsigned char TempModbas = RCREG;
- TMR0_Reload();
- if (!Bit_action_ModbasRtu.b2)
-  {
-  if (!Bit_action_ModbasRtu.b0)
-   {
-   Bit_action_ModbasRtu.b0 = 1;
-   if (TempModbas == 0x31 )
+    PR2 = 0x3E;
+
+
+    TMR2 = 0x00;
+
+
+    PIR1bits.TMR2IF = 0;
+
+
+    PIE1bits.TMR2IE = 1;
+
+
+    TMR2_SetInterruptHandler(TMR2_DefaultInterruptHandler);
+
+
+    T2CON = 0x3A;
+}
+
+void TMR2_StartTimer(void)
+{
+
+    T2CONbits.TMR2ON = 1;
+}
+
+void TMR2_StopTimer(void)
+{
+
+    T2CONbits.TMR2ON = 0;
+}
+
+uint8_t TMR2_ReadTimer(void)
+{
+    uint8_t readVal;
+
+    readVal = TMR2;
+
+    return readVal;
+}
+
+void TMR2_WriteTimer(uint8_t timerVal)
+{
+
+    TMR2 = timerVal;
+}
+
+void TMR2_LoadPeriodRegister(uint8_t periodVal)
+{
+   PR2 = periodVal;
+}
+
+void TMR2_ISR(void)
+{
+
+
+    PIR1bits.TMR2IF = 0;
+
+    if(TMR2_InterruptHandler)
     {
-    Bit_action_ModbasRtu.b1 = 1;
-
-                do { LATAbits.LATA1 = ~LATAbits.LATA1; } while(0);
+        TMR2_InterruptHandler();
     }
-   quantity_Data_ModbasRtu = 0;
-   do { T0CONbits.TMR0ON = 1; } while(0);
-   }
-  if (Bit_action_ModbasRtu.b1 == 1)
+}
 
-   {
-     Danie_Rx_ModbasRtu[quantity_Data_ModbasRtu] = TempModbas;
-     quantity_Data_ModbasRtu ++;
-   }
-  }
- }
 
+void TMR2_SetInterruptHandler(void (* InterruptHandler)(void)){
+    TMR2_InterruptHandler = InterruptHandler;
+}
 
-void USART_TXC_vect(void)
- {
+void TMR2_DefaultInterruptHandler(void){
 
 
-   do { PIE1bits.TX1IE=0; } while(0);
-
-
-
- }
-
-
-void USART_UDRE_vect (void)
- {
-
-   if (quantity_Data_ModbasRtu >= Temp_ModbasRtu )
-    {
-   TXREG = Danie_Rx_ModbasRtu[Temp_ModbasRtu++];
-    }
-   else
-    {
-
-
-
-      USART_UDR_vect=0;
-
-      do { PIE1bits.TX1IE=1; } while(0);
-
-
- }
- }
-
-
-
-
- unsigned int crc_chk (unsigned char* data, unsigned char length )
-  {
-  int j;
-  unsigned int reg_crc = 0xFFFF;
- while (length--)
- {
-   reg_crc ^= *data++;
-   for(j=0;j<8;j++)
-    {
-   if(reg_crc & 0x01)
-       {
-      reg_crc = (reg_crc >> 1) ^ 0xA001;
-       }
-  else
-       {
-      reg_crc = reg_crc >> 1;
-    }
-    }
- }
- return reg_crc;
-  }
-
-
-
- unsigned int ModbasRtu_Register_address(unsigned char Li)
- {
-  register char Hi= Li - 1;
-  return Danie_Rx_ModbasRtu[Hi] * 256 + Danie_Rx_ModbasRtu[Li];
- }
-
-
-
- char Data_integrity()
- {
-   register unsigned int Temp22;
-   register unsigned char Temp33;
-   quantity_Data_ModbasRtu = quantity_Data_ModbasRtu - 2;
-   Temp22 = crc_chk(Danie_Rx_ModbasRtu,quantity_Data_ModbasRtu);
-   Temp33 = Temp22;
-   if ( Danie_Rx_ModbasRtu[quantity_Data_ModbasRtu] == Temp33 )
- {
-   quantity_Data_ModbasRtu ++;
-   Temp33 = (Temp22 >> 8) ;
-   if ( Danie_Rx_ModbasRtu[quantity_Data_ModbasRtu] == Temp33 )
-    {
-   return 1;
-    }
- }
-   return 0;
- }
-
-
-
-
-
-char _Bin_input_Output( register unsigned char NUMBER, register unsigned char state,volatile unsigned char *Masiv, volatile unsigned char Sd )
-  {
- volatile unsigned char Temp = 0,Temp1 = 0;
- while (NUMBER >= 8)
-  {
-    NUMBER = NUMBER - 8;
-    Temp ++;
-  }
- Temp1 = Masiv [ Temp ];
- if (Sd == 10 )
-  {
-    if ( state == 1)
-     Temp1 |=(1<<NUMBER);
-    else
-     Temp1 &=~(1<<NUMBER);
-    Masiv [ Temp ] = Temp1;
-  }
- else
-  {
-  if ( Temp1 & (1<<NUMBER) )
-   NUMBER = 1;
-  else
-   NUMBER = 0;
-  }
-  return NUMBER;
-  }
-
-
-
-
-
-
- void Changing_Discrete_Output(void)
-   {
-   register unsigned int address;
-   address = ModbasRtu_Register_address(3);
-   if ( address > 10 )
-    {
-    Error_modbasRtu (0x02);
-    }
-    else
-    {
-   if (Danie_Rx_ModbasRtu[4] == 255)
-     _Bin_input_Output ((char)address,1,Danie_ModbasRtu_Binary_Output,10);
-      else
-           _Bin_input_Output ((char)address,0,Danie_ModbasRtu_Binary_Output,10);
-    }
-  }
-
-
-
-
-
- void Reading_Discrete_Output(unsigned char* Massiv, register unsigned char Number_)
-  {
- volatile unsigned int address,Number_bits;
- register unsigned char Temp = 0,Danie,Temp2 = 0,address2 = 0,Temp3 = 2;
- address = ModbasRtu_Register_address(3);
- if ( address > Number_ )
-        {
-           Error_modbasRtu (0x02);
-        }
-  else
-        {
-           Number_bits = ModbasRtu_Register_address(5);
-           while (address >= 8)
-               {
-                 address = address - 8;
-                 Temp ++;
-               }
-           Danie = Massiv [ Temp ];
-
-
-
-           while ( Number_bits > 0)
-             {
-                   Number_bits --;
-                   if ( Danie & (1 << address) )
-                       {
-                         Temp2 |=(1<<address2);
-                       }
-                   address2 ++;
-                   address ++;
-                   if (address2 == 8 )
-                       {
-                         address2 = 0;
-                         Temp3 ++;
-                         Danie_Rx_ModbasRtu[Temp3] = Temp2;
-                         Temp2 = 0;
-                       }
-                   if ( address == 8)
-                       {
-                          address = 0;
-                          Temp++;
-                          Danie = Massiv [ Temp ];
-                       }
-            }
-           if ( address2 > 0 )
-            {
-              Temp3 ++;
-              Danie_Rx_ModbasRtu[Temp3] = Temp2;
-            }
-
-
-           Danie_Rx_ModbasRtu[2] = Temp3 - 2;
-           Temp3 ++;
-           check_sum ( Temp3);
-        }
-  }
-
-
-
-
-
- void Read_analog_input(unsigned char* Massiv, register unsigned char Number_, unsigned char Vt)
- {
- volatile unsigned int address,Number_bits,Danie;
- volatile unsigned char Adress = 4;
- address = ModbasRtu_Register_address(3);
- if ( address > Number_ )
-  {
-  Error_modbasRtu (0x02);
-  }
-  else
-  {
-  Number_bits = ModbasRtu_Register_address(5);
-  Danie_Rx_ModbasRtu[2] = Number_bits * 2;
-  Adress = 3;
-  while (Number_bits > 0 )
-   {
-   if ( Vt == 1 )
-   {
-     Danie = Danie_ModbasRtu_analog_input[ address ];
-   }
-   else
-      {
-     Danie = Danie_ModbasRtu_analog_Output[ address ];
-   }
-   address++;
-   Massiv = &Danie;
-   Danie_Rx_ModbasRtu[Adress ++] = Massiv[1];
-   Danie_Rx_ModbasRtu[Adress++] = Massiv [0];
-   Number_bits = Number_bits - 1 ;
-   }
-  check_sum ( Adress);
-  }
- }
-
-
-
-
-
- void analog_output_recording(void)
-  {
- register int address;
- address = ModbasRtu_Register_address(3);
- if ( address > 10 )
-  {
-  Error_modbasRtu (0x02);
-  }
-  else
-  {
-    Danie_ModbasRtu_analog_Output [address] = ModbasRtu_Register_address(5);
-  }
-  }
-
-
-
-
-
- void Error_modbasRtu (volatile unsigned char Temp_Error)
-  {
- Danie_Rx_ModbasRtu[1] |= (1<<7);
- Danie_Rx_ModbasRtu[2] = Temp_Error;
- check_sum (3);
-  }
-
-
-
- void check_sum ( register unsigned char Adress)
-  {
- register unsigned int RC;
- RC = crc_chk(Danie_Rx_ModbasRtu,Adress);
- Danie_Rx_ModbasRtu[Adress] = RC ;
- Adress++;
- Danie_Rx_ModbasRtu[Adress] = RC >> 8;
- quantity_Data_ModbasRtu = Adress;
-  }
-
-
-
-
-
-  void modbasRtu_Answer()
-  {
-   Temp_ModbasRtu = 0;
-   switch (Danie_Rx_ModbasRtu[1])
-   {
-    case 1:
-           Reading_Discrete_Output(Danie_ModbasRtu_Binary_Output,10);
-           break;
-    case 2:
-           Reading_Discrete_Output(Danie_ModbasRtu_Binary_input,10);
-           break;
-    case 3:
-           Read_analog_input( Danie_ModbasRtu_analog_Output,10,0);
-    break;
-    case 4:
-           Read_analog_input(Danie_ModbasRtu_analog_input,10,1);
-           break;
-    case 5:
-           Changing_Discrete_Output();
-           break;
-    case 6:
-           analog_output_recording();
-           break;
-    case 15:
-            __asm("nop");
-            break;
-    case 16:
-            __asm("nop");
-
-            break;
-          case 21:
-
-
-            break;
-          case 22:
-
-
-            break;
-          case 23:
-
-
-            break;
-          case 24:
-
-
-            break;
-
-    default:
-            Error_modbasRtu (0x01);
-            break;
-   }
-
-     USART_UDR_vect=1;
-  Bit_action_ModbasRtu.b2 = 0;
-  }
-
-
-
- char read_digital_inputs( volatile unsigned char Temp1 )
-  {
-   return _Bin_input_Output (Temp1,1,Danie_ModbasRtu_Binary_input,11);
-  }
-void change_digital_inputs( volatile unsigned char Temp1,volatile unsigned char Temp2 )
-  {
-   _Bin_input_Output (Temp1,Temp2,Danie_ModbasRtu_Binary_input,10);
-  }
-char read_digital_Output( volatile unsigned char Temp1 )
-  {
-   return _Bin_input_Output (Temp1,1,Danie_ModbasRtu_Binary_Output,11);
-  }
-void change_digital_Output( volatile unsigned char Temp1,volatile unsigned char Temp2 )
-  {
-   _Bin_input_Output (Temp1,Temp2,Danie_ModbasRtu_Binary_Output,10);
-  }
-
-
-void change_analogue_Output (volatile unsigned char nomer, int Danie)
-  {
-   Danie_ModbasRtu_analog_Output [ nomer ] = Danie;
-  }
-void change_analogue_input (volatile unsigned char nomer, int Danie)
-  {
-   Danie_ModbasRtu_analog_input [ nomer ] = Danie;
-  }
- int read_analogue_Output (volatile unsigned char nomer)
-  {
-  return Danie_ModbasRtu_analog_Output [ nomer ];
-  }
- int read_analogue_input (volatile unsigned char nomer)
-  {
-  return Danie_ModbasRtu_analog_input [ nomer ];
-  }
-
- void modbasRtu_Slave( void )
-   {
-    if (Bit_action_ModbasRtu.b2)
-    {
-     if ( Data_integrity() == 0 )
-     {
-
-
-      Error_modbasRtu (0x04);
-      USART_UDR_vect=1;
-            Temp_ModbasRtu = 0;
-            Bit_action_ModbasRtu.b2 = 0;
-
-     }
-     else
-     {
-      modbasRtu_Answer();
-     }
-    }
-  }
+}

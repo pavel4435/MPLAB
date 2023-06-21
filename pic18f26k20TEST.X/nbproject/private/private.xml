@@ -2,6 +2,14 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/orlov_pv/Documents/MPLAB/pic18f26k20TEST.X/DAC8574.h</file>
+            <file>file:/C:/Users/orlov_pv/Documents/MPLAB/pic18f26k20TEST.X/Modbas_RTU.h</file>
+            <file>file:/C:/Users/orlov_pv/Documents/MPLAB/pic18f26k20TEST.X/DAC8574.c</file>
+            <file>file:/C:/Users/orlov_pv/Documents/MPLAB/pic18f26k20TEST.X/main.c</file>
+            <file>file:/C:/Users/orlov_pv/Documents/MPLAB/pic-lcd-library-master/ProtocolELL.c</file>
+            <file>file:/C:/Users/orlov_pv/Documents/MPLAB/pic-lcd-library-master/ProtocolELL.h</file>
+            <file>file:/C:/Users/orlov_pv/Documents/MPLAB/pic18f26k20TEST.X/Modbas_RTU.c</file>
+        </group>
     </open-files>
 </project-private>

@@ -4491,7 +4491,7 @@ void TMR0_DefaultInterruptHandler(void);
 # 52 "mcc_generated_files/tmr0.c" 2
 
 # 1 "mcc_generated_files/../Modbas_RTU.h" 1
-# 57 "mcc_generated_files/../Modbas_RTU.h"
+# 66 "mcc_generated_files/../Modbas_RTU.h"
  unsigned char Danie_Rx_ModbasRtu[30] = {},quantity_Data_ModbasRtu;
 
  unsigned int Danie_ModbasRtu_analog_input [ 10 ];
@@ -4499,12 +4499,12 @@ void TMR0_DefaultInterruptHandler(void);
  unsigned char Danie_ModbasRtu_Binary_input [ (10 / 8)+ 1 ];
  unsigned char Danie_ModbasRtu_Binary_Output [ (10/ 8)+ 1 ];
  unsigned char Temp_ModbasRtu;
- struct
-    {
+
+ struct {
         unsigned b0 : 1;
         unsigned b1 : 1;
         unsigned b2 : 1;
-    } Bit_action_ModbasRtu = {0,0,0},D;
+    } Bit_action_ModbasRtu = {0, 0, 0}, D;
 unsigned char USART_UDR_vect = 0;
 
 
@@ -4515,26 +4515,26 @@ void USART_UDRE_vect(void);
 
 
 
-    int crc_chk( unsigned char* data, unsigned char length );
+    unsigned int crc_chk(unsigned char* data, unsigned char length);
     unsigned int ModbasRtu_Register_address(unsigned char Li);
     char Data_integrity();
-    char _Bin_input_Output( register unsigned char NUMBER, register unsigned char state,volatile unsigned char *Masiv, volatile unsigned char Sd );
+    char _Bin_input_Output(register unsigned char NUMBER, register unsigned char state, volatile unsigned char *Masiv, volatile unsigned char Sd);
     void Changing_Discrete_Output(void);
     void Reading_Discrete_Output(unsigned char *Massiv, register unsigned char Number_);
     void Read_analog_input(unsigned char *Massiv, register unsigned char Number_, unsigned char Vt);
     void analog_output_recording(void);
-    void Error_modbasRtu (volatile unsigned char Temp_Error);
-    void check_sum ( register unsigned char Adress);
+    void Error_modbasRtu(volatile unsigned char Temp_Error);
+    void check_sum(register unsigned char Adress);
     void modbasRtu_Answer();
-    char read_digital_inputs( volatile unsigned char Temp1 );
-    void change_digital_inputs( volatile unsigned char Temp1,volatile unsigned char Temp2 );
-    char read_digital_Output( volatile unsigned char Temp1 );
-    void change_digital_Output( volatile unsigned char Temp1,volatile unsigned char Temp2 );
-    void change_analogue_Output (volatile unsigned char nomer, int Danie);
-    void change_analogue_input (volatile unsigned char nomer, int Danie);
-    int read_analogue_Output (volatile unsigned char nomer);
-    int read_analogue_input (volatile unsigned char nomer);
-    void modbasRtu_Slave( void );
+    char read_digital_inputs(volatile unsigned char Temp1);
+    void change_digital_inputs(volatile unsigned char Temp1, volatile unsigned char Temp2);
+    char read_digital_Output(volatile unsigned char Temp1);
+    void change_digital_Output(volatile unsigned char Temp1, volatile unsigned char Temp2);
+    void change_analogue_Output(volatile unsigned char nomer, int Danie);
+    void change_analogue_input(volatile unsigned char nomer, int Danie);
+    int read_analogue_Output(volatile unsigned char nomer);
+    int read_analogue_input(volatile unsigned char nomer);
+    void modbasRtu_Slave(void);
 # 53 "mcc_generated_files/tmr0.c" 2
 
 # 1 "mcc_generated_files/pin_manager.h" 1

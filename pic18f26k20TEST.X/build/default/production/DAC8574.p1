@@ -1,0 +1,82 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"58 ./mcc_generated_files/examples/i2c_master_example.h
+[; ;./mcc_generated_files/examples/i2c_master_example.h: 58: void I2C_WriteNBytes(i2c_address_t address, uint8_t *data, size_t len);
+[v _I2C_WriteNBytes `(v ~T0 @X0 0 ef3`uc`*uc`ui ]
+"11 DAC8574.c
+[; ;DAC8574.c: 11:  void SetDAC(int channel, uint16_t value)
+[v _SetDAC `(v ~T0 @X0 1 ef2`i`us ]
+"12
+[; ;DAC8574.c: 12: {
+{
+[e :U _SetDAC ]
+"11
+[; ;DAC8574.c: 11:  void SetDAC(int channel, uint16_t value)
+[v _channel `i ~T0 @X0 1 r1 ]
+[v _value `us ~T0 @X0 1 r2 ]
+"12
+[; ;DAC8574.c: 12: {
+[f ]
+"13
+[; ;DAC8574.c: 13:   uint8_t DACCmd = 0;
+[v _DACCmd `uc ~T0 @X0 1 a ]
+[e = _DACCmd -> -> 0 `i `uc ]
+"14
+[; ;DAC8574.c: 14:   switch (channel)
+[e $U 5  ]
+"15
+[; ;DAC8574.c: 15:   {
+{
+"16
+[; ;DAC8574.c: 16:    case 0: DACCmd= 0x10; break;
+[e :U 6 ]
+[e = _DACCmd -> -> 16 `i `uc ]
+[e $U 4  ]
+"17
+[; ;DAC8574.c: 17:    case 1: DACCmd= 0x12; break;
+[e :U 7 ]
+[e = _DACCmd -> -> 18 `i `uc ]
+[e $U 4  ]
+"18
+[; ;DAC8574.c: 18:    case 2: DACCmd= 0x14; break;
+[e :U 8 ]
+[e = _DACCmd -> -> 20 `i `uc ]
+[e $U 4  ]
+"19
+[; ;DAC8574.c: 19:    case 3: DACCmd= 0x16; break;
+[e :U 9 ]
+[e = _DACCmd -> -> 22 `i `uc ]
+[e $U 4  ]
+"20
+[; ;DAC8574.c: 20:    default: break;
+[e :U 10 ]
+[e $U 4  ]
+"21
+[; ;DAC8574.c: 21:   }
+}
+[e $U 4  ]
+[e :U 5 ]
+[e [\ _channel , $ -> 0 `i 6
+ , $ -> 1 `i 7
+ , $ -> 2 `i 8
+ , $ -> 3 `i 9
+ 10 ]
+[e :U 4 ]
+"23
+[; ;DAC8574.c: 23:   uint8_t DAC8574_Data[3];
+[v _DAC8574_Data `uc ~T0 @X0 -> 3 `i a ]
+"25
+[; ;DAC8574.c: 25:   DAC8574_Data[0] = DACCmd;
+[e = *U + &U _DAC8574_Data * -> -> -> 0 `i `ui `ux -> -> # *U &U _DAC8574_Data `ui `ux _DACCmd ]
+"26
+[; ;DAC8574.c: 26:   DAC8574_Data[1] = (value & 0xFF00)>>8;
+[e = *U + &U _DAC8574_Data * -> -> -> 1 `i `ui `ux -> -> # *U &U _DAC8574_Data `ui `ux -> >> & -> _value `ui -> 65280 `ui -> 8 `i `uc ]
+"27
+[; ;DAC8574.c: 27:   DAC8574_Data[2] = (value & 0x00FF);
+[e = *U + &U _DAC8574_Data * -> -> -> 2 `i `ui `ux -> -> # *U &U _DAC8574_Data `ui `ux -> & -> _value `ui -> -> 255 `i `ui `uc ]
+"28
+[; ;DAC8574.c: 28:   I2C_WriteNBytes(0x98,DAC8574_Data,3);
+[e ( _I2C_WriteNBytes (3 , , -> -> 152 `i `uc &U _DAC8574_Data -> -> 3 `i `ui ]
+"38
+[; ;DAC8574.c: 38: }
+[e :UE 3 ]
+}
