@@ -4857,7 +4857,7 @@ void SYSTEM_Initialize(void);
 # 87 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
 # 3 "Modbas_RTU.c" 2
-# 24 "Modbas_RTU.c"
+# 26 "Modbas_RTU.c"
   void TIMER0_COMP_vect (void)
  {
    Bit_action_ModbasRtu.b0 = 0;

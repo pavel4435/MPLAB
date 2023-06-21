@@ -20,6 +20,8 @@
 
 
 
+
+
     
   void TIMER0_COMP_vect (void)    //прерывание таймера T0
  {     

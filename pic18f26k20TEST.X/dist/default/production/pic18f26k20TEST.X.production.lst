@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.40 build 20220703182018 
-                                                                                               Tue Jun 20 16:24:23 2023
+                                                                                               Wed Jun 21 08:52:35 2023
 
 Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1 
      1                           	processor	18F26K20
@@ -266,8 +266,8 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    252   0000F1                     _EUSART_TxDefaultInterruptHandler:
    253                           	callstack 0
    254   0000F1                     	ds	2
-   255   000000                     _T2CONbits	set	4042
-   256   000000                     _LATAbits	set	3977
+   255   000000                     _LATAbits	set	3977
+   256   000000                     _T2CONbits	set	4042
    257   000000                     _RCSTAbits	set	4011
    258   000000                     _TXSTAbits	set	4012
    259   000000                     _T0CONbits	set	4053
@@ -846,14 +846,14 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    827   0013F0  EFFC  F009         	goto	u2491
    828   0013F4  EFFE  F009         	goto	u2490
    829   0013F8                     u2491:
-   830   0013F8  EF30  F00A         	goto	l791
+   830   0013F8  EF30  F00A         	goto	l837
    831   0013FC                     u2490:
    832   0013FC  0101               	movlb	1	; () banked
    833   0013FE  B10A               	btfsc	main@bitt& (0+255),0,b
    834   001400  EF04  F00A         	goto	u2501
    835   001404  EF06  F00A         	goto	u2500
    836   001408                     u2501:
-   837   001408  EF30  F00A         	goto	l791
+   837   001408  EF30  F00A         	goto	l837
    838   00140C                     u2500:
    839   00140C                     
    840                           ; BSR set to: 1
@@ -905,20 +905,20 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    886   00145A  810A               	bsf	main@bitt& (0+255),0,b
    887                           
    888                           ;main.c: 108:          }
-   889   00145C  EF41  F00A         	goto	l794
-   890   001460                     l791:
+   889   00145C  EF41  F00A         	goto	l840
+   890   001460                     l837:
    891   001460  B480               	btfsc	128,2,c	;volatile
    892   001462  EF35  F00A         	goto	u2511
    893   001466  EF37  F00A         	goto	u2510
    894   00146A                     u2511:
-   895   00146A  EF41  F00A         	goto	l794
+   895   00146A  EF41  F00A         	goto	l840
    896   00146E                     u2510:
    897   00146E  0101               	movlb	1	; () banked
    898   001470  A10A               	btfss	main@bitt& (0+255),0,b
    899   001472  EF3D  F00A         	goto	u2521
    900   001476  EF3F  F00A         	goto	u2520
    901   00147A                     u2521:
-   902   00147A  EF41  F00A         	goto	l794
+   902   00147A  EF41  F00A         	goto	l840
    903   00147E                     u2520:
    904   00147E                     
    905                           ; BSR set to: 1
@@ -927,7 +927,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    908                           ; BSR set to: 1
    909                           ;main.c: 112:              bitt.b0=0;
    910   001480  910A               	bcf	main@bitt& (0+255),0,b
-   911   001482                     l794:
+   911   001482                     l840:
    912                           
    913                           ;main.c: 114:          if(TXSTAbits.TRMT && USART_UDR_vect)
    914   001482  A2AC               	btfss	172,1,c	;volatile
@@ -955,7 +955,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    936                           
    937 ;; *************** function _USART_UDRE_vect *****************
    938 ;; Defined at:
-   939 ;;		line 79 in file "Modbas_RTU.c"
+   939 ;;		line 81 in file "Modbas_RTU.c"
    940 ;; Parameters:    Size  Location     Type
    941 ;;		None
    942 ;; Auto vars:     Size  Location     Type
@@ -994,7 +994,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    970   001F9A                     _USART_UDRE_vect:
    971                           	callstack 21
    972   001F9A                     
-   973                           ;Modbas_RTU.c: 82:    if (quantity_Data_ModbasRtu >= Temp_ModbasRtu )
+   973                           ;Modbas_RTU.c: 84:    if (quantity_Data_ModbasRtu >= Temp_ModbasRtu )
    974   001F9A  503C               	movf	_Temp_ModbasRtu^0,w,c
    975   001F9C  5C3D               	subwf	_quantity_Data_ModbasRtu^0,w,c
    976   001F9E  A0D8               	btfss	status,0,c
@@ -1004,7 +1004,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    980   001FA8  EFE1  F00F         	goto	l4619
    981   001FAC                     u2360:
    982   001FAC                     
-   983                           ;Modbas_RTU.c: 83:     {;Modbas_RTU.c: 84:    TXREG = Danie_Rx_ModbasRtu[Temp_ModbasRtu+
+   983                           ;Modbas_RTU.c: 85:     {;Modbas_RTU.c: 86:    TXREG = Danie_Rx_ModbasRtu[Temp_ModbasRtu+
       +                          +];
    984   001FAC  0E8D               	movlw	low _Danie_Rx_ModbasRtu
    985   001FAE  243C               	addwf	_Temp_ModbasRtu^0,w,c
@@ -1016,11 +1016,11 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    991   001FBA  6EAD               	movwf	173,c	;volatile
    992   001FBC  2A3C               	incf	_Temp_ModbasRtu^0,f,c
    993                           
-   994                           ;Modbas_RTU.c: 85:     }
+   994                           ;Modbas_RTU.c: 87:     }
    995   001FBE  EFE5  F00F         	goto	l914
    996   001FC2                     l4619:
    997                           
-   998                           ;Modbas_RTU.c: 87:     {;Modbas_RTU.c: 91:       USART_UDR_vect=0;
+   998                           ;Modbas_RTU.c: 89:     {;Modbas_RTU.c: 93:       USART_UDR_vect=0;
    999   001FC2  0E00               	movlw	0
   1000   001FC4  0100               	movlb	0	; () banked
   1001   001FC6  6F8C               	movwf	_USART_UDR_vect& (0+255),b
@@ -6107,7 +6107,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   5630                           
   5631 ;; *************** function _USART_TXC_vect *****************
   5632 ;; Defined at:
-  5633 ;;		line 68 in file "Modbas_RTU.c"
+  5633 ;;		line 70 in file "Modbas_RTU.c"
   5634 ;; Parameters:    Size  Location     Type
   5635 ;;		None
   5636 ;; Auto vars:     Size  Location     Type
@@ -6318,7 +6318,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   5831                           
   5832 ;; *************** function _USART_RXC_vect *****************
   5833 ;; Defined at:
-  5834 ;;		line 40 in file "Modbas_RTU.c"
+  5834 ;;		line 42 in file "Modbas_RTU.c"
   5835 ;; Parameters:    Size  Location     Type
   5836 ;;		None
   5837 ;; Auto vars:     Size  Location     Type
@@ -6358,13 +6358,13 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   5866   0018E6                     _USART_RXC_vect:
   5867                           	callstack 19
   5868   0018E6                     
-  5869                           ;Modbas_RTU.c: 42:     unsigned char TempModbas = RCREG;
+  5869                           ;Modbas_RTU.c: 44:     unsigned char TempModbas = RCREG;
   5870   0018E6  CFAE F002          	movff	4014,USART_RXC_vect@TempModbas	;volatile
   5871   0018EA                     
-  5872                           ;Modbas_RTU.c: 43:  TMR0_Reload();
+  5872                           ;Modbas_RTU.c: 45:  TMR0_Reload();
   5873   0018EA  ECC6  F011         	call	_TMR0_Reload	;wreg free
   5874   0018EE                     
-  5875                           ;Modbas_RTU.c: 44:  if (!Bit_action_ModbasRtu.b2)
+  5875                           ;Modbas_RTU.c: 46:  if (!Bit_action_ModbasRtu.b2)
   5876   0018EE  B43B               	btfsc	_Bit_action_ModbasRtu^0,2,c
   5877   0018F0  EF7C  F00C         	goto	i2u176_41
   5878   0018F4  EF7E  F00C         	goto	i2u176_40
@@ -6372,7 +6372,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   5880   0018F8  EFB4  F00C         	goto	i2l902
   5881   0018FC                     i2u176_40:
   5882   0018FC                     
-  5883                           ;Modbas_RTU.c: 45:   {;Modbas_RTU.c: 46:   if (!Bit_action_ModbasRtu.b0)
+  5883                           ;Modbas_RTU.c: 47:   {;Modbas_RTU.c: 48:   if (!Bit_action_ModbasRtu.b0)
   5884   0018FC  B03B               	btfsc	_Bit_action_ModbasRtu^0,0,c
   5885   0018FE  EF83  F00C         	goto	i2u177_41
   5886   001902  EF85  F00C         	goto	i2u177_40
@@ -6380,10 +6380,10 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   5888   001906  EFA4  F00C         	goto	i2l3769
   5889   00190A                     i2u177_40:
   5890   00190A                     
-  5891                           ;Modbas_RTU.c: 47:    {;Modbas_RTU.c: 48:    Bit_action_ModbasRtu.b0 = 1;
+  5891                           ;Modbas_RTU.c: 49:    {;Modbas_RTU.c: 50:    Bit_action_ModbasRtu.b0 = 1;
   5892   00190A  803B               	bsf	_Bit_action_ModbasRtu^0,0,c
   5893   00190C                     
-  5894                           ;Modbas_RTU.c: 49:    if (TempModbas == 0x31 )
+  5894                           ;Modbas_RTU.c: 51:    if (TempModbas == 0x31 )
   5895   00190C  0E31               	movlw	49
   5896   00190E  1802               	xorwf	USART_RXC_vect@TempModbas^0,w,c
   5897   001910  A4D8               	btfss	status,2,c
@@ -6393,7 +6393,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   5901   00191A  EFA1  F00C         	goto	i2l3765
   5902   00191E                     i2u178_40:
   5903   00191E                     
-  5904                           ;Modbas_RTU.c: 50:     {;Modbas_RTU.c: 51:     Bit_action_ModbasRtu.b1 = 1;
+  5904                           ;Modbas_RTU.c: 52:     {;Modbas_RTU.c: 53:     Bit_action_ModbasRtu.b1 = 1;
   5905   00191E  823B               	bsf	_Bit_action_ModbasRtu^0,1,c
   5906   001920  B289               	btfsc	137,1,c	;volatile
   5907   001922  EF95  F00C         	goto	i2u179_41
@@ -6414,13 +6414,13 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   5922   001940  6E89               	movwf	137,c	;volatile
   5923   001942                     i2l3765:
   5924                           
-  5925                           ;Modbas_RTU.c: 55:    quantity_Data_ModbasRtu = 0;
+  5925                           ;Modbas_RTU.c: 57:    quantity_Data_ModbasRtu = 0;
   5926   001942  0E00               	movlw	0
   5927   001944  6E3D               	movwf	_quantity_Data_ModbasRtu^0,c
   5928   001946  8ED5               	bsf	213,7,c	;volatile
   5929   001948                     i2l3769:
   5930                           
-  5931                           ;Modbas_RTU.c: 58:   if (Bit_action_ModbasRtu.b1 == 1)
+  5931                           ;Modbas_RTU.c: 60:   if (Bit_action_ModbasRtu.b1 == 1)
   5932   001948  A23B               	btfss	_Bit_action_ModbasRtu^0,1,c
   5933   00194A  EFA9  F00C         	goto	i2u180_41
   5934   00194E  EFAB  F00C         	goto	i2u180_40
@@ -6428,7 +6428,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   5936   001952  EFB4  F00C         	goto	i2l902
   5937   001956                     i2u180_40:
   5938   001956                     
-  5939                           ;Modbas_RTU.c: 60:    {;Modbas_RTU.c: 61:      Danie_Rx_ModbasRtu[quantity_Data_ModbasRt
+  5939                           ;Modbas_RTU.c: 62:    {;Modbas_RTU.c: 63:      Danie_Rx_ModbasRtu[quantity_Data_ModbasRt
       +                          u] = TempModbas;
   5940   001956  0E8D               	movlw	low _Danie_Rx_ModbasRtu
   5941   001958  243D               	addwf	_quantity_Data_ModbasRtu^0,w,c
@@ -6438,7 +6438,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   5945   001960  22DA               	addwfc	fsr2h,f,c
   5946   001962  C002  FFDF         	movff	USART_RXC_vect@TempModbas,indf2
   5947   001966                     
-  5948                           ;Modbas_RTU.c: 62:      quantity_Data_ModbasRtu ++;
+  5948                           ;Modbas_RTU.c: 64:      quantity_Data_ModbasRtu ++;
   5949   001966  2A3D               	incf	_quantity_Data_ModbasRtu^0,f,c
   5950   001968                     i2l902:
   5951   001968  0012               	return		;funcret
@@ -6543,7 +6543,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6040   0020C2  EF65  F010         	goto	i2u173_41
   6041   0020C6  EF67  F010         	goto	i2u173_40
   6042   0020CA                     i2u173_41:
-  6043   0020CA  EF73  F010         	goto	i2l841
+  6043   0020CA  EF73  F010         	goto	i2l777
   6044   0020CE                     i2u173_40:
   6045   0020CE                     
   6046                           ;mcc_generated_files/tmr2.c: 126:     {;mcc_generated_files/tmr2.c: 127:         TMR2_In
@@ -6561,7 +6561,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6057   0020E2  50FA               	movf	pclath,w,c
   6058   0020E4  0012               	return		;indir
   6059   0020E6                     i2u174_49:
-  6060   0020E6                     i2l841:
+  6060   0020E6                     i2l777:
   6061   0020E6  0012               	return		;funcret
   6062   0020E8                     __end_of_TMR2_ISR:
   6063                           	callstack 0
@@ -6738,7 +6738,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6218                           
   6219 ;; *************** function _TIMER0_COMP_vect *****************
   6220 ;; Defined at:
-  6221 ;;		line 24 in file "Modbas_RTU.c"
+  6221 ;;		line 26 in file "Modbas_RTU.c"
   6222 ;; Parameters:    Size  Location     Type
   6223 ;;		None
   6224 ;; Auto vars:     Size  Location     Type
@@ -6777,11 +6777,11 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6252   0021FE                     _TIMER0_COMP_vect:
   6253                           	callstack 13
   6254   0021FE                     
-  6255                           ;Modbas_RTU.c: 26:    Bit_action_ModbasRtu.b0 = 0;
+  6255                           ;Modbas_RTU.c: 28:    Bit_action_ModbasRtu.b0 = 0;
   6256   0021FE  903B               	bcf	_Bit_action_ModbasRtu^0,0,c
   6257   002200  9ED5               	bcf	213,7,c	;volatile
   6258   002202                     
-  6259                           ;Modbas_RTU.c: 28:       if ( Bit_action_ModbasRtu.b1)
+  6259                           ;Modbas_RTU.c: 30:       if ( Bit_action_ModbasRtu.b1)
   6260   002202  A23B               	btfss	_Bit_action_ModbasRtu^0,1,c
   6261   002204  EF06  F011         	goto	i2u158_41
   6262   002208  EF08  F011         	goto	i2u158_40
@@ -6789,13 +6789,13 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6264   00220C  EF0C  F011         	goto	i2l891
   6265   002210                     i2u158_40:
   6266   002210                     
-  6267                           ;Modbas_RTU.c: 29:        {;Modbas_RTU.c: 30:       Bit_action_ModbasRtu.b1 = 0;
+  6267                           ;Modbas_RTU.c: 31:        {;Modbas_RTU.c: 32:       Bit_action_ModbasRtu.b1 = 0;
   6268   002210  923B               	bcf	_Bit_action_ModbasRtu^0,1,c
   6269                           
-  6270                           ;Modbas_RTU.c: 33:    Bit_action_ModbasRtu.b2 = 1;
+  6270                           ;Modbas_RTU.c: 35:    Bit_action_ModbasRtu.b2 = 1;
   6271   002212  843B               	bsf	_Bit_action_ModbasRtu^0,2,c
   6272   002214                     
-  6273                           ;Modbas_RTU.c: 34:             modbasRtu_Slave();
+  6273                           ;Modbas_RTU.c: 36:             modbasRtu_Slave();
   6274   002214  EC76  F00F         	call	_modbasRtu_Slave	;wreg free
   6275   002218                     i2l891:
   6276   002218  0012               	return		;funcret
@@ -6804,7 +6804,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6279                           
   6280 ;; *************** function _modbasRtu_Slave *****************
   6281 ;; Defined at:
-  6282 ;;		line 443 in file "Modbas_RTU.c"
+  6282 ;;		line 445 in file "Modbas_RTU.c"
   6283 ;; Parameters:    Size  Location     Type
   6284 ;;		None
   6285 ;; Auto vars:     Size  Location     Type
@@ -6845,7 +6845,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6315   001EEC                     _modbasRtu_Slave:
   6316                           	callstack 13
   6317   001EEC                     
-  6318                           ;Modbas_RTU.c: 445:     if (Bit_action_ModbasRtu.b2)
+  6318                           ;Modbas_RTU.c: 447:     if (Bit_action_ModbasRtu.b2)
   6319   001EEC  A43B               	btfss	_Bit_action_ModbasRtu^0,2,c
   6320   001EEE  EF7B  F00F         	goto	i2u154_41
   6321   001EF2  EF7D  F00F         	goto	i2u154_40
@@ -6853,7 +6853,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6323   001EF6  EF94  F00F         	goto	i2l1035
   6324   001EFA                     i2u154_40:
   6325   001EFA                     
-  6326                           ;Modbas_RTU.c: 446:     {;Modbas_RTU.c: 447:      if ( Data_integrity() == 0 )
+  6326                           ;Modbas_RTU.c: 448:     {;Modbas_RTU.c: 449:      if ( Data_integrity() == 0 )
   6327   001EFA  ECE3  F00D         	call	_Data_integrity	;wreg free
   6328   001EFE  0900               	iorlw	0
   6329   001F00  A4D8               	btfss	status,2,c
@@ -6863,29 +6863,29 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6333   001F0A  EF92  F00F         	goto	i2l3511
   6334   001F0E                     i2u155_40:
   6335   001F0E                     
-  6336                           ;Modbas_RTU.c: 448:      {;Modbas_RTU.c: 451:       Error_modbasRtu (0x04);
+  6336                           ;Modbas_RTU.c: 450:      {;Modbas_RTU.c: 453:       Error_modbasRtu (0x04);
   6337   001F0E  0E04               	movlw	4
   6338   001F10  EC39  F011         	call	_Error_modbasRtu
   6339   001F14                     
-  6340                           ;Modbas_RTU.c: 452:       USART_UDR_vect=1;
+  6340                           ;Modbas_RTU.c: 454:       USART_UDR_vect=1;
   6341   001F14  0E01               	movlw	1
   6342   001F16  0100               	movlb	0	; () banked
   6343   001F18  6F8C               	movwf	_USART_UDR_vect& (0+255),b
   6344   001F1A                     
   6345                           ; BSR set to: 0
-  6346                           ;Modbas_RTU.c: 453:             Temp_ModbasRtu = 0;
+  6346                           ;Modbas_RTU.c: 455:             Temp_ModbasRtu = 0;
   6347   001F1A  0E00               	movlw	0
   6348   001F1C  6E3C               	movwf	_Temp_ModbasRtu^0,c
   6349   001F1E                     
   6350                           ; BSR set to: 0
-  6351                           ;Modbas_RTU.c: 454:             Bit_action_ModbasRtu.b2 = 0;
+  6351                           ;Modbas_RTU.c: 456:             Bit_action_ModbasRtu.b2 = 0;
   6352   001F1E  943B               	bcf	_Bit_action_ModbasRtu^0,2,c
   6353                           
-  6354                           ;Modbas_RTU.c: 456:      }
+  6354                           ;Modbas_RTU.c: 458:      }
   6355   001F20  EF94  F00F         	goto	i2l1035
   6356   001F24                     i2l3511:
   6357                           
-  6358                           ;Modbas_RTU.c: 458:      {;Modbas_RTU.c: 459:       modbasRtu_Answer();
+  6358                           ;Modbas_RTU.c: 460:      {;Modbas_RTU.c: 461:       modbasRtu_Answer();
   6359   001F24  ECCC  F008         	call	_modbasRtu_Answer	;wreg free
   6360   001F28                     i2l1035:
   6361   001F28  0012               	return		;funcret
@@ -6894,7 +6894,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6364                           
   6365 ;; *************** function _modbasRtu_Answer *****************
   6366 ;; Defined at:
-  6367 ;;		line 350 in file "Modbas_RTU.c"
+  6367 ;;		line 352 in file "Modbas_RTU.c"
   6368 ;; Parameters:    Size  Location     Type
   6369 ;;		None
   6370 ;; Auto vars:     Size  Location     Type
@@ -6937,16 +6937,16 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6402   001198                     _modbasRtu_Answer:
   6403                           	callstack 13
   6404   001198                     
-  6405                           ;Modbas_RTU.c: 352:    Temp_ModbasRtu = 0;
+  6405                           ;Modbas_RTU.c: 354:    Temp_ModbasRtu = 0;
   6406   001198  0E00               	movlw	0
   6407   00119A  6E3C               	movwf	_Temp_ModbasRtu^0,c
   6408                           
-  6409                           ;Modbas_RTU.c: 353:    switch (Danie_Rx_ModbasRtu[1])
+  6409                           ;Modbas_RTU.c: 355:    switch (Danie_Rx_ModbasRtu[1])
   6410   00119C  EF0F  F009         	goto	i2l3431
   6411   0011A0                     i2l3415:
   6412                           
   6413                           ; BSR set to: 0
-  6414                           ;Modbas_RTU.c: 356:            Reading_Discrete_Output(Danie_ModbasRtu_Binary_Output,10)
+  6414                           ;Modbas_RTU.c: 358:            Reading_Discrete_Output(Danie_ModbasRtu_Binary_Output,10)
       +                          ;
   6415   0011A0  0E3E               	movlw	low _Danie_ModbasRtu_Binary_Output
   6416   0011A2  6E0E               	movwf	Reading_Discrete_Output@Massiv^0,c
@@ -6956,12 +6956,12 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6420   0011AA  6E10               	movwf	Reading_Discrete_Output@Number_^0,c
   6421   0011AC  EC11  F008         	call	_Reading_Discrete_Output	;wreg free
   6422                           
-  6423                           ;Modbas_RTU.c: 357:            break;
+  6423                           ;Modbas_RTU.c: 359:            break;
   6424   0011B0  EF4D  F009         	goto	i2l3433
   6425   0011B4                     i2l3417:
   6426                           
   6427                           ; BSR set to: 0
-  6428                           ;Modbas_RTU.c: 359:            Reading_Discrete_Output(Danie_ModbasRtu_Binary_input,10);
+  6428                           ;Modbas_RTU.c: 361:            Reading_Discrete_Output(Danie_ModbasRtu_Binary_input,10);
   6429   0011B4  0E40               	movlw	low _Danie_ModbasRtu_Binary_input
   6430   0011B6  6E0E               	movwf	Reading_Discrete_Output@Massiv^0,c
   6431   0011B8  0E00               	movlw	high _Danie_ModbasRtu_Binary_input
@@ -6970,12 +6970,12 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6434   0011BE  6E10               	movwf	Reading_Discrete_Output@Number_^0,c
   6435   0011C0  EC11  F008         	call	_Reading_Discrete_Output	;wreg free
   6436                           
-  6437                           ;Modbas_RTU.c: 360:            break;
+  6437                           ;Modbas_RTU.c: 362:            break;
   6438   0011C4  EF4D  F009         	goto	i2l3433
   6439   0011C8                     i2l3419:
   6440                           
   6441                           ; BSR set to: 0
-  6442                           ;Modbas_RTU.c: 362:            Read_analog_input( Danie_ModbasRtu_analog_Output,10,0);
+  6442                           ;Modbas_RTU.c: 364:            Read_analog_input( Danie_ModbasRtu_analog_Output,10,0);
   6443   0011C8  0EAB               	movlw	low _Danie_ModbasRtu_analog_Output
   6444   0011CA  6E0E               	movwf	Read_analog_input@Massiv^0,c
   6445   0011CC  0E00               	movlw	high _Danie_ModbasRtu_analog_Output
@@ -6986,12 +6986,12 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6450   0011D6  6E11               	movwf	Read_analog_input@Vt^0,c
   6451   0011D8  EC52  F009         	call	_Read_analog_input	;wreg free
   6452                           
-  6453                           ;Modbas_RTU.c: 363:     break;
+  6453                           ;Modbas_RTU.c: 365:     break;
   6454   0011DC  EF4D  F009         	goto	i2l3433
   6455   0011E0                     i2l3421:
   6456                           
   6457                           ; BSR set to: 0
-  6458                           ;Modbas_RTU.c: 365:            Read_analog_input(Danie_ModbasRtu_analog_input,10,1);
+  6458                           ;Modbas_RTU.c: 367:            Read_analog_input(Danie_ModbasRtu_analog_input,10,1);
   6459   0011E0  0EBF               	movlw	low _Danie_ModbasRtu_analog_input
   6460   0011E2  6E0E               	movwf	Read_analog_input@Massiv^0,c
   6461   0011E4  0E00               	movlw	high _Danie_ModbasRtu_analog_input
@@ -7002,46 +7002,46 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6466   0011EE  6E11               	movwf	Read_analog_input@Vt^0,c
   6467   0011F0  EC52  F009         	call	_Read_analog_input	;wreg free
   6468                           
-  6469                           ;Modbas_RTU.c: 366:            break;
+  6469                           ;Modbas_RTU.c: 368:            break;
   6470   0011F4  EF4D  F009         	goto	i2l3433
   6471   0011F8                     i2l3423:
   6472                           
   6473                           ; BSR set to: 0
-  6474                           ;Modbas_RTU.c: 368:            Changing_Discrete_Output();
+  6474                           ;Modbas_RTU.c: 370:            Changing_Discrete_Output();
   6475   0011F8  EC72  F00D         	call	_Changing_Discrete_Output	;wreg free
   6476                           
-  6477                           ;Modbas_RTU.c: 369:            break;
+  6477                           ;Modbas_RTU.c: 371:            break;
   6478   0011FC  EF4D  F009         	goto	i2l3433
   6479   001200                     i2l3425:
   6480                           
   6481                           ; BSR set to: 0
-  6482                           ;Modbas_RTU.c: 371:            analog_output_recording();
+  6482                           ;Modbas_RTU.c: 373:            analog_output_recording();
   6483   001200  EC7E  F00E         	call	_analog_output_recording	;wreg free
   6484                           
-  6485                           ;Modbas_RTU.c: 372:            break;
+  6485                           ;Modbas_RTU.c: 374:            break;
   6486   001204  EF4D  F009         	goto	i2l3433
   6487   001208                     i2l998:
   6488                           
   6489                           ; BSR set to: 0
   6490   001208  F000               	nop		;# 
   6491                           
-  6492                           ;Modbas_RTU.c: 375:             break;
+  6492                           ;Modbas_RTU.c: 377:             break;
   6493   00120A  EF4D  F009         	goto	i2l3433
   6494   00120E                     i2l999:
   6495                           
   6496                           ; BSR set to: 0
   6497   00120E  F000               	nop		;# 
   6498                           
-  6499                           ;Modbas_RTU.c: 379:             break;
+  6499                           ;Modbas_RTU.c: 381:             break;
   6500   001210  EF4D  F009         	goto	i2l3433
   6501   001214                     i2l3427:
   6502                           
   6503                           ; BSR set to: 0
-  6504                           ;Modbas_RTU.c: 398:             Error_modbasRtu (0x01);
+  6504                           ;Modbas_RTU.c: 400:             Error_modbasRtu (0x01);
   6505   001214  0E01               	movlw	1
   6506   001216  EC39  F011         	call	_Error_modbasRtu
   6507                           
-  6508                           ;Modbas_RTU.c: 399:             break;
+  6508                           ;Modbas_RTU.c: 401:             break;
   6509   00121A  EF4D  F009         	goto	i2l3433
   6510   00121E                     i2l3431:
   6511   00121E  0100               	movlb	0	; () banked
@@ -7111,13 +7111,13 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6574   001296  EF0A  F009         	goto	i2l3427
   6575   00129A                     i2l3433:
   6576                           
-  6577                           ;Modbas_RTU.c: 402:      USART_UDR_vect=1;
+  6577                           ;Modbas_RTU.c: 404:      USART_UDR_vect=1;
   6578   00129A  0E01               	movlw	1
   6579   00129C  0100               	movlb	0	; () banked
   6580   00129E  6F8C               	movwf	_USART_UDR_vect& (0+255),b
   6581   0012A0                     
   6582                           ; BSR set to: 0
-  6583                           ;Modbas_RTU.c: 403:   Bit_action_ModbasRtu.b2 = 0;
+  6583                           ;Modbas_RTU.c: 405:   Bit_action_ModbasRtu.b2 = 0;
   6584   0012A0  943B               	bcf	_Bit_action_ModbasRtu^0,2,c
   6585   0012A2                     
   6586                           ; BSR set to: 0
@@ -7127,7 +7127,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6590                           
   6591 ;; *************** function _analog_output_recording *****************
   6592 ;; Defined at:
-  6593 ;;		line 309 in file "Modbas_RTU.c"
+  6593 ;;		line 311 in file "Modbas_RTU.c"
   6594 ;; Parameters:    Size  Location     Type
   6595 ;;		None
   6596 ;; Auto vars:     Size  Location     Type
@@ -7167,14 +7167,14 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6625   001CFC                     _analog_output_recording:
   6626                           	callstack 13
   6627   001CFC                     
-  6628                           ;Modbas_RTU.c: 311:  register int address;;Modbas_RTU.c: 312:  address = ModbasRtu_Regis
+  6628                           ;Modbas_RTU.c: 313:  register int address;;Modbas_RTU.c: 314:  address = ModbasRtu_Regis
       +                          ter_address(3);
   6629   001CFC  0E03               	movlw	3
   6630   001CFE  EC95  F00F         	call	_ModbasRtu_Register_address
   6631   001D02  C001  F00E         	movff	?_ModbasRtu_Register_address,analog_output_recording@address
   6632   001D06  C002  F00F         	movff	?_ModbasRtu_Register_address+1,analog_output_recording@address+1
   6633   001D0A                     
-  6634                           ;Modbas_RTU.c: 313:  if ( address > 10 )
+  6634                           ;Modbas_RTU.c: 315:  if ( address > 10 )
   6635   001D0A  BE0F               	btfsc	(analog_output_recording@address+1)^0,7,c
   6636   001D0C  EF91  F00E         	goto	i2u146_41
   6637   001D10  500F               	movf	(analog_output_recording@address+1)^0,w,c
@@ -7188,15 +7188,15 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6645   001D22  EF98  F00E         	goto	i2l3379
   6646   001D26                     i2u146_40:
   6647   001D26                     
-  6648                           ;Modbas_RTU.c: 314:   {;Modbas_RTU.c: 315:   Error_modbasRtu (0x02);
+  6648                           ;Modbas_RTU.c: 316:   {;Modbas_RTU.c: 317:   Error_modbasRtu (0x02);
   6649   001D26  0E02               	movlw	2
   6650   001D28  EC39  F011         	call	_Error_modbasRtu
   6651                           
-  6652                           ;Modbas_RTU.c: 316:   }
+  6652                           ;Modbas_RTU.c: 318:   }
   6653   001D2C  EFA8  F00E         	goto	i2l981
   6654   001D30                     i2l3379:
   6655                           
-  6656                           ;Modbas_RTU.c: 318:   {;Modbas_RTU.c: 319:     Danie_ModbasRtu_analog_Output [address] =
+  6656                           ;Modbas_RTU.c: 320:   {;Modbas_RTU.c: 321:     Danie_ModbasRtu_analog_Output [address] =
       +                           ModbasRtu_Register_address(5);
   6657   001D30  0E05               	movlw	5
   6658   001D32  EC95  F00F         	call	_ModbasRtu_Register_address
@@ -7218,7 +7218,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6674                           
   6675 ;; *************** function _Reading_Discrete_Output *****************
   6676 ;; Defined at:
-  6677 ;;		line 210 in file "Modbas_RTU.c"
+  6677 ;;		line 212 in file "Modbas_RTU.c"
   6678 ;; Parameters:    Size  Location     Type
   6679 ;;  Massiv          2   13[COMRAM] PTR unsigned char 
   6680 ;;		 -> Danie_ModbasRtu_Binary_input(2), Danie_ModbasRtu_Binary_Output(2), 
@@ -7267,9 +7267,9 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6718   001022                     _Reading_Discrete_Output:
   6719                           	callstack 13
   6720   001022                     
-  6721                           ;Modbas_RTU.c: 210:  void Reading_Discrete_Output(unsigned char* Massiv, register unsign
-      +                          ed char Number_);Modbas_RTU.c: 211:   {;Modbas_RTU.c: 212:  volatile unsigned int addres
-      +                          s,Number_bits;;Modbas_RTU.c: 213:  register unsigned char Temp = 0,Danie,Temp2 = 0,addre
+  6721                           ;Modbas_RTU.c: 212:  void Reading_Discrete_Output(unsigned char* Massiv, register unsign
+      +                          ed char Number_);Modbas_RTU.c: 213:   {;Modbas_RTU.c: 214:  volatile unsigned int addres
+      +                          s,Number_bits;;Modbas_RTU.c: 215:  register unsigned char Temp = 0,Danie,Temp2 = 0,addre
       +                          ss2 = 0,Temp3 = 2;
   6722   001022  0E00               	movlw	0
   6723   001024  6E14               	movwf	Reading_Discrete_Output@Temp^0,c
@@ -7280,13 +7280,13 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6728   00102E  0E02               	movlw	2
   6729   001030  6E17               	movwf	Reading_Discrete_Output@Temp3^0,c
   6730   001032                     
-  6731                           ;Modbas_RTU.c: 214:  address = ModbasRtu_Register_address(3);
+  6731                           ;Modbas_RTU.c: 216:  address = ModbasRtu_Register_address(3);
   6732   001032  0E03               	movlw	3
   6733   001034  EC95  F00F         	call	_ModbasRtu_Register_address
   6734   001038  C001  F01A         	movff	?_ModbasRtu_Register_address,Reading_Discrete_Output@address	;volatile
   6735   00103C  C002  F01B         	movff	?_ModbasRtu_Register_address+1,Reading_Discrete_Output@address+1	;volatile
   6736   001040                     
-  6737                           ;Modbas_RTU.c: 215:  if ( address > Number_ )
+  6737                           ;Modbas_RTU.c: 217:  if ( address > Number_ )
   6738   001040  5010               	movf	Reading_Discrete_Output@Number_^0,w,c
   6739   001042  6E11               	movwf	??_Reading_Discrete_Output^0,c
   6740   001044  6A12               	clrf	(??_Reading_Discrete_Output+1)^0,c
@@ -7301,26 +7301,26 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6749   001058  EF33  F008         	goto	i2l3285
   6750   00105C                     i2u134_40:
   6751   00105C                     
-  6752                           ;Modbas_RTU.c: 216:         {;Modbas_RTU.c: 217:            Error_modbasRtu (0x02);
+  6752                           ;Modbas_RTU.c: 218:         {;Modbas_RTU.c: 219:            Error_modbasRtu (0x02);
   6753   00105C  0E02               	movlw	2
   6754   00105E  EC39  F011         	call	_Error_modbasRtu
   6755                           
-  6756                           ;Modbas_RTU.c: 218:         }
+  6756                           ;Modbas_RTU.c: 220:         }
   6757   001062  EFCB  F008         	goto	i2l966
   6758   001066                     i2l3285:
   6759                           
-  6760                           ;Modbas_RTU.c: 220:         {;Modbas_RTU.c: 221:            Number_bits = ModbasRtu_Regi
+  6760                           ;Modbas_RTU.c: 222:         {;Modbas_RTU.c: 223:            Number_bits = ModbasRtu_Regi
       +                          ster_address(5);
   6761   001066  0E05               	movlw	5
   6762   001068  EC95  F00F         	call	_ModbasRtu_Register_address
   6763   00106C  C001  F018         	movff	?_ModbasRtu_Register_address,Reading_Discrete_Output@Number_bits	;volatile
   6764   001070  C002  F019         	movff	?_ModbasRtu_Register_address+1,Reading_Discrete_Output@Number_bits+1	;volatile
   6765                           
-  6766                           ;Modbas_RTU.c: 222:            while (address >= 8)
+  6766                           ;Modbas_RTU.c: 224:            while (address >= 8)
   6767   001074  EF43  F008         	goto	i2l3291
   6768   001078                     i2l3287:
   6769                           
-  6770                           ;Modbas_RTU.c: 223:                {;Modbas_RTU.c: 224:                  address = addre
+  6770                           ;Modbas_RTU.c: 225:                {;Modbas_RTU.c: 226:                  address = addre
       +                          ss - 8;
   6771   001078  0EF8               	movlw	248
   6772   00107A  241A               	addwf	Reading_Discrete_Output@address^0,w,c	;volatile
@@ -7329,11 +7329,11 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6775   001080  201B               	addwfc	(Reading_Discrete_Output@address+1)^0,w,c	;volatile
   6776   001082  6E1B               	movwf	(Reading_Discrete_Output@address+1)^0,c	;volatile
   6777   001084                     
-  6778                           ;Modbas_RTU.c: 225:                  Temp ++;
+  6778                           ;Modbas_RTU.c: 227:                  Temp ++;
   6779   001084  2A14               	incf	Reading_Discrete_Output@Temp^0,f,c
   6780   001086                     i2l3291:
   6781                           
-  6782                           ;Modbas_RTU.c: 222:            while (address >= 8)
+  6782                           ;Modbas_RTU.c: 224:            while (address >= 8)
   6783   001086  501B               	movf	(Reading_Discrete_Output@address+1)^0,w,c	;volatile
   6784   001088  E107               	bnz	i2u135_41
   6785   00108A  0E08               	movlw	8
@@ -7346,7 +7346,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6792   00109C                     i2u135_40:
   6793   00109C                     i2l3293:
   6794                           
-  6795                           ;Modbas_RTU.c: 227:            Danie = Massiv [ Temp ];
+  6795                           ;Modbas_RTU.c: 229:            Danie = Massiv [ Temp ];
   6796   00109C  5014               	movf	Reading_Discrete_Output@Temp^0,w,c
   6797   00109E  240E               	addwf	Reading_Discrete_Output@Massiv^0,w,c
   6798   0010A0  6ED9               	movwf	fsr2l,c
@@ -7356,16 +7356,16 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6802   0010A8  50DF               	movf	indf2,w,c
   6803   0010AA  6E13               	movwf	Reading_Discrete_Output@Danie^0,c
   6804                           
-  6805                           ;Modbas_RTU.c: 231:            while ( Number_bits > 0)
+  6805                           ;Modbas_RTU.c: 233:            while ( Number_bits > 0)
   6806   0010AC  EFA9  F008         	goto	i2l3321
   6807   0010B0                     i2l3295:
   6808                           
-  6809                           ;Modbas_RTU.c: 232:              {;Modbas_RTU.c: 233:                    Number_bits --;
+  6809                           ;Modbas_RTU.c: 234:              {;Modbas_RTU.c: 235:                    Number_bits --;
   6810   0010B0  0618               	decf	Reading_Discrete_Output@Number_bits^0,f,c	;volatile
   6811   0010B2  A0D8               	btfss	status,0,c
   6812   0010B4  0619               	decf	(Reading_Discrete_Output@Number_bits+1)^0,f,c	;volatile
   6813   0010B6                     
-  6814                           ;Modbas_RTU.c: 234:                    if ( Danie & (1 << address) )
+  6814                           ;Modbas_RTU.c: 236:                    if ( Danie & (1 << address) )
   6815   0010B6  C01A  F011         	movff	Reading_Discrete_Output@address,??_Reading_Discrete_Output	;volatile
   6816   0010BA  0E01               	movlw	1
   6817   0010BC  6E12               	movwf	(??_Reading_Discrete_Output+1)^0,c
@@ -7387,7 +7387,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6833   0010DE  EF7F  F008         	goto	i2l3301
   6834   0010E2                     i2u137_40:
   6835   0010E2                     
-  6836                           ;Modbas_RTU.c: 235:                        {;Modbas_RTU.c: 236:                         
+  6836                           ;Modbas_RTU.c: 237:                        {;Modbas_RTU.c: 238:                         
       +                           Temp2 |=(1<<address2);
   6837   0010E2  C016  F011         	movff	Reading_Discrete_Output@address2,??_Reading_Discrete_Output
   6838   0010E6  0E01               	movlw	1
@@ -7404,14 +7404,14 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6849   0010FC  1215               	iorwf	Reading_Discrete_Output@Temp2^0,f,c
   6850   0010FE                     i2l3301:
   6851                           
-  6852                           ;Modbas_RTU.c: 238:                    address2 ++;
+  6852                           ;Modbas_RTU.c: 240:                    address2 ++;
   6853   0010FE  2A16               	incf	Reading_Discrete_Output@address2^0,f,c
   6854   001100                     
-  6855                           ;Modbas_RTU.c: 239:                    address ++;
+  6855                           ;Modbas_RTU.c: 241:                    address ++;
   6856   001100  4A1A               	infsnz	Reading_Discrete_Output@address^0,f,c	;volatile
   6857   001102  2A1B               	incf	(Reading_Discrete_Output@address+1)^0,f,c	;volatile
   6858                           
-  6859                           ;Modbas_RTU.c: 240:                    if (address2 == 8 )
+  6859                           ;Modbas_RTU.c: 242:                    if (address2 == 8 )
   6860   001104  0E08               	movlw	8
   6861   001106  1816               	xorwf	Reading_Discrete_Output@address2^0,w,c
   6862   001108  A4D8               	btfss	status,2,c
@@ -7421,15 +7421,15 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6866   001112  EF98  F008         	goto	i2l3313
   6867   001116                     i2u139_40:
   6868   001116                     
-  6869                           ;Modbas_RTU.c: 241:                        {;Modbas_RTU.c: 242:                         
+  6869                           ;Modbas_RTU.c: 243:                        {;Modbas_RTU.c: 244:                         
       +                           address2 = 0;
   6870   001116  0E00               	movlw	0
   6871   001118  6E16               	movwf	Reading_Discrete_Output@address2^0,c
   6872   00111A                     
-  6873                           ;Modbas_RTU.c: 243:                          Temp3 ++;
+  6873                           ;Modbas_RTU.c: 245:                          Temp3 ++;
   6874   00111A  2A17               	incf	Reading_Discrete_Output@Temp3^0,f,c
   6875   00111C                     
-  6876                           ;Modbas_RTU.c: 244:                          Danie_Rx_ModbasRtu[Temp3] = Temp2;
+  6876                           ;Modbas_RTU.c: 246:                          Danie_Rx_ModbasRtu[Temp3] = Temp2;
   6877   00111C  0E8D               	movlw	low _Danie_Rx_ModbasRtu
   6878   00111E  2417               	addwf	Reading_Discrete_Output@Temp3^0,w,c
   6879   001120  6ED9               	movwf	fsr2l,c
@@ -7438,12 +7438,12 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6882   001126  22DA               	addwfc	fsr2h,f,c
   6883   001128  C015  FFDF         	movff	Reading_Discrete_Output@Temp2,indf2
   6884   00112C                     
-  6885                           ;Modbas_RTU.c: 245:                          Temp2 = 0;
+  6885                           ;Modbas_RTU.c: 247:                          Temp2 = 0;
   6886   00112C  0E00               	movlw	0
   6887   00112E  6E15               	movwf	Reading_Discrete_Output@Temp2^0,c
   6888   001130                     i2l3313:
   6889                           
-  6890                           ;Modbas_RTU.c: 247:                    if ( address == 8)
+  6890                           ;Modbas_RTU.c: 249:                    if ( address == 8)
   6891   001130  0E08               	movlw	8
   6892   001132  181A               	xorwf	Reading_Discrete_Output@address^0,w,c	;volatile
   6893   001134  101B               	iorwf	(Reading_Discrete_Output@address+1)^0,w,c	;volatile
@@ -7454,19 +7454,19 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6898   001140  EFA9  F008         	goto	i2l3321
   6899   001144                     i2u140_40:
   6900   001144                     
-  6901                           ;Modbas_RTU.c: 248:                        {;Modbas_RTU.c: 249:                         
+  6901                           ;Modbas_RTU.c: 250:                        {;Modbas_RTU.c: 251:                         
       +                            address = 0;
   6902   001144  0E00               	movlw	0
   6903   001146  6E1B               	movwf	(Reading_Discrete_Output@address+1)^0,c	;volatile
   6904   001148  0E00               	movlw	0
   6905   00114A  6E1A               	movwf	Reading_Discrete_Output@address^0,c	;volatile
   6906   00114C                     
-  6907                           ;Modbas_RTU.c: 250:                           Temp++;
+  6907                           ;Modbas_RTU.c: 252:                           Temp++;
   6908   00114C  2A14               	incf	Reading_Discrete_Output@Temp^0,f,c
   6909   00114E  EF4E  F008         	goto	i2l3293
   6910   001152                     i2l3321:
   6911                           
-  6912                           ;Modbas_RTU.c: 231:            while ( Number_bits > 0)
+  6912                           ;Modbas_RTU.c: 233:            while ( Number_bits > 0)
   6913   001152  5018               	movf	Reading_Discrete_Output@Number_bits^0,w,c	;volatile
   6914   001154  1019               	iorwf	(Reading_Discrete_Output@Number_bits+1)^0,w,c	;volatile
   6915   001156  A4D8               	btfss	status,2,c
@@ -7476,7 +7476,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6919   001160  EF58  F008         	goto	i2l3295
   6920   001164                     i2u141_40:
   6921   001164                     
-  6922                           ;Modbas_RTU.c: 254:            if ( address2 > 0 )
+  6922                           ;Modbas_RTU.c: 256:            if ( address2 > 0 )
   6923   001164  5016               	movf	Reading_Discrete_Output@address2^0,w,c
   6924   001166  B4D8               	btfsc	status,2,c
   6925   001168  EFB8  F008         	goto	i2u142_41
@@ -7485,10 +7485,10 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6928   001170  EFC3  F008         	goto	i2l3329
   6929   001174                     i2u142_40:
   6930   001174                     
-  6931                           ;Modbas_RTU.c: 255:             {;Modbas_RTU.c: 256:               Temp3 ++;
+  6931                           ;Modbas_RTU.c: 257:             {;Modbas_RTU.c: 258:               Temp3 ++;
   6932   001174  2A17               	incf	Reading_Discrete_Output@Temp3^0,f,c
   6933   001176                     
-  6934                           ;Modbas_RTU.c: 257:               Danie_Rx_ModbasRtu[Temp3] = Temp2;
+  6934                           ;Modbas_RTU.c: 259:               Danie_Rx_ModbasRtu[Temp3] = Temp2;
   6935   001176  0E8D               	movlw	low _Danie_Rx_ModbasRtu
   6936   001178  2417               	addwf	Reading_Discrete_Output@Temp3^0,w,c
   6937   00117A  6ED9               	movwf	fsr2l,c
@@ -7498,18 +7498,18 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6941   001182  C015  FFDF         	movff	Reading_Discrete_Output@Temp2,indf2
   6942   001186                     i2l3329:
   6943                           
-  6944                           ;Modbas_RTU.c: 261:            Danie_Rx_ModbasRtu[2] = Temp3 - 2;
+  6944                           ;Modbas_RTU.c: 263:            Danie_Rx_ModbasRtu[2] = Temp3 - 2;
   6945   001186  5017               	movf	Reading_Discrete_Output@Temp3^0,w,c
   6946   001188  0FFE               	addlw	254
   6947   00118A  0100               	movlb	0	; () banked
   6948   00118C  6F8F               	movwf	(_Danie_Rx_ModbasRtu+2)& (0+255),b
   6949   00118E                     
   6950                           ; BSR set to: 0
-  6951                           ;Modbas_RTU.c: 262:            Temp3 ++;
+  6951                           ;Modbas_RTU.c: 264:            Temp3 ++;
   6952   00118E  2A17               	incf	Reading_Discrete_Output@Temp3^0,f,c
   6953   001190                     
   6954                           ; BSR set to: 0
-  6955                           ;Modbas_RTU.c: 263:            check_sum ( Temp3);
+  6955                           ;Modbas_RTU.c: 265:            check_sum ( Temp3);
   6956   001190  5017               	movf	Reading_Discrete_Output@Temp3^0,w,c
   6957   001192  EC35  F00F         	call	_check_sum
   6958   001196                     i2l966:
@@ -7519,7 +7519,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   6962                           
   6963 ;; *************** function _Read_analog_input *****************
   6964 ;; Defined at:
-  6965 ;;		line 271 in file "Modbas_RTU.c"
+  6965 ;;		line 273 in file "Modbas_RTU.c"
   6966 ;; Parameters:    Size  Location     Type
   6967 ;;  Massiv          2   13[COMRAM] PTR unsigned char 
   6968 ;;		 -> Danie_ModbasRtu_analog_Output(20), Danie_ModbasRtu_analog_input(20), Read_analog_input@Danie(2), 
@@ -7566,19 +7566,19 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7004   0012A4                     _Read_analog_input:
   7005                           	callstack 13
   7006   0012A4                     
-  7007                           ;Modbas_RTU.c: 271:  void Read_analog_input(unsigned char* Massiv, register unsigned cha
-      +                          r Number_, unsigned char Vt);Modbas_RTU.c: 272:  {;Modbas_RTU.c: 273:  volatile unsigned
-      +                           int address,Number_bits,Danie;;Modbas_RTU.c: 274:  volatile unsigned char Adress = 4;
+  7007                           ;Modbas_RTU.c: 273:  void Read_analog_input(unsigned char* Massiv, register unsigned cha
+      +                          r Number_, unsigned char Vt);Modbas_RTU.c: 274:  {;Modbas_RTU.c: 275:  volatile unsigned
+      +                           int address,Number_bits,Danie;;Modbas_RTU.c: 276:  volatile unsigned char Adress = 4;
   7008   0012A4  0E04               	movlw	4
   7009   0012A6  6E1A               	movwf	Read_analog_input@Adress^0,c	;volatile
   7010   0012A8                     
-  7011                           ;Modbas_RTU.c: 275:  address = ModbasRtu_Register_address(3);
+  7011                           ;Modbas_RTU.c: 277:  address = ModbasRtu_Register_address(3);
   7012   0012A8  0E03               	movlw	3
   7013   0012AA  EC95  F00F         	call	_ModbasRtu_Register_address
   7014   0012AE  C001  F016         	movff	?_ModbasRtu_Register_address,Read_analog_input@address	;volatile
   7015   0012B2  C002  F017         	movff	?_ModbasRtu_Register_address+1,Read_analog_input@address+1	;volatile
   7016   0012B6                     
-  7017                           ;Modbas_RTU.c: 276:  if ( address > Number_ )
+  7017                           ;Modbas_RTU.c: 278:  if ( address > Number_ )
   7018   0012B6  5010               	movf	Read_analog_input@Number_^0,w,c
   7019   0012B8  6E12               	movwf	??_Read_analog_input^0,c
   7020   0012BA  6A13               	clrf	(??_Read_analog_input+1)^0,c
@@ -7593,37 +7593,37 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7029   0012CE  EF6E  F009         	goto	i2l3343
   7030   0012D2                     i2u143_40:
   7031   0012D2                     
-  7032                           ;Modbas_RTU.c: 277:   {;Modbas_RTU.c: 278:   Error_modbasRtu (0x02);
+  7032                           ;Modbas_RTU.c: 279:   {;Modbas_RTU.c: 280:   Error_modbasRtu (0x02);
   7033   0012D2  0E02               	movlw	2
   7034   0012D4  EC39  F011         	call	_Error_modbasRtu
   7035                           
-  7036                           ;Modbas_RTU.c: 279:   }
+  7036                           ;Modbas_RTU.c: 281:   }
   7037   0012D8  EFD5  F009         	goto	i2l976
   7038   0012DC                     i2l3343:
   7039                           
-  7040                           ;Modbas_RTU.c: 281:   {;Modbas_RTU.c: 282:   Number_bits = ModbasRtu_Register_address(5)
+  7040                           ;Modbas_RTU.c: 283:   {;Modbas_RTU.c: 284:   Number_bits = ModbasRtu_Register_address(5)
       +                          ;
   7041   0012DC  0E05               	movlw	5
   7042   0012DE  EC95  F00F         	call	_ModbasRtu_Register_address
   7043   0012E2  C001  F018         	movff	?_ModbasRtu_Register_address,Read_analog_input@Number_bits	;volatile
   7044   0012E6  C002  F019         	movff	?_ModbasRtu_Register_address+1,Read_analog_input@Number_bits+1	;volatile
   7045   0012EA                     
-  7046                           ;Modbas_RTU.c: 283:   Danie_Rx_ModbasRtu[2] = Number_bits * 2;
+  7046                           ;Modbas_RTU.c: 285:   Danie_Rx_ModbasRtu[2] = Number_bits * 2;
   7047   0012EA  5018               	movf	Read_analog_input@Number_bits^0,w,c	;volatile
   7048   0012EC  2418               	addwf	Read_analog_input@Number_bits^0,w,c	;volatile
   7049   0012EE  0100               	movlb	0	; () banked
   7050   0012F0  6F8F               	movwf	(_Danie_Rx_ModbasRtu+2)& (0+255),b
   7051   0012F2                     
   7052                           ; BSR set to: 0
-  7053                           ;Modbas_RTU.c: 284:   Adress = 3;
+  7053                           ;Modbas_RTU.c: 286:   Adress = 3;
   7054   0012F2  0E03               	movlw	3
   7055   0012F4  6E1A               	movwf	Read_analog_input@Adress^0,c	;volatile
   7056                           
-  7057                           ;Modbas_RTU.c: 285:   while (Number_bits > 0 )
+  7057                           ;Modbas_RTU.c: 287:   while (Number_bits > 0 )
   7058   0012F6  EFC9  F009         	goto	i2l3369
   7059   0012FA                     i2l3349:
   7060                           
-  7061                           ;Modbas_RTU.c: 286:    {;Modbas_RTU.c: 287:    if ( Vt == 1 )
+  7061                           ;Modbas_RTU.c: 288:    {;Modbas_RTU.c: 289:    if ( Vt == 1 )
   7062   0012FA  0411               	decf	Read_analog_input@Vt^0,w,c
   7063   0012FC  A4D8               	btfss	status,2,c
   7064   0012FE  EF83  F009         	goto	i2u144_41
@@ -7632,7 +7632,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7067   001306  EF94  F009         	goto	i2l3353
   7068   00130A                     i2u144_40:
   7069   00130A                     
-  7070                           ;Modbas_RTU.c: 288:    {;Modbas_RTU.c: 289:      Danie = Danie_ModbasRtu_analog_input[ a
+  7070                           ;Modbas_RTU.c: 290:    {;Modbas_RTU.c: 291:      Danie = Danie_ModbasRtu_analog_input[ a
       +                          ddress ];
   7071   00130A  90D8               	bcf	status,0,c
   7072   00130C  3416               	rlcf	Read_analog_input@address^0,w,c	;volatile
@@ -7646,11 +7646,11 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7080   00131C  CFDE F014          	movff	postinc2,Read_analog_input@Danie	;volatile
   7081   001320  CFDD F015          	movff	postdec2,Read_analog_input@Danie+1	;volatile
   7082                           
-  7083                           ;Modbas_RTU.c: 290:    }
+  7083                           ;Modbas_RTU.c: 292:    }
   7084   001324  EFA1  F009         	goto	i2l3355
   7085   001328                     i2l3353:
   7086                           
-  7087                           ;Modbas_RTU.c: 292:       {;Modbas_RTU.c: 293:      Danie = Danie_ModbasRtu_analog_Outpu
+  7087                           ;Modbas_RTU.c: 294:       {;Modbas_RTU.c: 295:      Danie = Danie_ModbasRtu_analog_Outpu
       +                          t[ address ];
   7088   001328  90D8               	bcf	status,0,c
   7089   00132A  3416               	rlcf	Read_analog_input@address^0,w,c	;volatile
@@ -7665,17 +7665,17 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7098   00133E  CFDD F015          	movff	postdec2,Read_analog_input@Danie+1	;volatile
   7099   001342                     i2l3355:
   7100                           
-  7101                           ;Modbas_RTU.c: 295:    address++;
+  7101                           ;Modbas_RTU.c: 297:    address++;
   7102   001342  4A16               	infsnz	Read_analog_input@address^0,f,c	;volatile
   7103   001344  2A17               	incf	(Read_analog_input@address+1)^0,f,c	;volatile
   7104   001346                     
-  7105                           ;Modbas_RTU.c: 296:    Massiv = &Danie;
+  7105                           ;Modbas_RTU.c: 298:    Massiv = &Danie;
   7106   001346  0E14               	movlw	low Read_analog_input@Danie
   7107   001348  6E0E               	movwf	Read_analog_input@Massiv^0,c
   7108   00134A  0E00               	movlw	high Read_analog_input@Danie
   7109   00134C  6E0F               	movwf	(Read_analog_input@Massiv+1)^0,c
   7110   00134E                     
-  7111                           ;Modbas_RTU.c: 297:    Danie_Rx_ModbasRtu[Adress ++] = Massiv[1];
+  7111                           ;Modbas_RTU.c: 299:    Danie_Rx_ModbasRtu[Adress ++] = Massiv[1];
   7112   00134E  EE20 F001          	lfsr	2,1
   7113   001352  500E               	movf	Read_analog_input@Massiv^0,w,c
   7114   001354  26D9               	addwf	fsr2l,f,c
@@ -7690,7 +7690,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7123   001366  CFDF FFE7          	movff	indf2,indf1
   7124   00136A  2A1A               	incf	Read_analog_input@Adress^0,f,c	;volatile
   7125   00136C                     
-  7126                           ;Modbas_RTU.c: 298:    Danie_Rx_ModbasRtu[Adress++] = Massiv [0];
+  7126                           ;Modbas_RTU.c: 300:    Danie_Rx_ModbasRtu[Adress++] = Massiv [0];
   7127   00136C  C00E  FFD9         	movff	Read_analog_input@Massiv,fsr2l
   7128   001370  C00F  FFDA         	movff	Read_analog_input@Massiv+1,fsr2h
   7129   001374  0E8D               	movlw	low _Danie_Rx_ModbasRtu
@@ -7702,7 +7702,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7135   001380  CFDF FFE7          	movff	indf2,indf1
   7136   001384  2A1A               	incf	Read_analog_input@Adress^0,f,c	;volatile
   7137   001386                     
-  7138                           ;Modbas_RTU.c: 299:    Number_bits = Number_bits - 1 ;
+  7138                           ;Modbas_RTU.c: 301:    Number_bits = Number_bits - 1 ;
   7139   001386  0EFF               	movlw	255
   7140   001388  2418               	addwf	Read_analog_input@Number_bits^0,w,c	;volatile
   7141   00138A  6E18               	movwf	Read_analog_input@Number_bits^0,c	;volatile
@@ -7711,7 +7711,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7144   001390  6E19               	movwf	(Read_analog_input@Number_bits+1)^0,c	;volatile
   7145   001392                     i2l3369:
   7146                           
-  7147                           ;Modbas_RTU.c: 285:   while (Number_bits > 0 )
+  7147                           ;Modbas_RTU.c: 287:   while (Number_bits > 0 )
   7148   001392  5018               	movf	Read_analog_input@Number_bits^0,w,c	;volatile
   7149   001394  1019               	iorwf	(Read_analog_input@Number_bits+1)^0,w,c	;volatile
   7150   001396  A4D8               	btfss	status,2,c
@@ -7721,7 +7721,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7154   0013A0  EF7D  F009         	goto	i2l3349
   7155   0013A4                     i2u145_40:
   7156   0013A4                     
-  7157                           ;Modbas_RTU.c: 301:   check_sum ( Adress);
+  7157                           ;Modbas_RTU.c: 303:   check_sum ( Adress);
   7158   0013A4  501A               	movf	Read_analog_input@Adress^0,w,c	;volatile
   7159   0013A6  EC35  F00F         	call	_check_sum
   7160   0013AA                     i2l976:
@@ -7731,7 +7731,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7164                           
   7165 ;; *************** function _Changing_Discrete_Output *****************
   7166 ;; Defined at:
-  7167 ;;		line 189 in file "Modbas_RTU.c"
+  7167 ;;		line 191 in file "Modbas_RTU.c"
   7168 ;; Parameters:    Size  Location     Type
   7169 ;;		None
   7170 ;; Auto vars:     Size  Location     Type
@@ -7772,14 +7772,14 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7200   001AE4                     _Changing_Discrete_Output:
   7201                           	callstack 13
   7202   001AE4                     
-  7203                           ;Modbas_RTU.c: 191:    register unsigned int address;;Modbas_RTU.c: 192:    address = Mo
+  7203                           ;Modbas_RTU.c: 193:    register unsigned int address;;Modbas_RTU.c: 194:    address = Mo
       +                          dbasRtu_Register_address(3);
   7204   001AE4  0E03               	movlw	3
   7205   001AE6  EC95  F00F         	call	_ModbasRtu_Register_address
   7206   001AEA  C001  F00E         	movff	?_ModbasRtu_Register_address,Changing_Discrete_Output@address
   7207   001AEE  C002  F00F         	movff	?_ModbasRtu_Register_address+1,Changing_Discrete_Output@address+1
   7208   001AF2                     
-  7209                           ;Modbas_RTU.c: 193:    if ( address > 10 )
+  7209                           ;Modbas_RTU.c: 195:    if ( address > 10 )
   7210   001AF2  500F               	movf	(Changing_Discrete_Output@address+1)^0,w,c
   7211   001AF4  E109               	bnz	i2u132_40
   7212   001AF6  0E0B               	movlw	11
@@ -7791,15 +7791,15 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7218   001B04  EF89  F00D         	goto	i2l3271
   7219   001B08                     i2u132_40:
   7220   001B08                     
-  7221                           ;Modbas_RTU.c: 194:     {;Modbas_RTU.c: 195:     Error_modbasRtu (0x02);
+  7221                           ;Modbas_RTU.c: 196:     {;Modbas_RTU.c: 197:     Error_modbasRtu (0x02);
   7222   001B08  0E02               	movlw	2
   7223   001B0A  EC39  F011         	call	_Error_modbasRtu
   7224                           
-  7225                           ;Modbas_RTU.c: 196:     }
+  7225                           ;Modbas_RTU.c: 198:     }
   7226   001B0E  EFAA  F00D         	goto	i2l951
   7227   001B12                     i2l3271:
   7228                           
-  7229                           ;Modbas_RTU.c: 198:     {;Modbas_RTU.c: 199:    if (Danie_Rx_ModbasRtu[4] == 255)
+  7229                           ;Modbas_RTU.c: 200:     {;Modbas_RTU.c: 201:    if (Danie_Rx_ModbasRtu[4] == 255)
   7230   001B12  0100               	movlb	0	; () banked
   7231   001B14  2991               	incf	(_Danie_Rx_ModbasRtu+4)& (0+255),w,b
   7232   001B16  A4D8               	btfss	status,2,c
@@ -7810,7 +7810,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7237   001B24                     i2u133_40:
   7238   001B24                     
   7239                           ; BSR set to: 0
-  7240                           ;Modbas_RTU.c: 200:      _Bin_input_Output ((char)address,1,Danie_ModbasRtu_Binary_Outpu
+  7240                           ;Modbas_RTU.c: 202:      _Bin_input_Output ((char)address,1,Danie_ModbasRtu_Binary_Outpu
       +                          t,10);
   7241   001B24  0E01               	movlw	1
   7242   001B26  6E01               	movwf	__Bin_input_Output@state^0,c
@@ -7826,7 +7826,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7252   001B3E                     i2l3275:
   7253                           
   7254                           ; BSR set to: 0
-  7255                           ;Modbas_RTU.c: 202:            _Bin_input_Output ((char)address,0,Danie_ModbasRtu_Binary
+  7255                           ;Modbas_RTU.c: 204:            _Bin_input_Output ((char)address,0,Danie_ModbasRtu_Binary
       +                          _Output,10);
   7256   001B3E  0E00               	movlw	0
   7257   001B40  6E01               	movwf	__Bin_input_Output@state^0,c
@@ -7845,7 +7845,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7270                           
   7271 ;; *************** function __Bin_input_Output *****************
   7272 ;; Defined at:
-  7273 ;;		line 157 in file "Modbas_RTU.c"
+  7273 ;;		line 159 in file "Modbas_RTU.c"
   7274 ;; Parameters:    Size  Location     Type
   7275 ;;  NUMBER          1    wreg     unsigned char 
   7276 ;;  state           1    0[COMRAM] unsigned char 
@@ -7897,28 +7897,28 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7317                           ;__Bin_input_Output@NUMBER stored from wreg
   7318   0014AE  6E07               	movwf	__Bin_input_Output@NUMBER^0,c
   7319   0014B0                     
-  7320                           ;Modbas_RTU.c: 157: char _Bin_input_Output( register unsigned char NUMBER, register unsi
+  7320                           ;Modbas_RTU.c: 159: char _Bin_input_Output( register unsigned char NUMBER, register unsi
       +                          gned char state,volatile unsigned char *Masiv, volatile unsigned char Sd );Modbas_RTU.c:
-      +                           158:   {;Modbas_RTU.c: 159:  volatile unsigned char Temp = 0,Temp1 = 0;
+      +                           160:   {;Modbas_RTU.c: 161:  volatile unsigned char Temp = 0,Temp1 = 0;
   7321   0014B0  0E00               	movlw	0
   7322   0014B2  6E08               	movwf	__Bin_input_Output@Temp^0,c	;volatile
   7323   0014B4  0E00               	movlw	0
   7324   0014B6  6E09               	movwf	__Bin_input_Output@Temp1^0,c	;volatile
   7325                           
-  7326                           ;Modbas_RTU.c: 160:  while (NUMBER >= 8)
+  7326                           ;Modbas_RTU.c: 162:  while (NUMBER >= 8)
   7327   0014B8  EF62  F00A         	goto	i2l3225
   7328   0014BC                     i2l3221:
   7329                           
-  7330                           ;Modbas_RTU.c: 161:   {;Modbas_RTU.c: 162:     NUMBER = NUMBER - 8;
+  7330                           ;Modbas_RTU.c: 163:   {;Modbas_RTU.c: 164:     NUMBER = NUMBER - 8;
   7331   0014BC  5007               	movf	__Bin_input_Output@NUMBER^0,w,c
   7332   0014BE  0FF8               	addlw	248
   7333   0014C0  6E07               	movwf	__Bin_input_Output@NUMBER^0,c
   7334   0014C2                     
-  7335                           ;Modbas_RTU.c: 163:     Temp ++;
+  7335                           ;Modbas_RTU.c: 165:     Temp ++;
   7336   0014C2  2A08               	incf	__Bin_input_Output@Temp^0,f,c	;volatile
   7337   0014C4                     i2l3225:
   7338                           
-  7339                           ;Modbas_RTU.c: 160:  while (NUMBER >= 8)
+  7339                           ;Modbas_RTU.c: 162:  while (NUMBER >= 8)
   7340   0014C4  0E08               	movlw	8
   7341   0014C6  6007               	cpfslt	__Bin_input_Output@NUMBER^0,c
   7342   0014C8  EF68  F00A         	goto	i2u121_41
@@ -7927,7 +7927,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7345   0014D0  EF5E  F00A         	goto	i2l3221
   7346   0014D4                     i2u121_40:
   7347   0014D4                     
-  7348                           ;Modbas_RTU.c: 165:  Temp1 = Masiv [ Temp ];
+  7348                           ;Modbas_RTU.c: 167:  Temp1 = Masiv [ Temp ];
   7349   0014D4  5008               	movf	__Bin_input_Output@Temp^0,w,c	;volatile
   7350   0014D6  2402               	addwf	__Bin_input_Output@Masiv^0,w,c
   7351   0014D8  6ED9               	movwf	fsr2l,c
@@ -7937,7 +7937,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7355   0014E0  50DF               	movf	indf2,w,c
   7356   0014E2  6E09               	movwf	__Bin_input_Output@Temp1^0,c	;volatile
   7357   0014E4                     
-  7358                           ;Modbas_RTU.c: 166:  if (Sd == 10 )
+  7358                           ;Modbas_RTU.c: 168:  if (Sd == 10 )
   7359   0014E4  0E0A               	movlw	10
   7360   0014E6  1804               	xorwf	__Bin_input_Output@Sd^0,w,c	;volatile
   7361   0014E8  A4D8               	btfss	status,2,c
@@ -7947,7 +7947,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7365   0014F2  EFAC  F00A         	goto	i2l3239
   7366   0014F6                     i2u122_40:
   7367   0014F6                     
-  7368                           ;Modbas_RTU.c: 167:   {;Modbas_RTU.c: 168:     if ( state == 1)
+  7368                           ;Modbas_RTU.c: 169:   {;Modbas_RTU.c: 170:     if ( state == 1)
   7369   0014F6  0401               	decf	__Bin_input_Output@state^0,w,c
   7370   0014F8  A4D8               	btfss	status,2,c
   7371   0014FA  EF81  F00A         	goto	i2u123_41
@@ -7956,7 +7956,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7374   001502  EF93  F00A         	goto	i2l3235
   7375   001506                     i2u123_40:
   7376   001506                     
-  7377                           ;Modbas_RTU.c: 169:      Temp1 |=(1<<NUMBER);
+  7377                           ;Modbas_RTU.c: 171:      Temp1 |=(1<<NUMBER);
   7378   001506  C007  F005         	movff	__Bin_input_Output@NUMBER,??__Bin_input_Output
   7379   00150A  0E01               	movlw	1
   7380   00150C  6E06               	movwf	(??__Bin_input_Output+1)^0,c
@@ -7973,7 +7973,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7391   001522  EFA2  F00A         	goto	i2l3237
   7392   001526                     i2l3235:
   7393                           
-  7394                           ;Modbas_RTU.c: 171:      Temp1 &=~(1<<NUMBER);
+  7394                           ;Modbas_RTU.c: 173:      Temp1 &=~(1<<NUMBER);
   7395   001526  C007  F005         	movff	__Bin_input_Output@NUMBER,??__Bin_input_Output
   7396   00152A  0E01               	movlw	1
   7397   00152C  6E06               	movwf	(??__Bin_input_Output+1)^0,c
@@ -7990,7 +7990,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7408   001542  1609               	andwf	__Bin_input_Output@Temp1^0,f,c	;volatile
   7409   001544                     i2l3237:
   7410                           
-  7411                           ;Modbas_RTU.c: 172:     Masiv [ Temp ] = Temp1;
+  7411                           ;Modbas_RTU.c: 174:     Masiv [ Temp ] = Temp1;
   7412   001544  5008               	movf	__Bin_input_Output@Temp^0,w,c	;volatile
   7413   001546  2402               	addwf	__Bin_input_Output@Masiv^0,w,c
   7414   001548  6ED9               	movwf	fsr2l,c
@@ -7999,11 +7999,11 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7417   00154E  6EDA               	movwf	fsr2h,c
   7418   001550  C009  FFDF         	movff	__Bin_input_Output@Temp1,indf2	;volatile
   7419                           
-  7420                           ;Modbas_RTU.c: 173:   }
+  7420                           ;Modbas_RTU.c: 175:   }
   7421   001554  EFC8  F00A         	goto	i2l941
   7422   001558                     i2l3239:
   7423                           
-  7424                           ;Modbas_RTU.c: 175:   {;Modbas_RTU.c: 176:   if ( Temp1 & (1<<NUMBER) )
+  7424                           ;Modbas_RTU.c: 177:   {;Modbas_RTU.c: 178:   if ( Temp1 & (1<<NUMBER) )
   7425   001558  C007  F005         	movff	__Bin_input_Output@NUMBER,??__Bin_input_Output
   7426   00155C  0E01               	movlw	1
   7427   00155E  6E06               	movwf	(??__Bin_input_Output+1)^0,c
@@ -8025,18 +8025,18 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7443   001580  EFC6  F00A         	goto	i2l3243
   7444   001584                     i2u127_40:
   7445   001584                     
-  7446                           ;Modbas_RTU.c: 177:    NUMBER = 1;
+  7446                           ;Modbas_RTU.c: 179:    NUMBER = 1;
   7447   001584  0E01               	movlw	1
   7448   001586  6E07               	movwf	__Bin_input_Output@NUMBER^0,c
   7449   001588  EFC8  F00A         	goto	i2l941
   7450   00158C                     i2l3243:
   7451                           
-  7452                           ;Modbas_RTU.c: 179:    NUMBER = 0;
+  7452                           ;Modbas_RTU.c: 181:    NUMBER = 0;
   7453   00158C  0E00               	movlw	0
   7454   00158E  6E07               	movwf	__Bin_input_Output@NUMBER^0,c
   7455   001590                     i2l941:
   7456                           
-  7457                           ;Modbas_RTU.c: 181:   return NUMBER;
+  7457                           ;Modbas_RTU.c: 183:   return NUMBER;
   7458   001590  5007               	movf	__Bin_input_Output@NUMBER^0,w,c
   7459   001592  0012               	return		;funcret
   7460   001594                     __end_of__Bin_input_Output:
@@ -8044,7 +8044,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7462                           
   7463 ;; *************** function _ModbasRtu_Register_address *****************
   7464 ;; Defined at:
-  7465 ;;		line 126 in file "Modbas_RTU.c"
+  7465 ;;		line 128 in file "Modbas_RTU.c"
   7466 ;; Parameters:    Size  Location     Type
   7467 ;;  Li              1    wreg     unsigned char 
   7468 ;; Auto vars:     Size  Location     Type
@@ -8090,12 +8090,12 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7503                           ;ModbasRtu_Register_address@Li stored from wreg
   7504   001F2A  6E08               	movwf	ModbasRtu_Register_address@Li^0,c
   7505   001F2C                     
-  7506                           ;Modbas_RTU.c: 126:  unsigned int ModbasRtu_Register_address(unsigned char Li);Modbas_RT
-      +                          U.c: 127:  {;Modbas_RTU.c: 128:   register char Hi= Li - 1;
+  7506                           ;Modbas_RTU.c: 128:  unsigned int ModbasRtu_Register_address(unsigned char Li);Modbas_RT
+      +                          U.c: 129:  {;Modbas_RTU.c: 130:   register char Hi= Li - 1;
   7507   001F2C  0408               	decf	ModbasRtu_Register_address@Li^0,w,c
   7508   001F2E  6E07               	movwf	ModbasRtu_Register_address@Hi^0,c
   7509   001F30                     
-  7510                           ;Modbas_RTU.c: 129:   return Danie_Rx_ModbasRtu[Hi] * 256 + Danie_Rx_ModbasRtu[Li];
+  7510                           ;Modbas_RTU.c: 131:   return Danie_Rx_ModbasRtu[Hi] * 256 + Danie_Rx_ModbasRtu[Li];
   7511   001F30  0E8D               	movlw	low _Danie_Rx_ModbasRtu
   7512   001F32  2408               	addwf	ModbasRtu_Register_address@Li^0,w,c
   7513   001F34  6ED9               	movwf	fsr2l,c
@@ -8127,7 +8127,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7539                           
   7540 ;; *************** function _Error_modbasRtu *****************
   7541 ;; Defined at:
-  7542 ;;		line 327 in file "Modbas_RTU.c"
+  7542 ;;		line 329 in file "Modbas_RTU.c"
   7543 ;; Parameters:    Size  Location     Type
   7544 ;;  Temp_Error      1    wreg     volatile unsigned char 
   7545 ;; Auto vars:     Size  Location     Type
@@ -8175,17 +8175,17 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7582                           ;Error_modbasRtu@Temp_Error stored from wreg
   7583   002272  6E0D               	movwf	Error_modbasRtu@Temp_Error^0,c	;volatile
   7584   002274                     
-  7585                           ;Modbas_RTU.c: 327:  void Error_modbasRtu (volatile unsigned char Temp_Error);Modbas_RTU
-      +                          .c: 328:   {;Modbas_RTU.c: 329:  Danie_Rx_ModbasRtu[1] |= (1<<7);
+  7585                           ;Modbas_RTU.c: 329:  void Error_modbasRtu (volatile unsigned char Temp_Error);Modbas_RTU
+      +                          .c: 330:   {;Modbas_RTU.c: 331:  Danie_Rx_ModbasRtu[1] |= (1<<7);
   7586   002274  0100               	movlb	0	; () banked
   7587   002276  8F8E               	bsf	(_Danie_Rx_ModbasRtu+1)& (0+255),7,b
   7588   002278                     
   7589                           ; BSR set to: 0
-  7590                           ;Modbas_RTU.c: 330:  Danie_Rx_ModbasRtu[2] = Temp_Error;
+  7590                           ;Modbas_RTU.c: 332:  Danie_Rx_ModbasRtu[2] = Temp_Error;
   7591   002278  C00D  F08F         	movff	Error_modbasRtu@Temp_Error,_Danie_Rx_ModbasRtu+2	;volatile
   7592   00227C                     
   7593                           ; BSR set to: 0
-  7594                           ;Modbas_RTU.c: 331:  check_sum (3);
+  7594                           ;Modbas_RTU.c: 333:  check_sum (3);
   7595   00227C  0E03               	movlw	3
   7596   00227E  EC35  F00F         	call	_check_sum
   7597   002282  0012               	return		;funcret
@@ -8194,7 +8194,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7600                           
   7601 ;; *************** function _check_sum *****************
   7602 ;; Defined at:
-  7603 ;;		line 336 in file "Modbas_RTU.c"
+  7603 ;;		line 338 in file "Modbas_RTU.c"
   7604 ;; Parameters:    Size  Location     Type
   7605 ;;  Adress          1    wreg     unsigned char 
   7606 ;; Auto vars:     Size  Location     Type
@@ -8240,8 +8240,8 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7641                           ;check_sum@Adress stored from wreg
   7642   001E6A  6E0C               	movwf	check_sum@Adress^0,c
   7643   001E6C                     
-  7644                           ;Modbas_RTU.c: 336:  void check_sum ( register unsigned char Adress);Modbas_RTU.c: 337: 
-      +                            {;Modbas_RTU.c: 338:  register unsigned int RC;;Modbas_RTU.c: 339:  RC = crc_chk(Danie
+  7644                           ;Modbas_RTU.c: 338:  void check_sum ( register unsigned char Adress);Modbas_RTU.c: 339: 
+      +                            {;Modbas_RTU.c: 340:  register unsigned int RC;;Modbas_RTU.c: 341:  RC = crc_chk(Danie
       +                          _Rx_ModbasRtu,Adress);
   7645   001E6C  0E8D               	movlw	low _Danie_Rx_ModbasRtu
   7646   001E6E  6E01               	movwf	crc_chk@data^0,c
@@ -8252,7 +8252,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7651   001E7C  C001  F00A         	movff	?_crc_chk,check_sum@RC
   7652   001E80  C002  F00B         	movff	?_crc_chk+1,check_sum@RC+1
   7653   001E84                     
-  7654                           ;Modbas_RTU.c: 340:  Danie_Rx_ModbasRtu[Adress] = RC ;
+  7654                           ;Modbas_RTU.c: 342:  Danie_Rx_ModbasRtu[Adress] = RC ;
   7655   001E84  0E8D               	movlw	low _Danie_Rx_ModbasRtu
   7656   001E86  240C               	addwf	check_sum@Adress^0,w,c
   7657   001E88  6ED9               	movwf	fsr2l,c
@@ -8261,10 +8261,10 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7660   001E8E  22DA               	addwfc	fsr2h,f,c
   7661   001E90  C00A  FFDF         	movff	check_sum@RC,indf2
   7662   001E94                     
-  7663                           ;Modbas_RTU.c: 341:  Adress++;
+  7663                           ;Modbas_RTU.c: 343:  Adress++;
   7664   001E94  2A0C               	incf	check_sum@Adress^0,f,c
   7665   001E96                     
-  7666                           ;Modbas_RTU.c: 342:  Danie_Rx_ModbasRtu[Adress] = RC >> 8;
+  7666                           ;Modbas_RTU.c: 344:  Danie_Rx_ModbasRtu[Adress] = RC >> 8;
   7667   001E96  0E8D               	movlw	low _Danie_Rx_ModbasRtu
   7668   001E98  240C               	addwf	check_sum@Adress^0,w,c
   7669   001E9A  6ED9               	movwf	fsr2l,c
@@ -8274,7 +8274,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7673   001EA2  500B               	movf	(check_sum@RC+1)^0,w,c
   7674   001EA4  6EDF               	movwf	indf2,c
   7675   001EA6                     
-  7676                           ;Modbas_RTU.c: 343:  quantity_Data_ModbasRtu = Adress;
+  7676                           ;Modbas_RTU.c: 345:  quantity_Data_ModbasRtu = Adress;
   7677   001EA6  C00C  F03D         	movff	check_sum@Adress,_quantity_Data_ModbasRtu
   7678   001EAA  0012               	return		;funcret
   7679   001EAC                     __end_of_check_sum:
@@ -8282,7 +8282,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7681                           
   7682 ;; *************** function _Data_integrity *****************
   7683 ;; Defined at:
-  7684 ;;		line 134 in file "Modbas_RTU.c"
+  7684 ;;		line 136 in file "Modbas_RTU.c"
   7685 ;; Parameters:    Size  Location     Type
   7686 ;;		None
   7687 ;; Auto vars:     Size  Location     Type
@@ -8322,14 +8322,14 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7716   001BC6                     _Data_integrity:
   7717                           	callstack 16
   7718   001BC6                     
-  7719                           ;Modbas_RTU.c: 136:    register unsigned int Temp22;;Modbas_RTU.c: 137:    register unsi
-      +                          gned char Temp33;;Modbas_RTU.c: 138:    quantity_Data_ModbasRtu = quantity_Data_ModbasRt
+  7719                           ;Modbas_RTU.c: 138:    register unsigned int Temp22;;Modbas_RTU.c: 139:    register unsi
+      +                          gned char Temp33;;Modbas_RTU.c: 140:    quantity_Data_ModbasRtu = quantity_Data_ModbasRt
       +                          u - 2;
   7720   001BC6  503D               	movf	_quantity_Data_ModbasRtu^0,w,c
   7721   001BC8  0FFE               	addlw	254
   7722   001BCA  6E3D               	movwf	_quantity_Data_ModbasRtu^0,c
   7723   001BCC                     
-  7724                           ;Modbas_RTU.c: 139:    Temp22 = crc_chk(Danie_Rx_ModbasRtu,quantity_Data_ModbasRtu);
+  7724                           ;Modbas_RTU.c: 141:    Temp22 = crc_chk(Danie_Rx_ModbasRtu,quantity_Data_ModbasRtu);
   7725   001BCC  0E8D               	movlw	low _Danie_Rx_ModbasRtu
   7726   001BCE  6E01               	movwf	crc_chk@data^0,c
   7727   001BD0  0E00               	movlw	high _Danie_Rx_ModbasRtu
@@ -8339,10 +8339,10 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7731   001BDC  C001  F00B         	movff	?_crc_chk,Data_integrity@Temp22
   7732   001BE0  C002  F00C         	movff	?_crc_chk+1,Data_integrity@Temp22+1
   7733   001BE4                     
-  7734                           ;Modbas_RTU.c: 140:    Temp33 = Temp22;
+  7734                           ;Modbas_RTU.c: 142:    Temp33 = Temp22;
   7735   001BE4  C00B  F00D         	movff	Data_integrity@Temp22,Data_integrity@Temp33
   7736   001BE8                     
-  7737                           ;Modbas_RTU.c: 141:    if ( Danie_Rx_ModbasRtu[quantity_Data_ModbasRtu] == Temp33 )
+  7737                           ;Modbas_RTU.c: 143:    if ( Danie_Rx_ModbasRtu[quantity_Data_ModbasRtu] == Temp33 )
   7738   001BE8  0E8D               	movlw	low _Danie_Rx_ModbasRtu
   7739   001BEA  243D               	addwf	_quantity_Data_ModbasRtu^0,w,c
   7740   001BEC  6ED9               	movwf	fsr2l,c
@@ -8358,14 +8358,14 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7750   001C02  EF18  F00E         	goto	i2l3409
   7751   001C06                     i2u148_40:
   7752   001C06                     
-  7753                           ;Modbas_RTU.c: 142:  {;Modbas_RTU.c: 143:    quantity_Data_ModbasRtu ++;
+  7753                           ;Modbas_RTU.c: 144:  {;Modbas_RTU.c: 145:    quantity_Data_ModbasRtu ++;
   7754   001C06  2A3D               	incf	_quantity_Data_ModbasRtu^0,f,c
   7755   001C08                     
-  7756                           ;Modbas_RTU.c: 144:    Temp33 = (Temp22 >> 8) ;
+  7756                           ;Modbas_RTU.c: 146:    Temp33 = (Temp22 >> 8) ;
   7757   001C08  500C               	movf	(Data_integrity@Temp22+1)^0,w,c
   7758   001C0A  6E0D               	movwf	Data_integrity@Temp33^0,c
   7759   001C0C                     
-  7760                           ;Modbas_RTU.c: 145:    if ( Danie_Rx_ModbasRtu[quantity_Data_ModbasRtu] == Temp33 )
+  7760                           ;Modbas_RTU.c: 147:    if ( Danie_Rx_ModbasRtu[quantity_Data_ModbasRtu] == Temp33 )
   7761   001C0C  0E8D               	movlw	low _Danie_Rx_ModbasRtu
   7762   001C0E  243D               	addwf	_quantity_Data_ModbasRtu^0,w,c
   7763   001C10  6ED9               	movwf	fsr2l,c
@@ -8381,12 +8381,12 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7773   001C26  EF18  F00E         	goto	i2l3409
   7774   001C2A                     i2u149_40:
   7775   001C2A                     
-  7776                           ;Modbas_RTU.c: 146:     {;Modbas_RTU.c: 147:    return 1;
+  7776                           ;Modbas_RTU.c: 148:     {;Modbas_RTU.c: 149:    return 1;
   7777   001C2A  0E01               	movlw	1
   7778   001C2C  EF19  F00E         	goto	i2l932
   7779   001C30                     i2l3409:
   7780                           
-  7781                           ;Modbas_RTU.c: 150:    return 0;
+  7781                           ;Modbas_RTU.c: 152:    return 0;
   7782   001C30  0E00               	movlw	0
   7783   001C32                     i2l932:
   7784   001C32  0012               	return		;funcret
@@ -8395,7 +8395,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7787                           
   7788 ;; *************** function _crc_chk *****************
   7789 ;; Defined at:
-  7790 ;;		line 102 in file "Modbas_RTU.c"
+  7790 ;;		line 104 in file "Modbas_RTU.c"
   7791 ;; Parameters:    Size  Location     Type
   7792 ;;  data            2    0[COMRAM] PTR unsigned char 
   7793 ;;		 -> Danie_Rx_ModbasRtu(30), 
@@ -8437,17 +8437,17 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7824   0017BE                     _crc_chk:
   7825                           	callstack 13
   7826   0017BE                     
-  7827                           ;Modbas_RTU.c: 102:  unsigned int crc_chk (unsigned char* data, unsigned char length );M
-      +                          odbas_RTU.c: 103:   {;Modbas_RTU.c: 104:   int j;;Modbas_RTU.c: 105:   unsigned int reg_
+  7827                           ;Modbas_RTU.c: 104:  unsigned int crc_chk (unsigned char* data, unsigned char length );M
+      +                          odbas_RTU.c: 105:   {;Modbas_RTU.c: 106:   int j;;Modbas_RTU.c: 107:   unsigned int reg_
       +                          crc = 0xFFFF;
   7828   0017BE  6808               	setf	crc_chk@reg_crc^0,c
   7829   0017C0  6809               	setf	(crc_chk@reg_crc+1)^0,c
   7830                           
-  7831                           ;Modbas_RTU.c: 106:  while (length--)
+  7831                           ;Modbas_RTU.c: 108:  while (length--)
   7832   0017C2  EF1C  F00C         	goto	i2l2945
   7833   0017C6                     i2l2927:
   7834                           
-  7835                           ;Modbas_RTU.c: 107:  {;Modbas_RTU.c: 108:    reg_crc ^= *data++;
+  7835                           ;Modbas_RTU.c: 109:  {;Modbas_RTU.c: 110:    reg_crc ^= *data++;
   7836   0017C6  C001  FFD9         	movff	crc_chk@data,fsr2l
   7837   0017CA  C002  FFDA         	movff	crc_chk@data+1,fsr2h
   7838   0017CE  50DF               	movf	indf2,w,c
@@ -8457,14 +8457,14 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7842   0017D6  4A01               	infsnz	crc_chk@data^0,f,c
   7843   0017D8  2A02               	incf	(crc_chk@data+1)^0,f,c
   7844   0017DA                     
-  7845                           ;Modbas_RTU.c: 109:    for(j=0;j<8;j++)
+  7845                           ;Modbas_RTU.c: 111:    for(j=0;j<8;j++)
   7846   0017DA  0E00               	movlw	0
   7847   0017DC  6E07               	movwf	(crc_chk@j+1)^0,c
   7848   0017DE  0E00               	movlw	0
   7849   0017E0  6E06               	movwf	crc_chk@j^0,c
   7850   0017E2                     i2l919:
   7851                           
-  7852                           ;Modbas_RTU.c: 110:     {;Modbas_RTU.c: 111:    if(reg_crc & 0x01)
+  7852                           ;Modbas_RTU.c: 112:     {;Modbas_RTU.c: 113:    if(reg_crc & 0x01)
   7853   0017E2  A008               	btfss	crc_chk@reg_crc^0,0,c
   7854   0017E4  EFF6  F00B         	goto	i2u110_41
   7855   0017E8  EFF8  F00B         	goto	i2u110_40
@@ -8472,7 +8472,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7857   0017EC  EF05  F00C         	goto	i2l2939
   7858   0017F0                     i2u110_40:
   7859   0017F0                     
-  7860                           ;Modbas_RTU.c: 112:        {;Modbas_RTU.c: 113:       reg_crc = (reg_crc >> 1) ^ 0xA001;
+  7860                           ;Modbas_RTU.c: 114:        {;Modbas_RTU.c: 115:       reg_crc = (reg_crc >> 1) ^ 0xA001;
   7861   0017F0  90D8               	bcf	status,0,c
   7862   0017F2  3009               	rrcf	(crc_chk@reg_crc+1)^0,w,c
   7863   0017F4  6E05               	movwf	(??_crc_chk+1)^0,c
@@ -8485,11 +8485,11 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7870   001802  1805               	xorwf	(??_crc_chk+1)^0,w,c
   7871   001804  6E09               	movwf	(crc_chk@reg_crc+1)^0,c
   7872                           
-  7873                           ;Modbas_RTU.c: 114:        }
+  7873                           ;Modbas_RTU.c: 116:        }
   7874   001806  EF0C  F00C         	goto	i2l2941
   7875   00180A                     i2l2939:
   7876                           
-  7877                           ;Modbas_RTU.c: 116:        {;Modbas_RTU.c: 117:       reg_crc = reg_crc >> 1;
+  7877                           ;Modbas_RTU.c: 118:        {;Modbas_RTU.c: 119:       reg_crc = reg_crc >> 1;
   7878   00180A  90D8               	bcf	status,0,c
   7879   00180C  3009               	rrcf	(crc_chk@reg_crc+1)^0,w,c
   7880   00180E  6E04               	movwf	??_crc_chk^0,c
@@ -8498,7 +8498,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7883   001814  C004  F009         	movff	??_crc_chk,crc_chk@reg_crc+1
   7884   001818                     i2l2941:
   7885                           
-  7886                           ;Modbas_RTU.c: 119:     }
+  7886                           ;Modbas_RTU.c: 121:     }
   7887   001818  4A06               	infsnz	crc_chk@j^0,f,c
   7888   00181A  2A07               	incf	(crc_chk@j+1)^0,f,c
   7889   00181C  BE07               	btfsc	(crc_chk@j+1)^0,7,c
@@ -8515,7 +8515,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7900   001838                     i2u111_40:
   7901   001838                     i2l2945:
   7902                           
-  7903                           ;Modbas_RTU.c: 106:  while (length--)
+  7903                           ;Modbas_RTU.c: 108:  while (length--)
   7904   001838  0603               	decf	crc_chk@length^0,f,c
   7905   00183A  2803               	incf	crc_chk@length^0,w,c
   7906   00183C  A4D8               	btfss	status,2,c
@@ -8525,7 +8525,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   7910   001846  EFE3  F00B         	goto	i2l2927
   7911   00184A                     i2u112_40:
   7912   00184A                     
-  7913                           ;Modbas_RTU.c: 121:  return reg_crc;
+  7913                           ;Modbas_RTU.c: 123:  return reg_crc;
   7914   00184A  C008  F001         	movff	crc_chk@reg_crc,?_crc_chk
   7915   00184E  C009  F002         	movff	crc_chk@reg_crc+1,?_crc_chk+1
   7916   001852  0012               	return		;funcret
@@ -10086,7 +10086,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.40 build 20220703182018 
-Symbol Table                                                                                   Tue Jun 20 16:24:23 2023
+Symbol Table                                                                                   Wed Jun 21 08:52:35 2023
 
                 ?_EUSART_SetRxInterruptHandler 00D3                         ??_I2C_DO_SEND_ADR_READ 00D3  
              __end_of_TMR2_SetInterruptHandler 22E2                                              _D 003A  
@@ -10124,13 +10124,13 @@ Symbol Table                                                                    
                                           l634 19E6                                            l722 23A0  
                                           l387 2330                                            l491 22F4  
                                           l396 23AC                                            l556 22EA  
-                                          l822 21C0                                            l399 23C0  
-                                          l488 21DE                                            l914 1FCA  
-                                          l691 231C                                            l844 22E0  
-                                          l694 2312                                            l791 1460  
-                                          l792 140C                                            l697 2326  
-                                          l794 1482                                            l796 147E  
-                                          l797 1480                                            _PR2 000FCB  
+                                          l399 23C0                                            l488 21DE  
+                                          l840 1482                                            l914 1FCA  
+                                          l842 147E                                            l691 231C  
+                                          l843 1480                                            l780 22E0  
+                                          l837 1460                                            l694 2312  
+                                          l758 21C0                                            l838 140C  
+                                          l697 2326                                            _PR2 000FCB  
                        ??_EUSART_RxDataHandler 0001                         fp__I2C_DO_RX_NACK_STOP 0000  
                        _I2C_MasterWaitForEvent 2284                 ?_EUSART_SetFramingErrorHandler 00D3  
                               _TMR2_Initialize 21A2                                            prod 000FF3  
@@ -10306,16 +10306,16 @@ Symbol Table                                                                    
                                         i2l731 00EC                                          i2l732 00C8  
                                         i2l549 2390                                          i2l902 1968  
                                         i2l559 23D4                                          i2l727 0046  
-                                        i2l841 20E6                                          i2l905 23CE  
-                                        i2l665 1EE8                                          i2l737 00EC  
-                                        i2l682 23D6                                          i2l923 184A  
-                                        i2l675 1714                                          i2l907 23D0  
-                                        i2l924 1852                                          i2l932 1C32  
-                                        i2l668 1EEA                                          i2l685 2396  
-                                        i2l941 1590                                          i2l679 2110  
-                                        i2l919 17E2                                          i2l927 1F62  
-                                        i2l951 1B54                                          i2l847 23D2  
-                                        i2l688 239C                                          i2l944 1592  
+                                        i2l905 23CE                                          i2l665 1EE8  
+                                        i2l737 00EC                                          i2l682 23D6  
+                                        i2l923 184A                                          i2l675 1714  
+                                        i2l907 23D0                                          i2l924 1852  
+                                        i2l932 1C32                                          i2l668 1EEA  
+                                        i2l685 2396                                          i2l941 1590  
+                                        i2l679 2110                                          i2l919 17E2  
+                                        i2l927 1F62                                          i2l951 1B54  
+                                        i2l783 23D2                                          i2l688 239C  
+                                        i2l944 1592                                          i2l777 20E6  
                                         i2l891 2218                                          i2l981 1D50  
                                         i2l966 1196                                          i2l984 2282  
                                         i2l976 13AA                                          i2l888 2200  

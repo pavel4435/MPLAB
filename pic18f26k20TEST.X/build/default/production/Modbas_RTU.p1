@@ -528,555 +528,555 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _USART_UDR_vect
 -> -> 0 `i `uc
 ]
-"24 Modbas_RTU.c
-[; ;Modbas_RTU.c: 24:   void TIMER0_COMP_vect (void)
+"26 Modbas_RTU.c
+[; ;Modbas_RTU.c: 26:   void TIMER0_COMP_vect (void)
 [v _TIMER0_COMP_vect `(v ~T0 @X0 1 ef ]
-"25
-[; ;Modbas_RTU.c: 25:  {
+"27
+[; ;Modbas_RTU.c: 27:  {
 {
 [e :U _TIMER0_COMP_vect ]
 [f ]
-"26
-[; ;Modbas_RTU.c: 26:    Bit_action_ModbasRtu.b0 = 0;
+"28
+[; ;Modbas_RTU.c: 28:    Bit_action_ModbasRtu.b0 = 0;
 [e = . _Bit_action_ModbasRtu 0 -> -> 0 `i `uc ]
-"27
-[; ;Modbas_RTU.c: 27:    do { T0CONbits.TMR0ON = 0; } while(0);
+"29
+[; ;Modbas_RTU.c: 29:    do { T0CONbits.TMR0ON = 0; } while(0);
 [e :U 285 ]
 {
 [e = . . _T0CONbits 0 5 -> -> 0 `i `uc ]
 }
 [e :U 284 ]
-"28
-[; ;Modbas_RTU.c: 28:       if ( Bit_action_ModbasRtu.b1)
-[e $ ! != -> . _Bit_action_ModbasRtu 1 `i -> 0 `i 286  ]
-"29
-[; ;Modbas_RTU.c: 29:        {
-{
 "30
-[; ;Modbas_RTU.c: 30:       Bit_action_ModbasRtu.b1 = 0;
+[; ;Modbas_RTU.c: 30:       if ( Bit_action_ModbasRtu.b1)
+[e $ ! != -> . _Bit_action_ModbasRtu 1 `i -> 0 `i 286  ]
+"31
+[; ;Modbas_RTU.c: 31:        {
+{
+"32
+[; ;Modbas_RTU.c: 32:       Bit_action_ModbasRtu.b1 = 0;
 [e = . _Bit_action_ModbasRtu 1 -> -> 0 `i `uc ]
-"33
-[; ;Modbas_RTU.c: 33:    Bit_action_ModbasRtu.b2 = 1;
-[e = . _Bit_action_ModbasRtu 2 -> -> 1 `i `uc ]
-"34
-[; ;Modbas_RTU.c: 34:             modbasRtu_Slave();
-[e ( _modbasRtu_Slave ..  ]
 "35
-[; ;Modbas_RTU.c: 35:        }
+[; ;Modbas_RTU.c: 35:    Bit_action_ModbasRtu.b2 = 1;
+[e = . _Bit_action_ModbasRtu 2 -> -> 1 `i `uc ]
+"36
+[; ;Modbas_RTU.c: 36:             modbasRtu_Slave();
+[e ( _modbasRtu_Slave ..  ]
+"37
+[; ;Modbas_RTU.c: 37:        }
 }
 [e :U 286 ]
-"36
-[; ;Modbas_RTU.c: 36:  }
+"38
+[; ;Modbas_RTU.c: 38:  }
 [e :UE 282 ]
 }
-"40
-[; ;Modbas_RTU.c: 40: void USART_RXC_vect(void)
+"42
+[; ;Modbas_RTU.c: 42: void USART_RXC_vect(void)
 [v _USART_RXC_vect `(v ~T0 @X0 1 ef ]
-"41
-[; ;Modbas_RTU.c: 41:  {
+"43
+[; ;Modbas_RTU.c: 43:  {
 {
 [e :U _USART_RXC_vect ]
 [f ]
-"42
-[; ;Modbas_RTU.c: 42:     unsigned char TempModbas = RCREG;
+"44
+[; ;Modbas_RTU.c: 44:     unsigned char TempModbas = RCREG;
 [v _TempModbas `uc ~T0 @X0 1 a ]
 [e = _TempModbas _RCREG ]
-"43
-[; ;Modbas_RTU.c: 43:  TMR0_Reload();
-[e ( _TMR0_Reload ..  ]
-"44
-[; ;Modbas_RTU.c: 44:  if (!Bit_action_ModbasRtu.b2)
-[e $ ! ! != -> . _Bit_action_ModbasRtu 2 `i -> 0 `i 288  ]
 "45
-[; ;Modbas_RTU.c: 45:   {
-{
+[; ;Modbas_RTU.c: 45:  TMR0_Reload();
+[e ( _TMR0_Reload ..  ]
 "46
-[; ;Modbas_RTU.c: 46:   if (!Bit_action_ModbasRtu.b0)
-[e $ ! ! != -> . _Bit_action_ModbasRtu 0 `i -> 0 `i 289  ]
+[; ;Modbas_RTU.c: 46:  if (!Bit_action_ModbasRtu.b2)
+[e $ ! ! != -> . _Bit_action_ModbasRtu 2 `i -> 0 `i 288  ]
 "47
-[; ;Modbas_RTU.c: 47:    {
+[; ;Modbas_RTU.c: 47:   {
 {
 "48
-[; ;Modbas_RTU.c: 48:    Bit_action_ModbasRtu.b0 = 1;
-[e = . _Bit_action_ModbasRtu 0 -> -> 1 `i `uc ]
+[; ;Modbas_RTU.c: 48:   if (!Bit_action_ModbasRtu.b0)
+[e $ ! ! != -> . _Bit_action_ModbasRtu 0 `i -> 0 `i 289  ]
 "49
-[; ;Modbas_RTU.c: 49:    if (TempModbas == 0x31 )
-[e $ ! == -> _TempModbas `i -> 49 `i 290  ]
-"50
-[; ;Modbas_RTU.c: 50:     {
+[; ;Modbas_RTU.c: 49:    {
 {
+"50
+[; ;Modbas_RTU.c: 50:    Bit_action_ModbasRtu.b0 = 1;
+[e = . _Bit_action_ModbasRtu 0 -> -> 1 `i `uc ]
 "51
-[; ;Modbas_RTU.c: 51:     Bit_action_ModbasRtu.b1 = 1;
-[e = . _Bit_action_ModbasRtu 1 -> -> 1 `i `uc ]
+[; ;Modbas_RTU.c: 51:    if (TempModbas == 0x31 )
+[e $ ! == -> _TempModbas `i -> 49 `i 290  ]
+"52
+[; ;Modbas_RTU.c: 52:     {
+{
 "53
-[; ;Modbas_RTU.c: 53:                 do { LATAbits.LATA1 = ~LATAbits.LATA1; } while(0);
+[; ;Modbas_RTU.c: 53:     Bit_action_ModbasRtu.b1 = 1;
+[e = . _Bit_action_ModbasRtu 1 -> -> 1 `i `uc ]
+"55
+[; ;Modbas_RTU.c: 55:                 do { LATAbits.LATA1 = ~LATAbits.LATA1; } while(0);
 [e :U 293 ]
 {
 [e = . . _LATAbits 0 1 -> ~ -> . . _LATAbits 0 1 `i `uc ]
 }
 [e :U 292 ]
-"54
-[; ;Modbas_RTU.c: 54:     }
+"56
+[; ;Modbas_RTU.c: 56:     }
 }
 [e :U 290 ]
-"55
-[; ;Modbas_RTU.c: 55:    quantity_Data_ModbasRtu = 0;
+"57
+[; ;Modbas_RTU.c: 57:    quantity_Data_ModbasRtu = 0;
 [e = _quantity_Data_ModbasRtu -> -> 0 `i `uc ]
-"56
-[; ;Modbas_RTU.c: 56:    do { T0CONbits.TMR0ON = 1; } while(0);
+"58
+[; ;Modbas_RTU.c: 58:    do { T0CONbits.TMR0ON = 1; } while(0);
 [e :U 296 ]
 {
 [e = . . _T0CONbits 0 5 -> -> 1 `i `uc ]
 }
 [e :U 295 ]
-"57
-[; ;Modbas_RTU.c: 57:    }
+"59
+[; ;Modbas_RTU.c: 59:    }
 }
 [e :U 289 ]
-"58
-[; ;Modbas_RTU.c: 58:   if (Bit_action_ModbasRtu.b1 == 1)
-[e $ ! == -> . _Bit_action_ModbasRtu 1 `i -> 1 `i 297  ]
 "60
-[; ;Modbas_RTU.c: 60:    {
-{
-"61
-[; ;Modbas_RTU.c: 61:      Danie_Rx_ModbasRtu[quantity_Data_ModbasRtu] = TempModbas;
-[e = *U + &U _Danie_Rx_ModbasRtu * -> _quantity_Data_ModbasRtu `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux _TempModbas ]
+[; ;Modbas_RTU.c: 60:   if (Bit_action_ModbasRtu.b1 == 1)
+[e $ ! == -> . _Bit_action_ModbasRtu 1 `i -> 1 `i 297  ]
 "62
-[; ;Modbas_RTU.c: 62:      quantity_Data_ModbasRtu ++;
-[e ++ _quantity_Data_ModbasRtu -> -> 1 `i `uc ]
+[; ;Modbas_RTU.c: 62:    {
+{
 "63
-[; ;Modbas_RTU.c: 63:    }
+[; ;Modbas_RTU.c: 63:      Danie_Rx_ModbasRtu[quantity_Data_ModbasRtu] = TempModbas;
+[e = *U + &U _Danie_Rx_ModbasRtu * -> _quantity_Data_ModbasRtu `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux _TempModbas ]
+"64
+[; ;Modbas_RTU.c: 64:      quantity_Data_ModbasRtu ++;
+[e ++ _quantity_Data_ModbasRtu -> -> 1 `i `uc ]
+"65
+[; ;Modbas_RTU.c: 65:    }
 }
 [e :U 297 ]
-"64
-[; ;Modbas_RTU.c: 64:   }
+"66
+[; ;Modbas_RTU.c: 66:   }
 }
 [e :U 288 ]
-"65
-[; ;Modbas_RTU.c: 65:  }
+"67
+[; ;Modbas_RTU.c: 67:  }
 [e :UE 287 ]
 }
-"68
-[; ;Modbas_RTU.c: 68: void USART_TXC_vect(void)
+"70
+[; ;Modbas_RTU.c: 70: void USART_TXC_vect(void)
 [v _USART_TXC_vect `(v ~T0 @X0 1 ef ]
-"69
-[; ;Modbas_RTU.c: 69:  {
+"71
+[; ;Modbas_RTU.c: 71:  {
 {
 [e :U _USART_TXC_vect ]
 [f ]
-"72
-[; ;Modbas_RTU.c: 72:    do { PIE1bits.TX1IE=0; } while(0);
+"74
+[; ;Modbas_RTU.c: 74:    do { PIE1bits.TX1IE=0; } while(0);
 [e :U 301 ]
 {
 [e = . . _PIE1bits 1 1 -> -> 0 `i `uc ]
 }
 [e :U 300 ]
-"76
-[; ;Modbas_RTU.c: 76:  }
+"78
+[; ;Modbas_RTU.c: 78:  }
 [e :UE 298 ]
 }
-"79
-[; ;Modbas_RTU.c: 79: void USART_UDRE_vect (void)
+"81
+[; ;Modbas_RTU.c: 81: void USART_UDRE_vect (void)
 [v _USART_UDRE_vect `(v ~T0 @X0 1 ef ]
-"80
-[; ;Modbas_RTU.c: 80:  {
+"82
+[; ;Modbas_RTU.c: 82:  {
 {
 [e :U _USART_UDRE_vect ]
 [f ]
-"82
-[; ;Modbas_RTU.c: 82:    if (quantity_Data_ModbasRtu >= Temp_ModbasRtu )
-[e $ ! >= -> _quantity_Data_ModbasRtu `i -> _Temp_ModbasRtu `i 303  ]
-"83
-[; ;Modbas_RTU.c: 83:     {
-{
 "84
-[; ;Modbas_RTU.c: 84:    TXREG = Danie_Rx_ModbasRtu[Temp_ModbasRtu++];
-[e = _TXREG *U + &U _Danie_Rx_ModbasRtu * -> ++ _Temp_ModbasRtu -> -> 1 `i `uc `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux ]
+[; ;Modbas_RTU.c: 84:    if (quantity_Data_ModbasRtu >= Temp_ModbasRtu )
+[e $ ! >= -> _quantity_Data_ModbasRtu `i -> _Temp_ModbasRtu `i 303  ]
 "85
-[; ;Modbas_RTU.c: 85:     }
+[; ;Modbas_RTU.c: 85:     {
+{
+"86
+[; ;Modbas_RTU.c: 86:    TXREG = Danie_Rx_ModbasRtu[Temp_ModbasRtu++];
+[e = _TXREG *U + &U _Danie_Rx_ModbasRtu * -> ++ _Temp_ModbasRtu -> -> 1 `i `uc `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux ]
+"87
+[; ;Modbas_RTU.c: 87:     }
 }
 [e $U 304  ]
-"86
-[; ;Modbas_RTU.c: 86:    else
+"88
+[; ;Modbas_RTU.c: 88:    else
 [e :U 303 ]
-"87
-[; ;Modbas_RTU.c: 87:     {
+"89
+[; ;Modbas_RTU.c: 89:     {
 {
-"91
-[; ;Modbas_RTU.c: 91:       USART_UDR_vect=0;
-[e = _USART_UDR_vect -> -> 0 `i `uc ]
 "93
-[; ;Modbas_RTU.c: 93:       do { PIE1bits.TX1IE=1; } while(0);
+[; ;Modbas_RTU.c: 93:       USART_UDR_vect=0;
+[e = _USART_UDR_vect -> -> 0 `i `uc ]
+"95
+[; ;Modbas_RTU.c: 95:       do { PIE1bits.TX1IE=1; } while(0);
 [e :U 307 ]
 {
 [e = . . _PIE1bits 1 1 -> -> 1 `i `uc ]
 }
 [e :U 306 ]
-"96
-[; ;Modbas_RTU.c: 96:  }
+"98
+[; ;Modbas_RTU.c: 98:  }
 }
 [e :U 304 ]
-"97
-[; ;Modbas_RTU.c: 97:  }
+"99
+[; ;Modbas_RTU.c: 99:  }
 [e :UE 302 ]
 }
-"102
-[; ;Modbas_RTU.c: 102:  unsigned int crc_chk (unsigned char* data, unsigned char length )
+"104
+[; ;Modbas_RTU.c: 104:  unsigned int crc_chk (unsigned char* data, unsigned char length )
 [v _crc_chk `(ui ~T0 @X0 1 ef2`*uc`uc ]
-"103
-[; ;Modbas_RTU.c: 103:   {
+"105
+[; ;Modbas_RTU.c: 105:   {
 {
 [e :U _crc_chk ]
-"102
-[; ;Modbas_RTU.c: 102:  unsigned int crc_chk (unsigned char* data, unsigned char length )
+"104
+[; ;Modbas_RTU.c: 104:  unsigned int crc_chk (unsigned char* data, unsigned char length )
 [v _data `*uc ~T0 @X0 1 r1 ]
 [v _length `uc ~T0 @X0 1 r2 ]
-"103
-[; ;Modbas_RTU.c: 103:   {
-[f ]
-"104
-[; ;Modbas_RTU.c: 104:   int j;
-[v _j `i ~T0 @X0 1 a ]
 "105
-[; ;Modbas_RTU.c: 105:   unsigned int reg_crc = 0xFFFF;
+[; ;Modbas_RTU.c: 105:   {
+[f ]
+"106
+[; ;Modbas_RTU.c: 106:   int j;
+[v _j `i ~T0 @X0 1 a ]
+"107
+[; ;Modbas_RTU.c: 107:   unsigned int reg_crc = 0xFFFF;
 [v _reg_crc `ui ~T0 @X0 1 a ]
 [e = _reg_crc -> 65535 `ui ]
-"106
-[; ;Modbas_RTU.c: 106:  while (length--)
+"108
+[; ;Modbas_RTU.c: 108:  while (length--)
 [e $U 309  ]
 [e :U 310 ]
-"107
-[; ;Modbas_RTU.c: 107:  {
-{
-"108
-[; ;Modbas_RTU.c: 108:    reg_crc ^= *data++;
-[e =^ _reg_crc -> *U ++ _data * -> -> 1 `i `x -> -> # *U _data `i `x `ui ]
 "109
-[; ;Modbas_RTU.c: 109:    for(j=0;j<8;j++)
+[; ;Modbas_RTU.c: 109:  {
+{
+"110
+[; ;Modbas_RTU.c: 110:    reg_crc ^= *data++;
+[e =^ _reg_crc -> *U ++ _data * -> -> 1 `i `x -> -> # *U _data `i `x `ui ]
+"111
+[; ;Modbas_RTU.c: 111:    for(j=0;j<8;j++)
 {
 [e = _j -> 0 `i ]
 [e $ < _j -> 8 `i 312  ]
 [e $U 313  ]
 [e :U 312 ]
-"110
-[; ;Modbas_RTU.c: 110:     {
-{
-"111
-[; ;Modbas_RTU.c: 111:    if(reg_crc & 0x01)
-[e $ ! != & _reg_crc -> -> 1 `i `ui -> -> 0 `i `ui 315  ]
 "112
-[; ;Modbas_RTU.c: 112:        {
+[; ;Modbas_RTU.c: 112:     {
 {
 "113
-[; ;Modbas_RTU.c: 113:       reg_crc = (reg_crc >> 1) ^ 0xA001;
-[e = _reg_crc ^ >> _reg_crc -> 1 `i -> 40961 `ui ]
+[; ;Modbas_RTU.c: 113:    if(reg_crc & 0x01)
+[e $ ! != & _reg_crc -> -> 1 `i `ui -> -> 0 `i `ui 315  ]
 "114
-[; ;Modbas_RTU.c: 114:        }
+[; ;Modbas_RTU.c: 114:        {
+{
+"115
+[; ;Modbas_RTU.c: 115:       reg_crc = (reg_crc >> 1) ^ 0xA001;
+[e = _reg_crc ^ >> _reg_crc -> 1 `i -> 40961 `ui ]
+"116
+[; ;Modbas_RTU.c: 116:        }
 }
 [e $U 316  ]
-"115
-[; ;Modbas_RTU.c: 115:   else
-[e :U 315 ]
-"116
-[; ;Modbas_RTU.c: 116:        {
-{
 "117
-[; ;Modbas_RTU.c: 117:       reg_crc = reg_crc >> 1;
-[e = _reg_crc >> _reg_crc -> 1 `i ]
+[; ;Modbas_RTU.c: 117:   else
+[e :U 315 ]
 "118
-[; ;Modbas_RTU.c: 118:     }
+[; ;Modbas_RTU.c: 118:        {
+{
+"119
+[; ;Modbas_RTU.c: 119:       reg_crc = reg_crc >> 1;
+[e = _reg_crc >> _reg_crc -> 1 `i ]
+"120
+[; ;Modbas_RTU.c: 120:     }
 }
 [e :U 316 ]
-"119
-[; ;Modbas_RTU.c: 119:     }
+"121
+[; ;Modbas_RTU.c: 121:     }
 }
 [e ++ _j -> 1 `i ]
 [e $ < _j -> 8 `i 312  ]
 [e :U 313 ]
 }
-"120
-[; ;Modbas_RTU.c: 120:  }
+"122
+[; ;Modbas_RTU.c: 122:  }
 }
 [e :U 309 ]
-"106
-[; ;Modbas_RTU.c: 106:  while (length--)
+"108
+[; ;Modbas_RTU.c: 108:  while (length--)
 [e $ != -> -- _length -> -> 1 `i `uc `i -> 0 `i 310  ]
 [e :U 311 ]
-"121
-[; ;Modbas_RTU.c: 121:  return reg_crc;
+"123
+[; ;Modbas_RTU.c: 123:  return reg_crc;
 [e ) _reg_crc ]
 [e $UE 308  ]
-"122
-[; ;Modbas_RTU.c: 122:   }
+"124
+[; ;Modbas_RTU.c: 124:   }
 [e :UE 308 ]
 }
-"126
-[; ;Modbas_RTU.c: 126:  unsigned int ModbasRtu_Register_address(unsigned char Li)
+"128
+[; ;Modbas_RTU.c: 128:  unsigned int ModbasRtu_Register_address(unsigned char Li)
 [v _ModbasRtu_Register_address `(ui ~T0 @X0 1 ef1`uc ]
-"127
-[; ;Modbas_RTU.c: 127:  {
+"129
+[; ;Modbas_RTU.c: 129:  {
 {
 [e :U _ModbasRtu_Register_address ]
-"126
-[; ;Modbas_RTU.c: 126:  unsigned int ModbasRtu_Register_address(unsigned char Li)
-[v _Li `uc ~T0 @X0 1 r1 ]
-"127
-[; ;Modbas_RTU.c: 127:  {
-[f ]
 "128
-[; ;Modbas_RTU.c: 128:   register char Hi= Li - 1;
+[; ;Modbas_RTU.c: 128:  unsigned int ModbasRtu_Register_address(unsigned char Li)
+[v _Li `uc ~T0 @X0 1 r1 ]
+"129
+[; ;Modbas_RTU.c: 129:  {
+[f ]
+"130
+[; ;Modbas_RTU.c: 130:   register char Hi= Li - 1;
 [v _Hi `uc ~T0 @X0 1 A ]
 [e = _Hi -> - -> _Li `i -> 1 `i `uc ]
-"129
-[; ;Modbas_RTU.c: 129:   return Danie_Rx_ModbasRtu[Hi] * 256 + Danie_Rx_ModbasRtu[Li];
+"131
+[; ;Modbas_RTU.c: 131:   return Danie_Rx_ModbasRtu[Hi] * 256 + Danie_Rx_ModbasRtu[Li];
 [e ) -> + * -> *U + &U _Danie_Rx_ModbasRtu * -> _Hi `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux `i -> 256 `i -> *U + &U _Danie_Rx_ModbasRtu * -> _Li `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux `i `ui ]
 [e $UE 317  ]
-"130
-[; ;Modbas_RTU.c: 130:  }
+"132
+[; ;Modbas_RTU.c: 132:  }
 [e :UE 317 ]
 }
-"134
-[; ;Modbas_RTU.c: 134:  char Data_integrity()
+"136
+[; ;Modbas_RTU.c: 136:  char Data_integrity()
 [v _Data_integrity `(uc ~T0 @X0 1 ef ]
-"135
-[; ;Modbas_RTU.c: 135:  {
+"137
+[; ;Modbas_RTU.c: 137:  {
 {
 [e :U _Data_integrity ]
 [f ]
-"136
-[; ;Modbas_RTU.c: 136:    register unsigned int Temp22;
-[v _Temp22 `ui ~T0 @X0 1 A ]
-"137
-[; ;Modbas_RTU.c: 137:    register unsigned char Temp33;
-[v _Temp33 `uc ~T0 @X0 1 A ]
 "138
-[; ;Modbas_RTU.c: 138:    quantity_Data_ModbasRtu = quantity_Data_ModbasRtu - 2;
-[e = _quantity_Data_ModbasRtu -> - -> _quantity_Data_ModbasRtu `i -> 2 `i `uc ]
+[; ;Modbas_RTU.c: 138:    register unsigned int Temp22;
+[v _Temp22 `ui ~T0 @X0 1 A ]
 "139
-[; ;Modbas_RTU.c: 139:    Temp22 = crc_chk(Danie_Rx_ModbasRtu,quantity_Data_ModbasRtu);
-[e = _Temp22 ( _crc_chk (2 , &U _Danie_Rx_ModbasRtu _quantity_Data_ModbasRtu ]
+[; ;Modbas_RTU.c: 139:    register unsigned char Temp33;
+[v _Temp33 `uc ~T0 @X0 1 A ]
 "140
-[; ;Modbas_RTU.c: 140:    Temp33 = Temp22;
-[e = _Temp33 -> _Temp22 `uc ]
+[; ;Modbas_RTU.c: 140:    quantity_Data_ModbasRtu = quantity_Data_ModbasRtu - 2;
+[e = _quantity_Data_ModbasRtu -> - -> _quantity_Data_ModbasRtu `i -> 2 `i `uc ]
 "141
-[; ;Modbas_RTU.c: 141:    if ( Danie_Rx_ModbasRtu[quantity_Data_ModbasRtu] == Temp33 )
-[e $ ! == -> *U + &U _Danie_Rx_ModbasRtu * -> _quantity_Data_ModbasRtu `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux `i -> _Temp33 `i 319  ]
+[; ;Modbas_RTU.c: 141:    Temp22 = crc_chk(Danie_Rx_ModbasRtu,quantity_Data_ModbasRtu);
+[e = _Temp22 ( _crc_chk (2 , &U _Danie_Rx_ModbasRtu _quantity_Data_ModbasRtu ]
 "142
-[; ;Modbas_RTU.c: 142:  {
-{
+[; ;Modbas_RTU.c: 142:    Temp33 = Temp22;
+[e = _Temp33 -> _Temp22 `uc ]
 "143
-[; ;Modbas_RTU.c: 143:    quantity_Data_ModbasRtu ++;
-[e ++ _quantity_Data_ModbasRtu -> -> 1 `i `uc ]
+[; ;Modbas_RTU.c: 143:    if ( Danie_Rx_ModbasRtu[quantity_Data_ModbasRtu] == Temp33 )
+[e $ ! == -> *U + &U _Danie_Rx_ModbasRtu * -> _quantity_Data_ModbasRtu `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux `i -> _Temp33 `i 319  ]
 "144
-[; ;Modbas_RTU.c: 144:    Temp33 = (Temp22 >> 8) ;
-[e = _Temp33 -> >> _Temp22 -> 8 `i `uc ]
-"145
-[; ;Modbas_RTU.c: 145:    if ( Danie_Rx_ModbasRtu[quantity_Data_ModbasRtu] == Temp33 )
-[e $ ! == -> *U + &U _Danie_Rx_ModbasRtu * -> _quantity_Data_ModbasRtu `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux `i -> _Temp33 `i 320  ]
-"146
-[; ;Modbas_RTU.c: 146:     {
+[; ;Modbas_RTU.c: 144:  {
 {
+"145
+[; ;Modbas_RTU.c: 145:    quantity_Data_ModbasRtu ++;
+[e ++ _quantity_Data_ModbasRtu -> -> 1 `i `uc ]
+"146
+[; ;Modbas_RTU.c: 146:    Temp33 = (Temp22 >> 8) ;
+[e = _Temp33 -> >> _Temp22 -> 8 `i `uc ]
 "147
-[; ;Modbas_RTU.c: 147:    return 1;
+[; ;Modbas_RTU.c: 147:    if ( Danie_Rx_ModbasRtu[quantity_Data_ModbasRtu] == Temp33 )
+[e $ ! == -> *U + &U _Danie_Rx_ModbasRtu * -> _quantity_Data_ModbasRtu `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux `i -> _Temp33 `i 320  ]
+"148
+[; ;Modbas_RTU.c: 148:     {
+{
+"149
+[; ;Modbas_RTU.c: 149:    return 1;
 [e ) -> -> 1 `i `uc ]
 [e $UE 318  ]
-"148
-[; ;Modbas_RTU.c: 148:     }
+"150
+[; ;Modbas_RTU.c: 150:     }
 }
 [e :U 320 ]
-"149
-[; ;Modbas_RTU.c: 149:  }
-}
-[e :U 319 ]
-"150
-[; ;Modbas_RTU.c: 150:    return 0;
-[e ) -> -> 0 `i `uc ]
-[e $UE 318  ]
 "151
 [; ;Modbas_RTU.c: 151:  }
+}
+[e :U 319 ]
+"152
+[; ;Modbas_RTU.c: 152:    return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 318  ]
+"153
+[; ;Modbas_RTU.c: 153:  }
 [e :UE 318 ]
 }
-"157
-[; ;Modbas_RTU.c: 157: char _Bin_input_Output( register unsigned char NUMBER, register unsigned char state,volatile unsigned char *Masiv, volatile unsigned char Sd )
+"159
+[; ;Modbas_RTU.c: 159: char _Bin_input_Output( register unsigned char NUMBER, register unsigned char state,volatile unsigned char *Masiv, volatile unsigned char Sd )
 [v __Bin_input_Output `(uc ~T0 @X0 1 ef4`uc`uc`*Vuc`Vuc ]
-"158
-[; ;Modbas_RTU.c: 158:   {
+"160
+[; ;Modbas_RTU.c: 160:   {
 {
 [e :U __Bin_input_Output ]
-"157
-[; ;Modbas_RTU.c: 157: char _Bin_input_Output( register unsigned char NUMBER, register unsigned char state,volatile unsigned char *Masiv, volatile unsigned char Sd )
+"159
+[; ;Modbas_RTU.c: 159: char _Bin_input_Output( register unsigned char NUMBER, register unsigned char state,volatile unsigned char *Masiv, volatile unsigned char Sd )
 [v _NUMBER `uc ~T0 @X0 1 R1 ]
 [v _state `uc ~T0 @X0 1 R2 ]
 [v _Masiv `*Vuc ~T0 @X0 1 r3 ]
 [v _Sd `Vuc ~T0 @X0 1 r4 ]
-"158
-[; ;Modbas_RTU.c: 158:   {
+"160
+[; ;Modbas_RTU.c: 160:   {
 [f ]
-"159
-[; ;Modbas_RTU.c: 159:  volatile unsigned char Temp = 0,Temp1 = 0;
+"161
+[; ;Modbas_RTU.c: 161:  volatile unsigned char Temp = 0,Temp1 = 0;
 [v _Temp `Vuc ~T0 @X0 1 a ]
 [e = _Temp -> -> 0 `i `uc ]
 [v _Temp1 `Vuc ~T0 @X0 1 a ]
 [e = _Temp1 -> -> 0 `i `uc ]
-"160
-[; ;Modbas_RTU.c: 160:  while (NUMBER >= 8)
+"162
+[; ;Modbas_RTU.c: 162:  while (NUMBER >= 8)
 [e $U 322  ]
 [e :U 323 ]
-"161
-[; ;Modbas_RTU.c: 161:   {
-{
-"162
-[; ;Modbas_RTU.c: 162:     NUMBER = NUMBER - 8;
-[e = _NUMBER -> - -> _NUMBER `i -> 8 `i `uc ]
 "163
-[; ;Modbas_RTU.c: 163:     Temp ++;
-[e ++ _Temp -> -> 1 `i `Vuc ]
+[; ;Modbas_RTU.c: 163:   {
+{
 "164
-[; ;Modbas_RTU.c: 164:   }
+[; ;Modbas_RTU.c: 164:     NUMBER = NUMBER - 8;
+[e = _NUMBER -> - -> _NUMBER `i -> 8 `i `uc ]
+"165
+[; ;Modbas_RTU.c: 165:     Temp ++;
+[e ++ _Temp -> -> 1 `i `Vuc ]
+"166
+[; ;Modbas_RTU.c: 166:   }
 }
 [e :U 322 ]
-"160
-[; ;Modbas_RTU.c: 160:  while (NUMBER >= 8)
+"162
+[; ;Modbas_RTU.c: 162:  while (NUMBER >= 8)
 [e $ >= -> _NUMBER `i -> 8 `i 323  ]
 [e :U 324 ]
-"165
-[; ;Modbas_RTU.c: 165:  Temp1 = Masiv [ Temp ];
-[e = _Temp1 *U + _Masiv * -> _Temp `ux -> -> # *U _Masiv `ui `ux ]
-"166
-[; ;Modbas_RTU.c: 166:  if (Sd == 10 )
-[e $ ! == -> _Sd `i -> 10 `i 325  ]
 "167
-[; ;Modbas_RTU.c: 167:   {
-{
+[; ;Modbas_RTU.c: 167:  Temp1 = Masiv [ Temp ];
+[e = _Temp1 *U + _Masiv * -> _Temp `ux -> -> # *U _Masiv `ui `ux ]
 "168
-[; ;Modbas_RTU.c: 168:     if ( state == 1)
-[e $ ! == -> _state `i -> 1 `i 326  ]
+[; ;Modbas_RTU.c: 168:  if (Sd == 10 )
+[e $ ! == -> _Sd `i -> 10 `i 325  ]
 "169
-[; ;Modbas_RTU.c: 169:      Temp1 |=(1<<NUMBER);
+[; ;Modbas_RTU.c: 169:   {
+{
+"170
+[; ;Modbas_RTU.c: 170:     if ( state == 1)
+[e $ ! == -> _state `i -> 1 `i 326  ]
+"171
+[; ;Modbas_RTU.c: 171:      Temp1 |=(1<<NUMBER);
 [e =| _Temp1 -> << -> 1 `i -> _NUMBER `i `Vuc ]
 [e $U 327  ]
-"170
-[; ;Modbas_RTU.c: 170:     else
+"172
+[; ;Modbas_RTU.c: 172:     else
 [e :U 326 ]
-"171
-[; ;Modbas_RTU.c: 171:      Temp1 &=~(1<<NUMBER);
+"173
+[; ;Modbas_RTU.c: 173:      Temp1 &=~(1<<NUMBER);
 [e =& _Temp1 -> ~ << -> 1 `i -> _NUMBER `i `Vuc ]
 [e :U 327 ]
-"172
-[; ;Modbas_RTU.c: 172:     Masiv [ Temp ] = Temp1;
+"174
+[; ;Modbas_RTU.c: 174:     Masiv [ Temp ] = Temp1;
 [e = *U + _Masiv * -> _Temp `ux -> -> # *U _Masiv `ui `ux _Temp1 ]
-"173
-[; ;Modbas_RTU.c: 173:   }
+"175
+[; ;Modbas_RTU.c: 175:   }
 }
 [e $U 328  ]
-"174
-[; ;Modbas_RTU.c: 174:  else
-[e :U 325 ]
-"175
-[; ;Modbas_RTU.c: 175:   {
-{
 "176
-[; ;Modbas_RTU.c: 176:   if ( Temp1 & (1<<NUMBER) )
-[e $ ! != & -> _Temp1 `i << -> 1 `i -> _NUMBER `i -> 0 `i 329  ]
+[; ;Modbas_RTU.c: 176:  else
+[e :U 325 ]
 "177
-[; ;Modbas_RTU.c: 177:    NUMBER = 1;
+[; ;Modbas_RTU.c: 177:   {
+{
+"178
+[; ;Modbas_RTU.c: 178:   if ( Temp1 & (1<<NUMBER) )
+[e $ ! != & -> _Temp1 `i << -> 1 `i -> _NUMBER `i -> 0 `i 329  ]
+"179
+[; ;Modbas_RTU.c: 179:    NUMBER = 1;
 [e = _NUMBER -> -> 1 `i `uc ]
 [e $U 330  ]
-"178
-[; ;Modbas_RTU.c: 178:   else
+"180
+[; ;Modbas_RTU.c: 180:   else
 [e :U 329 ]
-"179
-[; ;Modbas_RTU.c: 179:    NUMBER = 0;
+"181
+[; ;Modbas_RTU.c: 181:    NUMBER = 0;
 [e = _NUMBER -> -> 0 `i `uc ]
 [e :U 330 ]
-"180
-[; ;Modbas_RTU.c: 180:   }
-}
-[e :U 328 ]
-"181
-[; ;Modbas_RTU.c: 181:   return NUMBER;
-[e ) -> _NUMBER `uc ]
-[e $UE 321  ]
 "182
 [; ;Modbas_RTU.c: 182:   }
+}
+[e :U 328 ]
+"183
+[; ;Modbas_RTU.c: 183:   return NUMBER;
+[e ) -> _NUMBER `uc ]
+[e $UE 321  ]
+"184
+[; ;Modbas_RTU.c: 184:   }
 [e :UE 321 ]
 }
-"189
-[; ;Modbas_RTU.c: 189:  void Changing_Discrete_Output(void)
+"191
+[; ;Modbas_RTU.c: 191:  void Changing_Discrete_Output(void)
 [v _Changing_Discrete_Output `(v ~T0 @X0 1 ef ]
-"190
-[; ;Modbas_RTU.c: 190:    {
+"192
+[; ;Modbas_RTU.c: 192:    {
 {
 [e :U _Changing_Discrete_Output ]
 [f ]
-"191
-[; ;Modbas_RTU.c: 191:    register unsigned int address;
-[v _address `ui ~T0 @X0 1 A ]
-"192
-[; ;Modbas_RTU.c: 192:    address = ModbasRtu_Register_address(3);
-[e = _address ( _ModbasRtu_Register_address (1 -> -> 3 `i `uc ]
 "193
-[; ;Modbas_RTU.c: 193:    if ( address > 10 )
-[e $ ! > _address -> -> 10 `i `ui 332  ]
+[; ;Modbas_RTU.c: 193:    register unsigned int address;
+[v _address `ui ~T0 @X0 1 A ]
 "194
-[; ;Modbas_RTU.c: 194:     {
-{
+[; ;Modbas_RTU.c: 194:    address = ModbasRtu_Register_address(3);
+[e = _address ( _ModbasRtu_Register_address (1 -> -> 3 `i `uc ]
 "195
-[; ;Modbas_RTU.c: 195:     Error_modbasRtu (0x02);
-[e ( _Error_modbasRtu (1 -> -> 2 `i `uc ]
+[; ;Modbas_RTU.c: 195:    if ( address > 10 )
+[e $ ! > _address -> -> 10 `i `ui 332  ]
 "196
-[; ;Modbas_RTU.c: 196:     }
+[; ;Modbas_RTU.c: 196:     {
+{
+"197
+[; ;Modbas_RTU.c: 197:     Error_modbasRtu (0x02);
+[e ( _Error_modbasRtu (1 -> -> 2 `i `uc ]
+"198
+[; ;Modbas_RTU.c: 198:     }
 }
 [e $U 333  ]
-"197
-[; ;Modbas_RTU.c: 197:     else
-[e :U 332 ]
-"198
-[; ;Modbas_RTU.c: 198:     {
-{
 "199
-[; ;Modbas_RTU.c: 199:    if (Danie_Rx_ModbasRtu[4] == 255)
-[e $ ! == -> *U + &U _Danie_Rx_ModbasRtu * -> -> -> 4 `i `ui `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux `i -> 255 `i 334  ]
+[; ;Modbas_RTU.c: 199:     else
+[e :U 332 ]
 "200
-[; ;Modbas_RTU.c: 200:      _Bin_input_Output ((char)address,1,Danie_ModbasRtu_Binary_Output,10);
+[; ;Modbas_RTU.c: 200:     {
+{
+"201
+[; ;Modbas_RTU.c: 201:    if (Danie_Rx_ModbasRtu[4] == 255)
+[e $ ! == -> *U + &U _Danie_Rx_ModbasRtu * -> -> -> 4 `i `ui `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux `i -> 255 `i 334  ]
+"202
+[; ;Modbas_RTU.c: 202:      _Bin_input_Output ((char)address,1,Danie_ModbasRtu_Binary_Output,10);
 [e ( __Bin_input_Output (4 , , , -> -> _address `uc `uc -> -> 1 `i `uc -> &U _Danie_ModbasRtu_Binary_Output `*Vuc -> -> 10 `i `uc ]
 [e $U 335  ]
-"201
-[; ;Modbas_RTU.c: 201:       else
+"203
+[; ;Modbas_RTU.c: 203:       else
 [e :U 334 ]
-"202
-[; ;Modbas_RTU.c: 202:            _Bin_input_Output ((char)address,0,Danie_ModbasRtu_Binary_Output,10);
+"204
+[; ;Modbas_RTU.c: 204:            _Bin_input_Output ((char)address,0,Danie_ModbasRtu_Binary_Output,10);
 [e ( __Bin_input_Output (4 , , , -> -> _address `uc `uc -> -> 0 `i `uc -> &U _Danie_ModbasRtu_Binary_Output `*Vuc -> -> 10 `i `uc ]
 [e :U 335 ]
-"203
-[; ;Modbas_RTU.c: 203:     }
+"205
+[; ;Modbas_RTU.c: 205:     }
 }
 [e :U 333 ]
-"204
-[; ;Modbas_RTU.c: 204:   }
+"206
+[; ;Modbas_RTU.c: 206:   }
 [e :UE 331 ]
 }
-"210
-[; ;Modbas_RTU.c: 210:  void Reading_Discrete_Output(unsigned char* Massiv, register unsigned char Number_)
+"212
+[; ;Modbas_RTU.c: 212:  void Reading_Discrete_Output(unsigned char* Massiv, register unsigned char Number_)
 [v _Reading_Discrete_Output `(v ~T0 @X0 1 ef2`*uc`uc ]
-"211
-[; ;Modbas_RTU.c: 211:   {
+"213
+[; ;Modbas_RTU.c: 213:   {
 {
 [e :U _Reading_Discrete_Output ]
-"210
-[; ;Modbas_RTU.c: 210:  void Reading_Discrete_Output(unsigned char* Massiv, register unsigned char Number_)
+"212
+[; ;Modbas_RTU.c: 212:  void Reading_Discrete_Output(unsigned char* Massiv, register unsigned char Number_)
 [v _Massiv `*uc ~T0 @X0 1 r1 ]
 [v _Number_ `uc ~T0 @X0 1 R2 ]
-"211
-[; ;Modbas_RTU.c: 211:   {
+"213
+[; ;Modbas_RTU.c: 213:   {
 [f ]
-"212
-[; ;Modbas_RTU.c: 212:  volatile unsigned int address,Number_bits;
+"214
+[; ;Modbas_RTU.c: 214:  volatile unsigned int address,Number_bits;
 [v _address `Vui ~T0 @X0 1 a ]
 [v _Number_bits `Vui ~T0 @X0 1 a ]
-"213
-[; ;Modbas_RTU.c: 213:  register unsigned char Temp = 0,Danie,Temp2 = 0,address2 = 0,Temp3 = 2;
+"215
+[; ;Modbas_RTU.c: 215:  register unsigned char Temp = 0,Danie,Temp2 = 0,address2 = 0,Temp3 = 2;
 [v _Temp `uc ~T0 @X0 1 A ]
 [e = _Temp -> -> 0 `i `uc ]
 [v _Danie `uc ~T0 @X0 1 A ]
@@ -1086,517 +1086,517 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _address2 -> -> 0 `i `uc ]
 [v _Temp3 `uc ~T0 @X0 1 A ]
 [e = _Temp3 -> -> 2 `i `uc ]
-"214
-[; ;Modbas_RTU.c: 214:  address = ModbasRtu_Register_address(3);
-[e = _address ( _ModbasRtu_Register_address (1 -> -> 3 `i `uc ]
-"215
-[; ;Modbas_RTU.c: 215:  if ( address > Number_ )
-[e $ ! > _address -> _Number_ `ui 337  ]
 "216
-[; ;Modbas_RTU.c: 216:         {
-{
+[; ;Modbas_RTU.c: 216:  address = ModbasRtu_Register_address(3);
+[e = _address ( _ModbasRtu_Register_address (1 -> -> 3 `i `uc ]
 "217
-[; ;Modbas_RTU.c: 217:            Error_modbasRtu (0x02);
-[e ( _Error_modbasRtu (1 -> -> 2 `i `uc ]
+[; ;Modbas_RTU.c: 217:  if ( address > Number_ )
+[e $ ! > _address -> _Number_ `ui 337  ]
 "218
-[; ;Modbas_RTU.c: 218:         }
+[; ;Modbas_RTU.c: 218:         {
+{
+"219
+[; ;Modbas_RTU.c: 219:            Error_modbasRtu (0x02);
+[e ( _Error_modbasRtu (1 -> -> 2 `i `uc ]
+"220
+[; ;Modbas_RTU.c: 220:         }
 }
 [e $U 338  ]
-"219
-[; ;Modbas_RTU.c: 219:   else
-[e :U 337 ]
-"220
-[; ;Modbas_RTU.c: 220:         {
-{
 "221
-[; ;Modbas_RTU.c: 221:            Number_bits = ModbasRtu_Register_address(5);
-[e = _Number_bits ( _ModbasRtu_Register_address (1 -> -> 5 `i `uc ]
+[; ;Modbas_RTU.c: 221:   else
+[e :U 337 ]
 "222
-[; ;Modbas_RTU.c: 222:            while (address >= 8)
+[; ;Modbas_RTU.c: 222:         {
+{
+"223
+[; ;Modbas_RTU.c: 223:            Number_bits = ModbasRtu_Register_address(5);
+[e = _Number_bits ( _ModbasRtu_Register_address (1 -> -> 5 `i `uc ]
+"224
+[; ;Modbas_RTU.c: 224:            while (address >= 8)
 [e $U 339  ]
 [e :U 340 ]
-"223
-[; ;Modbas_RTU.c: 223:                {
-{
-"224
-[; ;Modbas_RTU.c: 224:                  address = address - 8;
-[e = _address - _address -> -> 8 `i `ui ]
 "225
-[; ;Modbas_RTU.c: 225:                  Temp ++;
-[e ++ _Temp -> -> 1 `i `uc ]
+[; ;Modbas_RTU.c: 225:                {
+{
 "226
-[; ;Modbas_RTU.c: 226:                }
+[; ;Modbas_RTU.c: 226:                  address = address - 8;
+[e = _address - _address -> -> 8 `i `ui ]
+"227
+[; ;Modbas_RTU.c: 227:                  Temp ++;
+[e ++ _Temp -> -> 1 `i `uc ]
+"228
+[; ;Modbas_RTU.c: 228:                }
 }
 [e :U 339 ]
-"222
-[; ;Modbas_RTU.c: 222:            while (address >= 8)
+"224
+[; ;Modbas_RTU.c: 224:            while (address >= 8)
 [e $ >= _address -> -> 8 `i `ui 340  ]
 [e :U 341 ]
-"227
-[; ;Modbas_RTU.c: 227:            Danie = Massiv [ Temp ];
+"229
+[; ;Modbas_RTU.c: 229:            Danie = Massiv [ Temp ];
 [e = _Danie *U + _Massiv * -> _Temp `ux -> -> # *U _Massiv `ui `ux ]
-"231
-[; ;Modbas_RTU.c: 231:            while ( Number_bits > 0)
+"233
+[; ;Modbas_RTU.c: 233:            while ( Number_bits > 0)
 [e $U 342  ]
 [e :U 343 ]
-"232
-[; ;Modbas_RTU.c: 232:              {
-{
-"233
-[; ;Modbas_RTU.c: 233:                    Number_bits --;
-[e -- _Number_bits -> -> 1 `i `Vui ]
 "234
-[; ;Modbas_RTU.c: 234:                    if ( Danie & (1 << address) )
-[e $ ! != & -> _Danie `i << -> 1 `i _address -> 0 `i 345  ]
-"235
-[; ;Modbas_RTU.c: 235:                        {
+[; ;Modbas_RTU.c: 234:              {
 {
+"235
+[; ;Modbas_RTU.c: 235:                    Number_bits --;
+[e -- _Number_bits -> -> 1 `i `Vui ]
 "236
-[; ;Modbas_RTU.c: 236:                          Temp2 |=(1<<address2);
-[e =| _Temp2 -> << -> 1 `i -> _address2 `i `uc ]
+[; ;Modbas_RTU.c: 236:                    if ( Danie & (1 << address) )
+[e $ ! != & -> _Danie `i << -> 1 `i _address -> 0 `i 345  ]
 "237
-[; ;Modbas_RTU.c: 237:                        }
+[; ;Modbas_RTU.c: 237:                        {
+{
+"238
+[; ;Modbas_RTU.c: 238:                          Temp2 |=(1<<address2);
+[e =| _Temp2 -> << -> 1 `i -> _address2 `i `uc ]
+"239
+[; ;Modbas_RTU.c: 239:                        }
 }
 [e :U 345 ]
-"238
-[; ;Modbas_RTU.c: 238:                    address2 ++;
-[e ++ _address2 -> -> 1 `i `uc ]
-"239
-[; ;Modbas_RTU.c: 239:                    address ++;
-[e ++ _address -> -> 1 `i `Vui ]
 "240
-[; ;Modbas_RTU.c: 240:                    if (address2 == 8 )
-[e $ ! == -> _address2 `i -> 8 `i 346  ]
+[; ;Modbas_RTU.c: 240:                    address2 ++;
+[e ++ _address2 -> -> 1 `i `uc ]
 "241
-[; ;Modbas_RTU.c: 241:                        {
-{
+[; ;Modbas_RTU.c: 241:                    address ++;
+[e ++ _address -> -> 1 `i `Vui ]
 "242
-[; ;Modbas_RTU.c: 242:                          address2 = 0;
-[e = _address2 -> -> 0 `i `uc ]
+[; ;Modbas_RTU.c: 242:                    if (address2 == 8 )
+[e $ ! == -> _address2 `i -> 8 `i 346  ]
 "243
-[; ;Modbas_RTU.c: 243:                          Temp3 ++;
-[e ++ _Temp3 -> -> 1 `i `uc ]
+[; ;Modbas_RTU.c: 243:                        {
+{
 "244
-[; ;Modbas_RTU.c: 244:                          Danie_Rx_ModbasRtu[Temp3] = Temp2;
-[e = *U + &U _Danie_Rx_ModbasRtu * -> _Temp3 `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux _Temp2 ]
+[; ;Modbas_RTU.c: 244:                          address2 = 0;
+[e = _address2 -> -> 0 `i `uc ]
 "245
-[; ;Modbas_RTU.c: 245:                          Temp2 = 0;
-[e = _Temp2 -> -> 0 `i `uc ]
+[; ;Modbas_RTU.c: 245:                          Temp3 ++;
+[e ++ _Temp3 -> -> 1 `i `uc ]
 "246
-[; ;Modbas_RTU.c: 246:                        }
+[; ;Modbas_RTU.c: 246:                          Danie_Rx_ModbasRtu[Temp3] = Temp2;
+[e = *U + &U _Danie_Rx_ModbasRtu * -> _Temp3 `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux _Temp2 ]
+"247
+[; ;Modbas_RTU.c: 247:                          Temp2 = 0;
+[e = _Temp2 -> -> 0 `i `uc ]
+"248
+[; ;Modbas_RTU.c: 248:                        }
 }
 [e :U 346 ]
-"247
-[; ;Modbas_RTU.c: 247:                    if ( address == 8)
-[e $ ! == _address -> -> 8 `i `ui 347  ]
-"248
-[; ;Modbas_RTU.c: 248:                        {
-{
 "249
-[; ;Modbas_RTU.c: 249:                           address = 0;
-[e = _address -> -> 0 `i `ui ]
+[; ;Modbas_RTU.c: 249:                    if ( address == 8)
+[e $ ! == _address -> -> 8 `i `ui 347  ]
 "250
-[; ;Modbas_RTU.c: 250:                           Temp++;
-[e ++ _Temp -> -> 1 `i `uc ]
+[; ;Modbas_RTU.c: 250:                        {
+{
 "251
-[; ;Modbas_RTU.c: 251:                           Danie = Massiv [ Temp ];
-[e = _Danie *U + _Massiv * -> _Temp `ux -> -> # *U _Massiv `ui `ux ]
+[; ;Modbas_RTU.c: 251:                           address = 0;
+[e = _address -> -> 0 `i `ui ]
 "252
-[; ;Modbas_RTU.c: 252:                        }
+[; ;Modbas_RTU.c: 252:                           Temp++;
+[e ++ _Temp -> -> 1 `i `uc ]
+"253
+[; ;Modbas_RTU.c: 253:                           Danie = Massiv [ Temp ];
+[e = _Danie *U + _Massiv * -> _Temp `ux -> -> # *U _Massiv `ui `ux ]
+"254
+[; ;Modbas_RTU.c: 254:                        }
 }
 [e :U 347 ]
-"253
-[; ;Modbas_RTU.c: 253:             }
+"255
+[; ;Modbas_RTU.c: 255:             }
 }
 [e :U 342 ]
-"231
-[; ;Modbas_RTU.c: 231:            while ( Number_bits > 0)
+"233
+[; ;Modbas_RTU.c: 233:            while ( Number_bits > 0)
 [e $ > _Number_bits -> -> 0 `i `ui 343  ]
 [e :U 344 ]
-"254
-[; ;Modbas_RTU.c: 254:            if ( address2 > 0 )
-[e $ ! > -> _address2 `i -> 0 `i 348  ]
-"255
-[; ;Modbas_RTU.c: 255:             {
-{
 "256
-[; ;Modbas_RTU.c: 256:               Temp3 ++;
-[e ++ _Temp3 -> -> 1 `i `uc ]
+[; ;Modbas_RTU.c: 256:            if ( address2 > 0 )
+[e $ ! > -> _address2 `i -> 0 `i 348  ]
 "257
-[; ;Modbas_RTU.c: 257:               Danie_Rx_ModbasRtu[Temp3] = Temp2;
-[e = *U + &U _Danie_Rx_ModbasRtu * -> _Temp3 `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux _Temp2 ]
+[; ;Modbas_RTU.c: 257:             {
+{
 "258
-[; ;Modbas_RTU.c: 258:             }
+[; ;Modbas_RTU.c: 258:               Temp3 ++;
+[e ++ _Temp3 -> -> 1 `i `uc ]
+"259
+[; ;Modbas_RTU.c: 259:               Danie_Rx_ModbasRtu[Temp3] = Temp2;
+[e = *U + &U _Danie_Rx_ModbasRtu * -> _Temp3 `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux _Temp2 ]
+"260
+[; ;Modbas_RTU.c: 260:             }
 }
 [e :U 348 ]
-"261
-[; ;Modbas_RTU.c: 261:            Danie_Rx_ModbasRtu[2] = Temp3 - 2;
-[e = *U + &U _Danie_Rx_ModbasRtu * -> -> -> 2 `i `ui `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux -> - -> _Temp3 `i -> 2 `i `uc ]
-"262
-[; ;Modbas_RTU.c: 262:            Temp3 ++;
-[e ++ _Temp3 -> -> 1 `i `uc ]
 "263
-[; ;Modbas_RTU.c: 263:            check_sum ( Temp3);
-[e ( _check_sum (1 _Temp3 ]
+[; ;Modbas_RTU.c: 263:            Danie_Rx_ModbasRtu[2] = Temp3 - 2;
+[e = *U + &U _Danie_Rx_ModbasRtu * -> -> -> 2 `i `ui `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux -> - -> _Temp3 `i -> 2 `i `uc ]
 "264
-[; ;Modbas_RTU.c: 264:         }
+[; ;Modbas_RTU.c: 264:            Temp3 ++;
+[e ++ _Temp3 -> -> 1 `i `uc ]
+"265
+[; ;Modbas_RTU.c: 265:            check_sum ( Temp3);
+[e ( _check_sum (1 _Temp3 ]
+"266
+[; ;Modbas_RTU.c: 266:         }
 }
 [e :U 338 ]
-"265
-[; ;Modbas_RTU.c: 265:   }
+"267
+[; ;Modbas_RTU.c: 267:   }
 [e :UE 336 ]
 }
-"271
-[; ;Modbas_RTU.c: 271:  void Read_analog_input(unsigned char* Massiv, register unsigned char Number_, unsigned char Vt)
+"273
+[; ;Modbas_RTU.c: 273:  void Read_analog_input(unsigned char* Massiv, register unsigned char Number_, unsigned char Vt)
 [v _Read_analog_input `(v ~T0 @X0 1 ef3`*uc`uc`uc ]
-"272
-[; ;Modbas_RTU.c: 272:  {
+"274
+[; ;Modbas_RTU.c: 274:  {
 {
 [e :U _Read_analog_input ]
-"271
-[; ;Modbas_RTU.c: 271:  void Read_analog_input(unsigned char* Massiv, register unsigned char Number_, unsigned char Vt)
+"273
+[; ;Modbas_RTU.c: 273:  void Read_analog_input(unsigned char* Massiv, register unsigned char Number_, unsigned char Vt)
 [v _Massiv `*uc ~T0 @X0 1 r1 ]
 [v _Number_ `uc ~T0 @X0 1 R2 ]
 [v _Vt `uc ~T0 @X0 1 r3 ]
-"272
-[; ;Modbas_RTU.c: 272:  {
+"274
+[; ;Modbas_RTU.c: 274:  {
 [f ]
-"273
-[; ;Modbas_RTU.c: 273:  volatile unsigned int address,Number_bits,Danie;
+"275
+[; ;Modbas_RTU.c: 275:  volatile unsigned int address,Number_bits,Danie;
 [v _address `Vui ~T0 @X0 1 a ]
 [v _Number_bits `Vui ~T0 @X0 1 a ]
 [v _Danie `Vui ~T0 @X0 1 a ]
-"274
-[; ;Modbas_RTU.c: 274:  volatile unsigned char Adress = 4;
+"276
+[; ;Modbas_RTU.c: 276:  volatile unsigned char Adress = 4;
 [v _Adress `Vuc ~T0 @X0 1 a ]
 [e = _Adress -> -> 4 `i `uc ]
-"275
-[; ;Modbas_RTU.c: 275:  address = ModbasRtu_Register_address(3);
-[e = _address ( _ModbasRtu_Register_address (1 -> -> 3 `i `uc ]
-"276
-[; ;Modbas_RTU.c: 276:  if ( address > Number_ )
-[e $ ! > _address -> _Number_ `ui 350  ]
 "277
-[; ;Modbas_RTU.c: 277:   {
-{
+[; ;Modbas_RTU.c: 277:  address = ModbasRtu_Register_address(3);
+[e = _address ( _ModbasRtu_Register_address (1 -> -> 3 `i `uc ]
 "278
-[; ;Modbas_RTU.c: 278:   Error_modbasRtu (0x02);
-[e ( _Error_modbasRtu (1 -> -> 2 `i `uc ]
+[; ;Modbas_RTU.c: 278:  if ( address > Number_ )
+[e $ ! > _address -> _Number_ `ui 350  ]
 "279
-[; ;Modbas_RTU.c: 279:   }
+[; ;Modbas_RTU.c: 279:   {
+{
+"280
+[; ;Modbas_RTU.c: 280:   Error_modbasRtu (0x02);
+[e ( _Error_modbasRtu (1 -> -> 2 `i `uc ]
+"281
+[; ;Modbas_RTU.c: 281:   }
 }
 [e $U 351  ]
-"280
-[; ;Modbas_RTU.c: 280:   else
-[e :U 350 ]
-"281
-[; ;Modbas_RTU.c: 281:   {
-{
 "282
-[; ;Modbas_RTU.c: 282:   Number_bits = ModbasRtu_Register_address(5);
-[e = _Number_bits ( _ModbasRtu_Register_address (1 -> -> 5 `i `uc ]
+[; ;Modbas_RTU.c: 282:   else
+[e :U 350 ]
 "283
-[; ;Modbas_RTU.c: 283:   Danie_Rx_ModbasRtu[2] = Number_bits * 2;
-[e = *U + &U _Danie_Rx_ModbasRtu * -> -> -> 2 `i `ui `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux -> * _Number_bits -> -> 2 `i `ui `uc ]
+[; ;Modbas_RTU.c: 283:   {
+{
 "284
-[; ;Modbas_RTU.c: 284:   Adress = 3;
-[e = _Adress -> -> 3 `i `uc ]
+[; ;Modbas_RTU.c: 284:   Number_bits = ModbasRtu_Register_address(5);
+[e = _Number_bits ( _ModbasRtu_Register_address (1 -> -> 5 `i `uc ]
 "285
-[; ;Modbas_RTU.c: 285:   while (Number_bits > 0 )
+[; ;Modbas_RTU.c: 285:   Danie_Rx_ModbasRtu[2] = Number_bits * 2;
+[e = *U + &U _Danie_Rx_ModbasRtu * -> -> -> 2 `i `ui `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux -> * _Number_bits -> -> 2 `i `ui `uc ]
+"286
+[; ;Modbas_RTU.c: 286:   Adress = 3;
+[e = _Adress -> -> 3 `i `uc ]
+"287
+[; ;Modbas_RTU.c: 287:   while (Number_bits > 0 )
 [e $U 352  ]
 [e :U 353 ]
-"286
-[; ;Modbas_RTU.c: 286:    {
-{
-"287
-[; ;Modbas_RTU.c: 287:    if ( Vt == 1 )
-[e $ ! == -> _Vt `i -> 1 `i 355  ]
 "288
 [; ;Modbas_RTU.c: 288:    {
 {
 "289
-[; ;Modbas_RTU.c: 289:      Danie = Danie_ModbasRtu_analog_input[ address ];
-[e = _Danie *U + &U _Danie_ModbasRtu_analog_input * -> _address `ux -> -> # *U &U _Danie_ModbasRtu_analog_input `ui `ux ]
+[; ;Modbas_RTU.c: 289:    if ( Vt == 1 )
+[e $ ! == -> _Vt `i -> 1 `i 355  ]
 "290
-[; ;Modbas_RTU.c: 290:    }
+[; ;Modbas_RTU.c: 290:    {
+{
+"291
+[; ;Modbas_RTU.c: 291:      Danie = Danie_ModbasRtu_analog_input[ address ];
+[e = _Danie *U + &U _Danie_ModbasRtu_analog_input * -> _address `ux -> -> # *U &U _Danie_ModbasRtu_analog_input `ui `ux ]
+"292
+[; ;Modbas_RTU.c: 292:    }
 }
 [e $U 356  ]
-"291
-[; ;Modbas_RTU.c: 291:    else
-[e :U 355 ]
-"292
-[; ;Modbas_RTU.c: 292:       {
-{
 "293
-[; ;Modbas_RTU.c: 293:      Danie = Danie_ModbasRtu_analog_Output[ address ];
-[e = _Danie *U + &U _Danie_ModbasRtu_analog_Output * -> _address `ux -> -> # *U &U _Danie_ModbasRtu_analog_Output `ui `ux ]
+[; ;Modbas_RTU.c: 293:    else
+[e :U 355 ]
 "294
-[; ;Modbas_RTU.c: 294:    }
+[; ;Modbas_RTU.c: 294:       {
+{
+"295
+[; ;Modbas_RTU.c: 295:      Danie = Danie_ModbasRtu_analog_Output[ address ];
+[e = _Danie *U + &U _Danie_ModbasRtu_analog_Output * -> _address `ux -> -> # *U &U _Danie_ModbasRtu_analog_Output `ui `ux ]
+"296
+[; ;Modbas_RTU.c: 296:    }
 }
 [e :U 356 ]
-"295
-[; ;Modbas_RTU.c: 295:    address++;
-[e ++ _address -> -> 1 `i `Vui ]
-"296
-[; ;Modbas_RTU.c: 296:    Massiv = &Danie;
-[e = _Massiv -> &U _Danie `*uc ]
 "297
-[; ;Modbas_RTU.c: 297:    Danie_Rx_ModbasRtu[Adress ++] = Massiv[1];
-[e = *U + &U _Danie_Rx_ModbasRtu * -> ++ _Adress -> -> 1 `i `Vuc `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux *U + _Massiv * -> -> 1 `i `x -> -> # *U _Massiv `i `x ]
+[; ;Modbas_RTU.c: 297:    address++;
+[e ++ _address -> -> 1 `i `Vui ]
 "298
-[; ;Modbas_RTU.c: 298:    Danie_Rx_ModbasRtu[Adress++] = Massiv [0];
-[e = *U + &U _Danie_Rx_ModbasRtu * -> ++ _Adress -> -> 1 `i `Vuc `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux *U + _Massiv * -> -> 0 `i `x -> -> # *U _Massiv `i `x ]
+[; ;Modbas_RTU.c: 298:    Massiv = &Danie;
+[e = _Massiv -> &U _Danie `*uc ]
 "299
-[; ;Modbas_RTU.c: 299:    Number_bits = Number_bits - 1 ;
-[e = _Number_bits - _Number_bits -> -> 1 `i `ui ]
+[; ;Modbas_RTU.c: 299:    Danie_Rx_ModbasRtu[Adress ++] = Massiv[1];
+[e = *U + &U _Danie_Rx_ModbasRtu * -> ++ _Adress -> -> 1 `i `Vuc `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux *U + _Massiv * -> -> 1 `i `x -> -> # *U _Massiv `i `x ]
 "300
-[; ;Modbas_RTU.c: 300:    }
+[; ;Modbas_RTU.c: 300:    Danie_Rx_ModbasRtu[Adress++] = Massiv [0];
+[e = *U + &U _Danie_Rx_ModbasRtu * -> ++ _Adress -> -> 1 `i `Vuc `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux *U + _Massiv * -> -> 0 `i `x -> -> # *U _Massiv `i `x ]
+"301
+[; ;Modbas_RTU.c: 301:    Number_bits = Number_bits - 1 ;
+[e = _Number_bits - _Number_bits -> -> 1 `i `ui ]
+"302
+[; ;Modbas_RTU.c: 302:    }
 }
 [e :U 352 ]
-"285
-[; ;Modbas_RTU.c: 285:   while (Number_bits > 0 )
+"287
+[; ;Modbas_RTU.c: 287:   while (Number_bits > 0 )
 [e $ > _Number_bits -> -> 0 `i `ui 353  ]
 [e :U 354 ]
-"301
-[; ;Modbas_RTU.c: 301:   check_sum ( Adress);
+"303
+[; ;Modbas_RTU.c: 303:   check_sum ( Adress);
 [e ( _check_sum (1 _Adress ]
-"302
-[; ;Modbas_RTU.c: 302:   }
+"304
+[; ;Modbas_RTU.c: 304:   }
 }
 [e :U 351 ]
-"303
-[; ;Modbas_RTU.c: 303:  }
+"305
+[; ;Modbas_RTU.c: 305:  }
 [e :UE 349 ]
 }
-"309
-[; ;Modbas_RTU.c: 309:  void analog_output_recording(void)
+"311
+[; ;Modbas_RTU.c: 311:  void analog_output_recording(void)
 [v _analog_output_recording `(v ~T0 @X0 1 ef ]
-"310
-[; ;Modbas_RTU.c: 310:   {
+"312
+[; ;Modbas_RTU.c: 312:   {
 {
 [e :U _analog_output_recording ]
 [f ]
-"311
-[; ;Modbas_RTU.c: 311:  register int address;
-[v _address `i ~T0 @X0 1 A ]
-"312
-[; ;Modbas_RTU.c: 312:  address = ModbasRtu_Register_address(3);
-[e = _address -> ( _ModbasRtu_Register_address (1 -> -> 3 `i `uc `i ]
 "313
-[; ;Modbas_RTU.c: 313:  if ( address > 10 )
-[e $ ! > _address -> 10 `i 358  ]
+[; ;Modbas_RTU.c: 313:  register int address;
+[v _address `i ~T0 @X0 1 A ]
 "314
-[; ;Modbas_RTU.c: 314:   {
-{
+[; ;Modbas_RTU.c: 314:  address = ModbasRtu_Register_address(3);
+[e = _address -> ( _ModbasRtu_Register_address (1 -> -> 3 `i `uc `i ]
 "315
-[; ;Modbas_RTU.c: 315:   Error_modbasRtu (0x02);
-[e ( _Error_modbasRtu (1 -> -> 2 `i `uc ]
+[; ;Modbas_RTU.c: 315:  if ( address > 10 )
+[e $ ! > _address -> 10 `i 358  ]
 "316
-[; ;Modbas_RTU.c: 316:   }
+[; ;Modbas_RTU.c: 316:   {
+{
+"317
+[; ;Modbas_RTU.c: 317:   Error_modbasRtu (0x02);
+[e ( _Error_modbasRtu (1 -> -> 2 `i `uc ]
+"318
+[; ;Modbas_RTU.c: 318:   }
 }
 [e $U 359  ]
-"317
-[; ;Modbas_RTU.c: 317:   else
-[e :U 358 ]
-"318
-[; ;Modbas_RTU.c: 318:   {
-{
 "319
-[; ;Modbas_RTU.c: 319:     Danie_ModbasRtu_analog_Output [address] = ModbasRtu_Register_address(5);
-[e = *U + &U _Danie_ModbasRtu_analog_Output * -> -> _address `ui `ux -> -> # *U &U _Danie_ModbasRtu_analog_Output `ui `ux ( _ModbasRtu_Register_address (1 -> -> 5 `i `uc ]
+[; ;Modbas_RTU.c: 319:   else
+[e :U 358 ]
 "320
-[; ;Modbas_RTU.c: 320:   }
+[; ;Modbas_RTU.c: 320:   {
+{
+"321
+[; ;Modbas_RTU.c: 321:     Danie_ModbasRtu_analog_Output [address] = ModbasRtu_Register_address(5);
+[e = *U + &U _Danie_ModbasRtu_analog_Output * -> -> _address `ui `ux -> -> # *U &U _Danie_ModbasRtu_analog_Output `ui `ux ( _ModbasRtu_Register_address (1 -> -> 5 `i `uc ]
+"322
+[; ;Modbas_RTU.c: 322:   }
 }
 [e :U 359 ]
-"321
-[; ;Modbas_RTU.c: 321:   }
+"323
+[; ;Modbas_RTU.c: 323:   }
 [e :UE 357 ]
 }
-"327
-[; ;Modbas_RTU.c: 327:  void Error_modbasRtu (volatile unsigned char Temp_Error)
+"329
+[; ;Modbas_RTU.c: 329:  void Error_modbasRtu (volatile unsigned char Temp_Error)
 [v _Error_modbasRtu `(v ~T0 @X0 1 ef1`Vuc ]
-"328
-[; ;Modbas_RTU.c: 328:   {
+"330
+[; ;Modbas_RTU.c: 330:   {
 {
 [e :U _Error_modbasRtu ]
-"327
-[; ;Modbas_RTU.c: 327:  void Error_modbasRtu (volatile unsigned char Temp_Error)
-[v _Temp_Error `Vuc ~T0 @X0 1 r1 ]
-"328
-[; ;Modbas_RTU.c: 328:   {
-[f ]
 "329
-[; ;Modbas_RTU.c: 329:  Danie_Rx_ModbasRtu[1] |= (1<<7);
-[e =| *U + &U _Danie_Rx_ModbasRtu * -> -> -> 1 `i `ui `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux -> << -> 1 `i -> 7 `i `uc ]
+[; ;Modbas_RTU.c: 329:  void Error_modbasRtu (volatile unsigned char Temp_Error)
+[v _Temp_Error `Vuc ~T0 @X0 1 r1 ]
 "330
-[; ;Modbas_RTU.c: 330:  Danie_Rx_ModbasRtu[2] = Temp_Error;
-[e = *U + &U _Danie_Rx_ModbasRtu * -> -> -> 2 `i `ui `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux _Temp_Error ]
+[; ;Modbas_RTU.c: 330:   {
+[f ]
 "331
-[; ;Modbas_RTU.c: 331:  check_sum (3);
-[e ( _check_sum (1 -> -> 3 `i `uc ]
+[; ;Modbas_RTU.c: 331:  Danie_Rx_ModbasRtu[1] |= (1<<7);
+[e =| *U + &U _Danie_Rx_ModbasRtu * -> -> -> 1 `i `ui `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux -> << -> 1 `i -> 7 `i `uc ]
 "332
-[; ;Modbas_RTU.c: 332:   }
+[; ;Modbas_RTU.c: 332:  Danie_Rx_ModbasRtu[2] = Temp_Error;
+[e = *U + &U _Danie_Rx_ModbasRtu * -> -> -> 2 `i `ui `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux _Temp_Error ]
+"333
+[; ;Modbas_RTU.c: 333:  check_sum (3);
+[e ( _check_sum (1 -> -> 3 `i `uc ]
+"334
+[; ;Modbas_RTU.c: 334:   }
 [e :UE 360 ]
 }
-"336
-[; ;Modbas_RTU.c: 336:  void check_sum ( register unsigned char Adress)
+"338
+[; ;Modbas_RTU.c: 338:  void check_sum ( register unsigned char Adress)
 [v _check_sum `(v ~T0 @X0 1 ef1`uc ]
-"337
-[; ;Modbas_RTU.c: 337:   {
+"339
+[; ;Modbas_RTU.c: 339:   {
 {
 [e :U _check_sum ]
-"336
-[; ;Modbas_RTU.c: 336:  void check_sum ( register unsigned char Adress)
-[v _Adress `uc ~T0 @X0 1 R1 ]
-"337
-[; ;Modbas_RTU.c: 337:   {
-[f ]
 "338
-[; ;Modbas_RTU.c: 338:  register unsigned int RC;
-[v _RC `ui ~T0 @X0 1 A ]
+[; ;Modbas_RTU.c: 338:  void check_sum ( register unsigned char Adress)
+[v _Adress `uc ~T0 @X0 1 R1 ]
 "339
-[; ;Modbas_RTU.c: 339:  RC = crc_chk(Danie_Rx_ModbasRtu,Adress);
-[e = _RC ( _crc_chk (2 , &U _Danie_Rx_ModbasRtu _Adress ]
+[; ;Modbas_RTU.c: 339:   {
+[f ]
 "340
-[; ;Modbas_RTU.c: 340:  Danie_Rx_ModbasRtu[Adress] = RC ;
-[e = *U + &U _Danie_Rx_ModbasRtu * -> _Adress `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux -> _RC `uc ]
+[; ;Modbas_RTU.c: 340:  register unsigned int RC;
+[v _RC `ui ~T0 @X0 1 A ]
 "341
-[; ;Modbas_RTU.c: 341:  Adress++;
-[e ++ _Adress -> -> 1 `i `uc ]
+[; ;Modbas_RTU.c: 341:  RC = crc_chk(Danie_Rx_ModbasRtu,Adress);
+[e = _RC ( _crc_chk (2 , &U _Danie_Rx_ModbasRtu _Adress ]
 "342
-[; ;Modbas_RTU.c: 342:  Danie_Rx_ModbasRtu[Adress] = RC >> 8;
-[e = *U + &U _Danie_Rx_ModbasRtu * -> _Adress `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux -> >> _RC -> 8 `i `uc ]
+[; ;Modbas_RTU.c: 342:  Danie_Rx_ModbasRtu[Adress] = RC ;
+[e = *U + &U _Danie_Rx_ModbasRtu * -> _Adress `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux -> _RC `uc ]
 "343
-[; ;Modbas_RTU.c: 343:  quantity_Data_ModbasRtu = Adress;
-[e = _quantity_Data_ModbasRtu _Adress ]
+[; ;Modbas_RTU.c: 343:  Adress++;
+[e ++ _Adress -> -> 1 `i `uc ]
 "344
-[; ;Modbas_RTU.c: 344:   }
+[; ;Modbas_RTU.c: 344:  Danie_Rx_ModbasRtu[Adress] = RC >> 8;
+[e = *U + &U _Danie_Rx_ModbasRtu * -> _Adress `ux -> -> # *U &U _Danie_Rx_ModbasRtu `ui `ux -> >> _RC -> 8 `i `uc ]
+"345
+[; ;Modbas_RTU.c: 345:  quantity_Data_ModbasRtu = Adress;
+[e = _quantity_Data_ModbasRtu _Adress ]
+"346
+[; ;Modbas_RTU.c: 346:   }
 [e :UE 361 ]
 }
-"350
-[; ;Modbas_RTU.c: 350:   void modbasRtu_Answer()
+"352
+[; ;Modbas_RTU.c: 352:   void modbasRtu_Answer()
 [v _modbasRtu_Answer `(v ~T0 @X0 1 ef ]
-"351
-[; ;Modbas_RTU.c: 351:   {
+"353
+[; ;Modbas_RTU.c: 353:   {
 {
 [e :U _modbasRtu_Answer ]
 [f ]
-"352
-[; ;Modbas_RTU.c: 352:    Temp_ModbasRtu = 0;
-[e = _Temp_ModbasRtu -> -> 0 `i `uc ]
-"353
-[; ;Modbas_RTU.c: 353:    switch (Danie_Rx_ModbasRtu[1])
-[e $U 364  ]
 "354
-[; ;Modbas_RTU.c: 354:    {
-{
+[; ;Modbas_RTU.c: 354:    Temp_ModbasRtu = 0;
+[e = _Temp_ModbasRtu -> -> 0 `i `uc ]
 "355
-[; ;Modbas_RTU.c: 355:     case 1:
-[e :U 365 ]
+[; ;Modbas_RTU.c: 355:    switch (Danie_Rx_ModbasRtu[1])
+[e $U 364  ]
 "356
-[; ;Modbas_RTU.c: 356:            Reading_Discrete_Output(Danie_ModbasRtu_Binary_Output,10);
-[e ( _Reading_Discrete_Output (2 , &U _Danie_ModbasRtu_Binary_Output -> -> 10 `i `uc ]
+[; ;Modbas_RTU.c: 356:    {
+{
 "357
-[; ;Modbas_RTU.c: 357:            break;
-[e $U 363  ]
+[; ;Modbas_RTU.c: 357:     case 1:
+[e :U 365 ]
 "358
-[; ;Modbas_RTU.c: 358:     case 2:
-[e :U 366 ]
+[; ;Modbas_RTU.c: 358:            Reading_Discrete_Output(Danie_ModbasRtu_Binary_Output,10);
+[e ( _Reading_Discrete_Output (2 , &U _Danie_ModbasRtu_Binary_Output -> -> 10 `i `uc ]
 "359
-[; ;Modbas_RTU.c: 359:            Reading_Discrete_Output(Danie_ModbasRtu_Binary_input,10);
-[e ( _Reading_Discrete_Output (2 , &U _Danie_ModbasRtu_Binary_input -> -> 10 `i `uc ]
+[; ;Modbas_RTU.c: 359:            break;
+[e $U 363  ]
 "360
-[; ;Modbas_RTU.c: 360:            break;
-[e $U 363  ]
+[; ;Modbas_RTU.c: 360:     case 2:
+[e :U 366 ]
 "361
-[; ;Modbas_RTU.c: 361:     case 3:
-[e :U 367 ]
+[; ;Modbas_RTU.c: 361:            Reading_Discrete_Output(Danie_ModbasRtu_Binary_input,10);
+[e ( _Reading_Discrete_Output (2 , &U _Danie_ModbasRtu_Binary_input -> -> 10 `i `uc ]
 "362
-[; ;Modbas_RTU.c: 362:            Read_analog_input( Danie_ModbasRtu_analog_Output,10,0);
-[e ( _Read_analog_input (3 , , -> &U _Danie_ModbasRtu_analog_Output `*uc -> -> 10 `i `uc -> -> 0 `i `uc ]
+[; ;Modbas_RTU.c: 362:            break;
+[e $U 363  ]
 "363
-[; ;Modbas_RTU.c: 363:     break;
-[e $U 363  ]
+[; ;Modbas_RTU.c: 363:     case 3:
+[e :U 367 ]
 "364
-[; ;Modbas_RTU.c: 364:     case 4:
-[e :U 368 ]
+[; ;Modbas_RTU.c: 364:            Read_analog_input( Danie_ModbasRtu_analog_Output,10,0);
+[e ( _Read_analog_input (3 , , -> &U _Danie_ModbasRtu_analog_Output `*uc -> -> 10 `i `uc -> -> 0 `i `uc ]
 "365
-[; ;Modbas_RTU.c: 365:            Read_analog_input(Danie_ModbasRtu_analog_input,10,1);
-[e ( _Read_analog_input (3 , , -> &U _Danie_ModbasRtu_analog_input `*uc -> -> 10 `i `uc -> -> 1 `i `uc ]
+[; ;Modbas_RTU.c: 365:     break;
+[e $U 363  ]
 "366
-[; ;Modbas_RTU.c: 366:            break;
-[e $U 363  ]
+[; ;Modbas_RTU.c: 366:     case 4:
+[e :U 368 ]
 "367
-[; ;Modbas_RTU.c: 367:     case 5:
-[e :U 369 ]
+[; ;Modbas_RTU.c: 367:            Read_analog_input(Danie_ModbasRtu_analog_input,10,1);
+[e ( _Read_analog_input (3 , , -> &U _Danie_ModbasRtu_analog_input `*uc -> -> 10 `i `uc -> -> 1 `i `uc ]
 "368
-[; ;Modbas_RTU.c: 368:            Changing_Discrete_Output();
-[e ( _Changing_Discrete_Output ..  ]
+[; ;Modbas_RTU.c: 368:            break;
+[e $U 363  ]
 "369
-[; ;Modbas_RTU.c: 369:            break;
-[e $U 363  ]
+[; ;Modbas_RTU.c: 369:     case 5:
+[e :U 369 ]
 "370
-[; ;Modbas_RTU.c: 370:     case 6:
-[e :U 370 ]
+[; ;Modbas_RTU.c: 370:            Changing_Discrete_Output();
+[e ( _Changing_Discrete_Output ..  ]
 "371
-[; ;Modbas_RTU.c: 371:            analog_output_recording();
-[e ( _analog_output_recording ..  ]
+[; ;Modbas_RTU.c: 371:            break;
+[e $U 363  ]
 "372
-[; ;Modbas_RTU.c: 372:            break;
-[e $U 363  ]
+[; ;Modbas_RTU.c: 372:     case 6:
+[e :U 370 ]
 "373
-[; ;Modbas_RTU.c: 373:     case 15:
-[e :U 371 ]
+[; ;Modbas_RTU.c: 373:            analog_output_recording();
+[e ( _analog_output_recording ..  ]
 "374
-[; ;Modbas_RTU.c: 374:             __asm("nop");
-[; <" nop ;# ">
+[; ;Modbas_RTU.c: 374:            break;
+[e $U 363  ]
 "375
-[; ;Modbas_RTU.c: 375:             break;
-[e $U 363  ]
+[; ;Modbas_RTU.c: 375:     case 15:
+[e :U 371 ]
 "376
-[; ;Modbas_RTU.c: 376:     case 16:
-[e :U 372 ]
-"377
-[; ;Modbas_RTU.c: 377:             __asm("nop");
+[; ;Modbas_RTU.c: 376:             __asm("nop");
 [; <" nop ;# ">
+"377
+[; ;Modbas_RTU.c: 377:             break;
+[e $U 363  ]
+"378
+[; ;Modbas_RTU.c: 378:     case 16:
+[e :U 372 ]
 "379
-[; ;Modbas_RTU.c: 379:             break;
+[; ;Modbas_RTU.c: 379:             __asm("nop");
+[; <" nop ;# ">
+"381
+[; ;Modbas_RTU.c: 381:             break;
 [e $U 363  ]
-"380
-[; ;Modbas_RTU.c: 380:           case 21:
+"382
+[; ;Modbas_RTU.c: 382:           case 21:
 [e :U 373 ]
-"383
-[; ;Modbas_RTU.c: 383:             break;
+"385
+[; ;Modbas_RTU.c: 385:             break;
 [e $U 363  ]
-"384
-[; ;Modbas_RTU.c: 384:           case 22:
+"386
+[; ;Modbas_RTU.c: 386:           case 22:
 [e :U 374 ]
-"387
-[; ;Modbas_RTU.c: 387:             break;
+"389
+[; ;Modbas_RTU.c: 389:             break;
 [e $U 363  ]
-"388
-[; ;Modbas_RTU.c: 388:           case 23:
+"390
+[; ;Modbas_RTU.c: 390:           case 23:
 [e :U 375 ]
-"391
-[; ;Modbas_RTU.c: 391:             break;
+"393
+[; ;Modbas_RTU.c: 393:             break;
 [e $U 363  ]
-"392
-[; ;Modbas_RTU.c: 392:           case 24:
+"394
+[; ;Modbas_RTU.c: 394:           case 24:
 [e :U 376 ]
-"395
-[; ;Modbas_RTU.c: 395:             break;
-[e $U 363  ]
 "397
-[; ;Modbas_RTU.c: 397:     default:
-[e :U 377 ]
-"398
-[; ;Modbas_RTU.c: 398:             Error_modbasRtu (0x01);
-[e ( _Error_modbasRtu (1 -> -> 1 `i `uc ]
-"399
-[; ;Modbas_RTU.c: 399:             break;
+[; ;Modbas_RTU.c: 397:             break;
 [e $U 363  ]
+"399
+[; ;Modbas_RTU.c: 399:     default:
+[e :U 377 ]
 "400
-[; ;Modbas_RTU.c: 400:    }
+[; ;Modbas_RTU.c: 400:             Error_modbasRtu (0x01);
+[e ( _Error_modbasRtu (1 -> -> 1 `i `uc ]
+"401
+[; ;Modbas_RTU.c: 401:             break;
+[e $U 363  ]
+"402
+[; ;Modbas_RTU.c: 402:    }
 }
 [e $U 363  ]
 [e :U 364 ]
@@ -1614,238 +1614,238 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 24 `i 376
  377 ]
 [e :U 363 ]
-"402
-[; ;Modbas_RTU.c: 402:      USART_UDR_vect=1;
-[e = _USART_UDR_vect -> -> 1 `i `uc ]
-"403
-[; ;Modbas_RTU.c: 403:   Bit_action_ModbasRtu.b2 = 0;
-[e = . _Bit_action_ModbasRtu 2 -> -> 0 `i `uc ]
 "404
-[; ;Modbas_RTU.c: 404:   }
+[; ;Modbas_RTU.c: 404:      USART_UDR_vect=1;
+[e = _USART_UDR_vect -> -> 1 `i `uc ]
+"405
+[; ;Modbas_RTU.c: 405:   Bit_action_ModbasRtu.b2 = 0;
+[e = . _Bit_action_ModbasRtu 2 -> -> 0 `i `uc ]
+"406
+[; ;Modbas_RTU.c: 406:   }
 [e :UE 362 ]
 }
-"408
-[; ;Modbas_RTU.c: 408:  char read_digital_inputs( volatile unsigned char Temp1 )
+"410
+[; ;Modbas_RTU.c: 410:  char read_digital_inputs( volatile unsigned char Temp1 )
 [v _read_digital_inputs `(uc ~T0 @X0 1 ef1`Vuc ]
-"409
-[; ;Modbas_RTU.c: 409:   {
+"411
+[; ;Modbas_RTU.c: 411:   {
 {
 [e :U _read_digital_inputs ]
-"408
-[; ;Modbas_RTU.c: 408:  char read_digital_inputs( volatile unsigned char Temp1 )
-[v _Temp1 `Vuc ~T0 @X0 1 r1 ]
-"409
-[; ;Modbas_RTU.c: 409:   {
-[f ]
 "410
-[; ;Modbas_RTU.c: 410:    return _Bin_input_Output (Temp1,1,Danie_ModbasRtu_Binary_input,11);
+[; ;Modbas_RTU.c: 410:  char read_digital_inputs( volatile unsigned char Temp1 )
+[v _Temp1 `Vuc ~T0 @X0 1 r1 ]
+"411
+[; ;Modbas_RTU.c: 411:   {
+[f ]
+"412
+[; ;Modbas_RTU.c: 412:    return _Bin_input_Output (Temp1,1,Danie_ModbasRtu_Binary_input,11);
 [e ) ( __Bin_input_Output (4 , , , _Temp1 -> -> 1 `i `uc -> &U _Danie_ModbasRtu_Binary_input `*Vuc -> -> 11 `i `uc ]
 [e $UE 378  ]
-"411
-[; ;Modbas_RTU.c: 411:   }
+"413
+[; ;Modbas_RTU.c: 413:   }
 [e :UE 378 ]
 }
-"412
-[; ;Modbas_RTU.c: 412: void change_digital_inputs( volatile unsigned char Temp1,volatile unsigned char Temp2 )
+"414
+[; ;Modbas_RTU.c: 414: void change_digital_inputs( volatile unsigned char Temp1,volatile unsigned char Temp2 )
 [v _change_digital_inputs `(v ~T0 @X0 1 ef2`Vuc`Vuc ]
-"413
-[; ;Modbas_RTU.c: 413:   {
+"415
+[; ;Modbas_RTU.c: 415:   {
 {
 [e :U _change_digital_inputs ]
-"412
-[; ;Modbas_RTU.c: 412: void change_digital_inputs( volatile unsigned char Temp1,volatile unsigned char Temp2 )
+"414
+[; ;Modbas_RTU.c: 414: void change_digital_inputs( volatile unsigned char Temp1,volatile unsigned char Temp2 )
 [v _Temp1 `Vuc ~T0 @X0 1 r1 ]
 [v _Temp2 `Vuc ~T0 @X0 1 r2 ]
-"413
-[; ;Modbas_RTU.c: 413:   {
-[f ]
-"414
-[; ;Modbas_RTU.c: 414:    _Bin_input_Output (Temp1,Temp2,Danie_ModbasRtu_Binary_input,10);
-[e ( __Bin_input_Output (4 , , , _Temp1 _Temp2 -> &U _Danie_ModbasRtu_Binary_input `*Vuc -> -> 10 `i `uc ]
 "415
-[; ;Modbas_RTU.c: 415:   }
+[; ;Modbas_RTU.c: 415:   {
+[f ]
+"416
+[; ;Modbas_RTU.c: 416:    _Bin_input_Output (Temp1,Temp2,Danie_ModbasRtu_Binary_input,10);
+[e ( __Bin_input_Output (4 , , , _Temp1 _Temp2 -> &U _Danie_ModbasRtu_Binary_input `*Vuc -> -> 10 `i `uc ]
+"417
+[; ;Modbas_RTU.c: 417:   }
 [e :UE 379 ]
 }
-"416
-[; ;Modbas_RTU.c: 416: char read_digital_Output( volatile unsigned char Temp1 )
+"418
+[; ;Modbas_RTU.c: 418: char read_digital_Output( volatile unsigned char Temp1 )
 [v _read_digital_Output `(uc ~T0 @X0 1 ef1`Vuc ]
-"417
-[; ;Modbas_RTU.c: 417:   {
+"419
+[; ;Modbas_RTU.c: 419:   {
 {
 [e :U _read_digital_Output ]
-"416
-[; ;Modbas_RTU.c: 416: char read_digital_Output( volatile unsigned char Temp1 )
-[v _Temp1 `Vuc ~T0 @X0 1 r1 ]
-"417
-[; ;Modbas_RTU.c: 417:   {
-[f ]
 "418
-[; ;Modbas_RTU.c: 418:    return _Bin_input_Output (Temp1,1,Danie_ModbasRtu_Binary_Output,11);
+[; ;Modbas_RTU.c: 418: char read_digital_Output( volatile unsigned char Temp1 )
+[v _Temp1 `Vuc ~T0 @X0 1 r1 ]
+"419
+[; ;Modbas_RTU.c: 419:   {
+[f ]
+"420
+[; ;Modbas_RTU.c: 420:    return _Bin_input_Output (Temp1,1,Danie_ModbasRtu_Binary_Output,11);
 [e ) ( __Bin_input_Output (4 , , , _Temp1 -> -> 1 `i `uc -> &U _Danie_ModbasRtu_Binary_Output `*Vuc -> -> 11 `i `uc ]
 [e $UE 380  ]
-"419
-[; ;Modbas_RTU.c: 419:   }
+"421
+[; ;Modbas_RTU.c: 421:   }
 [e :UE 380 ]
 }
-"420
-[; ;Modbas_RTU.c: 420: void change_digital_Output( volatile unsigned char Temp1,volatile unsigned char Temp2 )
+"422
+[; ;Modbas_RTU.c: 422: void change_digital_Output( volatile unsigned char Temp1,volatile unsigned char Temp2 )
 [v _change_digital_Output `(v ~T0 @X0 1 ef2`Vuc`Vuc ]
-"421
-[; ;Modbas_RTU.c: 421:   {
+"423
+[; ;Modbas_RTU.c: 423:   {
 {
 [e :U _change_digital_Output ]
-"420
-[; ;Modbas_RTU.c: 420: void change_digital_Output( volatile unsigned char Temp1,volatile unsigned char Temp2 )
+"422
+[; ;Modbas_RTU.c: 422: void change_digital_Output( volatile unsigned char Temp1,volatile unsigned char Temp2 )
 [v _Temp1 `Vuc ~T0 @X0 1 r1 ]
 [v _Temp2 `Vuc ~T0 @X0 1 r2 ]
-"421
-[; ;Modbas_RTU.c: 421:   {
-[f ]
-"422
-[; ;Modbas_RTU.c: 422:    _Bin_input_Output (Temp1,Temp2,Danie_ModbasRtu_Binary_Output,10);
-[e ( __Bin_input_Output (4 , , , _Temp1 _Temp2 -> &U _Danie_ModbasRtu_Binary_Output `*Vuc -> -> 10 `i `uc ]
 "423
-[; ;Modbas_RTU.c: 423:   }
+[; ;Modbas_RTU.c: 423:   {
+[f ]
+"424
+[; ;Modbas_RTU.c: 424:    _Bin_input_Output (Temp1,Temp2,Danie_ModbasRtu_Binary_Output,10);
+[e ( __Bin_input_Output (4 , , , _Temp1 _Temp2 -> &U _Danie_ModbasRtu_Binary_Output `*Vuc -> -> 10 `i `uc ]
+"425
+[; ;Modbas_RTU.c: 425:   }
 [e :UE 381 ]
 }
-"426
-[; ;Modbas_RTU.c: 426: void change_analogue_Output (volatile unsigned char nomer, int Danie)
+"428
+[; ;Modbas_RTU.c: 428: void change_analogue_Output (volatile unsigned char nomer, int Danie)
 [v _change_analogue_Output `(v ~T0 @X0 1 ef2`Vuc`i ]
-"427
-[; ;Modbas_RTU.c: 427:   {
+"429
+[; ;Modbas_RTU.c: 429:   {
 {
 [e :U _change_analogue_Output ]
-"426
-[; ;Modbas_RTU.c: 426: void change_analogue_Output (volatile unsigned char nomer, int Danie)
+"428
+[; ;Modbas_RTU.c: 428: void change_analogue_Output (volatile unsigned char nomer, int Danie)
 [v _nomer `Vuc ~T0 @X0 1 r1 ]
 [v _Danie `i ~T0 @X0 1 r2 ]
-"427
-[; ;Modbas_RTU.c: 427:   {
-[f ]
-"428
-[; ;Modbas_RTU.c: 428:    Danie_ModbasRtu_analog_Output [ nomer ] = Danie;
-[e = *U + &U _Danie_ModbasRtu_analog_Output * -> _nomer `ux -> -> # *U &U _Danie_ModbasRtu_analog_Output `ui `ux -> _Danie `ui ]
 "429
-[; ;Modbas_RTU.c: 429:   }
+[; ;Modbas_RTU.c: 429:   {
+[f ]
+"430
+[; ;Modbas_RTU.c: 430:    Danie_ModbasRtu_analog_Output [ nomer ] = Danie;
+[e = *U + &U _Danie_ModbasRtu_analog_Output * -> _nomer `ux -> -> # *U &U _Danie_ModbasRtu_analog_Output `ui `ux -> _Danie `ui ]
+"431
+[; ;Modbas_RTU.c: 431:   }
 [e :UE 382 ]
 }
-"430
-[; ;Modbas_RTU.c: 430: void change_analogue_input (volatile unsigned char nomer, int Danie)
+"432
+[; ;Modbas_RTU.c: 432: void change_analogue_input (volatile unsigned char nomer, int Danie)
 [v _change_analogue_input `(v ~T0 @X0 1 ef2`Vuc`i ]
-"431
-[; ;Modbas_RTU.c: 431:   {
+"433
+[; ;Modbas_RTU.c: 433:   {
 {
 [e :U _change_analogue_input ]
-"430
-[; ;Modbas_RTU.c: 430: void change_analogue_input (volatile unsigned char nomer, int Danie)
+"432
+[; ;Modbas_RTU.c: 432: void change_analogue_input (volatile unsigned char nomer, int Danie)
 [v _nomer `Vuc ~T0 @X0 1 r1 ]
 [v _Danie `i ~T0 @X0 1 r2 ]
-"431
-[; ;Modbas_RTU.c: 431:   {
-[f ]
-"432
-[; ;Modbas_RTU.c: 432:    Danie_ModbasRtu_analog_input [ nomer ] = Danie;
-[e = *U + &U _Danie_ModbasRtu_analog_input * -> _nomer `ux -> -> # *U &U _Danie_ModbasRtu_analog_input `ui `ux -> _Danie `ui ]
 "433
-[; ;Modbas_RTU.c: 433:   }
+[; ;Modbas_RTU.c: 433:   {
+[f ]
+"434
+[; ;Modbas_RTU.c: 434:    Danie_ModbasRtu_analog_input [ nomer ] = Danie;
+[e = *U + &U _Danie_ModbasRtu_analog_input * -> _nomer `ux -> -> # *U &U _Danie_ModbasRtu_analog_input `ui `ux -> _Danie `ui ]
+"435
+[; ;Modbas_RTU.c: 435:   }
 [e :UE 383 ]
 }
-"434
-[; ;Modbas_RTU.c: 434:  int read_analogue_Output (volatile unsigned char nomer)
+"436
+[; ;Modbas_RTU.c: 436:  int read_analogue_Output (volatile unsigned char nomer)
 [v _read_analogue_Output `(i ~T0 @X0 1 ef1`Vuc ]
-"435
-[; ;Modbas_RTU.c: 435:   {
+"437
+[; ;Modbas_RTU.c: 437:   {
 {
 [e :U _read_analogue_Output ]
-"434
-[; ;Modbas_RTU.c: 434:  int read_analogue_Output (volatile unsigned char nomer)
-[v _nomer `Vuc ~T0 @X0 1 r1 ]
-"435
-[; ;Modbas_RTU.c: 435:   {
-[f ]
 "436
-[; ;Modbas_RTU.c: 436:   return Danie_ModbasRtu_analog_Output [ nomer ];
+[; ;Modbas_RTU.c: 436:  int read_analogue_Output (volatile unsigned char nomer)
+[v _nomer `Vuc ~T0 @X0 1 r1 ]
+"437
+[; ;Modbas_RTU.c: 437:   {
+[f ]
+"438
+[; ;Modbas_RTU.c: 438:   return Danie_ModbasRtu_analog_Output [ nomer ];
 [e ) -> *U + &U _Danie_ModbasRtu_analog_Output * -> _nomer `ux -> -> # *U &U _Danie_ModbasRtu_analog_Output `ui `ux `i ]
 [e $UE 384  ]
-"437
-[; ;Modbas_RTU.c: 437:   }
+"439
+[; ;Modbas_RTU.c: 439:   }
 [e :UE 384 ]
 }
-"438
-[; ;Modbas_RTU.c: 438:  int read_analogue_input (volatile unsigned char nomer)
+"440
+[; ;Modbas_RTU.c: 440:  int read_analogue_input (volatile unsigned char nomer)
 [v _read_analogue_input `(i ~T0 @X0 1 ef1`Vuc ]
-"439
-[; ;Modbas_RTU.c: 439:   {
+"441
+[; ;Modbas_RTU.c: 441:   {
 {
 [e :U _read_analogue_input ]
-"438
-[; ;Modbas_RTU.c: 438:  int read_analogue_input (volatile unsigned char nomer)
-[v _nomer `Vuc ~T0 @X0 1 r1 ]
-"439
-[; ;Modbas_RTU.c: 439:   {
-[f ]
 "440
-[; ;Modbas_RTU.c: 440:   return Danie_ModbasRtu_analog_input [ nomer ];
+[; ;Modbas_RTU.c: 440:  int read_analogue_input (volatile unsigned char nomer)
+[v _nomer `Vuc ~T0 @X0 1 r1 ]
+"441
+[; ;Modbas_RTU.c: 441:   {
+[f ]
+"442
+[; ;Modbas_RTU.c: 442:   return Danie_ModbasRtu_analog_input [ nomer ];
 [e ) -> *U + &U _Danie_ModbasRtu_analog_input * -> _nomer `ux -> -> # *U &U _Danie_ModbasRtu_analog_input `ui `ux `i ]
 [e $UE 385  ]
-"441
-[; ;Modbas_RTU.c: 441:   }
+"443
+[; ;Modbas_RTU.c: 443:   }
 [e :UE 385 ]
 }
-"443
-[; ;Modbas_RTU.c: 443:  void modbasRtu_Slave( void )
+"445
+[; ;Modbas_RTU.c: 445:  void modbasRtu_Slave( void )
 [v _modbasRtu_Slave `(v ~T0 @X0 1 ef ]
-"444
-[; ;Modbas_RTU.c: 444:    {
+"446
+[; ;Modbas_RTU.c: 446:    {
 {
 [e :U _modbasRtu_Slave ]
 [f ]
-"445
-[; ;Modbas_RTU.c: 445:     if (Bit_action_ModbasRtu.b2)
-[e $ ! != -> . _Bit_action_ModbasRtu 2 `i -> 0 `i 387  ]
-"446
-[; ;Modbas_RTU.c: 446:     {
-{
 "447
-[; ;Modbas_RTU.c: 447:      if ( Data_integrity() == 0 )
-[e $ ! == -> ( _Data_integrity ..  `i -> 0 `i 388  ]
+[; ;Modbas_RTU.c: 447:     if (Bit_action_ModbasRtu.b2)
+[e $ ! != -> . _Bit_action_ModbasRtu 2 `i -> 0 `i 387  ]
 "448
-[; ;Modbas_RTU.c: 448:      {
+[; ;Modbas_RTU.c: 448:     {
 {
-"451
-[; ;Modbas_RTU.c: 451:       Error_modbasRtu (0x04);
-[e ( _Error_modbasRtu (1 -> -> 4 `i `uc ]
-"452
-[; ;Modbas_RTU.c: 452:       USART_UDR_vect=1;
-[e = _USART_UDR_vect -> -> 1 `i `uc ]
+"449
+[; ;Modbas_RTU.c: 449:      if ( Data_integrity() == 0 )
+[e $ ! == -> ( _Data_integrity ..  `i -> 0 `i 388  ]
+"450
+[; ;Modbas_RTU.c: 450:      {
+{
 "453
-[; ;Modbas_RTU.c: 453:             Temp_ModbasRtu = 0;
-[e = _Temp_ModbasRtu -> -> 0 `i `uc ]
+[; ;Modbas_RTU.c: 453:       Error_modbasRtu (0x04);
+[e ( _Error_modbasRtu (1 -> -> 4 `i `uc ]
 "454
-[; ;Modbas_RTU.c: 454:             Bit_action_ModbasRtu.b2 = 0;
-[e = . _Bit_action_ModbasRtu 2 -> -> 0 `i `uc ]
+[; ;Modbas_RTU.c: 454:       USART_UDR_vect=1;
+[e = _USART_UDR_vect -> -> 1 `i `uc ]
+"455
+[; ;Modbas_RTU.c: 455:             Temp_ModbasRtu = 0;
+[e = _Temp_ModbasRtu -> -> 0 `i `uc ]
 "456
-[; ;Modbas_RTU.c: 456:      }
+[; ;Modbas_RTU.c: 456:             Bit_action_ModbasRtu.b2 = 0;
+[e = . _Bit_action_ModbasRtu 2 -> -> 0 `i `uc ]
+"458
+[; ;Modbas_RTU.c: 458:      }
 }
 [e $U 389  ]
-"457
-[; ;Modbas_RTU.c: 457:      else
-[e :U 388 ]
-"458
-[; ;Modbas_RTU.c: 458:      {
-{
 "459
-[; ;Modbas_RTU.c: 459:       modbasRtu_Answer();
-[e ( _modbasRtu_Answer ..  ]
+[; ;Modbas_RTU.c: 459:      else
+[e :U 388 ]
 "460
-[; ;Modbas_RTU.c: 460:      }
+[; ;Modbas_RTU.c: 460:      {
+{
+"461
+[; ;Modbas_RTU.c: 461:       modbasRtu_Answer();
+[e ( _modbasRtu_Answer ..  ]
+"462
+[; ;Modbas_RTU.c: 462:      }
 }
 [e :U 389 ]
-"461
-[; ;Modbas_RTU.c: 461:     }
+"463
+[; ;Modbas_RTU.c: 463:     }
 }
 [e :U 387 ]
-"462
-[; ;Modbas_RTU.c: 462:   }
+"464
+[; ;Modbas_RTU.c: 464:   }
 [e :UE 386 ]
 }
